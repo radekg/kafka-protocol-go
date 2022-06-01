@@ -1,8 +1,8 @@
 # Kafka Protocol for go and tinygo
 
-This is a fork of the Kafka protocol implementation from [grepplabs/kafka-proxy](https://github.com/grepplabs/kafka-proxy). This fantastic work is a great donor because this it:
+This is a fork of the Kafka protocol implementation from [grepplabs/kafka-proxy](https://github.com/grepplabs/kafka-proxy). This fantastic work is a great donor because it:
 
-- Does not use any reflection.
+- Does not use reflection.
 - Does not use goroutines.
 - Does not use channels.
 
