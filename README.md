@@ -6,7 +6,11 @@ This is a fork of the Kafka protocol implementation from [grepplabs/kafka-proxy]
 - Does not use goroutines.
 - Does not use channels.
 
-Which results in being able to compile with [tinygo-org/tinygo](https://github.com/tinygo-org/tinygo).
+Which results in:
+
+- Being able to compile with [tinygo-org/tinygo](https://github.com/tinygo-org/tinygo).
+- Because it can be compiled with _tinygo_, it can be compiled with [tetratelabs/proxy-wasm-go-sdk](https://github.com/tetratelabs/proxy-wasm-go-sdk).
+  - Which means that it can be used as a foundation for Envoy WebAssembly Layer 7 proxies.
 
 ## Why forking?
 
