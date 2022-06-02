@@ -20,7 +20,11 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 
 ## Message support
 
-- [ ] Headers
+- [x] Headers
+
+### General notes
+
+- Compact arrays have been added in Apache Kafka® 2.4, hence it will be crucial to test with 2.3 and 2.4 client to get the differences between arrays and compact arrays right.
 
 ### Requests
 
