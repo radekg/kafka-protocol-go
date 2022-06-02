@@ -13,15 +13,18 @@ import (
 
 var (
 	TypeBool               = &Bool{}
+	TypeBytes              = &Bytes{}
+	TypeCompactBytes       = &CompactBytes{}
+	TypeCompactStr         = &CompactStr{}
+	TypeCompactNullableStr = &CompactNullableStr{}
 	TypeInt8               = &Int8{}
 	TypeInt16              = &Int16{}
 	TypeInt32              = &Int32{}
+	TypeInt32Array         = &Int32Array{}
 	TypeInt64              = &Int64{}
 	TypeVarint             = &Varint{}
 	TypeStr                = &Str{}
 	TypeNullableStr        = &NullableStr{}
-	TypeCompactStr         = &CompactStr{}
-	TypeCompactNullableStr = &CompactNullableStr{}
 	TypeUuid               = &Uuid{}
 )
 
