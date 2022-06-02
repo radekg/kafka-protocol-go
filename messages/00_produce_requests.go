@@ -17,6 +17,7 @@ func initProduceRequests() []schema.Schema {
 
 	schemas := []schema.Schema{}
 
+	// TODO: verify: most likely Array instead of CompactArray
 	produceRequestSchemaV0 := schema.NewSchema("produce_v0",
 		&schema.Mfield{Name: FieldNameProduceAcks, Ty: schema.TypeInt16},
 		&schema.Mfield{Name: FieldNameProduceTimeoutMs, Ty: schema.TypeInt32},
@@ -34,7 +35,7 @@ func initProduceRequests() []schema.Schema {
 	schemas = append(schemas, produceRequestSchemaV0)
 
 	// Version 3 adds transactional_id:
-
+	// TODO: verify: most likely Array instead of CompactArray
 	produceRequestSchemaV3 := schema.NewSchema("produce_v3",
 		&schema.Mfield{Name: FieldNameProduceTransactionalId, Ty: schema.TypeNullableStr},
 		&schema.Mfield{Name: FieldNameProduceAcks, Ty: schema.TypeInt16},

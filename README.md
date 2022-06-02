@@ -82,8 +82,8 @@ The goal of this fork is to add support for all Apache Kafka messages.
 - [ ] `66`: AlterPartition
 - [ ] `57`: UpdateFeatures
 
-- [ ] `60`: DescribeCluster
-- [ ] `61`: DescribeProducers
+- [x] `60`: DescribeCluster
+- [x] `61`: DescribeProducers
 - [ ] `65`: DescribeTransactions
 - [x] `66`: ListTransactions
 - [x] `67`: AllocateProducerIds
