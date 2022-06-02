@@ -2,8 +2,6 @@ package messages
 
 import "github.com/radekg/kafka-protocol-go/schema"
 
-var fetchRequestSchemas = []schema.Schema{}
-
 const (
 	FieldNameFetchCurrentLeaderEpoch  = "current_leader_epoch"
 	FieldNameFetchForgottenTopicsData = "forgotten_topics_data"
@@ -24,7 +22,9 @@ const (
 	FieldNameFetchTopicName           = "topic"
 )
 
-func initFetch() {
+func initFetchRequests() []schema.Schema {
+
+	schemas := []schema.Schema{}
 
 	fetchDataSchemaV0 := schema.NewSchema("fetch_v0",
 		&schema.Mfield{Name: FieldNameFetchReplicaId, Ty: schema.TypeInt32},
@@ -40,9 +40,9 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV0)
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV0)
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV0)
+	schemas = append(schemas, fetchDataSchemaV0)
+	schemas = append(schemas, fetchDataSchemaV0)
+	schemas = append(schemas, fetchDataSchemaV0)
 
 	// Version 3 adds max_bytes
 
@@ -61,7 +61,7 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV3)
+	schemas = append(schemas, fetchDataSchemaV3)
 
 	// Version 4 adds isolation_level
 
@@ -81,7 +81,7 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV4)
+	schemas = append(schemas, fetchDataSchemaV4)
 
 	// Version 5 adds topic.partition.log_start_offset
 
@@ -102,8 +102,8 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV5)
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV5)
+	schemas = append(schemas, fetchDataSchemaV5)
+	schemas = append(schemas, fetchDataSchemaV5)
 
 	// Version 7 adds:
 	//  - session_id, session_epoch
@@ -132,8 +132,8 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV7)
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV7)
+	schemas = append(schemas, fetchDataSchemaV7)
+	schemas = append(schemas, fetchDataSchemaV7)
 
 	// Version 9 adds topic.partition.current_leader_epoch
 
@@ -161,8 +161,8 @@ func initFetch() {
 		)},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV9)
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV9)
+	schemas = append(schemas, fetchDataSchemaV9)
+	schemas = append(schemas, fetchDataSchemaV9)
 
 	// Version 11 adds rack_id
 
@@ -191,7 +191,7 @@ func initFetch() {
 		&schema.Mfield{Name: FieldNameFetchRackId, Ty: schema.TypeStr},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV11)
+	schemas = append(schemas, fetchDataSchemaV11)
 
 	// Version 12 adds tag buffers and changes:
 	//  - Str => CompactStr
@@ -225,6 +225,8 @@ func initFetch() {
 		&schema.SchemaTaggedFields{Name: FieldNameTagBuffer},
 	)
 
-	fetchRequestSchemas = append(fetchRequestSchemas, fetchDataSchemaV12)
+	schemas = append(schemas, fetchDataSchemaV12)
+
+	return schemas
 
 }

@@ -2,8 +2,6 @@ package messages
 
 import "github.com/radekg/kafka-protocol-go/schema"
 
-var produceRequestSchemas = []schema.Schema{}
-
 const (
 	FieldNameProduceAcks            = "acks"
 	FieldNameProducePartition       = "partition"
@@ -15,7 +13,9 @@ const (
 	FieldNameProduceTransactionalId = "transactional_id"
 )
 
-func initProduce() {
+func initProduceRequests() []schema.Schema {
+
+	schemas := []schema.Schema{}
 
 	produceRequestSchemaV0 := schema.NewSchema("produce_v0",
 		&schema.Mfield{Name: FieldNameProduceAcks, Ty: schema.TypeInt16},
@@ -29,9 +29,9 @@ func initProduce() {
 		)},
 	)
 
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV0)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV0)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV0)
+	schemas = append(schemas, produceRequestSchemaV0)
+	schemas = append(schemas, produceRequestSchemaV0)
+	schemas = append(schemas, produceRequestSchemaV0)
 
 	// Version 3 adds transactional_id:
 
@@ -48,12 +48,12 @@ func initProduce() {
 		)},
 	)
 
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
+	schemas = append(schemas, produceRequestSchemaV3)
 
 	// Version 9 adds tag buffers and changes:
 	//  - Str => CompactStr
@@ -76,6 +76,8 @@ func initProduce() {
 		&schema.SchemaTaggedFields{Name: FieldNameTagBuffer},
 	)
 
-	produceRequestSchemas = append(produceRequestSchemas, produceRequestSchemaV9)
+	schemas = append(schemas, produceRequestSchemaV9)
+
+	return schemas
 
 }
