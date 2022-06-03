@@ -30,7 +30,7 @@ func (f SchemaTaggedFields) Decode(pd decoder.DDef) (interface{}, error) {
 		if err != nil {
 			return nil, err
 		}
-		result[i].data, err = pd.GetVarintBytes()
+		result[i].data, err = pd.GetBytesNullable()
 		if err != nil {
 			return nil, err
 		}
@@ -47,7 +47,7 @@ func (f SchemaTaggedFields) Encode(pe encoder.EDef, value interface{}) error {
 	pe.PutVarint(int64(len(in)))
 	for _, rawTaggedField := range in {
 		pe.PutVarint(rawTaggedField.tag)
-		err := pe.PutVarintBytes(rawTaggedField.data)
+		err := pe.PutBytesNullable(rawTaggedField.data)
 		if err != nil {
 			return err
 		}

@@ -12,20 +12,43 @@ import (
 )
 
 var (
-	TypeBool               = &Bool{}
-	TypeBytes              = &Bytes{}
-	TypeCompactBytes       = &CompactBytes{}
-	TypeCompactStr         = &CompactStr{}
-	TypeCompactNullableStr = &CompactNullableStr{}
-	TypeInt8               = &Int8{}
-	TypeInt16              = &Int16{}
-	TypeInt32              = &Int32{}
-	TypeInt32Array         = &Int32Array{}
-	TypeInt64              = &Int64{}
-	TypeVarint             = &Varint{}
+	TypeBool = &Bool{}
+
+	// Bytes:
+	TypeBytes                = &Bytes{}
+	TypeBytesCompact         = &BytesCompact{}
+	TypeBytesCompactNullable = &BytesCompact{} // Compact nullable bytes
+	TypeBytesNullable        = &Bytes{}        // TODO: proper implementation
+
+	// Int types:
+	TypeInt8              = &Int8{}
+	TypeInt16             = &Int16{}
+	TypeInt32             = &Int32{}
+	TypeInt32Array        = &Int32Array{}
+	TypeInt32CompactArray = &Int32CompactArray{}
+	TypeInt64             = &Int64{}
+	TypeInt64Array        = &Int64Array{}
+	TypeInt64CompactArray = &Int64CompactArray{}
+	TypeVarint            = &Varint{}
+
+	// Uint types:
+	// TODO: add uint16
+	// TODO: add uint32
+
+	// Float types:
+	// TODO: add float64
+
+	// String types:
 	TypeStr                = &Str{}
-	TypeNullableStr        = &NullableStr{}
-	TypeUuid               = &Uuid{}
+	TypeStrCompact         = &StrCompact{}
+	TypeStrCompactArray    = &StrCompactArray{}
+	TypeStrCompactNullable = &StrCompactNullable{}
+	TypeStrNullable        = &StrNullable{}
+
+	// UUID types:
+	TypeUuid = &Uuid{}
+
+	// TODO: TypeInt32CompactArray
 )
 
 type EncoderDecoder interface {

@@ -13,14 +13,14 @@ type SaslAuthenticateRequestV2 struct {
 }
 
 func (r *SaslAuthenticateRequestV2) Encode(pe encoder.EDef) error {
-	if err := pe.PutCompactBytes(r.SaslAuthBytes); err != nil {
+	if err := pe.PutBytesCompact(r.SaslAuthBytes); err != nil {
 		return err
 	}
 	return r.TaggedFields.Encode(pe)
 }
 
 func (r *SaslAuthenticateRequestV2) Decode(pd decoder.DDef) (err error) {
-	if r.SaslAuthBytes, err = pd.GetCompactBytes(); err != nil {
+	if r.SaslAuthBytes, err = pd.GetBytesCompact(); err != nil {
 		return err
 	}
 	return r.TaggedFields.Decode(pd)
@@ -45,11 +45,11 @@ type SaslAuthenticateResponseV2 struct {
 func (r *SaslAuthenticateResponseV2) Encode(pe encoder.EDef) error {
 	pe.PutInt16(int16(r.Err))
 
-	if err := pe.PutCompactNullableString(r.ErrMsg); err != nil {
+	if err := pe.PutStringCompactNullable(r.ErrMsg); err != nil {
 		return err
 	}
 
-	if err := pe.PutCompactBytes(r.SaslAuthBytes); err != nil {
+	if err := pe.PutBytesCompact(r.SaslAuthBytes); err != nil {
 		return err
 	}
 	pe.PutInt64(r.SessionLifetimeMs)
@@ -64,10 +64,10 @@ func (r *SaslAuthenticateResponseV2) Decode(pd decoder.DDef) error {
 	}
 	r.Err = errors.KError(kerr)
 
-	if r.ErrMsg, err = pd.GetCompactNullableString(); err != nil {
+	if r.ErrMsg, err = pd.GetStringCompactNullable(); err != nil {
 		return err
 	}
-	if r.SaslAuthBytes, err = pd.GetCompactBytes(); err != nil {
+	if r.SaslAuthBytes, err = pd.GetBytesCompact(); err != nil {
 		return err
 	}
 	if r.SessionLifetimeMs, err = pd.GetInt64(); err != nil {
