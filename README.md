@@ -82,10 +82,10 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [ ] `48`: DescribeClientQuotas
 - [ ] `49`: AlterClientQuotas
 
-- [ ] `50`: DescribeUserScramCredentials
-- [ ] `51`: AlterUserScramCredentials
-- [ ] `66`: AlterPartition
-- [ ] `57`: UpdateFeatures
+- [x] `50`: DescribeUserScramCredentials
+- [x] `51`: AlterUserScramCredentials
+- [x] `56`: AlterPartition
+- [x] `57`: UpdateFeatures
 
 - [x] `60`: DescribeCluster
 - [x] `61`: DescribeProducers (has TODOs)
@@ -133,6 +133,10 @@ go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=Offse
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=FindCoordinatorRequest > messages/10_findcoordinator_requests.go
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=HeartbeatRequest > messages/12_heartbeat_requests.go
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ApiVersionsRequest > messages/18_apiversions_requests.go
+go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeUserScramCredentialsRequest > messages/50_describeuserscramcredentials_requests.go
+go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterUserScramCredentialsRequest > messages/51_alteruserscramcredentials_requests.go
+go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterPartitionRequest > messages/56_alterpartitions_requests.go
+go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=UpdateFeaturesRequest > messages/57_updatefeatures_requests.go
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeClusterRequest > messages/60_describecluster_requests.go
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeProducersRequest > messages/61_describeproducers_requests.go
 go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeTransactionsRequest > messages/65_describetransactions_requests.go
