@@ -33,7 +33,7 @@ func (d *typeDescriptor) String() string {
 }
 
 var typeMap = map[string]typeDef{
-	"bool":       typeDef{Name: "TypeBool", SupportsFlexible: false},
+	"bool":       typeDef{Name: "TypeBool"},
 	"bytes":      typeDef{Name: "TypeBytes", SupportsFlexible: true},
 	"int8":       typeDef{Name: "TypeInt8"},
 	"int16":      typeDef{Name: "TypeInt16"},
@@ -92,6 +92,12 @@ func GetType(t string, flexible, nullable bool) *typeDescriptor {
 		if !flexible && nullable {
 			return &typeDescriptor{
 				Name:             fmt.Sprintf("%sNullable", mt.Name),
+				SupportsFlexible: mt.SupportsFlexible,
+			}
+		}
+		if flexible && !nullable && mt.SupportsFlexible {
+			return &typeDescriptor{
+				Name:             fmt.Sprintf("%sCompact", mt.Name),
 				SupportsFlexible: mt.SupportsFlexible,
 			}
 		}

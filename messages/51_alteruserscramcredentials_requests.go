@@ -9,16 +9,16 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 		// Message: AlterUserScramCredentialsRequest, API Key: 51, Version: 0
 		schema.NewSchema("AlterUserScramCredentialsRequestv0", 
 			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestDeletions, Ty: schema.NewSchema("DeletionsV0",
-				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsMechanism, Ty: schema.TypeInt8},
 				&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsRequestDeletionsTags},
 			)},
 			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestUpsertions, Ty: schema.NewSchema("UpsertionsV0",
-				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsMechanism, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsIterations, Ty: schema.TypeInt32},
-				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsSalt, Ty: schema.TypeBytes},
-				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword, Ty: schema.TypeBytes},
+				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsSalt, Ty: schema.TypeBytesCompact},
+				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsRequestUpsertionsTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsRequestTags},
@@ -28,30 +28,30 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterUserScramCredentialsRequestUpsertionsSalt is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsSalt = "Salt"
+	// FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword = "SaltedPassword"
+	// FieldAlterUserScramCredentialsRequestDeletionsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsName = "Name"
+	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
+	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
+	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
+	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
+	// FieldAlterUserScramCredentialsRequestUpsertionsIterations is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsIterations = "Iterations"
 	// FieldAlterUserScramCredentialsRequestUpsertionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestUpsertionsTags = "Tags"
 	// FieldAlterUserScramCredentialsRequestDeletions is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestDeletions = "Deletions"
-	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
-	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
-	// FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword = "SaltedPassword"
-	// FieldAlterUserScramCredentialsRequestUpsertionsIterations is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsIterations = "Iterations"
-	// FieldAlterUserScramCredentialsRequestUpsertionsSalt is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsSalt = "Salt"
-	// FieldAlterUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestTags = "Tags"
-	// FieldAlterUserScramCredentialsRequestDeletionsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsName = "Name"
 	// FieldAlterUserScramCredentialsRequestDeletionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestDeletionsTags = "Tags"
-	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
-	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
+	// FieldAlterUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterUserScramCredentialsRequest.json

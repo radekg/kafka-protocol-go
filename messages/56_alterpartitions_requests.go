@@ -11,7 +11,7 @@ func init56AlterPartitionRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldAlterPartitionRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAlterPartitionRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.ArrayCompact{Name: FieldAlterPartitionRequestTopics, Ty: schema.NewSchema("TopicsV0",
-				&schema.Mfield{Name: FieldAlterPartitionRequestTopicsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldAlterPartitionRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.ArrayCompact{Name: FieldAlterPartitionRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
 					&schema.Mfield{Name: FieldAlterPartitionRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -29,7 +29,7 @@ func init56AlterPartitionRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldAlterPartitionRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAlterPartitionRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.ArrayCompact{Name: FieldAlterPartitionRequestTopics, Ty: schema.NewSchema("TopicsV1",
-				&schema.Mfield{Name: FieldAlterPartitionRequestTopicsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldAlterPartitionRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.ArrayCompact{Name: FieldAlterPartitionRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
 					&schema.Mfield{Name: FieldAlterPartitionRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -47,32 +47,32 @@ func init56AlterPartitionRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterPartitionRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopics = "Topics"
-	// FieldAlterPartitionRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
-	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
-	// FieldAlterPartitionRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTags = "Tags"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
-	// FieldAlterPartitionRequestBrokerId is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestBrokerId = "BrokerId"
-	// FieldAlterPartitionRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
-	// FieldAlterPartitionRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsName = "Name"
-	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
 	// FieldAlterPartitionRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsPartitionsTags = "Tags"
 	// FieldAlterPartitionRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsTags = "Tags"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
+	// FieldAlterPartitionRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopics = "Topics"
+	// FieldAlterPartitionRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsName = "Name"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
+	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
+	// FieldAlterPartitionRequestBrokerId is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestBrokerId = "BrokerId"
+	// FieldAlterPartitionRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
+	// FieldAlterPartitionRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
+	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldAlterPartitionRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionRequest.json

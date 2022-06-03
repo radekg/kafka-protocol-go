@@ -25,7 +25,7 @@ func init10FindCoordinatorRequest() []schema.Schema {
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 3
 		schema.NewSchema("FindCoordinatorRequestv3", 
-			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStr},
+			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKeyType, Ty: schema.TypeInt8},
 			&schema.SchemaTaggedFields{Name: FieldFindCoordinatorRequestTags},
 		),

@@ -9,7 +9,7 @@ func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 		// Message: DescribeUserScramCredentialsRequest, API Key: 50, Version: 0
 		schema.NewSchema("DescribeUserScramCredentialsRequestv0", 
 			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsRequestUsers, Ty: schema.NewSchema("UsersV0",
-				&schema.Mfield{Name: FieldDescribeUserScramCredentialsRequestUsersName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldDescribeUserScramCredentialsRequestUsersName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestUsersTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestTags},
@@ -19,14 +19,14 @@ func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeUserScramCredentialsRequestUsers is a field name that can be used to resolve the correct struct field.
+	FieldDescribeUserScramCredentialsRequestUsers = "Users"
 	// FieldDescribeUserScramCredentialsRequestUsersName is a field name that can be used to resolve the correct struct field.
 	FieldDescribeUserScramCredentialsRequestUsersName = "Name"
 	// FieldDescribeUserScramCredentialsRequestUsersTags is a field name that can be used to resolve the correct struct field.
 	FieldDescribeUserScramCredentialsRequestUsersTags = "Tags"
 	// FieldDescribeUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDescribeUserScramCredentialsRequestTags = "Tags"
-	// FieldDescribeUserScramCredentialsRequestUsers is a field name that can be used to resolve the correct struct field.
-	FieldDescribeUserScramCredentialsRequestUsers = "Users"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeUserScramCredentialsRequest.json

@@ -9,7 +9,7 @@ func init61DescribeProducersRequest() []schema.Schema {
 		// Message: DescribeProducersRequest, API Key: 61, Version: 0
 		schema.NewSchema("DescribeProducersRequestv0", 
 			&schema.ArrayCompact{Name: FieldDescribeProducersRequestTopics, Ty: schema.NewSchema("TopicsV0",
-				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldDescribeProducersRequestTopicsTags},
 			)},
@@ -20,6 +20,8 @@ func init61DescribeProducersRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeProducersRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldDescribeProducersRequestTopicsName = "Name"
 	// FieldDescribeProducersRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
 	FieldDescribeProducersRequestTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldDescribeProducersRequestTopicsTags is a field name that can be used to resolve the correct struct field.
@@ -28,8 +30,6 @@ const (
 	FieldDescribeProducersRequestTags = "Tags"
 	// FieldDescribeProducersRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldDescribeProducersRequestTopics = "Topics"
-	// FieldDescribeProducersRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldDescribeProducersRequestTopicsName = "Name"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeProducersRequest.json

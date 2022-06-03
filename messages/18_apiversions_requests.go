@@ -14,8 +14,8 @@ func init18ApiVersionsRequest() []schema.Schema {
 		schema.NewSchema("ApiVersionsRequestv2"),
 		// Message: ApiVersionsRequest, API Key: 18, Version: 3
 		schema.NewSchema("ApiVersionsRequestv3", 
-			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareName, Ty: schema.TypeStr},
-			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareVersion, Ty: schema.TypeStr},
+			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareName, Ty: schema.TypeStrCompact},
+			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareVersion, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsRequestTags},
 		),
 
@@ -23,12 +23,12 @@ func init18ApiVersionsRequest() []schema.Schema {
 }
 
 const (
+	// FieldApiVersionsRequestClientSoftwareName is a field name that can be used to resolve the correct struct field.
+	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 	// FieldApiVersionsRequestClientSoftwareVersion is a field name that can be used to resolve the correct struct field.
 	FieldApiVersionsRequestClientSoftwareVersion = "ClientSoftwareVersion"
 	// FieldApiVersionsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldApiVersionsRequestTags = "Tags"
-	// FieldApiVersionsRequestClientSoftwareName is a field name that can be used to resolve the correct struct field.
-	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ApiVersionsRequest.json

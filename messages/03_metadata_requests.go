@@ -79,7 +79,7 @@ func init3MetadataRequest() []schema.Schema {
 		// Message: MetadataRequest, API Key: 3, Version: 9
 		schema.NewSchema("MetadataRequestv9", 
 			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV9",
-				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -129,10 +129,6 @@ func init3MetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldMetadataRequestAllowAutoTopicCreation is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
-	// FieldMetadataRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 	// FieldMetadataRequestIncludeTopicAuthorizedOperations is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
 	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
@@ -145,6 +141,10 @@ const (
 	FieldMetadataRequestTopics = "Topics"
 	// FieldMetadataRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestTopicsName = "Name"
+	// FieldMetadataRequestAllowAutoTopicCreation is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
+	// FieldMetadataRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataRequest.json

@@ -10,7 +10,7 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 		schema.NewSchema("UpdateFeaturesRequestv0", 
 			&schema.Mfield{Name: FieldUpdateFeaturesRequesttimeoutMs, Ty: schema.TypeInt32},
 			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("FeatureUpdatesV0",
-				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesFeature, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesFeature, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade, Ty: schema.TypeBool},
 				&schema.SchemaTaggedFields{Name: FieldUpdateFeaturesRequestFeatureUpdatesTags},
@@ -22,10 +22,6 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
-	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
 	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
 	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is a field name that can be used to resolve the correct struct field.
@@ -36,6 +32,10 @@ const (
 	FieldUpdateFeaturesRequestFeatureUpdatesTags = "Tags"
 	// FieldUpdateFeaturesRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequestTags = "Tags"
+	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
+	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateFeaturesRequest.json
