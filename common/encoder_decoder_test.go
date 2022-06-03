@@ -204,7 +204,7 @@ func TestEncodeDecodeUUID(t *testing.T) {
 }
 
 func TestEncodeDecodeCompactArray(t *testing.T) {
-	compactArray := &schema.CompactArray{Name: "strings", Ty: schema.TypeStr}
+	compactArray := &schema.ArrayCompact{Name: "strings", Ty: schema.TypeStr}
 	tt := []struct {
 		name string
 		lens []int
@@ -262,7 +262,7 @@ func TestEncodeDecodeCompactArray(t *testing.T) {
 }
 
 func TestEncodeDecodeCompactNullableArray(t *testing.T) {
-	array := &schema.CompactNullableArray{Name: "strings", Ty: schema.TypeNullableStr}
+	array := &schema.ArrayCompactNullable{Name: "strings", Ty: schema.TypeStrNullable}
 	tt := []struct {
 		name string
 		lens []int
@@ -479,7 +479,7 @@ type CompactBytesHolder struct {
 
 func (r *CompactBytesHolder) Encode(pe encoder.EDef) (err error) {
 	for _, value := range r.values {
-		err = pe.PutCompactBytes(value)
+		err = pe.PutBytesCompact(value)
 		if err != nil {
 			return err
 		}
@@ -491,7 +491,7 @@ func (r *CompactBytesHolder) Decode(pd decoder.DDef) (err error) {
 	r.values = make([][]byte, 0)
 	var value []byte
 	for ok := true; ok; ok = pd.Remaining() > 0 {
-		if value, err = pd.GetCompactBytes(); err != nil {
+		if value, err = pd.GetBytesCompact(); err != nil {
 			return err
 		}
 		r.values = append(r.values, value)
@@ -508,7 +508,7 @@ type CompactStringsHolder struct {
 
 func (r *CompactStringsHolder) Encode(pe encoder.EDef) (err error) {
 	for _, value := range r.values {
-		err = pe.PutCompactString(value)
+		err = pe.PutStringCompact(value)
 		if err != nil {
 			return err
 		}
@@ -520,7 +520,7 @@ func (r *CompactStringsHolder) Decode(pd decoder.DDef) (err error) {
 	r.values = make([]string, 0)
 	var value string
 	for ok := true; ok; ok = pd.Remaining() > 0 {
-		if value, err = pd.GetCompactString(); err != nil {
+		if value, err = pd.GetStringCompact(); err != nil {
 			return err
 		}
 		r.values = append(r.values, value)
@@ -537,7 +537,7 @@ type CompactNullableStringsHolder struct {
 
 func (r *CompactNullableStringsHolder) Encode(pe encoder.EDef) (err error) {
 	for _, value := range r.values {
-		err = pe.PutCompactNullableString(value)
+		err = pe.PutStringCompactNullable(value)
 		if err != nil {
 			return err
 		}
@@ -549,7 +549,7 @@ func (r *CompactNullableStringsHolder) Decode(pd decoder.DDef) (err error) {
 	r.values = make([]*string, 0)
 	var value *string
 	for ok := true; ok; ok = pd.Remaining() > 0 {
-		if value, err = pd.GetCompactNullableString(); err != nil {
+		if value, err = pd.GetStringCompactNullable(); err != nil {
 			return err
 		}
 		r.values = append(r.values, value)
@@ -562,7 +562,7 @@ func (r *CompactNullableStringsHolder) Decode(pd decoder.DDef) (err error) {
 
 type CompactArrayHolder struct {
 	values []interface{}
-	array  *schema.CompactArray
+	array  *schema.ArrayCompact
 }
 
 func (r *CompactArrayHolder) Encode(pe encoder.EDef) (err error) {
@@ -588,7 +588,7 @@ func (r *CompactArrayHolder) Decode(pd decoder.DDef) (err error) {
 
 type CompactNullableArrayHolder struct {
 	values []interface{}
-	array  *schema.CompactNullableArray
+	array  *schema.ArrayCompactNullable
 }
 
 func (r *CompactNullableArrayHolder) Encode(pe encoder.EDef) (err error) {

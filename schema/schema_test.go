@@ -16,9 +16,9 @@ func TestEncodeDecodeSchema(t *testing.T) {
 		&Mfield{Name: "fieldInt32", Ty: TypeInt32},
 		&Mfield{Name: "fieldBool", Ty: TypeBool},
 		&Mfield{Name: "fieldStr", Ty: TypeStr},
-		&Mfield{Name: "fieldNullableStr", Ty: TypeNullableStr},
-		&Mfield{Name: "fieldCompactStr", Ty: TypeCompactStr},
-		&Mfield{Name: "fieldCompactNullableStr", Ty: TypeCompactNullableStr},
+		&Mfield{Name: "fieldNullableStr", Ty: TypeStrNullable},
+		&Mfield{Name: "fieldCompactStr", Ty: TypeStrCompact},
+		&Mfield{Name: "fieldCompactNullableStr", Ty: TypeStrCompactNullable},
 		&Array{Name: "arrayOfSomeSchema", Ty: someSchema},
 		&Mfield{Name: "fieldUuid", Ty: TypeUuid},
 	)
@@ -118,8 +118,8 @@ func TestEncodeDecodeSchema(t *testing.T) {
 
 	fieldNullStrSchema := schema.GetFieldsByName()["fieldNullableStr"].GetDef().GetSchema()
 
-	if fieldNullStrSchema != TypeNullableStr {
-		t.Fatalf("Got bad schema for TypeNullableStr field")
+	if fieldNullStrSchema != TypeStrNullable {
+		t.Fatalf("Got bad schema for TypeStrNullable field")
 	}
 
 	val = resultData.Get("fieldCompactStr")
@@ -130,7 +130,7 @@ func TestEncodeDecodeSchema(t *testing.T) {
 
 	fieldCompactStrSchema := schema.GetFieldsByName()["fieldCompactStr"].GetDef().GetSchema()
 
-	if fieldCompactStrSchema != TypeCompactStr {
+	if fieldCompactStrSchema != TypeStrCompact {
 		t.Fatalf("Got bad schema for fieldCompactStr field")
 	}
 
@@ -142,7 +142,7 @@ func TestEncodeDecodeSchema(t *testing.T) {
 
 	fieldCompactNullableStrSchema := schema.GetFieldsByName()["fieldCompactNullableStr"].GetDef().GetSchema()
 
-	if fieldCompactNullableStrSchema != TypeCompactNullableStr {
+	if fieldCompactNullableStrSchema != TypeStrCompactNullable {
 		t.Fatalf("Got bad schema for fieldCompactNullableStr field")
 	}
 

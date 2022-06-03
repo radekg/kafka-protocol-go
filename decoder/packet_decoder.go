@@ -6,33 +6,43 @@ import "github.com/google/uuid"
 // Types implementing Decoder only need to worry about calling methods like GetString,
 // not about how a string is represented in Kafka.
 type DDef interface {
-	// Primitives
+
+	// Array lengths
+	GetArrayLength() (int, error)
+	GetArrayCompactLength() (int, error)
+	GetArrayCompactNullableLength() (int, error)
+
+	// Booleans
+	GetBool() (bool, error)
+
+	// Bytes
+	GetBytes() ([]byte, error)
+	GetBytesCompact() ([]byte, error)
+	GetBytesNullable() ([]byte, error)
+
+	// Integers and their arrays
 	GetInt8() (int8, error)
 	GetInt16() (int16, error)
 	GetInt32() (int32, error)
-	GetInt64() (int64, error)
-	GetVarint() (int64, error)
-	GetArrayLength() (int, error)
-	GetBool() (bool, error)
-
-	GetBytes() ([]byte, error)
-	GetUUID() (uuid.UUID, error)
-	GetString() (string, error)
-	GetNullableString() (*string, error)
 	GetInt32Array() ([]int32, error)
+	GetInt32CompactArray() ([]int32, error)
+	GetInt64() (int64, error)
 	GetInt64Array() ([]int64, error)
+	GetInt64CompactArray() ([]int64, error)
+	GetVarint() (int64, error)
+
+	// Strings and their arrays
+	GetString() (string, error)
 	GetStringArray() ([]string, error)
+	GetStringCompact() (string, error)
+	GetStringCompactArray() ([]string, error)
+	GetStringCompactNullable() (*string, error)
+	GetStringNullable() (*string, error)
 
-	GetVarintBytes() ([]byte, error)
+	// UUIDs
+	GetUUID() (uuid.UUID, error)
 
-	GetCompactBytes() ([]byte, error)
-	GetCompactString() (string, error)
-	GetCompactNullableString() (*string, error)
-	GetCompactArrayLength() (int, error)
-	GetCompactNullableArrayLength() (int, error)
-
+	// Other utility
 	Offset() int
-
-	// Subsets
 	Remaining() int
 }

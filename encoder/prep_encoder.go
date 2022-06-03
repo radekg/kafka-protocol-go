@@ -66,7 +66,7 @@ func (pe *prepEncoder) PutUUID(in uuid.UUID) error {
 	return nil
 }
 
-func (pe *prepEncoder) PutVarintBytes(in []byte) error {
+func (pe *prepEncoder) PutBytesNullable(in []byte) error {
 	if in == nil {
 		pe.PutVarint(-1)
 		return nil
@@ -83,7 +83,7 @@ func (pe *prepEncoder) PutRawBytes(in []byte) error {
 	return nil
 }
 
-func (pe *prepEncoder) PutCompactBytes(in []byte) error {
+func (pe *prepEncoder) PutBytesCompact(in []byte) error {
 	pe.PutVarint(int64(len(in) + 1))
 	if len(in) > math.MaxInt16 {
 		return errors.PacketEncodingError{fmt.Sprintf("compact bytes too long (%d)", len(in))}
@@ -92,7 +92,7 @@ func (pe *prepEncoder) PutCompactBytes(in []byte) error {
 	return nil
 }
 
-func (pe *prepEncoder) PutNullableString(in *string) error {
+func (pe *prepEncoder) PutStringNullable(in *string) error {
 	if in == nil {
 		pe.length += 2
 		return nil
@@ -124,11 +124,40 @@ func (pe *prepEncoder) PutStringArray(in []string) error {
 	return nil
 }
 
+func (pe *prepEncoder) PutStringCompactArray(in []string) error {
+	if in == nil {
+		return pe.PutArrayLength(-1)
+	}
+	err := pe.PutArrayCompactLength(len(in))
+	if err != nil {
+		return err
+	}
+	for _, str := range in {
+		if err := pe.PutStringCompact(str); err != nil {
+			return err
+		}
+	}
+
+	return nil
+}
+
 func (pe *prepEncoder) PutInt32Array(in []int32) error {
 	if in == nil {
 		return pe.PutArrayLength(-1)
 	}
 	err := pe.PutArrayLength(len(in))
+	if err != nil {
+		return err
+	}
+	pe.length += 4 * len(in)
+	return nil
+}
+
+func (pe *prepEncoder) PutInt32CompactArray(in []int32) error {
+	if in == nil {
+		return pe.PutArrayLength(-1)
+	}
+	err := pe.PutArrayCompactLength(len(in))
 	if err != nil {
 		return err
 	}
@@ -148,11 +177,23 @@ func (pe *prepEncoder) PutInt64Array(in []int64) error {
 	return nil
 }
 
+func (pe *prepEncoder) PutInt64CompactArray(in []int64) error {
+	if in == nil {
+		return pe.PutArrayLength(-1)
+	}
+	err := pe.PutArrayCompactLength(len(in))
+	if err != nil {
+		return err
+	}
+	pe.length += 4 * len(in)
+	return nil
+}
+
 func (pe *prepEncoder) Offset() int {
 	return pe.length
 }
 
-func (pe *prepEncoder) PutCompactString(in string) error {
+func (pe *prepEncoder) PutStringCompact(in string) error {
 	pe.PutVarint(int64(len(in) + 1))
 	if len(in) > math.MaxInt16 {
 		return errors.PacketEncodingError{fmt.Sprintf("string too long (%d)", len(in))}
@@ -161,34 +202,34 @@ func (pe *prepEncoder) PutCompactString(in string) error {
 	return nil
 }
 
-func (pe *prepEncoder) PutCompactNullableString(in *string) error {
+func (pe *prepEncoder) PutStringCompactNullable(in *string) error {
 	if in == nil {
 		// A null string is represented with a length of 0.
 		pe.length += 1 // pe.putVarint(0) is always 1
 		return nil
 	}
-	return pe.PutCompactString(*in)
+	return pe.PutStringCompact(*in)
 }
 
-func (pe *prepEncoder) PutCompactArrayLength(in int) error {
+func (pe *prepEncoder) PutArrayCompactLength(in int) error {
 	switch {
 	case in > math.MaxInt16:
-		return errors.PacketEncodingError{fmt.Sprintf("comact array too long (%d)", in)}
+		return errors.PacketEncodingError{fmt.Sprintf("compact array too long (%d)", in)}
 	case in == -1:
-		return errors.PacketEncodingError{fmt.Sprintf("comact array is null (%d)", in)}
+		return errors.PacketEncodingError{fmt.Sprintf("compact array is null (%d)", in)}
 	case in < -1:
-		return errors.PacketEncodingError{fmt.Sprintf("comact array invalid length (%d)", in)}
+		return errors.PacketEncodingError{fmt.Sprintf("compact array invalid length (%d)", in)}
 	}
 	pe.PutVarint(int64(in + 1))
 	return nil
 }
 
-func (pe *prepEncoder) PutCompactNullableArrayLength(in int) error {
+func (pe *prepEncoder) PutArrayCompactNullableLength(in int) error {
 	switch {
 	case in > math.MaxInt16:
-		return errors.PacketEncodingError{fmt.Sprintf("comact array too long (%d)", in)}
+		return errors.PacketEncodingError{fmt.Sprintf("compact array too long (%d)", in)}
 	case in < -1:
-		return errors.PacketEncodingError{fmt.Sprintf("comact array invalid length (%d)", in)}
+		return errors.PacketEncodingError{fmt.Sprintf("compact array invalid length (%d)", in)}
 	}
 	pe.PutVarint(int64(in + 1))
 	return nil

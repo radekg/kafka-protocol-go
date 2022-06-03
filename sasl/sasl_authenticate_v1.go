@@ -42,7 +42,7 @@ type SaslAuthenticateResponseV1 struct {
 func (r *SaslAuthenticateResponseV1) Encode(pe encoder.EDef) error {
 	pe.PutInt16(int16(r.Err))
 
-	if err := pe.PutNullableString(r.ErrMsg); err != nil {
+	if err := pe.PutStringNullable(r.ErrMsg); err != nil {
 		return err
 	}
 
@@ -61,7 +61,7 @@ func (r *SaslAuthenticateResponseV1) Decode(pd decoder.DDef) error {
 	}
 	r.Err = errors.KError(kerr)
 
-	if r.ErrMsg, err = pd.GetNullableString(); err != nil {
+	if r.ErrMsg, err = pd.GetStringNullable(); err != nil {
 		return err
 	}
 	if r.SaslAuthBytes, err = pd.GetBytes(); err != nil {

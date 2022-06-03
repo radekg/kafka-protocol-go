@@ -150,7 +150,7 @@ func (rd *realDecoder) GetBytes() ([]byte, error) {
 	return rd.GetRawBytes(int(tmp))
 }
 
-func (rd *realDecoder) GetVarintBytes() ([]byte, error) {
+func (rd *realDecoder) GetBytesNullable() ([]byte, error) {
 	tmp, err := rd.GetVarint()
 	if err != nil {
 		return nil, err
@@ -183,7 +183,7 @@ func (rd *realDecoder) GetUUID() (uuid.UUID, error) {
 	return uuid.FromBytes(r)
 }
 
-func (rd *realDecoder) GetCompactBytes() ([]byte, error) {
+func (rd *realDecoder) GetBytesCompact() ([]byte, error) {
 
 	n, err := rd.GetCompactLength()
 	if err != nil || n == 0 {
@@ -224,7 +224,7 @@ func (rd *realDecoder) GetString() (string, error) {
 	return tmpStr, nil
 }
 
-func (rd *realDecoder) GetNullableString() (*string, error) {
+func (rd *realDecoder) GetStringNullable() (*string, error) {
 	n, err := rd.GetStringLength()
 	if err != nil || n == -1 {
 		return nil, err
@@ -236,6 +236,33 @@ func (rd *realDecoder) GetNullableString() (*string, error) {
 }
 
 func (rd *realDecoder) GetInt32Array() ([]int32, error) {
+	n, err := rd.GetArrayLength()
+
+	if err != nil {
+		return nil, err
+	}
+	if n == -1 {
+		return nil, nil
+	}
+	if n == 0 {
+		return []int32{}, nil
+	}
+	if n < -1 {
+		return nil, errInvalidArrayLength
+	}
+	if rd.Remaining() < 4*n {
+		rd.off = len(rd.raw)
+		return nil, errors.ErrInsufficientData
+	}
+	ret := make([]int32, n)
+	for i := range ret {
+		ret[i] = int32(binary.BigEndian.Uint32(rd.raw[rd.off:]))
+		rd.off += 4
+	}
+	return ret, nil
+}
+
+func (rd *realDecoder) GetInt32CompactArray() ([]int32, error) {
 	n, err := rd.GetArrayLength()
 
 	if err != nil {
@@ -289,6 +316,33 @@ func (rd *realDecoder) GetInt64Array() ([]int64, error) {
 	return ret, nil
 }
 
+func (rd *realDecoder) GetInt64CompactArray() ([]int64, error) {
+	n, err := rd.GetArrayCompactLength()
+
+	if err != nil {
+		return nil, err
+	}
+	if n == -1 {
+		return nil, nil
+	}
+	if n == 0 {
+		return []int64{}, nil
+	}
+	if n < -1 {
+		return nil, errInvalidArrayLength
+	}
+	if rd.Remaining() < 8*n {
+		rd.off = len(rd.raw)
+		return nil, errors.ErrInsufficientData
+	}
+	ret := make([]int64, n)
+	for i := range ret {
+		ret[i] = int64(binary.BigEndian.Uint64(rd.raw[rd.off:]))
+		rd.off += 8
+	}
+	return ret, nil
+}
+
 func (rd *realDecoder) GetStringArray() ([]string, error) {
 	n, err := rd.GetArrayLength()
 
@@ -307,6 +361,33 @@ func (rd *realDecoder) GetStringArray() ([]string, error) {
 	ret := make([]string, n)
 	for i := range ret {
 		str, err := rd.GetString()
+		if err != nil {
+			return nil, err
+		}
+
+		ret[i] = str
+	}
+	return ret, nil
+}
+
+func (rd *realDecoder) GetStringCompactArray() ([]string, error) {
+	n, err := rd.GetArrayCompactLength()
+
+	if err != nil {
+		return nil, err
+	}
+
+	if n == -1 {
+		return nil, nil
+	}
+
+	if n < -1 {
+		return nil, errInvalidArrayLength
+	}
+
+	ret := make([]string, n)
+	for i := range ret {
+		str, err := rd.GetStringCompact()
 		if err != nil {
 			return nil, err
 		}
@@ -355,7 +436,7 @@ func (rd *realDecoder) GetCompactNullableLength() (int, error) {
 	return n, nil
 }
 
-func (rd *realDecoder) GetCompactString() (string, error) {
+func (rd *realDecoder) GetStringCompact() (string, error) {
 
 	n, err := rd.GetCompactLength()
 	if err != nil || n == 0 {
@@ -366,7 +447,7 @@ func (rd *realDecoder) GetCompactString() (string, error) {
 	return tmpStr, nil
 }
 
-func (rd *realDecoder) GetCompactNullableString() (*string, error) {
+func (rd *realDecoder) GetStringCompactNullable() (*string, error) {
 
 	n, err := rd.GetCompactNullableLength()
 	if err != nil || n < 0 {
@@ -377,11 +458,11 @@ func (rd *realDecoder) GetCompactNullableString() (*string, error) {
 	return &tmpStr, nil
 }
 
-func (rd *realDecoder) GetCompactArrayLength() (int, error) {
+func (rd *realDecoder) GetArrayCompactLength() (int, error) {
 	return rd.GetCompactLength()
 }
 
-func (rd *realDecoder) GetCompactNullableArrayLength() (int, error) {
+func (rd *realDecoder) GetArrayCompactNullableLength() (int, error) {
 	return rd.GetCompactNullableLength()
 }
 

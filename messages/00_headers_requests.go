@@ -31,14 +31,14 @@ func initHeaders() []schema.Schema {
 		&schema.Mfield{Name: FieldNameHeaderApiKey, Ty: schema.TypeInt16},
 		&schema.Mfield{Name: FieldNameHeaderApiVersion, Ty: schema.TypeInt16},
 		&schema.Mfield{Name: FieldNameHeaderCorrelationId, Ty: schema.TypeInt32},
-		&schema.Mfield{Name: FieldNameHeaderClientId, Ty: schema.TypeNullableStr}))
+		&schema.Mfield{Name: FieldNameHeaderClientId, Ty: schema.TypeStrNullable}))
 
 	schemas = append(schemas, schema.NewSchema("header_v2",
 		&schema.Mfield{Name: FieldNameHeaderMessageLength, Ty: schema.TypeInt32},
 		&schema.Mfield{Name: FieldNameHeaderApiKey, Ty: schema.TypeInt16},
 		&schema.Mfield{Name: FieldNameHeaderApiVersion, Ty: schema.TypeInt16},
 		&schema.Mfield{Name: FieldNameHeaderCorrelationId, Ty: schema.TypeInt32},
-		&schema.Mfield{Name: FieldNameHeaderClientId, Ty: schema.TypeNullableStr},
+		&schema.Mfield{Name: FieldNameHeaderClientId, Ty: schema.TypeStrNullable},
 		&schema.SchemaTaggedFields{Name: FieldNameTagBuffer}))
 
 	return schemas
