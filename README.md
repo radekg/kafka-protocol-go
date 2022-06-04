@@ -23,10 +23,6 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 
 ☑ Headers
 
-### General notes
-
-- Compact arrays have been added in Apache Kafka® 2.4, hence it will be crucial to test with 2.3 and 2.4 client to get the differences between arrays and compact arrays right.
-
 | Requests                             | Responses                            |
 | ------------------------------------ | ------------------------------------ |
 | ☑ `0`: Produce                       | ☑ `0`: Produce                       |
@@ -89,7 +85,13 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 | ☑ `66`: ListTransactions             | ☑ `66`: ListTransactions             |
 | ☑ `67`: AllocateProducerIds          | ☑ `67`: AllocateProducerIds          |
 
-## License 
+### General notes
+
+- Compact arrays have been added in Apache Kafka® 2.4.
+- Flexible messages support tag buffers. Flexibility flag is declared per message, any structure schema type includes a tag buffer.
+- Strings and arrays for flexible messages by default use compact versions of their respective types; reference: https://github.com/apache/kafka/blob/3.2.0/generator/src/main/java/org/apache/kafka/message/SchemaGenerator.java#L224-L322.
+
+## License
 
 Apache 2.0.
 
@@ -120,5 +122,5 @@ cd -
 3. Run the generator command:
 
 ```sh
-make generate-request-types
+make generate-request-types generate-response-types
 ```
