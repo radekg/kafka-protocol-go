@@ -127,30 +127,30 @@ func init2ListOffsetsResponse() []schema.Schema {
 }
 
 const (
-	// FieldListOffsetsResponseTopicsPartitionsTags is: The tagged fields.
-	FieldListOffsetsResponseTopicsPartitionsTags = "Tags"
-	// FieldListOffsetsResponseTopicsTags is: The tagged fields.
-	FieldListOffsetsResponseTopicsTags = "Tags"
-	// FieldListOffsetsResponseTopicsName is: The topic name
-	FieldListOffsetsResponseTopicsName = "Name"
-	// FieldListOffsetsResponseTopicsPartitionsOffset is: The returned offset.
-	FieldListOffsetsResponseTopicsPartitionsOffset = "Offset"
+	// FieldListOffsetsResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldListOffsetsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldListOffsetsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListOffsetsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldListOffsetsResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
-	FieldListOffsetsResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldListOffsetsResponseTopicsPartitionsTimestamp is: The timestamp associated with the returned offset.
-	FieldListOffsetsResponseTopicsPartitionsTimestamp = "Timestamp"
 	// FieldListOffsetsResponseTopicsPartitionsLeaderEpoch is:
 	FieldListOffsetsResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldListOffsetsResponseTopicsTags is: The tagged fields.
+	FieldListOffsetsResponseTopicsTags = "Tags"
 	// FieldListOffsetsResponseTags is: The tagged fields.
 	FieldListOffsetsResponseTags = "Tags"
 	// FieldListOffsetsResponseTopics is: Each topic in the response.
 	FieldListOffsetsResponseTopics = "Topics"
+	// FieldListOffsetsResponseTopicsName is: The topic name
+	FieldListOffsetsResponseTopicsName = "Name"
 	// FieldListOffsetsResponseTopicsPartitions is: Each partition in the response.
 	FieldListOffsetsResponseTopicsPartitions = "Partitions"
-	// FieldListOffsetsResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldListOffsetsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldListOffsetsResponseTopicsPartitionsTags is: The tagged fields.
+	FieldListOffsetsResponseTopicsPartitionsTags = "Tags"
+	// FieldListOffsetsResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
+	FieldListOffsetsResponseTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldListOffsetsResponseTopicsPartitionsTimestamp is: The timestamp associated with the returned offset.
+	FieldListOffsetsResponseTopicsPartitionsTimestamp = "Timestamp"
+	// FieldListOffsetsResponseTopicsPartitionsOffset is: The returned offset.
+	FieldListOffsetsResponseTopicsPartitionsOffset = "Offset"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListOffsetsResponse.json

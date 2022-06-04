@@ -41,18 +41,10 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 }
 
 const (
-	// FieldWriteTxnMarkersResponseMarkersTopics is: The results by topic.
-	FieldWriteTxnMarkersResponseMarkersTopics = "Topics"
 	// FieldWriteTxnMarkersResponseMarkersTopicsName is: The topic name.
 	FieldWriteTxnMarkersResponseMarkersTopicsName = "Name"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitions is: The results by partition.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitions = "Partitions"
-	// FieldWriteTxnMarkersResponseMarkersTags is: The tagged fields.
-	FieldWriteTxnMarkersResponseMarkersTags = "Tags"
-	// FieldWriteTxnMarkersResponseMarkersProducerId is: The current producer ID in use by the transactional ID.
-	FieldWriteTxnMarkersResponseMarkersProducerId = "ProducerId"
-	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex is: The partition index.
-	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode = "ErrorCode"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags is: The tagged fields.
@@ -63,6 +55,14 @@ const (
 	FieldWriteTxnMarkersResponseTags = "Tags"
 	// FieldWriteTxnMarkersResponseMarkers is: The results for writing makers.
 	FieldWriteTxnMarkersResponseMarkers = "Markers"
+	// FieldWriteTxnMarkersResponseMarkersProducerId is: The current producer ID in use by the transactional ID.
+	FieldWriteTxnMarkersResponseMarkersProducerId = "ProducerId"
+	// FieldWriteTxnMarkersResponseMarkersTopics is: The results by topic.
+	FieldWriteTxnMarkersResponseMarkersTopics = "Topics"
+	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex is: The partition index.
+	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldWriteTxnMarkersResponseMarkersTags is: The tagged fields.
+	FieldWriteTxnMarkersResponseMarkersTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/WriteTxnMarkersResponse.json

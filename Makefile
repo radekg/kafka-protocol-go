@@ -95,4 +95,33 @@ generate-response-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=WriteTxnMarkersResponse > $(CURRENT_DIR)messages/27_writetxnmarkers_responses.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=TxnOffsetCommitResponse > $(CURRENT_DIR)messages/28_txnoffsetcommit_responses.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeAclsResponse > $(CURRENT_DIR)messages/29_describeacls_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateAclsResponse > $(CURRENT_DIR)messages/30_createacls_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteAclsResponse > $(CURRENT_DIR)messages/31_deleteacls_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeConfigsResponse > $(CURRENT_DIR)messages/32_describeconfigs_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterConfigsResponse > $(CURRENT_DIR)messages/33_alterconfigs_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterReplicaLogDirsResponse > $(CURRENT_DIR)messages/34_alterreplicalogdirs_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeLogDirsResponse > $(CURRENT_DIR)messages/35_describelogdirs_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=SaslAuthenticateResponse > $(CURRENT_DIR)messages/36_saslauthenticate_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreatePartitionsResponse > $(CURRENT_DIR)messages/37_createpartitions_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateDelegationTokenResponse > $(CURRENT_DIR)messages/38_createdelegationtoken_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=RenewDelegationTokenResponse > $(CURRENT_DIR)messages/39_renewdelegationtoken_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ExpireDelegationTokenResponse > $(CURRENT_DIR)messages/40_expiredelegationtoken_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeDelegationTokenResponse > $(CURRENT_DIR)messages/41_describedelegationtoken_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteGroupsResponse > $(CURRENT_DIR)messages/42_deletegroups_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ElectLeadersResponse > $(CURRENT_DIR)messages/43_electleaders_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=IncrementalAlterConfigsResponse > $(CURRENT_DIR)messages/44_incrementalalterconfigs_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterPartitionReassignmentsResponse > $(CURRENT_DIR)messages/45_alterpartitionreassignments_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListPartitionReassignmentsResponse > $(CURRENT_DIR)messages/46_listpartitionreassignments_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetDeleteResponse > $(CURRENT_DIR)messages/47_offsetdelete_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeClientQuotasResponse > $(CURRENT_DIR)messages/48_describeclientquotas_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterClientQuotasResponse > $(CURRENT_DIR)messages/49_alterclientquotas_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeUserScramCredentialsResponse > $(CURRENT_DIR)messages/50_describeuserscramcredentials_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterUserScramCredentialsResponse > $(CURRENT_DIR)messages/51_alteruserscramcredentials_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterPartitionResponse > $(CURRENT_DIR)messages/56_alterpartitions_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=UpdateFeaturesResponse > $(CURRENT_DIR)messages/57_updatefeatures_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeClusterResponse > $(CURRENT_DIR)messages/60_describecluster_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeProducersResponse > $(CURRENT_DIR)messages/61_describeproducers_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeTransactionsResponse > $(CURRENT_DIR)messages/65_describetransactions_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListTransactionsResponse > $(CURRENT_DIR)messages/66_listtransactions_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AllocateProducerIdsResponse > $(CURRENT_DIR)messages/67_allocateproducerids_responses.go
 	go fmt $(CURRENT_DIR)/messages/...

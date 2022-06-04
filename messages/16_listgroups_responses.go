@@ -63,8 +63,6 @@ func init16ListGroupsResponse() []schema.Schema {
 }
 
 const (
-	// FieldListGroupsResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldListGroupsResponseErrorCode = "ErrorCode"
 	// FieldListGroupsResponseGroups is: Each group in the response.
 	FieldListGroupsResponseGroups = "Groups"
 	// FieldListGroupsResponseGroupsGroupId is: The group ID.
@@ -79,6 +77,8 @@ const (
 	FieldListGroupsResponseTags = "Tags"
 	// FieldListGroupsResponseGroupsGroupState is: The group state name.
 	FieldListGroupsResponseGroupsGroupState = "GroupState"
+	// FieldListGroupsResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldListGroupsResponseErrorCode = "ErrorCode"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListGroupsResponse.json

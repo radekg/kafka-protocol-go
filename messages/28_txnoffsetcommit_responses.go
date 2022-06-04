@@ -60,24 +60,24 @@ func init28TxnOffsetCommitResponse() []schema.Schema {
 }
 
 const (
+	// FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldTxnOffsetCommitResponseTopicsTags is: The tagged fields.
+	FieldTxnOffsetCommitResponseTopicsTags = "Tags"
+	// FieldTxnOffsetCommitResponseTags is: The tagged fields.
+	FieldTxnOffsetCommitResponseTags = "Tags"
 	// FieldTxnOffsetCommitResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldTxnOffsetCommitResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldTxnOffsetCommitResponseTopicsPartitions is: The responses for each partition in the topic.
 	FieldTxnOffsetCommitResponseTopicsPartitions = "Partitions"
-	// FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
+	FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode = "ErrorCode"
 	// FieldTxnOffsetCommitResponseTopicsPartitionsTags is: The tagged fields.
 	FieldTxnOffsetCommitResponseTopicsPartitionsTags = "Tags"
-	// FieldTxnOffsetCommitResponseTopicsTags is: The tagged fields.
-	FieldTxnOffsetCommitResponseTopicsTags = "Tags"
 	// FieldTxnOffsetCommitResponseTopics is: The responses for each topic.
 	FieldTxnOffsetCommitResponseTopics = "Topics"
 	// FieldTxnOffsetCommitResponseTopicsName is: The topic name.
 	FieldTxnOffsetCommitResponseTopicsName = "Name"
-	// FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
-	FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldTxnOffsetCommitResponseTags is: The tagged fields.
-	FieldTxnOffsetCommitResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/TxnOffsetCommitResponse.json

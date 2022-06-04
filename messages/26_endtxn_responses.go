@@ -34,12 +34,12 @@ func init26EndTxnResponse() []schema.Schema {
 }
 
 const (
+	// FieldEndTxnResponseTags is: The tagged fields.
+	FieldEndTxnResponseTags = "Tags"
 	// FieldEndTxnResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldEndTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldEndTxnResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldEndTxnResponseErrorCode = "ErrorCode"
-	// FieldEndTxnResponseTags is: The tagged fields.
-	FieldEndTxnResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/EndTxnResponse.json

@@ -53,24 +53,24 @@ func init21DeleteRecordsResponse() []schema.Schema {
 const (
 	// FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldDeleteRecordsResponseTopicsPartitionsErrorCode is: The deletion error code, or 0 if the deletion succeeded.
+	FieldDeleteRecordsResponseTopicsPartitionsErrorCode = "ErrorCode"
 	// FieldDeleteRecordsResponseTopicsPartitionsTags is: The tagged fields.
 	FieldDeleteRecordsResponseTopicsPartitionsTags = "Tags"
-	// FieldDeleteRecordsResponseTopicsTags is: The tagged fields.
-	FieldDeleteRecordsResponseTopicsTags = "Tags"
-	// FieldDeleteRecordsResponseTags is: The tagged fields.
-	FieldDeleteRecordsResponseTags = "Tags"
+	// FieldDeleteRecordsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDeleteRecordsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldDeleteRecordsResponseTopicsName is: The topic name.
 	FieldDeleteRecordsResponseTopicsName = "Name"
-	// FieldDeleteRecordsResponseTopics is: Each topic that we wanted to delete records from.
-	FieldDeleteRecordsResponseTopics = "Topics"
 	// FieldDeleteRecordsResponseTopicsPartitions is: Each partition that we wanted to delete records from.
 	FieldDeleteRecordsResponseTopicsPartitions = "Partitions"
 	// FieldDeleteRecordsResponseTopicsPartitionsLowWatermark is: The partition low water mark.
 	FieldDeleteRecordsResponseTopicsPartitionsLowWatermark = "LowWatermark"
-	// FieldDeleteRecordsResponseTopicsPartitionsErrorCode is: The deletion error code, or 0 if the deletion succeeded.
-	FieldDeleteRecordsResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldDeleteRecordsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDeleteRecordsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldDeleteRecordsResponseTopicsTags is: The tagged fields.
+	FieldDeleteRecordsResponseTopicsTags = "Tags"
+	// FieldDeleteRecordsResponseTags is: The tagged fields.
+	FieldDeleteRecordsResponseTags = "Tags"
+	// FieldDeleteRecordsResponseTopics is: Each topic that we wanted to delete records from.
+	FieldDeleteRecordsResponseTopics = "Topics"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteRecordsResponse.json

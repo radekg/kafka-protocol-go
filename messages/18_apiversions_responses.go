@@ -67,44 +67,44 @@ func init18ApiVersionsResponse() []schema.Schema {
 }
 
 const (
-	// FieldApiVersionsResponseFinalizedFeaturesEpoch is: The monotonically increasing epoch for the finalized features information. Valid values are >= 0. A value of -1 is special and represents unknown epoch.
-	FieldApiVersionsResponseFinalizedFeaturesEpoch = "FinalizedFeaturesEpoch"
-	// FieldApiVersionsResponseFinalizedFeaturesName is: The name of the feature.
-	FieldApiVersionsResponseFinalizedFeaturesName = "Name"
-	// FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel is: The cluster-wide finalized min version level for the feature.
-	FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel = "MinVersionLevel"
-	// FieldApiVersionsResponseApiKeysMaxVersion is: The maximum supported version, inclusive.
-	FieldApiVersionsResponseApiKeysMaxVersion = "MaxVersion"
-	// FieldApiVersionsResponseSupportedFeaturesName is: The name of the feature.
-	FieldApiVersionsResponseSupportedFeaturesName = "Name"
 	// FieldApiVersionsResponseSupportedFeaturesMinVersion is: The minimum supported version for the feature.
 	FieldApiVersionsResponseSupportedFeaturesMinVersion = "MinVersion"
-	// FieldApiVersionsResponseFinalizedFeatures is: List of cluster-wide finalized features. The information is valid only if FinalizedFeaturesEpoch >= 0.
-	FieldApiVersionsResponseFinalizedFeatures = "FinalizedFeatures"
-	// FieldApiVersionsResponseApiKeysApiKey is: The API index.
-	FieldApiVersionsResponseApiKeysApiKey = "ApiKey"
-	// FieldApiVersionsResponseApiKeysMinVersion is: The minimum supported version, inclusive.
-	FieldApiVersionsResponseApiKeysMinVersion = "MinVersion"
-	// FieldApiVersionsResponseApiKeysTags is: The tagged fields.
-	FieldApiVersionsResponseApiKeysTags = "Tags"
-	// FieldApiVersionsResponseErrorCode is: The top-level error code.
-	FieldApiVersionsResponseErrorCode = "ErrorCode"
-	// FieldApiVersionsResponseSupportedFeatures is: Features supported by the broker.
-	FieldApiVersionsResponseSupportedFeatures = "SupportedFeatures"
-	// FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel is: The cluster-wide finalized max version level for the feature.
-	FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel = "MaxVersionLevel"
 	// FieldApiVersionsResponseSupportedFeaturesTags is: The tagged fields.
 	FieldApiVersionsResponseSupportedFeaturesTags = "Tags"
+	// FieldApiVersionsResponseFinalizedFeaturesEpoch is: The monotonically increasing epoch for the finalized features information. Valid values are >= 0. A value of -1 is special and represents unknown epoch.
+	FieldApiVersionsResponseFinalizedFeaturesEpoch = "FinalizedFeaturesEpoch"
+	// FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel is: The cluster-wide finalized min version level for the feature.
+	FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel = "MinVersionLevel"
+	// FieldApiVersionsResponseApiKeysMinVersion is: The minimum supported version, inclusive.
+	FieldApiVersionsResponseApiKeysMinVersion = "MinVersion"
+	// FieldApiVersionsResponseSupportedFeaturesName is: The name of the feature.
+	FieldApiVersionsResponseSupportedFeaturesName = "Name"
+	// FieldApiVersionsResponseApiKeysTags is: The tagged fields.
+	FieldApiVersionsResponseApiKeysTags = "Tags"
+	// FieldApiVersionsResponseSupportedFeatures is: Features supported by the broker.
+	FieldApiVersionsResponseSupportedFeatures = "SupportedFeatures"
 	// FieldApiVersionsResponseFinalizedFeaturesTags is: The tagged fields.
 	FieldApiVersionsResponseFinalizedFeaturesTags = "Tags"
-	// FieldApiVersionsResponseTags is: The tagged fields.
-	FieldApiVersionsResponseTags = "Tags"
 	// FieldApiVersionsResponseApiKeys is: The APIs supported by the broker.
 	FieldApiVersionsResponseApiKeys = "ApiKeys"
-	// FieldApiVersionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldApiVersionsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldApiVersionsResponseApiKeysMaxVersion is: The maximum supported version, inclusive.
+	FieldApiVersionsResponseApiKeysMaxVersion = "MaxVersion"
 	// FieldApiVersionsResponseSupportedFeaturesMaxVersion is: The maximum supported version for the feature.
 	FieldApiVersionsResponseSupportedFeaturesMaxVersion = "MaxVersion"
+	// FieldApiVersionsResponseFinalizedFeatures is: List of cluster-wide finalized features. The information is valid only if FinalizedFeaturesEpoch >= 0.
+	FieldApiVersionsResponseFinalizedFeatures = "FinalizedFeatures"
+	// FieldApiVersionsResponseFinalizedFeaturesName is: The name of the feature.
+	FieldApiVersionsResponseFinalizedFeaturesName = "Name"
+	// FieldApiVersionsResponseApiKeysApiKey is: The API index.
+	FieldApiVersionsResponseApiKeysApiKey = "ApiKey"
+	// FieldApiVersionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldApiVersionsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldApiVersionsResponseTags is: The tagged fields.
+	FieldApiVersionsResponseTags = "Tags"
+	// FieldApiVersionsResponseErrorCode is: The top-level error code.
+	FieldApiVersionsResponseErrorCode = "ErrorCode"
+	// FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel is: The cluster-wide finalized max version level for the feature.
+	FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel = "MaxVersionLevel"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ApiVersionsResponse.json

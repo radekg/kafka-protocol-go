@@ -39,12 +39,12 @@ func init12HeartbeatResponse() []schema.Schema {
 }
 
 const (
+	// FieldHeartbeatResponseTags is: The tagged fields.
+	FieldHeartbeatResponseTags = "Tags"
 	// FieldHeartbeatResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldHeartbeatResponseErrorCode = "ErrorCode"
 	// FieldHeartbeatResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldHeartbeatResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldHeartbeatResponseTags is: The tagged fields.
-	FieldHeartbeatResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/HeartbeatResponse.json

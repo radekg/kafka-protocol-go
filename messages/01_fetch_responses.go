@@ -318,72 +318,72 @@ func init1FetchResponse() []schema.Schema {
 }
 
 const (
-	// FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId is: The producer id associated with the aborted transaction.
-	FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId = "ProducerId"
-	// FieldFetchResponseResponsesPartitionsDivergingEpochTags is: The tagged fields.
-	FieldFetchResponseResponsesPartitionsDivergingEpochTags = "Tags"
-	// FieldFetchResponseResponsesPartitionsCurrentLeader is:
-	FieldFetchResponseResponsesPartitionsCurrentLeader = "CurrentLeader"
-	// FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId is: The ID of the current leader or -1 if the leader is unknown.
-	FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId = "LeaderId"
-	// FieldFetchResponseResponsesPartitionsTags is: The tagged fields.
-	FieldFetchResponseResponsesPartitionsTags = "Tags"
-	// FieldFetchResponseResponsesPartitionsRecords is: The record data.
-	FieldFetchResponseResponsesPartitionsRecords = "Records"
-	// FieldFetchResponseSessionId is: The fetch session ID, or 0 if this is not part of a fetch session.
-	FieldFetchResponseSessionId = "SessionId"
-	// FieldFetchResponseResponsesPartitionsPreferredReadReplica is: The preferred read replica for the consumer to use on its next fetch request
-	FieldFetchResponseResponsesPartitionsPreferredReadReplica = "PreferredReadReplica"
-	// FieldFetchResponseResponsesPartitionsDivergingEpochEpoch is:
-	FieldFetchResponseResponsesPartitionsDivergingEpochEpoch = "Epoch"
-	// FieldFetchResponseResponsesPartitionsLastStableOffset is: The last stable offset (or LSO) of the partition. This is the last offset such that the state of all transactional records prior to this offset have been decided (ABORTED or COMMITTED)
-	FieldFetchResponseResponsesPartitionsLastStableOffset = "LastStableOffset"
-	// FieldFetchResponseResponsesPartitionsSnapshotId is: In the case of fetching an offset less than the LogStartOffset, this is the end offset and epoch that should be used in the FetchSnapshot request.
-	FieldFetchResponseResponsesPartitionsSnapshotId = "SnapshotId"
-	// FieldFetchResponseResponsesTopicId is: The unique topic ID
-	FieldFetchResponseResponsesTopicId = "TopicId"
-	// FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset is: The first offset in the aborted transaction.
-	FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset = "FirstOffset"
-	// FieldFetchResponseErrorCode is: The top level response error code.
-	FieldFetchResponseErrorCode = "ErrorCode"
-	// FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset is:
-	FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset = "EndOffset"
-	// FieldFetchResponseTags is: The tagged fields.
-	FieldFetchResponseTags = "Tags"
-	// FieldFetchResponseResponsesPartitionsDivergingEpoch is: In case divergence is detected based on the `LastFetchedEpoch` and `FetchOffset` in the request, this field indicates the largest epoch and its end offset such that subsequent records are known to diverge
-	FieldFetchResponseResponsesPartitionsDivergingEpoch = "DivergingEpoch"
-	// FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset is:
-	FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset = "EndOffset"
-	// FieldFetchResponseResponsesTopic is: The topic name.
-	FieldFetchResponseResponsesTopic = "Topic"
 	// FieldFetchResponseResponsesPartitions is: The topic partitions.
 	FieldFetchResponseResponsesPartitions = "Partitions"
+	// FieldFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldFetchResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldFetchResponseResponsesPartitionsLastStableOffset is: The last stable offset (or LSO) of the partition. This is the last offset such that the state of all transactional records prior to this offset have been decided (ABORTED or COMMITTED)
+	FieldFetchResponseResponsesPartitionsLastStableOffset = "LastStableOffset"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId is: The producer id associated with the aborted transaction.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId = "ProducerId"
+	// FieldFetchResponseSessionId is: The fetch session ID, or 0 if this is not part of a fetch session.
+	FieldFetchResponseSessionId = "SessionId"
+	// FieldFetchResponseResponsesPartitionsCurrentLeader is:
+	FieldFetchResponseResponsesPartitionsCurrentLeader = "CurrentLeader"
 	// FieldFetchResponseResponsesPartitionsErrorCode is: The error code, or 0 if there was no fetch error.
 	FieldFetchResponseResponsesPartitionsErrorCode = "ErrorCode"
 	// FieldFetchResponseResponsesPartitionsHighWatermark is: The current high water mark.
 	FieldFetchResponseResponsesPartitionsHighWatermark = "HighWatermark"
-	// FieldFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldFetchResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldFetchResponseResponsesPartitionsCurrentLeaderTags is: The tagged fields.
-	FieldFetchResponseResponsesPartitionsCurrentLeaderTags = "Tags"
-	// FieldFetchResponseResponsesPartitionsSnapshotIdEpoch is:
-	FieldFetchResponseResponsesPartitionsSnapshotIdEpoch = "Epoch"
-	// FieldFetchResponseResponsesPartitionsAbortedTransactions is: The aborted transactions.
-	FieldFetchResponseResponsesPartitionsAbortedTransactions = "AbortedTransactions"
-	// FieldFetchResponseResponsesPartitionsSnapshotIdTags is: The tagged fields.
-	FieldFetchResponseResponsesPartitionsSnapshotIdTags = "Tags"
-	// FieldFetchResponseResponsesTags is: The tagged fields.
-	FieldFetchResponseResponsesTags = "Tags"
-	// FieldFetchResponseResponsesPartitionsAbortedTransactionsTags is: The tagged fields.
-	FieldFetchResponseResponsesPartitionsAbortedTransactionsTags = "Tags"
-	// FieldFetchResponseResponses is: The response topics.
-	FieldFetchResponseResponses = "Responses"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochEpoch is:
+	FieldFetchResponseResponsesPartitionsDivergingEpochEpoch = "Epoch"
+	// FieldFetchResponseResponsesTopicId is: The unique topic ID
+	FieldFetchResponseResponsesTopicId = "TopicId"
+	// FieldFetchResponseResponsesTopic is: The topic name.
+	FieldFetchResponseResponsesTopic = "Topic"
 	// FieldFetchResponseResponsesPartitionsPartitionIndex is: The partition index.
 	FieldFetchResponseResponsesPartitionsPartitionIndex = "PartitionIndex"
-	// FieldFetchResponseResponsesPartitionsLogStartOffset is: The current log start offset.
-	FieldFetchResponseResponsesPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId is: The ID of the current leader or -1 if the leader is unknown.
+	FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId = "LeaderId"
 	// FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch is: The latest known leader epoch
 	FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch = "LeaderEpoch"
+	// FieldFetchResponseResponsesPartitionsSnapshotId is: In the case of fetching an offset less than the LogStartOffset, this is the end offset and epoch that should be used in the FetchSnapshot request.
+	FieldFetchResponseResponsesPartitionsSnapshotId = "SnapshotId"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdEpoch is:
+	FieldFetchResponseResponsesPartitionsSnapshotIdEpoch = "Epoch"
+	// FieldFetchResponseResponses is: The response topics.
+	FieldFetchResponseResponses = "Responses"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactions is: The aborted transactions.
+	FieldFetchResponseResponsesPartitionsAbortedTransactions = "AbortedTransactions"
+	// FieldFetchResponseResponsesPartitionsDivergingEpoch is: In case divergence is detected based on the `LastFetchedEpoch` and `FetchOffset` in the request, this field indicates the largest epoch and its end offset such that subsequent records are known to diverge
+	FieldFetchResponseResponsesPartitionsDivergingEpoch = "DivergingEpoch"
+	// FieldFetchResponseResponsesPartitionsCurrentLeaderTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsCurrentLeaderTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsSnapshotIdTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset is:
+	FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset = "EndOffset"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsDivergingEpochTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsLogStartOffset is: The current log start offset.
+	FieldFetchResponseResponsesPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchResponseErrorCode is: The top level response error code.
+	FieldFetchResponseErrorCode = "ErrorCode"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsTags = "Tags"
+	// FieldFetchResponseResponsesTags is: The tagged fields.
+	FieldFetchResponseResponsesTags = "Tags"
+	// FieldFetchResponseTags is: The tagged fields.
+	FieldFetchResponseTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsRecords is: The record data.
+	FieldFetchResponseResponsesPartitionsRecords = "Records"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset is: The first offset in the aborted transaction.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset = "FirstOffset"
+	// FieldFetchResponseResponsesPartitionsPreferredReadReplica is: The preferred read replica for the consumer to use on its next fetch request
+	FieldFetchResponseResponsesPartitionsPreferredReadReplica = "PreferredReadReplica"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset is:
+	FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset = "EndOffset"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FetchResponse.json

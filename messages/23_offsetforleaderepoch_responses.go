@@ -79,28 +79,28 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 }
 
 const (
-	// FieldOffsetForLeaderEpochResponseTopicsPartitionsEndOffset is: The end offset of the epoch.
-	FieldOffsetForLeaderEpochResponseTopicsPartitionsEndOffset = "EndOffset"
+	// FieldOffsetForLeaderEpochResponseTopicsTopic is: The topic name.
+	FieldOffsetForLeaderEpochResponseTopicsTopic = "Topic"
 	// FieldOffsetForLeaderEpochResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldOffsetForLeaderEpochResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldOffsetForLeaderEpochResponseTopicsPartitionsTags is: The tagged fields.
-	FieldOffsetForLeaderEpochResponseTopicsPartitionsTags = "Tags"
 	// FieldOffsetForLeaderEpochResponseTags is: The tagged fields.
 	FieldOffsetForLeaderEpochResponseTags = "Tags"
+	// FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition is: The partition index.
+	FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition = "Partition"
+	// FieldOffsetForLeaderEpochResponseTopicsPartitionsEndOffset is: The end offset of the epoch.
+	FieldOffsetForLeaderEpochResponseTopicsPartitionsEndOffset = "EndOffset"
 	// FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch is: The leader epoch of the partition.
 	FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldOffsetForLeaderEpochResponseTopicsPartitionsTags is: The tagged fields.
+	FieldOffsetForLeaderEpochResponseTopicsPartitionsTags = "Tags"
 	// FieldOffsetForLeaderEpochResponseTopicsTags is: The tagged fields.
 	FieldOffsetForLeaderEpochResponseTopicsTags = "Tags"
 	// FieldOffsetForLeaderEpochResponseTopics is: Each topic we fetched offsets for.
 	FieldOffsetForLeaderEpochResponseTopics = "Topics"
-	// FieldOffsetForLeaderEpochResponseTopicsTopic is: The topic name.
-	FieldOffsetForLeaderEpochResponseTopicsTopic = "Topic"
 	// FieldOffsetForLeaderEpochResponseTopicsPartitions is: Each partition in the topic we fetched offsets for.
 	FieldOffsetForLeaderEpochResponseTopicsPartitions = "Partitions"
 	// FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode is: The error code 0, or if there was no error.
 	FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition is: The partition index.
-	FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition = "Partition"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetForLeaderEpochResponse.json

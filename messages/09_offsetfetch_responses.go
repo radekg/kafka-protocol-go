@@ -156,60 +156,60 @@ func init9OffsetFetchResponse() []schema.Schema {
 }
 
 const (
-	// FieldOffsetFetchResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldOffsetFetchResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetFetchResponseTags is: The tagged fields.
-	FieldOffsetFetchResponseTags = "Tags"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldOffsetFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldOffsetFetchResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
-	FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldOffsetFetchResponseGroupsTopics is: The responses per topic.
-	FieldOffsetFetchResponseGroupsTopics = "Topics"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex is: The partition index.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset is: The committed message offset.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldOffsetFetchResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
-	FieldOffsetFetchResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldOffsetFetchResponseGroups is: The responses per group id.
-	FieldOffsetFetchResponseGroups = "Groups"
-	// FieldOffsetFetchResponseTopicsPartitionsCommittedOffset is: The committed message offset.
-	FieldOffsetFetchResponseTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldOffsetFetchResponseTopicsPartitionsMetadata is: The partition metadata.
-	FieldOffsetFetchResponseTopicsPartitionsMetadata = "Metadata"
-	// FieldOffsetFetchResponseGroupsTopicsName is: The topic name.
-	FieldOffsetFetchResponseGroupsTopicsName = "Name"
-	// FieldOffsetFetchResponseGroupsTopicsTags is: The tagged fields.
-	FieldOffsetFetchResponseGroupsTopicsTags = "Tags"
-	// FieldOffsetFetchResponseGroupsTags is: The tagged fields.
-	FieldOffsetFetchResponseGroupsTags = "Tags"
 	// FieldOffsetFetchResponseTopics is: The responses per topic.
 	FieldOffsetFetchResponseTopics = "Topics"
-	// FieldOffsetFetchResponseTopicsName is: The topic name.
-	FieldOffsetFetchResponseTopicsName = "Name"
-	// FieldOffsetFetchResponseTopicsTags is: The tagged fields.
-	FieldOffsetFetchResponseTopicsTags = "Tags"
-	// FieldOffsetFetchResponseGroupsErrorCode is: The group-level error code, or 0 if there was no error.
-	FieldOffsetFetchResponseGroupsErrorCode = "ErrorCode"
 	// FieldOffsetFetchResponseTopicsPartitions is: The responses per partition
 	FieldOffsetFetchResponseTopicsPartitions = "Partitions"
-	// FieldOffsetFetchResponseGroupsgroupId is: The group ID.
-	FieldOffsetFetchResponseGroupsgroupId = "groupId"
-	// FieldOffsetFetchResponseTopicsPartitionsTags is: The tagged fields.
-	FieldOffsetFetchResponseTopicsPartitionsTags = "Tags"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata is: The partition metadata.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata = "Metadata"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode is: The partition-level error code, or 0 if there was no error.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldOffsetFetchResponseGroupsTopicsPartitionsTags is: The tagged fields.
-	FieldOffsetFetchResponseGroupsTopicsPartitionsTags = "Tags"
+	// FieldOffsetFetchResponseGroupsTopics is: The responses per topic.
+	FieldOffsetFetchResponseGroupsTopics = "Topics"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset is: The committed message offset.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldOffsetFetchResponseTopicsPartitionsCommittedOffset is: The committed message offset.
+	FieldOffsetFetchResponseTopicsPartitionsCommittedOffset = "CommittedOffset"
 	// FieldOffsetFetchResponseErrorCode is: The top-level error code, or 0 if there was no error.
 	FieldOffsetFetchResponseErrorCode = "ErrorCode"
+	// FieldOffsetFetchResponseTopicsPartitionsTags is: The tagged fields.
+	FieldOffsetFetchResponseTopicsPartitionsTags = "Tags"
+	// FieldOffsetFetchResponseGroups is: The responses per group id.
+	FieldOffsetFetchResponseGroups = "Groups"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+	// FieldOffsetFetchResponseTopicsName is: The topic name.
+	FieldOffsetFetchResponseTopicsName = "Name"
+	// FieldOffsetFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldOffsetFetchResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode is: The partition-level error code, or 0 if there was no error.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldOffsetFetchResponseTopicsPartitionsMetadata is: The partition metadata.
+	FieldOffsetFetchResponseTopicsPartitionsMetadata = "Metadata"
+	// FieldOffsetFetchResponseTags is: The tagged fields.
+	FieldOffsetFetchResponseTags = "Tags"
+	// FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
+	FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+	// FieldOffsetFetchResponseGroupsErrorCode is: The group-level error code, or 0 if there was no error.
+	FieldOffsetFetchResponseGroupsErrorCode = "ErrorCode"
+	// FieldOffsetFetchResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
+	FieldOffsetFetchResponseTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldOffsetFetchResponseTopicsTags is: The tagged fields.
+	FieldOffsetFetchResponseTopicsTags = "Tags"
 	// FieldOffsetFetchResponseGroupsTopicsPartitions is: The responses per partition
 	FieldOffsetFetchResponseGroupsTopicsPartitions = "Partitions"
+	// FieldOffsetFetchResponseGroupsTopicsTags is: The tagged fields.
+	FieldOffsetFetchResponseGroupsTopicsTags = "Tags"
+	// FieldOffsetFetchResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetFetchResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldOffsetFetchResponseGroupsTopicsName is: The topic name.
+	FieldOffsetFetchResponseGroupsTopicsName = "Name"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata is: The partition metadata.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata = "Metadata"
+	// FieldOffsetFetchResponseGroupsTopicsPartitionsTags is: The tagged fields.
+	FieldOffsetFetchResponseGroupsTopicsPartitionsTags = "Tags"
+	// FieldOffsetFetchResponseGroupsTags is: The tagged fields.
+	FieldOffsetFetchResponseGroupsTags = "Tags"
+	// FieldOffsetFetchResponseGroupsgroupId is: The group ID.
+	FieldOffsetFetchResponseGroupsgroupId = "groupId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetFetchResponse.json

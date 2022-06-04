@@ -165,40 +165,40 @@ func init0ProduceResponse() []schema.Schema {
 }
 
 const (
-	// FieldProduceResponseResponsesTags is: The tagged fields.
-	FieldProduceResponseResponsesTags = "Tags"
-	// FieldProduceResponseResponses is: Each produce response
-	FieldProduceResponseResponses = "Responses"
-	// FieldProduceResponseResponsesPartitionResponses is: Each partition that we produced to within the topic.
-	FieldProduceResponseResponsesPartitionResponses = "PartitionResponses"
+	// FieldProduceResponseResponsesPartitionResponsesIndex is: The partition index.
+	FieldProduceResponseResponsesPartitionResponsesIndex = "Index"
+	// FieldProduceResponseResponsesName is: The topic name
+	FieldProduceResponseResponsesName = "Name"
+	// FieldProduceResponseResponsesPartitionResponsesBaseOffset is: The base offset.
+	FieldProduceResponseResponsesPartitionResponsesBaseOffset = "BaseOffset"
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex is: The batch index of the record that cause the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex = "BatchIndex"
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage is: The error message of the record that caused the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage = "BatchIndexErrorMessage"
-	// FieldProduceResponseResponsesPartitionResponsesErrorMessage is: The global error message summarizing the common root cause of the records that caused the batch to be dropped
-	FieldProduceResponseResponsesPartitionResponsesErrorMessage = "ErrorMessage"
-	// FieldProduceResponseResponsesPartitionResponsesTags is: The tagged fields.
-	FieldProduceResponseResponsesPartitionResponsesTags = "Tags"
+	// FieldProduceResponseResponsesTags is: The tagged fields.
+	FieldProduceResponseResponsesTags = "Tags"
+	// FieldProduceResponseResponses is: Each produce response
+	FieldProduceResponseResponses = "Responses"
 	// FieldProduceResponseResponsesPartitionResponsesErrorCode is: The error code, or 0 if there was no error.
 	FieldProduceResponseResponsesPartitionResponsesErrorCode = "ErrorCode"
-	// FieldProduceResponseResponsesPartitionResponsesRecordErrors is: The batch indices of records that caused the batch to be dropped
-	FieldProduceResponseResponsesPartitionResponsesRecordErrors = "RecordErrors"
-	// FieldProduceResponseResponsesPartitionResponsesBaseOffset is: The base offset.
-	FieldProduceResponseResponsesPartitionResponsesBaseOffset = "BaseOffset"
-	// FieldProduceResponseResponsesPartitionResponsesLogStartOffset is: The log start offset.
-	FieldProduceResponseResponsesPartitionResponsesLogStartOffset = "LogStartOffset"
-	// FieldProduceResponseResponsesName is: The topic name
-	FieldProduceResponseResponsesName = "Name"
-	// FieldProduceResponseResponsesPartitionResponsesIndex is: The partition index.
-	FieldProduceResponseResponsesPartitionResponsesIndex = "Index"
 	// FieldProduceResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldProduceResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs is: The timestamp returned by broker after appending the messages. If CreateTime is used for the topic, the timestamp will be -1.  If LogAppendTime is used for the topic, the timestamp will be the broker local time when the messages are appended.
 	FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs = "LogAppendTimeMs"
-	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags is: The tagged fields.
-	FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags = "Tags"
+	// FieldProduceResponseResponsesPartitionResponsesLogStartOffset is: The log start offset.
+	FieldProduceResponseResponsesPartitionResponsesLogStartOffset = "LogStartOffset"
 	// FieldProduceResponseTags is: The tagged fields.
 	FieldProduceResponseTags = "Tags"
+	// FieldProduceResponseResponsesPartitionResponses is: Each partition that we produced to within the topic.
+	FieldProduceResponseResponsesPartitionResponses = "PartitionResponses"
+	// FieldProduceResponseResponsesPartitionResponsesRecordErrors is: The batch indices of records that caused the batch to be dropped
+	FieldProduceResponseResponsesPartitionResponsesRecordErrors = "RecordErrors"
+	// FieldProduceResponseResponsesPartitionResponsesErrorMessage is: The global error message summarizing the common root cause of the records that caused the batch to be dropped
+	FieldProduceResponseResponsesPartitionResponsesErrorMessage = "ErrorMessage"
+	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags is: The tagged fields.
+	FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags = "Tags"
+	// FieldProduceResponseResponsesPartitionResponsesTags is: The tagged fields.
+	FieldProduceResponseResponsesPartitionResponsesTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceResponse.json

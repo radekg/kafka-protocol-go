@@ -65,36 +65,36 @@ func init29DescribeAclsResponse() []schema.Schema {
 }
 
 const (
+	// FieldDescribeAclsResponseErrorMessage is: The error message, or null if there was no error.
+	FieldDescribeAclsResponseErrorMessage = "ErrorMessage"
+	// FieldDescribeAclsResponseResources is: Each Resource that is referenced in an ACL.
+	FieldDescribeAclsResponseResources = "Resources"
+	// FieldDescribeAclsResponseResourcesAcls is: The ACLs.
+	FieldDescribeAclsResponseResourcesAcls = "Acls"
+	// FieldDescribeAclsResponseResourcesPatternType is: The resource pattern type.
+	FieldDescribeAclsResponseResourcesPatternType = "PatternType"
 	// FieldDescribeAclsResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeAclsResponseErrorCode = "ErrorCode"
 	// FieldDescribeAclsResponseResourcesAclsPrincipal is: The ACL principal.
 	FieldDescribeAclsResponseResourcesAclsPrincipal = "Principal"
+	// FieldDescribeAclsResponseResourcesAclsHost is: The ACL host.
+	FieldDescribeAclsResponseResourcesAclsHost = "Host"
 	// FieldDescribeAclsResponseResourcesAclsOperation is: The ACL operation.
 	FieldDescribeAclsResponseResourcesAclsOperation = "Operation"
-	// FieldDescribeAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeAclsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDescribeAclsResponseResourcesResourceName is: The resource name.
-	FieldDescribeAclsResponseResourcesResourceName = "ResourceName"
 	// FieldDescribeAclsResponseResourcesAclsTags is: The tagged fields.
 	FieldDescribeAclsResponseResourcesAclsTags = "Tags"
 	// FieldDescribeAclsResponseResourcesTags is: The tagged fields.
 	FieldDescribeAclsResponseResourcesTags = "Tags"
-	// FieldDescribeAclsResponseResources is: Each Resource that is referenced in an ACL.
-	FieldDescribeAclsResponseResources = "Resources"
-	// FieldDescribeAclsResponseResourcesResourceType is: The resource type.
-	FieldDescribeAclsResponseResourcesResourceType = "ResourceType"
-	// FieldDescribeAclsResponseResourcesAcls is: The ACLs.
-	FieldDescribeAclsResponseResourcesAcls = "Acls"
-	// FieldDescribeAclsResponseResourcesAclsPermissionType is: The ACL permission type.
-	FieldDescribeAclsResponseResourcesAclsPermissionType = "PermissionType"
-	// FieldDescribeAclsResponseErrorMessage is: The error message, or null if there was no error.
-	FieldDescribeAclsResponseErrorMessage = "ErrorMessage"
-	// FieldDescribeAclsResponseResourcesAclsHost is: The ACL host.
-	FieldDescribeAclsResponseResourcesAclsHost = "Host"
-	// FieldDescribeAclsResponseResourcesPatternType is: The resource pattern type.
-	FieldDescribeAclsResponseResourcesPatternType = "PatternType"
 	// FieldDescribeAclsResponseTags is: The tagged fields.
 	FieldDescribeAclsResponseTags = "Tags"
+	// FieldDescribeAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeAclsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldDescribeAclsResponseResourcesResourceName is: The resource name.
+	FieldDescribeAclsResponseResourcesResourceName = "ResourceName"
+	// FieldDescribeAclsResponseResourcesAclsPermissionType is: The ACL permission type.
+	FieldDescribeAclsResponseResourcesAclsPermissionType = "PermissionType"
+	// FieldDescribeAclsResponseResourcesResourceType is: The resource type.
+	FieldDescribeAclsResponseResourcesResourceType = "ResourceType"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeAclsResponse.json

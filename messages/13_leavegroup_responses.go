@@ -63,6 +63,8 @@ func init13LeaveGroupResponse() []schema.Schema {
 }
 
 const (
+	// FieldLeaveGroupResponseMembersErrorCode is: The error code, or 0 if there was no error.
+	FieldLeaveGroupResponseMembersErrorCode = "ErrorCode"
 	// FieldLeaveGroupResponseMembersTags is: The tagged fields.
 	FieldLeaveGroupResponseMembersTags = "Tags"
 	// FieldLeaveGroupResponseTags is: The tagged fields.
@@ -77,8 +79,6 @@ const (
 	FieldLeaveGroupResponseMembersMemberId = "MemberId"
 	// FieldLeaveGroupResponseMembersGroupInstanceId is: The group instance ID to remove from the group.
 	FieldLeaveGroupResponseMembersGroupInstanceId = "GroupInstanceId"
-	// FieldLeaveGroupResponseMembersErrorCode is: The error code, or 0 if there was no error.
-	FieldLeaveGroupResponseMembersErrorCode = "ErrorCode"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaveGroupResponse.json

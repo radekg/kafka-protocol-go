@@ -126,42 +126,42 @@ func init19CreateTopicsResponse() []schema.Schema {
 }
 
 const (
+	// FieldCreateTopicsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldCreateTopicsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldCreateTopicsResponseTopicsConfigsValue is: The configuration value.
+	FieldCreateTopicsResponseTopicsConfigsValue = "Value"
+	// FieldCreateTopicsResponseTopicsTopicConfigErrorCode is: Optional topic config error returned if configs are not returned in the response.
+	FieldCreateTopicsResponseTopicsTopicConfigErrorCode = "TopicConfigErrorCode"
+	// FieldCreateTopicsResponseTopicsConfigsTags is: The tagged fields.
+	FieldCreateTopicsResponseTopicsConfigsTags = "Tags"
+	// FieldCreateTopicsResponseTopicsErrorCode is: The error code, or 0 if there was no error.
+	FieldCreateTopicsResponseTopicsErrorCode = "ErrorCode"
+	// FieldCreateTopicsResponseTopicsConfigs is: Configuration of the topic.
+	FieldCreateTopicsResponseTopicsConfigs = "Configs"
+	// FieldCreateTopicsResponseTopicsConfigsName is: The configuration name.
+	FieldCreateTopicsResponseTopicsConfigsName = "Name"
 	// FieldCreateTopicsResponseTopicsConfigsConfigSource is: The configuration source.
 	FieldCreateTopicsResponseTopicsConfigsConfigSource = "ConfigSource"
 	// FieldCreateTopicsResponseTopics is: Results for each topic we tried to create.
 	FieldCreateTopicsResponseTopics = "Topics"
 	// FieldCreateTopicsResponseTopicsName is: The topic name.
 	FieldCreateTopicsResponseTopicsName = "Name"
-	// FieldCreateTopicsResponseTopicsErrorCode is: The error code, or 0 if there was no error.
-	FieldCreateTopicsResponseTopicsErrorCode = "ErrorCode"
+	// FieldCreateTopicsResponseTopicsReplicationFactor is: Replication factor of the topic.
+	FieldCreateTopicsResponseTopicsReplicationFactor = "ReplicationFactor"
 	// FieldCreateTopicsResponseTopicsConfigsReadOnly is: True if the configuration is read-only.
 	FieldCreateTopicsResponseTopicsConfigsReadOnly = "ReadOnly"
-	// FieldCreateTopicsResponseTopicsConfigsTags is: The tagged fields.
-	FieldCreateTopicsResponseTopicsConfigsTags = "Tags"
-	// FieldCreateTopicsResponseTopicsTags is: The tagged fields.
-	FieldCreateTopicsResponseTopicsTags = "Tags"
-	// FieldCreateTopicsResponseTopicsConfigsName is: The configuration name.
-	FieldCreateTopicsResponseTopicsConfigsName = "Name"
-	// FieldCreateTopicsResponseTopicsTopicId is: The unique topic ID
-	FieldCreateTopicsResponseTopicsTopicId = "TopicId"
-	// FieldCreateTopicsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldCreateTopicsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldCreateTopicsResponseTopicsTopicConfigErrorCode is: Optional topic config error returned if configs are not returned in the response.
-	FieldCreateTopicsResponseTopicsTopicConfigErrorCode = "TopicConfigErrorCode"
-	// FieldCreateTopicsResponseTopicsConfigs is: Configuration of the topic.
-	FieldCreateTopicsResponseTopicsConfigs = "Configs"
-	// FieldCreateTopicsResponseTopicsConfigsValue is: The configuration value.
-	FieldCreateTopicsResponseTopicsConfigsValue = "Value"
 	// FieldCreateTopicsResponseTopicsConfigsIsSensitive is: True if this configuration is sensitive.
 	FieldCreateTopicsResponseTopicsConfigsIsSensitive = "IsSensitive"
+	// FieldCreateTopicsResponseTopicsTags is: The tagged fields.
+	FieldCreateTopicsResponseTopicsTags = "Tags"
 	// FieldCreateTopicsResponseTags is: The tagged fields.
 	FieldCreateTopicsResponseTags = "Tags"
+	// FieldCreateTopicsResponseTopicsTopicId is: The unique topic ID
+	FieldCreateTopicsResponseTopicsTopicId = "TopicId"
 	// FieldCreateTopicsResponseTopicsErrorMessage is: The error message, or null if there was no error.
 	FieldCreateTopicsResponseTopicsErrorMessage = "ErrorMessage"
 	// FieldCreateTopicsResponseTopicsNumPartitions is: Number of partitions of the topic.
 	FieldCreateTopicsResponseTopicsNumPartitions = "NumPartitions"
-	// FieldCreateTopicsResponseTopicsReplicationFactor is: Replication factor of the topic.
-	FieldCreateTopicsResponseTopicsReplicationFactor = "ReplicationFactor"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateTopicsResponse.json

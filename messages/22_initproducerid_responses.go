@@ -52,8 +52,6 @@ func init22InitProducerIdResponse() []schema.Schema {
 }
 
 const (
-	// FieldInitProducerIdResponseProducerEpoch is: The current epoch associated with the producer id.
-	FieldInitProducerIdResponseProducerEpoch = "ProducerEpoch"
 	// FieldInitProducerIdResponseTags is: The tagged fields.
 	FieldInitProducerIdResponseTags = "Tags"
 	// FieldInitProducerIdResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
@@ -62,6 +60,8 @@ const (
 	FieldInitProducerIdResponseErrorCode = "ErrorCode"
 	// FieldInitProducerIdResponseProducerId is: The current producer id.
 	FieldInitProducerIdResponseProducerId = "ProducerId"
+	// FieldInitProducerIdResponseProducerEpoch is: The current epoch associated with the producer id.
+	FieldInitProducerIdResponseProducerEpoch = "ProducerEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/InitProducerIdResponse.json
