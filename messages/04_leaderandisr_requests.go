@@ -126,12 +126,10 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaderAndIsrRequestUngroupedPartitionStates is: The state of each partition, in a v0 or v1 message.
-	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is: The state of each partition
-	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldLeaderAndIsrRequestTopicStatesTags is: The tagged fields.
-	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
+	// FieldLeaderAndIsrRequestBrokerEpoch is: The current broker epoch.
+	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
+	// FieldLeaderAndIsrRequestControllerEpoch is: The current controller epoch.
+	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
 	// FieldLeaderAndIsrRequestControllerId is: The current controller ID.
 	FieldLeaderAndIsrRequestControllerId = "ControllerId"
 	// FieldLeaderAndIsrRequestLiveLeaders is: The current live leaders.
@@ -142,22 +140,24 @@ const (
 	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
 	// FieldLeaderAndIsrRequestLiveLeadersPort is: The leader's port.
 	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
-	// FieldLeaderAndIsrRequestBrokerEpoch is: The current broker epoch.
-	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
 	// FieldLeaderAndIsrRequestLiveLeadersTags is: The tagged fields.
 	FieldLeaderAndIsrRequestLiveLeadersTags = "Tags"
-	// FieldLeaderAndIsrRequestControllerEpoch is: The current controller epoch.
-	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
-	// FieldLeaderAndIsrRequestTopicStatesTopicName is: The topic name.
-	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
-	// FieldLeaderAndIsrRequestTopicStatesTopicId is: The unique topic ID.
-	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
-	// FieldLeaderAndIsrRequestTopicStates is: Each topic.
-	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
 	// FieldLeaderAndIsrRequestTags is: The tagged fields.
 	FieldLeaderAndIsrRequestTags = "Tags"
+	// FieldLeaderAndIsrRequestTopicStates is: Each topic.
+	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is: The state of each partition
+	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldLeaderAndIsrRequestTopicStatesTags is: The tagged fields.
+	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
+	// FieldLeaderAndIsrRequestTopicStatesTopicId is: The unique topic ID.
+	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
+	// FieldLeaderAndIsrRequestTopicStatesTopicName is: The topic name.
+	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
 	// FieldLeaderAndIsrRequestType is: The type that indicates whether all topics are included in the request
 	FieldLeaderAndIsrRequestType = "Type"
+	// FieldLeaderAndIsrRequestUngroupedPartitionStates is: The state of each partition, in a v0 or v1 message.
+	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaderAndIsrRequest.json

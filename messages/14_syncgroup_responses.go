@@ -54,18 +54,18 @@ func init14SyncGroupResponse() []schema.Schema {
 }
 
 const (
-	// FieldSyncGroupResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldSyncGroupResponseErrorCode = "ErrorCode"
 	// FieldSyncGroupResponseAssignment is: The member assignment.
 	FieldSyncGroupResponseAssignment = "Assignment"
-	// FieldSyncGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldSyncGroupResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldSyncGroupResponseTags is: The tagged fields.
-	FieldSyncGroupResponseTags = "Tags"
-	// FieldSyncGroupResponseProtocolType is: The group protocol type.
-	FieldSyncGroupResponseProtocolType = "ProtocolType"
+	// FieldSyncGroupResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldSyncGroupResponseErrorCode = "ErrorCode"
 	// FieldSyncGroupResponseProtocolName is: The group protocol name.
 	FieldSyncGroupResponseProtocolName = "ProtocolName"
+	// FieldSyncGroupResponseProtocolType is: The group protocol type.
+	FieldSyncGroupResponseProtocolType = "ProtocolType"
+	// FieldSyncGroupResponseTags is: The tagged fields.
+	FieldSyncGroupResponseTags = "Tags"
+	// FieldSyncGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldSyncGroupResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SyncGroupResponse.json

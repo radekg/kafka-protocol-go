@@ -37,10 +37,10 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 const (
 	// FieldDescribeDelegationTokenRequestOwners is: Each owner that we want to describe delegation tokens for, or null to describe all tokens.
 	FieldDescribeDelegationTokenRequestOwners = "Owners"
-	// FieldDescribeDelegationTokenRequestOwnersPrincipalType is: The owner principal type.
-	FieldDescribeDelegationTokenRequestOwnersPrincipalType = "PrincipalType"
 	// FieldDescribeDelegationTokenRequestOwnersPrincipalName is: The owner principal name.
 	FieldDescribeDelegationTokenRequestOwnersPrincipalName = "PrincipalName"
+	// FieldDescribeDelegationTokenRequestOwnersPrincipalType is: The owner principal type.
+	FieldDescribeDelegationTokenRequestOwnersPrincipalType = "PrincipalType"
 	// FieldDescribeDelegationTokenRequestOwnersTags is: The tagged fields.
 	FieldDescribeDelegationTokenRequestOwnersTags = "Tags"
 	// FieldDescribeDelegationTokenRequestTags is: The tagged fields.

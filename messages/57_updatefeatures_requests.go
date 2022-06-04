@@ -21,20 +21,20 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 }
 
 const (
+	// FieldUpdateFeaturesRequestFeatureUpdates is: The list of updates to finalized features.
+	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
 	// FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade is: When set to true, the finalized feature version level is allowed to be downgraded/deleted. The downgrade request will fail if the new maximum version level is a value that's not lower than the existing maximum finalized version level.
 	FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade = "AllowDowngrade"
+	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is: The name of the finalized feature to be updated.
+	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
+	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is: The new maximum version level for the finalized feature. A value >= 1 is valid. A value < 1, is special, and can be used to request the deletion of the finalized feature.
+	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
 	// FieldUpdateFeaturesRequestFeatureUpdatesTags is: The tagged fields.
 	FieldUpdateFeaturesRequestFeatureUpdatesTags = "Tags"
 	// FieldUpdateFeaturesRequestTags is: The tagged fields.
 	FieldUpdateFeaturesRequestTags = "Tags"
 	// FieldUpdateFeaturesRequesttimeoutMs is: How long to wait in milliseconds before timing out the request.
 	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
-	// FieldUpdateFeaturesRequestFeatureUpdates is: The list of updates to finalized features.
-	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
-	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is: The name of the finalized feature to be updated.
-	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
-	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is: The new maximum version level for the finalized feature. A value >= 1 is valid. A value < 1, is special, and can be used to request the deletion of the finalized feature.
-	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateFeaturesRequest.json

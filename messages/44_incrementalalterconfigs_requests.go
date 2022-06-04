@@ -40,28 +40,28 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldIncrementalAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
-	FieldIncrementalAlterConfigsRequestValidateOnly = "ValidateOnly"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsTags = "Tags"
 	// FieldIncrementalAlterConfigsRequestResources is: The incremental updates for each resource.
 	FieldIncrementalAlterConfigsRequestResources = "Resources"
-	// FieldIncrementalAlterConfigsRequestResourcesResourceName is: The resource name.
-	FieldIncrementalAlterConfigsRequestResourcesResourceName = "ResourceName"
 	// FieldIncrementalAlterConfigsRequestResourcesConfigs is: The configurations.
 	FieldIncrementalAlterConfigsRequestResourcesConfigs = "Configs"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsName is: The configuration key name.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsName = "Name"
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation is: The type (Set, Delete, Append, Subtract) of operation.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation = "ConfigOperation"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsName is: The configuration key name.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsName = "Name"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsTags = "Tags"
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsValue = "Value"
-	// FieldIncrementalAlterConfigsRequestTags is: The tagged fields.
-	FieldIncrementalAlterConfigsRequestTags = "Tags"
+	// FieldIncrementalAlterConfigsRequestResourcesResourceName is: The resource name.
+	FieldIncrementalAlterConfigsRequestResourcesResourceName = "ResourceName"
 	// FieldIncrementalAlterConfigsRequestResourcesResourceType is: The resource type.
 	FieldIncrementalAlterConfigsRequestResourcesResourceType = "ResourceType"
 	// FieldIncrementalAlterConfigsRequestResourcesTags is: The tagged fields.
 	FieldIncrementalAlterConfigsRequestResourcesTags = "Tags"
+	// FieldIncrementalAlterConfigsRequestTags is: The tagged fields.
+	FieldIncrementalAlterConfigsRequestTags = "Tags"
+	// FieldIncrementalAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
+	FieldIncrementalAlterConfigsRequestValidateOnly = "ValidateOnly"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/IncrementalAlterConfigsRequest.json

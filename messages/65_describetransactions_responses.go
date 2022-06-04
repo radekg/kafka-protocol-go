@@ -32,34 +32,34 @@ func init65DescribeTransactionsResponse() []schema.Schema {
 const (
 	// FieldDescribeTransactionsResponseTags is: The tagged fields.
 	FieldDescribeTransactionsResponseTags = "Tags"
-	// FieldDescribeTransactionsResponseTransactionStatesErrorCode is:
-	FieldDescribeTransactionsResponseTransactionStatesErrorCode = "ErrorCode"
-	// FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs is:
-	FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs = "TransactionStartTimeMs"
-	// FieldDescribeTransactionsResponseTransactionStatesProducerId is:
-	FieldDescribeTransactionsResponseTransactionStatesProducerId = "ProducerId"
-	// FieldDescribeTransactionsResponseTransactionStatesTopics is: The set of partitions included in the current transaction (if active). When a transaction is preparing to commit or abort, this will include only partitions which do not have markers.
-	FieldDescribeTransactionsResponseTransactionStatesTopics = "Topics"
-	// FieldDescribeTransactionsResponseTransactionStatesTopicsTags is: The tagged fields.
-	FieldDescribeTransactionsResponseTransactionStatesTopicsTags = "Tags"
 	// FieldDescribeTransactionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeTransactionsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldDescribeTransactionsResponseTransactionStates is:
 	FieldDescribeTransactionsResponseTransactionStates = "TransactionStates"
-	// FieldDescribeTransactionsResponseTransactionStatesTransactionalId is:
-	FieldDescribeTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
+	// FieldDescribeTransactionsResponseTransactionStatesErrorCode is:
+	FieldDescribeTransactionsResponseTransactionStatesErrorCode = "ErrorCode"
 	// FieldDescribeTransactionsResponseTransactionStatesProducerEpoch is:
 	FieldDescribeTransactionsResponseTransactionStatesProducerEpoch = "ProducerEpoch"
-	// FieldDescribeTransactionsResponseTransactionStatesTopicsTopic is:
-	FieldDescribeTransactionsResponseTransactionStatesTopicsTopic = "Topic"
+	// FieldDescribeTransactionsResponseTransactionStatesProducerId is:
+	FieldDescribeTransactionsResponseTransactionStatesProducerId = "ProducerId"
 	// FieldDescribeTransactionsResponseTransactionStatesTags is: The tagged fields.
 	FieldDescribeTransactionsResponseTransactionStatesTags = "Tags"
+	// FieldDescribeTransactionsResponseTransactionStatesTopics is: The set of partitions included in the current transaction (if active). When a transaction is preparing to commit or abort, this will include only partitions which do not have markers.
+	FieldDescribeTransactionsResponseTransactionStatesTopics = "Topics"
+	// FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions is:
+	FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions = "Partitions"
+	// FieldDescribeTransactionsResponseTransactionStatesTopicsTags is: The tagged fields.
+	FieldDescribeTransactionsResponseTransactionStatesTopicsTags = "Tags"
+	// FieldDescribeTransactionsResponseTransactionStatesTopicsTopic is:
+	FieldDescribeTransactionsResponseTransactionStatesTopicsTopic = "Topic"
+	// FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs is:
+	FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs = "TransactionStartTimeMs"
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionState is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionState = "TransactionState"
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionTimeoutMs is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionTimeoutMs = "TransactionTimeoutMs"
-	// FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions is:
-	FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions = "Partitions"
+	// FieldDescribeTransactionsResponseTransactionStatesTransactionalId is:
+	FieldDescribeTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeTransactionsResponse.json

@@ -101,34 +101,34 @@ func init9OffsetFetchRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetFetchRequestRequireStable is: Whether broker should hold on returning unstable offsets but set a retriable error code for the partitions.
-	FieldOffsetFetchRequestRequireStable = "RequireStable"
-	// FieldOffsetFetchRequestGroupsTopicsName is: The topic name.
-	FieldOffsetFetchRequestGroupsTopicsName = "Name"
-	// FieldOffsetFetchRequestTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
-	FieldOffsetFetchRequestTopics = "Topics"
-	// FieldOffsetFetchRequestTags is: The tagged fields.
-	FieldOffsetFetchRequestTags = "Tags"
-	// FieldOffsetFetchRequestGroupsTopicsTags is: The tagged fields.
-	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
-	// FieldOffsetFetchRequestGroupsTags is: The tagged fields.
-	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestGroupId is: The group to fetch offsets for.
 	FieldOffsetFetchRequestGroupId = "GroupId"
 	// FieldOffsetFetchRequestGroups is: Each group we would like to fetch offsets for
 	FieldOffsetFetchRequestGroups = "Groups"
-	// FieldOffsetFetchRequestGroupsgroupId is: The group ID.
-	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+	// FieldOffsetFetchRequestGroupsTags is: The tagged fields.
+	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestGroupsTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
 	FieldOffsetFetchRequestGroupsTopics = "Topics"
+	// FieldOffsetFetchRequestGroupsTopicsName is: The topic name.
+	FieldOffsetFetchRequestGroupsTopicsName = "Name"
+	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
+	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestGroupsTopicsTags is: The tagged fields.
+	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsgroupId is: The group ID.
+	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+	// FieldOffsetFetchRequestRequireStable is: Whether broker should hold on returning unstable offsets but set a retriable error code for the partitions.
+	FieldOffsetFetchRequestRequireStable = "RequireStable"
+	// FieldOffsetFetchRequestTags is: The tagged fields.
+	FieldOffsetFetchRequestTags = "Tags"
+	// FieldOffsetFetchRequestTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
+	FieldOffsetFetchRequestTopics = "Topics"
 	// FieldOffsetFetchRequestTopicsName is: The topic name.
 	FieldOffsetFetchRequestTopicsName = "Name"
 	// FieldOffsetFetchRequestTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
 	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldOffsetFetchRequestTopicsTags is: The tagged fields.
 	FieldOffsetFetchRequestTopicsTags = "Tags"
-	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
-	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetFetchRequest.json

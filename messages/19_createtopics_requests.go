@@ -172,38 +172,38 @@ func init19CreateTopicsRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateTopicsRequestTopicsAssignments is: The manual partition assignment, or the empty array if we are using automatic assignment.
-	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
-	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is: The partition index.
-	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
-	// FieldCreateTopicsRequestTopicsConfigs is: The custom topic configurations to set.
-	FieldCreateTopicsRequestTopicsConfigs = "Configs"
-	// FieldCreateTopicsRequestTopicsConfigsValue is: The configuration value.
-	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
-	// FieldCreateTopicsRequestTopicsConfigsName is: The configuration name.
-	FieldCreateTopicsRequestTopicsConfigsName = "Name"
-	// FieldCreateTopicsRequestTopicsAssignmentsTags is: The tagged fields.
-	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsConfigsTags is: The tagged fields.
-	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsTags is: The tagged fields.
-	FieldCreateTopicsRequestTopicsTags = "Tags"
 	// FieldCreateTopicsRequestTags is: The tagged fields.
 	FieldCreateTopicsRequestTags = "Tags"
 	// FieldCreateTopicsRequestTopics is: The topics to create.
 	FieldCreateTopicsRequestTopics = "Topics"
+	// FieldCreateTopicsRequestTopicsAssignments is: The manual partition assignment, or the empty array if we are using automatic assignment.
+	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
+	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is: The brokers to place the partition on.
+	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is: The partition index.
+	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
+	// FieldCreateTopicsRequestTopicsAssignmentsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsConfigs is: The custom topic configurations to set.
+	FieldCreateTopicsRequestTopicsConfigs = "Configs"
+	// FieldCreateTopicsRequestTopicsConfigsName is: The configuration name.
+	FieldCreateTopicsRequestTopicsConfigsName = "Name"
+	// FieldCreateTopicsRequestTopicsConfigsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsConfigsValue is: The configuration value.
+	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
 	// FieldCreateTopicsRequestTopicsName is: The topic name.
 	FieldCreateTopicsRequestTopicsName = "Name"
 	// FieldCreateTopicsRequestTopicsNumPartitions is: The number of partitions to create in the topic, or -1 if we are either specifying a manual partition assignment or using the default partitions.
 	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
 	// FieldCreateTopicsRequestTopicsReplicationFactor is: The number of replicas to create for each partition in the topic, or -1 if we are either specifying a manual partition assignment or using the default replication factor.
 	FieldCreateTopicsRequestTopicsReplicationFactor = "ReplicationFactor"
-	// FieldCreateTopicsRequestvalidateOnly is: If true, check that the topics can be created as specified, but don't create anything.
-	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
-	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is: The brokers to place the partition on.
-	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreateTopicsRequestTopicsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsTags = "Tags"
 	// FieldCreateTopicsRequesttimeoutMs is: How long to wait in milliseconds before timing out the request.
 	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
+	// FieldCreateTopicsRequestvalidateOnly is: If true, check that the topics can be created as specified, but don't create anything.
+	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateTopicsRequest.json

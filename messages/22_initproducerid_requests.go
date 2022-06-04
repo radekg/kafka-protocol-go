@@ -46,16 +46,16 @@ func init22InitProducerIdRequest() []schema.Schema {
 }
 
 const (
-	// FieldInitProducerIdRequestTransactionalId is: The transactional id, or null if the producer is not transactional.
-	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
-	// FieldInitProducerIdRequestTransactionTimeoutMs is: The time in ms to wait before aborting idle transactions sent by this producer. This is only relevant if a TransactionalId has been defined.
-	FieldInitProducerIdRequestTransactionTimeoutMs = "TransactionTimeoutMs"
-	// FieldInitProducerIdRequestTags is: The tagged fields.
-	FieldInitProducerIdRequestTags = "Tags"
-	// FieldInitProducerIdRequestProducerId is: The producer id. This is used to disambiguate requests if a transactional id is reused following its expiration.
-	FieldInitProducerIdRequestProducerId = "ProducerId"
 	// FieldInitProducerIdRequestProducerEpoch is: The producer's current epoch. This will be checked against the producer epoch on the broker, and the request will return an error if they do not match.
 	FieldInitProducerIdRequestProducerEpoch = "ProducerEpoch"
+	// FieldInitProducerIdRequestProducerId is: The producer id. This is used to disambiguate requests if a transactional id is reused following its expiration.
+	FieldInitProducerIdRequestProducerId = "ProducerId"
+	// FieldInitProducerIdRequestTags is: The tagged fields.
+	FieldInitProducerIdRequestTags = "Tags"
+	// FieldInitProducerIdRequestTransactionTimeoutMs is: The time in ms to wait before aborting idle transactions sent by this producer. This is only relevant if a TransactionalId has been defined.
+	FieldInitProducerIdRequestTransactionTimeoutMs = "TransactionTimeoutMs"
+	// FieldInitProducerIdRequestTransactionalId is: The transactional id, or null if the producer is not transactional.
+	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/InitProducerIdRequest.json

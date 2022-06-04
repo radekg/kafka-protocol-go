@@ -40,28 +40,28 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 }
 
 const (
-	// FieldWriteTxnMarkersRequestTags is: The tagged fields.
-	FieldWriteTxnMarkersRequestTags = "Tags"
 	// FieldWriteTxnMarkersRequestMarkers is: The transaction markers to be written.
 	FieldWriteTxnMarkersRequestMarkers = "Markers"
+	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is: Epoch associated with the transaction state partition hosted by this transaction coordinator
+	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
+	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is: The current epoch associated with the producer ID.
+	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
+	// FieldWriteTxnMarkersRequestMarkersProducerId is: The current producer ID.
+	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
+	// FieldWriteTxnMarkersRequestMarkersTags is: The tagged fields.
+	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
 	// FieldWriteTxnMarkersRequestMarkersTopics is: Each topic that we want to write transaction marker(s) for.
 	FieldWriteTxnMarkersRequestMarkersTopics = "Topics"
+	// FieldWriteTxnMarkersRequestMarkersTopicsName is: The topic name.
+	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
 	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is: The indexes of the partitions to write transaction markers for.
 	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldWriteTxnMarkersRequestMarkersTopicsTags is: The tagged fields.
 	FieldWriteTxnMarkersRequestMarkersTopicsTags = "Tags"
-	// FieldWriteTxnMarkersRequestMarkersTags is: The tagged fields.
-	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
-	// FieldWriteTxnMarkersRequestMarkersProducerId is: The current producer ID.
-	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
-	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is: The current epoch associated with the producer ID.
-	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
 	// FieldWriteTxnMarkersRequestMarkersTransactionResult is: The result of the transaction to write to the partitions (false = ABORT, true = COMMIT).
 	FieldWriteTxnMarkersRequestMarkersTransactionResult = "TransactionResult"
-	// FieldWriteTxnMarkersRequestMarkersTopicsName is: The topic name.
-	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
-	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is: Epoch associated with the transaction state partition hosted by this transaction coordinator
-	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
+	// FieldWriteTxnMarkersRequestTags is: The tagged fields.
+	FieldWriteTxnMarkersRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/WriteTxnMarkersRequest.json

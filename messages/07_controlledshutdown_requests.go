@@ -32,10 +32,10 @@ func init7ControlledShutdownRequest() []schema.Schema {
 }
 
 const (
-	// FieldControlledShutdownRequestBrokerId is: The id of the broker for which controlled shutdown has been requested.
-	FieldControlledShutdownRequestBrokerId = "BrokerId"
 	// FieldControlledShutdownRequestBrokerEpoch is: The broker epoch.
 	FieldControlledShutdownRequestBrokerEpoch = "BrokerEpoch"
+	// FieldControlledShutdownRequestBrokerId is: The id of the broker for which controlled shutdown has been requested.
+	FieldControlledShutdownRequestBrokerId = "BrokerId"
 	// FieldControlledShutdownRequestTags is: The tagged fields.
 	FieldControlledShutdownRequestTags = "Tags"
 )

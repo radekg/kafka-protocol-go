@@ -22,12 +22,12 @@ func init18ApiVersionsRequest() []schema.Schema {
 }
 
 const (
+	// FieldApiVersionsRequestClientSoftwareName is: The name of the client.
+	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 	// FieldApiVersionsRequestClientSoftwareVersion is: The version of the client.
 	FieldApiVersionsRequestClientSoftwareVersion = "ClientSoftwareVersion"
 	// FieldApiVersionsRequestTags is: The tagged fields.
 	FieldApiVersionsRequestTags = "Tags"
-	// FieldApiVersionsRequestClientSoftwareName is: The name of the client.
-	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ApiVersionsRequest.json

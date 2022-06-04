@@ -367,60 +367,60 @@ func init3MetadataResponse() []schema.Schema {
 }
 
 const (
-	// FieldMetadataResponseTopicsTags is: The tagged fields.
-	FieldMetadataResponseTopicsTags = "Tags"
-	// FieldMetadataResponseTopicsTopicId is: The topic id.
-	FieldMetadataResponseTopicsTopicId = "TopicId"
 	// FieldMetadataResponseBrokers is: Each broker in the response.
 	FieldMetadataResponseBrokers = "Brokers"
-	// FieldMetadataResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldMetadataResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldMetadataResponseTags is: The tagged fields.
-	FieldMetadataResponseTags = "Tags"
-	// FieldMetadataResponseTopics is: Each topic in the response.
-	FieldMetadataResponseTopics = "Topics"
-	// FieldMetadataResponseTopicsPartitionsIsrNodes is: The set of nodes that are in sync with the leader for this partition.
-	FieldMetadataResponseTopicsPartitionsIsrNodes = "IsrNodes"
-	// FieldMetadataResponseTopicsTopicAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this topic.
-	FieldMetadataResponseTopicsTopicAuthorizedOperations = "TopicAuthorizedOperations"
-	// FieldMetadataResponseBrokersTags is: The tagged fields.
-	FieldMetadataResponseBrokersTags = "Tags"
-	// FieldMetadataResponseBrokersRack is: The rack of the broker, or null if it has not been assigned to a rack.
-	FieldMetadataResponseBrokersRack = "Rack"
-	// FieldMetadataResponseTopicsPartitionsOfflineReplicas is: The set of offline replicas of this partition.
-	FieldMetadataResponseTopicsPartitionsOfflineReplicas = "OfflineReplicas"
-	// FieldMetadataResponseTopicsPartitionsTags is: The tagged fields.
-	FieldMetadataResponseTopicsPartitionsTags = "Tags"
-	// FieldMetadataResponseBrokersNodeId is: The broker ID.
-	FieldMetadataResponseBrokersNodeId = "NodeId"
 	// FieldMetadataResponseBrokersHost is: The broker hostname.
 	FieldMetadataResponseBrokersHost = "Host"
+	// FieldMetadataResponseBrokersNodeId is: The broker ID.
+	FieldMetadataResponseBrokersNodeId = "NodeId"
 	// FieldMetadataResponseBrokersPort is: The broker port.
 	FieldMetadataResponseBrokersPort = "Port"
+	// FieldMetadataResponseBrokersRack is: The rack of the broker, or null if it has not been assigned to a rack.
+	FieldMetadataResponseBrokersRack = "Rack"
+	// FieldMetadataResponseBrokersTags is: The tagged fields.
+	FieldMetadataResponseBrokersTags = "Tags"
+	// FieldMetadataResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
+	FieldMetadataResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
+	// FieldMetadataResponseClusterId is: The cluster ID that responding broker belongs to.
+	FieldMetadataResponseClusterId = "ClusterId"
+	// FieldMetadataResponseControllerId is: The ID of the controller broker.
+	FieldMetadataResponseControllerId = "ControllerId"
+	// FieldMetadataResponseTags is: The tagged fields.
+	FieldMetadataResponseTags = "Tags"
+	// FieldMetadataResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldMetadataResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldMetadataResponseTopics is: Each topic in the response.
+	FieldMetadataResponseTopics = "Topics"
+	// FieldMetadataResponseTopicsErrorCode is: The topic error, or 0 if there was no error.
+	FieldMetadataResponseTopicsErrorCode = "ErrorCode"
+	// FieldMetadataResponseTopicsIsInternal is: True if the topic is internal.
+	FieldMetadataResponseTopicsIsInternal = "IsInternal"
 	// FieldMetadataResponseTopicsName is: The topic name.
 	FieldMetadataResponseTopicsName = "Name"
 	// FieldMetadataResponseTopicsPartitions is: Each partition in the topic.
 	FieldMetadataResponseTopicsPartitions = "Partitions"
-	// FieldMetadataResponseTopicsErrorCode is: The topic error, or 0 if there was no error.
-	FieldMetadataResponseTopicsErrorCode = "ErrorCode"
-	// FieldMetadataResponseTopicsPartitionsLeaderId is: The ID of the leader broker.
-	FieldMetadataResponseTopicsPartitionsLeaderId = "LeaderId"
 	// FieldMetadataResponseTopicsPartitionsErrorCode is: The partition error, or 0 if there was no error.
 	FieldMetadataResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldMetadataResponseTopicsPartitionsReplicaNodes is: The set of all nodes that host this partition.
-	FieldMetadataResponseTopicsPartitionsReplicaNodes = "ReplicaNodes"
-	// FieldMetadataResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldMetadataResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldMetadataResponseTopicsPartitionsIsrNodes is: The set of nodes that are in sync with the leader for this partition.
+	FieldMetadataResponseTopicsPartitionsIsrNodes = "IsrNodes"
 	// FieldMetadataResponseTopicsPartitionsLeaderEpoch is: The leader epoch of this partition.
 	FieldMetadataResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldMetadataResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
-	FieldMetadataResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
-	// FieldMetadataResponseControllerId is: The ID of the controller broker.
-	FieldMetadataResponseControllerId = "ControllerId"
-	// FieldMetadataResponseTopicsIsInternal is: True if the topic is internal.
-	FieldMetadataResponseTopicsIsInternal = "IsInternal"
-	// FieldMetadataResponseClusterId is: The cluster ID that responding broker belongs to.
-	FieldMetadataResponseClusterId = "ClusterId"
+	// FieldMetadataResponseTopicsPartitionsLeaderId is: The ID of the leader broker.
+	FieldMetadataResponseTopicsPartitionsLeaderId = "LeaderId"
+	// FieldMetadataResponseTopicsPartitionsOfflineReplicas is: The set of offline replicas of this partition.
+	FieldMetadataResponseTopicsPartitionsOfflineReplicas = "OfflineReplicas"
+	// FieldMetadataResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldMetadataResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldMetadataResponseTopicsPartitionsReplicaNodes is: The set of all nodes that host this partition.
+	FieldMetadataResponseTopicsPartitionsReplicaNodes = "ReplicaNodes"
+	// FieldMetadataResponseTopicsPartitionsTags is: The tagged fields.
+	FieldMetadataResponseTopicsPartitionsTags = "Tags"
+	// FieldMetadataResponseTopicsTags is: The tagged fields.
+	FieldMetadataResponseTopicsTags = "Tags"
+	// FieldMetadataResponseTopicsTopicAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this topic.
+	FieldMetadataResponseTopicsTopicAuthorizedOperations = "TopicAuthorizedOperations"
+	// FieldMetadataResponseTopicsTopicId is: The topic id.
+	FieldMetadataResponseTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataResponse.json

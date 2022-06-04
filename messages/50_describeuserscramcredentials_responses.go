@@ -28,32 +28,32 @@ func init50DescribeUserScramCredentialsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeUserScramCredentialsResponseResultsUser is: The user name.
-	FieldDescribeUserScramCredentialsResponseResultsUser = "User"
-	// FieldDescribeUserScramCredentialsResponseResultsErrorMessage is: The user-level error message, if any.
-	FieldDescribeUserScramCredentialsResponseResultsErrorMessage = "ErrorMessage"
-	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism is: The SCRAM mechanism.
-	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism = "Mechanism"
-	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations is: The number of iterations used in the SCRAM credential.
-	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations = "Iterations"
-	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags is: The tagged fields.
-	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags = "Tags"
-	// FieldDescribeUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldDescribeUserScramCredentialsResponseErrorCode is: The message-level error code, 0 except for user authorization or infrastructure issues.
 	FieldDescribeUserScramCredentialsResponseErrorCode = "ErrorCode"
-	// FieldDescribeUserScramCredentialsResponseResults is: The results for descriptions, one per user.
-	FieldDescribeUserScramCredentialsResponseResults = "Results"
-	// FieldDescribeUserScramCredentialsResponseTags is: The tagged fields.
-	FieldDescribeUserScramCredentialsResponseTags = "Tags"
-	// FieldDescribeUserScramCredentialsResponseResultsTags is: The tagged fields.
-	FieldDescribeUserScramCredentialsResponseResultsTags = "Tags"
 	// FieldDescribeUserScramCredentialsResponseErrorMessage is: The message-level error message, if any.
 	FieldDescribeUserScramCredentialsResponseErrorMessage = "ErrorMessage"
-	// FieldDescribeUserScramCredentialsResponseResultsErrorCode is: The user-level error code.
-	FieldDescribeUserScramCredentialsResponseResultsErrorCode = "ErrorCode"
+	// FieldDescribeUserScramCredentialsResponseResults is: The results for descriptions, one per user.
+	FieldDescribeUserScramCredentialsResponseResults = "Results"
 	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfos is: The mechanism and related information associated with the user's SCRAM credentials.
 	FieldDescribeUserScramCredentialsResponseResultsCredentialInfos = "CredentialInfos"
+	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations is: The number of iterations used in the SCRAM credential.
+	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations = "Iterations"
+	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism is: The SCRAM mechanism.
+	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism = "Mechanism"
+	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags is: The tagged fields.
+	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags = "Tags"
+	// FieldDescribeUserScramCredentialsResponseResultsErrorCode is: The user-level error code.
+	FieldDescribeUserScramCredentialsResponseResultsErrorCode = "ErrorCode"
+	// FieldDescribeUserScramCredentialsResponseResultsErrorMessage is: The user-level error message, if any.
+	FieldDescribeUserScramCredentialsResponseResultsErrorMessage = "ErrorMessage"
+	// FieldDescribeUserScramCredentialsResponseResultsTags is: The tagged fields.
+	FieldDescribeUserScramCredentialsResponseResultsTags = "Tags"
+	// FieldDescribeUserScramCredentialsResponseResultsUser is: The user name.
+	FieldDescribeUserScramCredentialsResponseResultsUser = "User"
+	// FieldDescribeUserScramCredentialsResponseTags is: The tagged fields.
+	FieldDescribeUserScramCredentialsResponseTags = "Tags"
+	// FieldDescribeUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeUserScramCredentialsResponse.json

@@ -42,20 +42,20 @@ func init29DescribeAclsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeAclsRequestResourceTypeFilter is: The resource type.
-	FieldDescribeAclsRequestResourceTypeFilter = "ResourceTypeFilter"
-	// FieldDescribeAclsRequestResourceNameFilter is: The resource name, or null to match any resource name.
-	FieldDescribeAclsRequestResourceNameFilter = "ResourceNameFilter"
-	// FieldDescribeAclsRequestPrincipalFilter is: The principal to match, or null to match any principal.
-	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
 	// FieldDescribeAclsRequestHostFilter is: The host to match, or null to match any host.
 	FieldDescribeAclsRequestHostFilter = "HostFilter"
 	// FieldDescribeAclsRequestOperation is: The operation to match.
 	FieldDescribeAclsRequestOperation = "Operation"
-	// FieldDescribeAclsRequestPermissionType is: The permission type to match.
-	FieldDescribeAclsRequestPermissionType = "PermissionType"
 	// FieldDescribeAclsRequestPatternTypeFilter is: The resource pattern to match.
 	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
+	// FieldDescribeAclsRequestPermissionType is: The permission type to match.
+	FieldDescribeAclsRequestPermissionType = "PermissionType"
+	// FieldDescribeAclsRequestPrincipalFilter is: The principal to match, or null to match any principal.
+	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
+	// FieldDescribeAclsRequestResourceNameFilter is: The resource name, or null to match any resource name.
+	FieldDescribeAclsRequestResourceNameFilter = "ResourceNameFilter"
+	// FieldDescribeAclsRequestResourceTypeFilter is: The resource type.
+	FieldDescribeAclsRequestResourceTypeFilter = "ResourceTypeFilter"
 	// FieldDescribeAclsRequestTags is: The tagged fields.
 	FieldDescribeAclsRequestTags = "Tags"
 )

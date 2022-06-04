@@ -23,24 +23,24 @@ func init66ListTransactionsResponse() []schema.Schema {
 }
 
 const (
-	// FieldListTransactionsResponseUnknownStateFilters is: Set of state filters provided in the request which were unknown to the transaction coordinator
-	FieldListTransactionsResponseUnknownStateFilters = "UnknownStateFilters"
-	// FieldListTransactionsResponseTransactionStates is:
-	FieldListTransactionsResponseTransactionStates = "TransactionStates"
-	// FieldListTransactionsResponseTransactionStatesTransactionalId is:
-	FieldListTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
-	// FieldListTransactionsResponseTransactionStatesTransactionState is: The current transaction state of the producer
-	FieldListTransactionsResponseTransactionStatesTransactionState = "TransactionState"
-	// FieldListTransactionsResponseTransactionStatesTags is: The tagged fields.
-	FieldListTransactionsResponseTransactionStatesTags = "Tags"
+	// FieldListTransactionsResponseErrorCode is:
+	FieldListTransactionsResponseErrorCode = "ErrorCode"
 	// FieldListTransactionsResponseTags is: The tagged fields.
 	FieldListTransactionsResponseTags = "Tags"
 	// FieldListTransactionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListTransactionsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldListTransactionsResponseTransactionStates is:
+	FieldListTransactionsResponseTransactionStates = "TransactionStates"
 	// FieldListTransactionsResponseTransactionStatesProducerId is:
 	FieldListTransactionsResponseTransactionStatesProducerId = "ProducerId"
-	// FieldListTransactionsResponseErrorCode is:
-	FieldListTransactionsResponseErrorCode = "ErrorCode"
+	// FieldListTransactionsResponseTransactionStatesTags is: The tagged fields.
+	FieldListTransactionsResponseTransactionStatesTags = "Tags"
+	// FieldListTransactionsResponseTransactionStatesTransactionState is: The current transaction state of the producer
+	FieldListTransactionsResponseTransactionStatesTransactionState = "TransactionState"
+	// FieldListTransactionsResponseTransactionStatesTransactionalId is:
+	FieldListTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
+	// FieldListTransactionsResponseUnknownStateFilters is: Set of state filters provided in the request which were unknown to the transaction coordinator
+	FieldListTransactionsResponseUnknownStateFilters = "UnknownStateFilters"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListTransactionsResponse.json

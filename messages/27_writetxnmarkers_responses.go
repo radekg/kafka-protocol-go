@@ -41,28 +41,28 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 }
 
 const (
+	// FieldWriteTxnMarkersResponseMarkers is: The results for writing makers.
+	FieldWriteTxnMarkersResponseMarkers = "Markers"
+	// FieldWriteTxnMarkersResponseMarkersProducerId is: The current producer ID in use by the transactional ID.
+	FieldWriteTxnMarkersResponseMarkersProducerId = "ProducerId"
+	// FieldWriteTxnMarkersResponseMarkersTags is: The tagged fields.
+	FieldWriteTxnMarkersResponseMarkersTags = "Tags"
+	// FieldWriteTxnMarkersResponseMarkersTopics is: The results by topic.
+	FieldWriteTxnMarkersResponseMarkersTopics = "Topics"
 	// FieldWriteTxnMarkersResponseMarkersTopicsName is: The topic name.
 	FieldWriteTxnMarkersResponseMarkersTopicsName = "Name"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitions is: The results by partition.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitions = "Partitions"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex is: The partition index.
+	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags = "Tags"
 	// FieldWriteTxnMarkersResponseMarkersTopicsTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseMarkersTopicsTags = "Tags"
 	// FieldWriteTxnMarkersResponseTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseTags = "Tags"
-	// FieldWriteTxnMarkersResponseMarkers is: The results for writing makers.
-	FieldWriteTxnMarkersResponseMarkers = "Markers"
-	// FieldWriteTxnMarkersResponseMarkersProducerId is: The current producer ID in use by the transactional ID.
-	FieldWriteTxnMarkersResponseMarkersProducerId = "ProducerId"
-	// FieldWriteTxnMarkersResponseMarkersTopics is: The results by topic.
-	FieldWriteTxnMarkersResponseMarkersTopics = "Topics"
-	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex is: The partition index.
-	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldWriteTxnMarkersResponseMarkersTags is: The tagged fields.
-	FieldWriteTxnMarkersResponseMarkersTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/WriteTxnMarkersResponse.json

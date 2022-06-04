@@ -31,14 +31,14 @@ func init39RenewDelegationTokenResponse() []schema.Schema {
 }
 
 const (
-	// FieldRenewDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldRenewDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldRenewDelegationTokenResponseTags is: The tagged fields.
-	FieldRenewDelegationTokenResponseTags = "Tags"
 	// FieldRenewDelegationTokenResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldRenewDelegationTokenResponseErrorCode = "ErrorCode"
 	// FieldRenewDelegationTokenResponseExpiryTimestampMs is: The timestamp in milliseconds at which this token expires.
 	FieldRenewDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
+	// FieldRenewDelegationTokenResponseTags is: The tagged fields.
+	FieldRenewDelegationTokenResponseTags = "Tags"
+	// FieldRenewDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldRenewDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/RenewDelegationTokenResponse.json

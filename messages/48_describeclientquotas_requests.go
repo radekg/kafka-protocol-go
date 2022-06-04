@@ -31,20 +31,20 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeClientQuotasRequestComponentsMatch is: The string to match against, or null if unused for the match type.
-	FieldDescribeClientQuotasRequestComponentsMatch = "Match"
-	// FieldDescribeClientQuotasRequestStrict is: Whether the match is strict, i.e. should exclude entities with unspecified entity types.
-	FieldDescribeClientQuotasRequestStrict = "Strict"
-	// FieldDescribeClientQuotasRequestComponentsTags is: The tagged fields.
-	FieldDescribeClientQuotasRequestComponentsTags = "Tags"
-	// FieldDescribeClientQuotasRequestTags is: The tagged fields.
-	FieldDescribeClientQuotasRequestTags = "Tags"
 	// FieldDescribeClientQuotasRequestComponents is: Filter components to apply to quota entities.
 	FieldDescribeClientQuotasRequestComponents = "Components"
 	// FieldDescribeClientQuotasRequestComponentsEntityType is: The entity type that the filter component applies to.
 	FieldDescribeClientQuotasRequestComponentsEntityType = "EntityType"
+	// FieldDescribeClientQuotasRequestComponentsMatch is: The string to match against, or null if unused for the match type.
+	FieldDescribeClientQuotasRequestComponentsMatch = "Match"
 	// FieldDescribeClientQuotasRequestComponentsMatchType is: How to match the entity {0 = exact name, 1 = default name, 2 = any specified name}.
 	FieldDescribeClientQuotasRequestComponentsMatchType = "MatchType"
+	// FieldDescribeClientQuotasRequestComponentsTags is: The tagged fields.
+	FieldDescribeClientQuotasRequestComponentsTags = "Tags"
+	// FieldDescribeClientQuotasRequestStrict is: Whether the match is strict, i.e. should exclude entities with unspecified entity types.
+	FieldDescribeClientQuotasRequestStrict = "Strict"
+	// FieldDescribeClientQuotasRequestTags is: The tagged fields.
+	FieldDescribeClientQuotasRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeClientQuotasRequest.json

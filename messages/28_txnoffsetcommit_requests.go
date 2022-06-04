@@ -81,40 +81,40 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 }
 
 const (
-	// FieldTxnOffsetCommitRequestProducerEpoch is: The current epoch associated with the producer ID.
-	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
-	// FieldTxnOffsetCommitRequestTopicsName is: The topic name.
-	FieldTxnOffsetCommitRequestTopicsName = "Name"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is: The index of the partition within the topic.
-	FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldTxnOffsetCommitRequestTransactionalId is: The ID of the transaction.
-	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
-	// FieldTxnOffsetCommitRequestTags is: The tagged fields.
-	FieldTxnOffsetCommitRequestTags = "Tags"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of the last consumed record.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldTxnOffsetCommitRequestProducerId is: The current producer ID in use by the transactional ID.
-	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
-	// FieldTxnOffsetCommitRequestTopicsPartitions is: The partitions inside the topic that we want to committ offsets for.
-	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldTxnOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
-	FieldTxnOffsetCommitRequestMemberId = "MemberId"
-	// FieldTxnOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
-	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
-	// FieldTxnOffsetCommitRequestTopicsTags is: The tagged fields.
-	FieldTxnOffsetCommitRequestTopicsTags = "Tags"
-	// FieldTxnOffsetCommitRequestGroupId is: The ID of the group.
-	FieldTxnOffsetCommitRequestGroupId = "GroupId"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
 	// FieldTxnOffsetCommitRequestGenerationId is: The generation of the consumer.
 	FieldTxnOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
-	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
+	// FieldTxnOffsetCommitRequestGroupId is: The ID of the group.
+	FieldTxnOffsetCommitRequestGroupId = "GroupId"
+	// FieldTxnOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+	// FieldTxnOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
+	FieldTxnOffsetCommitRequestMemberId = "MemberId"
+	// FieldTxnOffsetCommitRequestProducerEpoch is: The current epoch associated with the producer ID.
+	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
+	// FieldTxnOffsetCommitRequestProducerId is: The current producer ID in use by the transactional ID.
+	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
+	// FieldTxnOffsetCommitRequestTags is: The tagged fields.
+	FieldTxnOffsetCommitRequestTags = "Tags"
 	// FieldTxnOffsetCommitRequestTopics is: Each topic that we want to commit offsets for.
 	FieldTxnOffsetCommitRequestTopics = "Topics"
+	// FieldTxnOffsetCommitRequestTopicsName is: The topic name.
+	FieldTxnOffsetCommitRequestTopicsName = "Name"
+	// FieldTxnOffsetCommitRequestTopicsPartitions is: The partitions inside the topic that we want to committ offsets for.
+	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of the last consumed record.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is: The index of the partition within the topic.
+	FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
+	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
+	// FieldTxnOffsetCommitRequestTopicsTags is: The tagged fields.
+	FieldTxnOffsetCommitRequestTopicsTags = "Tags"
+	// FieldTxnOffsetCommitRequestTransactionalId is: The ID of the transaction.
+	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/TxnOffsetCommitRequest.json

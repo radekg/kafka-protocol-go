@@ -53,24 +53,24 @@ func init33AlterConfigsRequest() []schema.Schema {
 const (
 	// FieldAlterConfigsRequestResources is: The updates for each resource.
 	FieldAlterConfigsRequestResources = "Resources"
-	// FieldAlterConfigsRequestResourcesConfigsName is: The configuration key name.
-	FieldAlterConfigsRequestResourcesConfigsName = "Name"
-	// FieldAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
-	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
-	// FieldAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
-	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
-	// FieldAlterConfigsRequestTags is: The tagged fields.
-	FieldAlterConfigsRequestTags = "Tags"
-	// FieldAlterConfigsRequestResourcesResourceType is: The resource type.
-	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
-	// FieldAlterConfigsRequestResourcesResourceName is: The resource name.
-	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
 	// FieldAlterConfigsRequestResourcesConfigs is: The configurations.
 	FieldAlterConfigsRequestResourcesConfigs = "Configs"
+	// FieldAlterConfigsRequestResourcesConfigsName is: The configuration key name.
+	FieldAlterConfigsRequestResourcesConfigsName = "Name"
+	// FieldAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
+	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
 	// FieldAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
 	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
+	// FieldAlterConfigsRequestResourcesResourceName is: The resource name.
+	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
+	// FieldAlterConfigsRequestResourcesResourceType is: The resource type.
+	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
 	// FieldAlterConfigsRequestResourcesTags is: The tagged fields.
 	FieldAlterConfigsRequestResourcesTags = "Tags"
+	// FieldAlterConfigsRequestTags is: The tagged fields.
+	FieldAlterConfigsRequestTags = "Tags"
+	// FieldAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
+	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterConfigsRequest.json

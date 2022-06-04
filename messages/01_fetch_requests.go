@@ -311,60 +311,60 @@ func init1FetchRequest() []schema.Schema {
 }
 
 const (
-	// FieldFetchRequestTopicsTopic is: The name of the topic to fetch.
-	FieldFetchRequestTopicsTopic = "Topic"
-	// FieldFetchRequestForgottenTopicsDataTags is: The tagged fields.
-	FieldFetchRequestForgottenTopicsDataTags = "Tags"
-	// FieldFetchRequestSessionId is: The fetch session ID.
-	FieldFetchRequestSessionId = "SessionId"
-	// FieldFetchRequestSessionEpoch is: The fetch session epoch, which is used for ordering requests in a session.
-	FieldFetchRequestSessionEpoch = "SessionEpoch"
-	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is: The epoch of the last fetched record or -1 if there is none
-	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
 	// FieldFetchRequestClusterId is: The clusterId if known. This is used to validate metadata fetches prior to broker registration.
 	FieldFetchRequestClusterId = "ClusterId"
-	// FieldFetchRequestTopicsPartitionsTags is: The tagged fields.
-	FieldFetchRequestTopicsPartitionsTags = "Tags"
-	// FieldFetchRequestTopicsTags is: The tagged fields.
-	FieldFetchRequestTopicsTags = "Tags"
-	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is: The maximum bytes to fetch from this partition.  See KIP-74 for cases where this limit may not be honored.
-	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
-	// FieldFetchRequestForgottenTopicsDataTopic is: The partition name.
-	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
+	// FieldFetchRequestForgottenTopicsData is: In an incremental fetch request, the partitions to remove.
+	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
 	// FieldFetchRequestForgottenTopicsDataPartitions is: The partitions indexes to forget.
 	FieldFetchRequestForgottenTopicsDataPartitions = "Partitions"
-	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch of the partition.
-	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldFetchRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
-	FieldFetchRequestIsolationLevel = "IsolationLevel"
-	// FieldFetchRequestTags is: The tagged fields.
-	FieldFetchRequestTags = "Tags"
+	// FieldFetchRequestForgottenTopicsDataTags is: The tagged fields.
+	FieldFetchRequestForgottenTopicsDataTags = "Tags"
+	// FieldFetchRequestForgottenTopicsDataTopic is: The partition name.
+	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
 	// FieldFetchRequestForgottenTopicsDataTopicId is: The unique topic ID
 	FieldFetchRequestForgottenTopicsDataTopicId = "TopicId"
-	// FieldFetchRequestReplicaId is: The broker ID of the follower, of -1 if this request is from a consumer.
-	FieldFetchRequestReplicaId = "ReplicaId"
-	// FieldFetchRequestTopics is: The topics to fetch.
-	FieldFetchRequestTopics = "Topics"
-	// FieldFetchRequestTopicsPartitionsLogStartOffset is: The earliest available offset of the follower replica.  The field is only used when the request is sent by the follower.
-	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
-	// FieldFetchRequestRackId is: Rack ID of the consumer making this request
-	FieldFetchRequestRackId = "RackId"
-	// FieldFetchRequestTopicsTopicId is: The unique topic ID
-	FieldFetchRequestTopicsTopicId = "TopicId"
+	// FieldFetchRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
+	FieldFetchRequestIsolationLevel = "IsolationLevel"
+	// FieldFetchRequestMaxBytes is: The maximum bytes to fetch.  See KIP-74 for cases where this limit may not be honored.
+	FieldFetchRequestMaxBytes = "MaxBytes"
 	// FieldFetchRequestMaxWaitMs is: The maximum time in milliseconds to wait for the response.
 	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
 	// FieldFetchRequestMinBytes is: The minimum bytes to accumulate in the response.
 	FieldFetchRequestMinBytes = "MinBytes"
+	// FieldFetchRequestRackId is: Rack ID of the consumer making this request
+	FieldFetchRequestRackId = "RackId"
+	// FieldFetchRequestReplicaId is: The broker ID of the follower, of -1 if this request is from a consumer.
+	FieldFetchRequestReplicaId = "ReplicaId"
+	// FieldFetchRequestSessionEpoch is: The fetch session epoch, which is used for ordering requests in a session.
+	FieldFetchRequestSessionEpoch = "SessionEpoch"
+	// FieldFetchRequestSessionId is: The fetch session ID.
+	FieldFetchRequestSessionId = "SessionId"
+	// FieldFetchRequestTags is: The tagged fields.
+	FieldFetchRequestTags = "Tags"
+	// FieldFetchRequestTopics is: The topics to fetch.
+	FieldFetchRequestTopics = "Topics"
 	// FieldFetchRequestTopicsPartitions is: The partitions to fetch.
 	FieldFetchRequestTopicsPartitions = "Partitions"
-	// FieldFetchRequestMaxBytes is: The maximum bytes to fetch.  See KIP-74 for cases where this limit may not be honored.
-	FieldFetchRequestMaxBytes = "MaxBytes"
-	// FieldFetchRequestTopicsPartitionsPartition is: The partition index.
-	FieldFetchRequestTopicsPartitionsPartition = "Partition"
+	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch of the partition.
+	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 	// FieldFetchRequestTopicsPartitionsFetchOffset is: The message offset.
 	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
-	// FieldFetchRequestForgottenTopicsData is: In an incremental fetch request, the partitions to remove.
-	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
+	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is: The epoch of the last fetched record or -1 if there is none
+	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
+	// FieldFetchRequestTopicsPartitionsLogStartOffset is: The earliest available offset of the follower replica.  The field is only used when the request is sent by the follower.
+	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchRequestTopicsPartitionsPartition is: The partition index.
+	FieldFetchRequestTopicsPartitionsPartition = "Partition"
+	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is: The maximum bytes to fetch from this partition.  See KIP-74 for cases where this limit may not be honored.
+	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
+	// FieldFetchRequestTopicsPartitionsTags is: The tagged fields.
+	FieldFetchRequestTopicsPartitionsTags = "Tags"
+	// FieldFetchRequestTopicsTags is: The tagged fields.
+	FieldFetchRequestTopicsTags = "Tags"
+	// FieldFetchRequestTopicsTopic is: The name of the topic to fetch.
+	FieldFetchRequestTopicsTopic = "Topic"
+	// FieldFetchRequestTopicsTopicId is: The unique topic ID
+	FieldFetchRequestTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FetchRequest.json

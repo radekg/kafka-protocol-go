@@ -38,20 +38,20 @@ func init49AlterClientQuotasResponse() []schema.Schema {
 }
 
 const (
+	// FieldAlterClientQuotasResponseEntries is: The quota configuration entries to alter.
+	FieldAlterClientQuotasResponseEntries = "Entries"
+	// FieldAlterClientQuotasResponseEntriesEntity is: The quota entity to alter.
+	FieldAlterClientQuotasResponseEntriesEntity = "Entity"
+	// FieldAlterClientQuotasResponseEntriesEntityEntityName is: The name of the entity, or null if the default.
+	FieldAlterClientQuotasResponseEntriesEntityEntityName = "EntityName"
 	// FieldAlterClientQuotasResponseEntriesEntityEntityType is: The entity type.
 	FieldAlterClientQuotasResponseEntriesEntityEntityType = "EntityType"
 	// FieldAlterClientQuotasResponseEntriesEntityTags is: The tagged fields.
 	FieldAlterClientQuotasResponseEntriesEntityTags = "Tags"
 	// FieldAlterClientQuotasResponseEntriesErrorCode is: The error code, or `0` if the quota alteration succeeded.
 	FieldAlterClientQuotasResponseEntriesErrorCode = "ErrorCode"
-	// FieldAlterClientQuotasResponseEntries is: The quota configuration entries to alter.
-	FieldAlterClientQuotasResponseEntries = "Entries"
 	// FieldAlterClientQuotasResponseEntriesErrorMessage is: The error message, or `null` if the quota alteration succeeded.
 	FieldAlterClientQuotasResponseEntriesErrorMessage = "ErrorMessage"
-	// FieldAlterClientQuotasResponseEntriesEntity is: The quota entity to alter.
-	FieldAlterClientQuotasResponseEntriesEntity = "Entity"
-	// FieldAlterClientQuotasResponseEntriesEntityEntityName is: The name of the entity, or null if the default.
-	FieldAlterClientQuotasResponseEntriesEntityEntityName = "EntityName"
 	// FieldAlterClientQuotasResponseEntriesTags is: The tagged fields.
 	FieldAlterClientQuotasResponseEntriesTags = "Tags"
 	// FieldAlterClientQuotasResponseTags is: The tagged fields.

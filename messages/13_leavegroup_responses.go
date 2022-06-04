@@ -63,22 +63,22 @@ func init13LeaveGroupResponse() []schema.Schema {
 }
 
 const (
+	// FieldLeaveGroupResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldLeaveGroupResponseErrorCode = "ErrorCode"
+	// FieldLeaveGroupResponseMembers is: List of leaving member responses.
+	FieldLeaveGroupResponseMembers = "Members"
 	// FieldLeaveGroupResponseMembersErrorCode is: The error code, or 0 if there was no error.
 	FieldLeaveGroupResponseMembersErrorCode = "ErrorCode"
+	// FieldLeaveGroupResponseMembersGroupInstanceId is: The group instance ID to remove from the group.
+	FieldLeaveGroupResponseMembersGroupInstanceId = "GroupInstanceId"
+	// FieldLeaveGroupResponseMembersMemberId is: The member ID to remove from the group.
+	FieldLeaveGroupResponseMembersMemberId = "MemberId"
 	// FieldLeaveGroupResponseMembersTags is: The tagged fields.
 	FieldLeaveGroupResponseMembersTags = "Tags"
 	// FieldLeaveGroupResponseTags is: The tagged fields.
 	FieldLeaveGroupResponseTags = "Tags"
-	// FieldLeaveGroupResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldLeaveGroupResponseErrorCode = "ErrorCode"
 	// FieldLeaveGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldLeaveGroupResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldLeaveGroupResponseMembers is: List of leaving member responses.
-	FieldLeaveGroupResponseMembers = "Members"
-	// FieldLeaveGroupResponseMembersMemberId is: The member ID to remove from the group.
-	FieldLeaveGroupResponseMembersMemberId = "MemberId"
-	// FieldLeaveGroupResponseMembersGroupInstanceId is: The group instance ID to remove from the group.
-	FieldLeaveGroupResponseMembersGroupInstanceId = "GroupInstanceId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaveGroupResponse.json

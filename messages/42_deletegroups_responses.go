@@ -40,10 +40,10 @@ func init42DeleteGroupsResponse() []schema.Schema {
 const (
 	// FieldDeleteGroupsResponseResults is: The deletion results
 	FieldDeleteGroupsResponseResults = "Results"
-	// FieldDeleteGroupsResponseResultsGroupId is: The group id
-	FieldDeleteGroupsResponseResultsGroupId = "GroupId"
 	// FieldDeleteGroupsResponseResultsErrorCode is: The deletion error, or 0 if the deletion succeeded.
 	FieldDeleteGroupsResponseResultsErrorCode = "ErrorCode"
+	// FieldDeleteGroupsResponseResultsGroupId is: The group id
+	FieldDeleteGroupsResponseResultsGroupId = "GroupId"
 	// FieldDeleteGroupsResponseResultsTags is: The tagged fields.
 	FieldDeleteGroupsResponseResultsTags = "Tags"
 	// FieldDeleteGroupsResponseTags is: The tagged fields.

@@ -43,12 +43,12 @@ func init15DescribeGroupsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeGroupsRequestTags is: The tagged fields.
-	FieldDescribeGroupsRequestTags = "Tags"
 	// FieldDescribeGroupsRequestGroups is: The names of the groups to describe
 	FieldDescribeGroupsRequestGroups = "Groups"
 	// FieldDescribeGroupsRequestIncludeAuthorizedOperations is: Whether to include authorized operations.
 	FieldDescribeGroupsRequestIncludeAuthorizedOperations = "IncludeAuthorizedOperations"
+	// FieldDescribeGroupsRequestTags is: The tagged fields.
+	FieldDescribeGroupsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeGroupsRequest.json

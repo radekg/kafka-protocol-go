@@ -62,22 +62,22 @@ func init24AddPartitionsToTxnResponse() []schema.Schema {
 const (
 	// FieldAddPartitionsToTxnResponseResults is: The results for each topic.
 	FieldAddPartitionsToTxnResponseResults = "Results"
+	// FieldAddPartitionsToTxnResponseResultsName is: The topic name.
+	FieldAddPartitionsToTxnResponseResultsName = "Name"
 	// FieldAddPartitionsToTxnResponseResultsResults is: The results for each partition
 	FieldAddPartitionsToTxnResponseResultsResults = "Results"
 	// FieldAddPartitionsToTxnResponseResultsResultsErrorCode is: The response error code.
 	FieldAddPartitionsToTxnResponseResultsResultsErrorCode = "ErrorCode"
+	// FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex is: The partition indexes.
+	FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex = "PartitionIndex"
 	// FieldAddPartitionsToTxnResponseResultsResultsTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseResultsResultsTags = "Tags"
 	// FieldAddPartitionsToTxnResponseResultsTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseResultsTags = "Tags"
-	// FieldAddPartitionsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAddPartitionsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldAddPartitionsToTxnResponseResultsName is: The topic name.
-	FieldAddPartitionsToTxnResponseResultsName = "Name"
-	// FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex is: The partition indexes.
-	FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex = "PartitionIndex"
 	// FieldAddPartitionsToTxnResponseTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseTags = "Tags"
+	// FieldAddPartitionsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAddPartitionsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddPartitionsToTxnResponse.json

@@ -130,40 +130,40 @@ func init15DescribeGroupsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeGroupsResponseTags is: The tagged fields.
-	FieldDescribeGroupsResponseTags = "Tags"
 	// FieldDescribeGroupsResponseGroups is: Each described group.
 	FieldDescribeGroupsResponseGroups = "Groups"
-	// FieldDescribeGroupsResponseGroupsErrorCode is: The describe error, or 0 if there was no error.
-	FieldDescribeGroupsResponseGroupsErrorCode = "ErrorCode"
-	// FieldDescribeGroupsResponseGroupsMembers is: The group members.
-	FieldDescribeGroupsResponseGroupsMembers = "Members"
-	// FieldDescribeGroupsResponseGroupsMembersMemberAssignment is: The current assignment provided by the group leader.
-	FieldDescribeGroupsResponseGroupsMembersMemberAssignment = "MemberAssignment"
-	// FieldDescribeGroupsResponseGroupsMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
-	FieldDescribeGroupsResponseGroupsMembersGroupInstanceId = "GroupInstanceId"
-	// FieldDescribeGroupsResponseGroupsMembersTags is: The tagged fields.
-	FieldDescribeGroupsResponseGroupsMembersTags = "Tags"
-	// FieldDescribeGroupsResponseGroupsMembersClientId is: The client ID used in the member's latest join group request.
-	FieldDescribeGroupsResponseGroupsMembersClientId = "ClientId"
 	// FieldDescribeGroupsResponseGroupsAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this group.
 	FieldDescribeGroupsResponseGroupsAuthorizedOperations = "AuthorizedOperations"
-	// FieldDescribeGroupsResponseGroupsTags is: The tagged fields.
-	FieldDescribeGroupsResponseGroupsTags = "Tags"
+	// FieldDescribeGroupsResponseGroupsErrorCode is: The describe error, or 0 if there was no error.
+	FieldDescribeGroupsResponseGroupsErrorCode = "ErrorCode"
 	// FieldDescribeGroupsResponseGroupsGroupId is: The group ID string.
 	FieldDescribeGroupsResponseGroupsGroupId = "GroupId"
-	// FieldDescribeGroupsResponseGroupsProtocolType is: The group protocol type, or the empty string.
-	FieldDescribeGroupsResponseGroupsProtocolType = "ProtocolType"
-	// FieldDescribeGroupsResponseGroupsProtocolData is: The group protocol data, or the empty string.
-	FieldDescribeGroupsResponseGroupsProtocolData = "ProtocolData"
-	// FieldDescribeGroupsResponseGroupsMembersMemberId is: The member ID assigned by the group coordinator.
-	FieldDescribeGroupsResponseGroupsMembersMemberId = "MemberId"
-	// FieldDescribeGroupsResponseGroupsMembersClientHost is: The client host.
-	FieldDescribeGroupsResponseGroupsMembersClientHost = "ClientHost"
-	// FieldDescribeGroupsResponseGroupsMembersMemberMetadata is: The metadata corresponding to the current group protocol in use.
-	FieldDescribeGroupsResponseGroupsMembersMemberMetadata = "MemberMetadata"
 	// FieldDescribeGroupsResponseGroupsGroupState is: The group state string, or the empty string.
 	FieldDescribeGroupsResponseGroupsGroupState = "GroupState"
+	// FieldDescribeGroupsResponseGroupsMembers is: The group members.
+	FieldDescribeGroupsResponseGroupsMembers = "Members"
+	// FieldDescribeGroupsResponseGroupsMembersClientHost is: The client host.
+	FieldDescribeGroupsResponseGroupsMembersClientHost = "ClientHost"
+	// FieldDescribeGroupsResponseGroupsMembersClientId is: The client ID used in the member's latest join group request.
+	FieldDescribeGroupsResponseGroupsMembersClientId = "ClientId"
+	// FieldDescribeGroupsResponseGroupsMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldDescribeGroupsResponseGroupsMembersGroupInstanceId = "GroupInstanceId"
+	// FieldDescribeGroupsResponseGroupsMembersMemberAssignment is: The current assignment provided by the group leader.
+	FieldDescribeGroupsResponseGroupsMembersMemberAssignment = "MemberAssignment"
+	// FieldDescribeGroupsResponseGroupsMembersMemberId is: The member ID assigned by the group coordinator.
+	FieldDescribeGroupsResponseGroupsMembersMemberId = "MemberId"
+	// FieldDescribeGroupsResponseGroupsMembersMemberMetadata is: The metadata corresponding to the current group protocol in use.
+	FieldDescribeGroupsResponseGroupsMembersMemberMetadata = "MemberMetadata"
+	// FieldDescribeGroupsResponseGroupsMembersTags is: The tagged fields.
+	FieldDescribeGroupsResponseGroupsMembersTags = "Tags"
+	// FieldDescribeGroupsResponseGroupsProtocolData is: The group protocol data, or the empty string.
+	FieldDescribeGroupsResponseGroupsProtocolData = "ProtocolData"
+	// FieldDescribeGroupsResponseGroupsProtocolType is: The group protocol type, or the empty string.
+	FieldDescribeGroupsResponseGroupsProtocolType = "ProtocolType"
+	// FieldDescribeGroupsResponseGroupsTags is: The tagged fields.
+	FieldDescribeGroupsResponseGroupsTags = "Tags"
+	// FieldDescribeGroupsResponseTags is: The tagged fields.
+	FieldDescribeGroupsResponseTags = "Tags"
 	// FieldDescribeGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

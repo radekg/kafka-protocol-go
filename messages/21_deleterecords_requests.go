@@ -48,20 +48,20 @@ func init21DeleteRecordsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteRecordsRequestTopics is: Each topic that we want to delete records from.
-	FieldDeleteRecordsRequestTopics = "Topics"
-	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is: The partition index.
-	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldDeleteRecordsRequestTags is: The tagged fields.
 	FieldDeleteRecordsRequestTags = "Tags"
+	// FieldDeleteRecordsRequestTimeoutMs is: How long to wait for the deletion to complete, in milliseconds.
+	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
+	// FieldDeleteRecordsRequestTopics is: Each topic that we want to delete records from.
+	FieldDeleteRecordsRequestTopics = "Topics"
 	// FieldDeleteRecordsRequestTopicsName is: The topic name.
 	FieldDeleteRecordsRequestTopicsName = "Name"
 	// FieldDeleteRecordsRequestTopicsPartitions is: Each partition that we want to delete records from.
 	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
 	// FieldDeleteRecordsRequestTopicsPartitionsOffset is: The deletion offset.
 	FieldDeleteRecordsRequestTopicsPartitionsOffset = "Offset"
-	// FieldDeleteRecordsRequestTimeoutMs is: How long to wait for the deletion to complete, in milliseconds.
-	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
+	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is: The partition index.
+	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldDeleteRecordsRequestTopicsPartitionsTags is: The tagged fields.
 	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
 	// FieldDeleteRecordsRequestTopicsTags is: The tagged fields.

@@ -49,6 +49,8 @@ const (
 	FieldAlterReplicaLogDirsRequestDirs = "Dirs"
 	// FieldAlterReplicaLogDirsRequestDirsPath is: The absolute directory path.
 	FieldAlterReplicaLogDirsRequestDirsPath = "Path"
+	// FieldAlterReplicaLogDirsRequestDirsTags is: The tagged fields.
+	FieldAlterReplicaLogDirsRequestDirsTags = "Tags"
 	// FieldAlterReplicaLogDirsRequestDirsTopics is: The topics to add to the directory.
 	FieldAlterReplicaLogDirsRequestDirsTopics = "Topics"
 	// FieldAlterReplicaLogDirsRequestDirsTopicsName is: The topic name.
@@ -57,8 +59,6 @@ const (
 	FieldAlterReplicaLogDirsRequestDirsTopicsPartitions = "Partitions"
 	// FieldAlterReplicaLogDirsRequestDirsTopicsTags is: The tagged fields.
 	FieldAlterReplicaLogDirsRequestDirsTopicsTags = "Tags"
-	// FieldAlterReplicaLogDirsRequestDirsTags is: The tagged fields.
-	FieldAlterReplicaLogDirsRequestDirsTags = "Tags"
 	// FieldAlterReplicaLogDirsRequestTags is: The tagged fields.
 	FieldAlterReplicaLogDirsRequestTags = "Tags"
 )

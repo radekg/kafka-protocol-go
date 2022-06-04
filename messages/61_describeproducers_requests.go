@@ -19,16 +19,16 @@ func init61DescribeProducersRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeProducersRequestTopicsPartitionIndexes is: The indexes of the partitions to list producers for.
-	FieldDescribeProducersRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldDescribeProducersRequestTopicsTags is: The tagged fields.
-	FieldDescribeProducersRequestTopicsTags = "Tags"
 	// FieldDescribeProducersRequestTags is: The tagged fields.
 	FieldDescribeProducersRequestTags = "Tags"
 	// FieldDescribeProducersRequestTopics is:
 	FieldDescribeProducersRequestTopics = "Topics"
 	// FieldDescribeProducersRequestTopicsName is: The topic name.
 	FieldDescribeProducersRequestTopicsName = "Name"
+	// FieldDescribeProducersRequestTopicsPartitionIndexes is: The indexes of the partitions to list producers for.
+	FieldDescribeProducersRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldDescribeProducersRequestTopicsTags is: The tagged fields.
+	FieldDescribeProducersRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeProducersRequest.json

@@ -33,12 +33,12 @@ func init36SaslAuthenticateResponse() []schema.Schema {
 }
 
 const (
+	// FieldSaslAuthenticateResponseAuthBytes is: The SASL authentication bytes from the server, as defined by the SASL mechanism.
+	FieldSaslAuthenticateResponseAuthBytes = "AuthBytes"
 	// FieldSaslAuthenticateResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldSaslAuthenticateResponseErrorCode = "ErrorCode"
 	// FieldSaslAuthenticateResponseErrorMessage is: The error message, or null if there was no error.
 	FieldSaslAuthenticateResponseErrorMessage = "ErrorMessage"
-	// FieldSaslAuthenticateResponseAuthBytes is: The SASL authentication bytes from the server, as defined by the SASL mechanism.
-	FieldSaslAuthenticateResponseAuthBytes = "AuthBytes"
 	// FieldSaslAuthenticateResponseSessionLifetimeMs is: The SASL authentication bytes from the server, as defined by the SASL mechanism.
 	FieldSaslAuthenticateResponseSessionLifetimeMs = "SessionLifetimeMs"
 	// FieldSaslAuthenticateResponseTags is: The tagged fields.

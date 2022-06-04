@@ -117,24 +117,24 @@ func init8OffsetCommitResponse() []schema.Schema {
 }
 
 const (
+	// FieldOffsetCommitResponseTags is: The tagged fields.
+	FieldOffsetCommitResponseTags = "Tags"
+	// FieldOffsetCommitResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldOffsetCommitResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldOffsetCommitResponseTopics is: The responses for each topic.
+	FieldOffsetCommitResponseTopics = "Topics"
 	// FieldOffsetCommitResponseTopicsName is: The topic name.
 	FieldOffsetCommitResponseTopicsName = "Name"
 	// FieldOffsetCommitResponseTopicsPartitions is: The responses for each partition in the topic.
 	FieldOffsetCommitResponseTopicsPartitions = "Partitions"
-	// FieldOffsetCommitResponseTopicsTags is: The tagged fields.
-	FieldOffsetCommitResponseTopicsTags = "Tags"
-	// FieldOffsetCommitResponseTags is: The tagged fields.
-	FieldOffsetCommitResponseTags = "Tags"
-	// FieldOffsetCommitResponseTopics is: The responses for each topic.
-	FieldOffsetCommitResponseTopics = "Topics"
-	// FieldOffsetCommitResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldOffsetCommitResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldOffsetCommitResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldOffsetCommitResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldOffsetCommitResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldOffsetCommitResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldOffsetCommitResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetCommitResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldOffsetCommitResponseTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetCommitResponseTopicsPartitionsTags = "Tags"
+	// FieldOffsetCommitResponseTopicsTags is: The tagged fields.
+	FieldOffsetCommitResponseTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetCommitResponse.json

@@ -71,40 +71,40 @@ func init31DeleteAclsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType is: The ACL resource type.
-	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType = "ResourceType"
-	// FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType is: The ACL permission type.
-	FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType = "PermissionType"
-	// FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage is: The deletion error message, or null if the deletion succeeded.
-	FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage = "ErrorMessage"
-	// FieldDeleteAclsResponseFilterResultsErrorCode is: The error code, or 0 if the filter succeeded.
-	FieldDeleteAclsResponseFilterResultsErrorCode = "ErrorCode"
-	// FieldDeleteAclsResponseTags is: The tagged fields.
-	FieldDeleteAclsResponseTags = "Tags"
 	// FieldDeleteAclsResponseFilterResults is: The results for each filter.
 	FieldDeleteAclsResponseFilterResults = "FilterResults"
+	// FieldDeleteAclsResponseFilterResultsErrorCode is: The error code, or 0 if the filter succeeded.
+	FieldDeleteAclsResponseFilterResultsErrorCode = "ErrorCode"
 	// FieldDeleteAclsResponseFilterResultsErrorMessage is: The error message, or null if the filter succeeded.
 	FieldDeleteAclsResponseFilterResultsErrorMessage = "ErrorMessage"
+	// FieldDeleteAclsResponseFilterResultsMatchingAcls is: The ACLs which matched this filter.
+	FieldDeleteAclsResponseFilterResultsMatchingAcls = "MatchingAcls"
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode is: The deletion error code, or 0 if the deletion succeeded.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode = "ErrorCode"
+	// FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage is: The deletion error message, or null if the deletion succeeded.
+	FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage = "ErrorMessage"
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsHost is: The ACL host.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsHost = "Host"
-	// FieldDeleteAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDeleteAclsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName is: The ACL resource name.
-	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName = "ResourceName"
-	// FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal is: The ACL principal.
-	FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal = "Principal"
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsOperation is: The ACL operation.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsOperation = "Operation"
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsPatternType is: The ACL resource pattern type.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsPatternType = "PatternType"
+	// FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType is: The ACL permission type.
+	FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType = "PermissionType"
+	// FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal is: The ACL principal.
+	FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal = "Principal"
+	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName is: The ACL resource name.
+	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName = "ResourceName"
+	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType is: The ACL resource type.
+	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType = "ResourceType"
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsTags is: The tagged fields.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsTags = "Tags"
 	// FieldDeleteAclsResponseFilterResultsTags is: The tagged fields.
 	FieldDeleteAclsResponseFilterResultsTags = "Tags"
-	// FieldDeleteAclsResponseFilterResultsMatchingAcls is: The ACLs which matched this filter.
-	FieldDeleteAclsResponseFilterResultsMatchingAcls = "MatchingAcls"
+	// FieldDeleteAclsResponseTags is: The tagged fields.
+	FieldDeleteAclsResponseTags = "Tags"
+	// FieldDeleteAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDeleteAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteAclsResponse.json

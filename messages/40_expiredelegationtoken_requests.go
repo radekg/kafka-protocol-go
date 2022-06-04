@@ -28,12 +28,12 @@ func init40ExpireDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldExpireDelegationTokenRequestTags is: The tagged fields.
-	FieldExpireDelegationTokenRequestTags = "Tags"
-	// FieldExpireDelegationTokenRequestHmac is: The HMAC of the delegation token to be expired.
-	FieldExpireDelegationTokenRequestHmac = "Hmac"
 	// FieldExpireDelegationTokenRequestExpiryTimePeriodMs is: The expiry time period in milliseconds.
 	FieldExpireDelegationTokenRequestExpiryTimePeriodMs = "ExpiryTimePeriodMs"
+	// FieldExpireDelegationTokenRequestHmac is: The HMAC of the delegation token to be expired.
+	FieldExpireDelegationTokenRequestHmac = "Hmac"
+	// FieldExpireDelegationTokenRequestTags is: The tagged fields.
+	FieldExpireDelegationTokenRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ExpireDelegationTokenRequest.json

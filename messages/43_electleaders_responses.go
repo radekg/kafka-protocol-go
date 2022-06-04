@@ -53,28 +53,28 @@ func init43ElectLeadersResponse() []schema.Schema {
 }
 
 const (
-	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode is: The result error, or zero if there was no error.
-	FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode = "ErrorCode"
 	// FieldElectLeadersResponseErrorCode is: The top level response error code.
 	FieldElectLeadersResponseErrorCode = "ErrorCode"
-	// FieldElectLeadersResponseTags is: The tagged fields.
-	FieldElectLeadersResponseTags = "Tags"
 	// FieldElectLeadersResponseReplicaElectionResults is: The election results, or an empty array if the requester did not have permission and the request asks for all partitions.
 	FieldElectLeadersResponseReplicaElectionResults = "ReplicaElectionResults"
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResult is: The results for each partition
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResult = "PartitionResult"
-	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId is: The partition id
-	FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId = "PartitionId"
+	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode is: The result error, or zero if there was no error.
+	FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode = "ErrorCode"
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage is: The result message, or null if there was no error.
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage = "ErrorMessage"
+	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId is: The partition id
+	FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId = "PartitionId"
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultTags is: The tagged fields.
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultTags = "Tags"
 	// FieldElectLeadersResponseReplicaElectionResultsTags is: The tagged fields.
 	FieldElectLeadersResponseReplicaElectionResultsTags = "Tags"
-	// FieldElectLeadersResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldElectLeadersResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldElectLeadersResponseReplicaElectionResultsTopic is: The topic name
 	FieldElectLeadersResponseReplicaElectionResultsTopic = "Topic"
+	// FieldElectLeadersResponseTags is: The tagged fields.
+	FieldElectLeadersResponseTags = "Tags"
+	// FieldElectLeadersResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldElectLeadersResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ElectLeadersResponse.json

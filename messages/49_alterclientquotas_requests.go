@@ -45,32 +45,32 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterClientQuotasRequestEntries is: The quota configuration entries to alter.
+	FieldAlterClientQuotasRequestEntries = "Entries"
 	// FieldAlterClientQuotasRequestEntriesEntity is: The quota entity to alter.
 	FieldAlterClientQuotasRequestEntriesEntity = "Entity"
+	// FieldAlterClientQuotasRequestEntriesEntityEntityName is: The name of the entity, or null if the default.
+	FieldAlterClientQuotasRequestEntriesEntityEntityName = "EntityName"
+	// FieldAlterClientQuotasRequestEntriesEntityEntityType is: The entity type.
+	FieldAlterClientQuotasRequestEntriesEntityEntityType = "EntityType"
+	// FieldAlterClientQuotasRequestEntriesEntityTags is: The tagged fields.
+	FieldAlterClientQuotasRequestEntriesEntityTags = "Tags"
+	// FieldAlterClientQuotasRequestEntriesOps is: An individual quota configuration entry to alter.
+	FieldAlterClientQuotasRequestEntriesOps = "Ops"
+	// FieldAlterClientQuotasRequestEntriesOpsKey is: The quota configuration key.
+	FieldAlterClientQuotasRequestEntriesOpsKey = "Key"
 	// FieldAlterClientQuotasRequestEntriesOpsRemove is: Whether the quota configuration value should be removed, otherwise set.
 	FieldAlterClientQuotasRequestEntriesOpsRemove = "Remove"
 	// FieldAlterClientQuotasRequestEntriesOpsTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesOpsTags = "Tags"
 	// FieldAlterClientQuotasRequestEntriesOpsValue is: The value to set, otherwise ignored if the value is to be removed.
 	FieldAlterClientQuotasRequestEntriesOpsValue = "Value"
-	// FieldAlterClientQuotasRequestValidateOnly is: Whether the alteration should be validated, but not performed.
-	FieldAlterClientQuotasRequestValidateOnly = "ValidateOnly"
-	// FieldAlterClientQuotasRequestEntriesEntityTags is: The tagged fields.
-	FieldAlterClientQuotasRequestEntriesEntityTags = "Tags"
-	// FieldAlterClientQuotasRequestEntries is: The quota configuration entries to alter.
-	FieldAlterClientQuotasRequestEntries = "Entries"
-	// FieldAlterClientQuotasRequestEntriesEntityEntityType is: The entity type.
-	FieldAlterClientQuotasRequestEntriesEntityEntityType = "EntityType"
-	// FieldAlterClientQuotasRequestEntriesEntityEntityName is: The name of the entity, or null if the default.
-	FieldAlterClientQuotasRequestEntriesEntityEntityName = "EntityName"
-	// FieldAlterClientQuotasRequestEntriesOps is: An individual quota configuration entry to alter.
-	FieldAlterClientQuotasRequestEntriesOps = "Ops"
-	// FieldAlterClientQuotasRequestEntriesOpsKey is: The quota configuration key.
-	FieldAlterClientQuotasRequestEntriesOpsKey = "Key"
 	// FieldAlterClientQuotasRequestEntriesTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesTags = "Tags"
 	// FieldAlterClientQuotasRequestTags is: The tagged fields.
 	FieldAlterClientQuotasRequestTags = "Tags"
+	// FieldAlterClientQuotasRequestValidateOnly is: Whether the alteration should be validated, but not performed.
+	FieldAlterClientQuotasRequestValidateOnly = "ValidateOnly"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterClientQuotasRequest.json

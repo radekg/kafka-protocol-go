@@ -63,22 +63,22 @@ func init16ListGroupsResponse() []schema.Schema {
 }
 
 const (
+	// FieldListGroupsResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldListGroupsResponseErrorCode = "ErrorCode"
 	// FieldListGroupsResponseGroups is: Each group in the response.
 	FieldListGroupsResponseGroups = "Groups"
 	// FieldListGroupsResponseGroupsGroupId is: The group ID.
 	FieldListGroupsResponseGroupsGroupId = "GroupId"
+	// FieldListGroupsResponseGroupsGroupState is: The group state name.
+	FieldListGroupsResponseGroupsGroupState = "GroupState"
 	// FieldListGroupsResponseGroupsProtocolType is: The group protocol type.
 	FieldListGroupsResponseGroupsProtocolType = "ProtocolType"
-	// FieldListGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldListGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldListGroupsResponseGroupsTags is: The tagged fields.
 	FieldListGroupsResponseGroupsTags = "Tags"
 	// FieldListGroupsResponseTags is: The tagged fields.
 	FieldListGroupsResponseTags = "Tags"
-	// FieldListGroupsResponseGroupsGroupState is: The group state name.
-	FieldListGroupsResponseGroupsGroupState = "GroupState"
-	// FieldListGroupsResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldListGroupsResponseErrorCode = "ErrorCode"
+	// FieldListGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldListGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListGroupsResponse.json

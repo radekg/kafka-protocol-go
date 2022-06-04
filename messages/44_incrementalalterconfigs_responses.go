@@ -33,22 +33,22 @@ func init44IncrementalAlterConfigsResponse() []schema.Schema {
 }
 
 const (
-	// FieldIncrementalAlterConfigsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldIncrementalAlterConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldIncrementalAlterConfigsResponseResponses is: The responses for each resource.
 	FieldIncrementalAlterConfigsResponseResponses = "Responses"
 	// FieldIncrementalAlterConfigsResponseResponsesErrorCode is: The resource error code.
 	FieldIncrementalAlterConfigsResponseResponsesErrorCode = "ErrorCode"
 	// FieldIncrementalAlterConfigsResponseResponsesErrorMessage is: The resource error message, or null if there was no error.
 	FieldIncrementalAlterConfigsResponseResponsesErrorMessage = "ErrorMessage"
-	// FieldIncrementalAlterConfigsResponseResponsesResourceType is: The resource type.
-	FieldIncrementalAlterConfigsResponseResponsesResourceType = "ResourceType"
 	// FieldIncrementalAlterConfigsResponseResponsesResourceName is: The resource name.
 	FieldIncrementalAlterConfigsResponseResponsesResourceName = "ResourceName"
+	// FieldIncrementalAlterConfigsResponseResponsesResourceType is: The resource type.
+	FieldIncrementalAlterConfigsResponseResponsesResourceType = "ResourceType"
 	// FieldIncrementalAlterConfigsResponseResponsesTags is: The tagged fields.
 	FieldIncrementalAlterConfigsResponseResponsesTags = "Tags"
 	// FieldIncrementalAlterConfigsResponseTags is: The tagged fields.
 	FieldIncrementalAlterConfigsResponseTags = "Tags"
+	// FieldIncrementalAlterConfigsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldIncrementalAlterConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/IncrementalAlterConfigsResponse.json

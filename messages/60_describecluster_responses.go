@@ -27,10 +27,6 @@ func init60DescribeClusterResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeClusterResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeClusterResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDescribeClusterResponseErrorCode is: The top-level error code, or 0 if there was no error
-	FieldDescribeClusterResponseErrorCode = "ErrorCode"
 	// FieldDescribeClusterResponseBrokers is: Each broker in the response.
 	FieldDescribeClusterResponseBrokers = "Brokers"
 	// FieldDescribeClusterResponseBrokersBrokerId is: The broker ID.
@@ -43,16 +39,20 @@ const (
 	FieldDescribeClusterResponseBrokersRack = "Rack"
 	// FieldDescribeClusterResponseBrokersTags is: The tagged fields.
 	FieldDescribeClusterResponseBrokersTags = "Tags"
-	// FieldDescribeClusterResponseTags is: The tagged fields.
-	FieldDescribeClusterResponseTags = "Tags"
-	// FieldDescribeClusterResponseErrorMessage is: The top-level error message, or null if there was no error.
-	FieldDescribeClusterResponseErrorMessage = "ErrorMessage"
+	// FieldDescribeClusterResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
+	FieldDescribeClusterResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
 	// FieldDescribeClusterResponseClusterId is: The cluster ID that responding broker belongs to.
 	FieldDescribeClusterResponseClusterId = "ClusterId"
 	// FieldDescribeClusterResponseControllerId is: The ID of the controller broker.
 	FieldDescribeClusterResponseControllerId = "ControllerId"
-	// FieldDescribeClusterResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
-	FieldDescribeClusterResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
+	// FieldDescribeClusterResponseErrorCode is: The top-level error code, or 0 if there was no error
+	FieldDescribeClusterResponseErrorCode = "ErrorCode"
+	// FieldDescribeClusterResponseErrorMessage is: The top-level error message, or null if there was no error.
+	FieldDescribeClusterResponseErrorMessage = "ErrorMessage"
+	// FieldDescribeClusterResponseTags is: The tagged fields.
+	FieldDescribeClusterResponseTags = "Tags"
+	// FieldDescribeClusterResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeClusterResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeClusterResponse.json

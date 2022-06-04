@@ -126,50 +126,50 @@ func init32DescribeConfigsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeConfigsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDescribeConfigsResponseResultsErrorMessage is: The error message, or null if we were able to successfully describe the configurations.
-	FieldDescribeConfigsResponseResultsErrorMessage = "ErrorMessage"
-	// FieldDescribeConfigsResponseResultsConfigs is: Each listed configuration.
-	FieldDescribeConfigsResponseResultsConfigs = "Configs"
-	// FieldDescribeConfigsResponseResultsConfigsReadOnly is: True if the configuration is read-only.
-	FieldDescribeConfigsResponseResultsConfigsReadOnly = "ReadOnly"
-	// FieldDescribeConfigsResponseResultsConfigsIsSensitive is: True if this configuration is sensitive.
-	FieldDescribeConfigsResponseResultsConfigsIsSensitive = "IsSensitive"
-	// FieldDescribeConfigsResponseResultsConfigsSynonyms is: The synonyms for this configuration key.
-	FieldDescribeConfigsResponseResultsConfigsSynonyms = "Synonyms"
-	// FieldDescribeConfigsResponseResultsConfigsSynonymsSource is: The synonym source.
-	FieldDescribeConfigsResponseResultsConfigsSynonymsSource = "Source"
-	// FieldDescribeConfigsResponseResultsConfigsTags is: The tagged fields.
-	FieldDescribeConfigsResponseResultsConfigsTags = "Tags"
 	// FieldDescribeConfigsResponseResults is: The results for each resource.
 	FieldDescribeConfigsResponseResults = "Results"
-	// FieldDescribeConfigsResponseResultsResourceType is: The resource type.
-	FieldDescribeConfigsResponseResultsResourceType = "ResourceType"
-	// FieldDescribeConfigsResponseResultsResourceName is: The resource name.
-	FieldDescribeConfigsResponseResultsResourceName = "ResourceName"
+	// FieldDescribeConfigsResponseResultsConfigs is: Each listed configuration.
+	FieldDescribeConfigsResponseResultsConfigs = "Configs"
 	// FieldDescribeConfigsResponseResultsConfigsConfigSource is: The configuration source.
 	FieldDescribeConfigsResponseResultsConfigsConfigSource = "ConfigSource"
 	// FieldDescribeConfigsResponseResultsConfigsConfigType is: The configuration data type. Type can be one of the following values - BOOLEAN, STRING, INT, SHORT, LONG, DOUBLE, LIST, CLASS, PASSWORD
 	FieldDescribeConfigsResponseResultsConfigsConfigType = "ConfigType"
 	// FieldDescribeConfigsResponseResultsConfigsDocumentation is: The configuration documentation.
 	FieldDescribeConfigsResponseResultsConfigsDocumentation = "Documentation"
-	// FieldDescribeConfigsResponseResultsErrorCode is: The error code, or 0 if we were able to successfully describe the configurations.
-	FieldDescribeConfigsResponseResultsErrorCode = "ErrorCode"
+	// FieldDescribeConfigsResponseResultsConfigsIsSensitive is: True if this configuration is sensitive.
+	FieldDescribeConfigsResponseResultsConfigsIsSensitive = "IsSensitive"
 	// FieldDescribeConfigsResponseResultsConfigsName is: The configuration name.
 	FieldDescribeConfigsResponseResultsConfigsName = "Name"
-	// FieldDescribeConfigsResponseResultsConfigsValue is: The configuration value.
-	FieldDescribeConfigsResponseResultsConfigsValue = "Value"
+	// FieldDescribeConfigsResponseResultsConfigsReadOnly is: True if the configuration is read-only.
+	FieldDescribeConfigsResponseResultsConfigsReadOnly = "ReadOnly"
+	// FieldDescribeConfigsResponseResultsConfigsSynonyms is: The synonyms for this configuration key.
+	FieldDescribeConfigsResponseResultsConfigsSynonyms = "Synonyms"
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsName is: The synonym name.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsName = "Name"
-	// FieldDescribeConfigsResponseResultsConfigsSynonymsValue is: The synonym value.
-	FieldDescribeConfigsResponseResultsConfigsSynonymsValue = "Value"
+	// FieldDescribeConfigsResponseResultsConfigsSynonymsSource is: The synonym source.
+	FieldDescribeConfigsResponseResultsConfigsSynonymsSource = "Source"
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsTags is: The tagged fields.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsTags = "Tags"
+	// FieldDescribeConfigsResponseResultsConfigsSynonymsValue is: The synonym value.
+	FieldDescribeConfigsResponseResultsConfigsSynonymsValue = "Value"
+	// FieldDescribeConfigsResponseResultsConfigsTags is: The tagged fields.
+	FieldDescribeConfigsResponseResultsConfigsTags = "Tags"
+	// FieldDescribeConfigsResponseResultsConfigsValue is: The configuration value.
+	FieldDescribeConfigsResponseResultsConfigsValue = "Value"
+	// FieldDescribeConfigsResponseResultsErrorCode is: The error code, or 0 if we were able to successfully describe the configurations.
+	FieldDescribeConfigsResponseResultsErrorCode = "ErrorCode"
+	// FieldDescribeConfigsResponseResultsErrorMessage is: The error message, or null if we were able to successfully describe the configurations.
+	FieldDescribeConfigsResponseResultsErrorMessage = "ErrorMessage"
+	// FieldDescribeConfigsResponseResultsResourceName is: The resource name.
+	FieldDescribeConfigsResponseResultsResourceName = "ResourceName"
+	// FieldDescribeConfigsResponseResultsResourceType is: The resource type.
+	FieldDescribeConfigsResponseResultsResourceType = "ResourceType"
 	// FieldDescribeConfigsResponseResultsTags is: The tagged fields.
 	FieldDescribeConfigsResponseResultsTags = "Tags"
 	// FieldDescribeConfigsResponseTags is: The tagged fields.
 	FieldDescribeConfigsResponseTags = "Tags"
+	// FieldDescribeConfigsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeConfigsResponse.json

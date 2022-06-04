@@ -60,40 +60,40 @@ func init5StopReplicaRequest() []schema.Schema {
 }
 
 const (
-	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is: Whether this partition should be deleted.
-	FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition = "DeletePartition"
-	// FieldStopReplicaRequestControllerId is: The controller id.
-	FieldStopReplicaRequestControllerId = "ControllerId"
-	// FieldStopReplicaRequestControllerEpoch is: The controller epoch.
-	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
-	// FieldStopReplicaRequestTopics is: The topics to stop.
-	FieldStopReplicaRequestTopics = "Topics"
-	// FieldStopReplicaRequestTopicsPartitionIndexes is: The partition indexes.
-	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldStopReplicaRequestTopicsTags is: The tagged fields.
-	FieldStopReplicaRequestTopicsTags = "Tags"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
-	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
 	// FieldStopReplicaRequestBrokerEpoch is: The broker epoch.
 	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
+	// FieldStopReplicaRequestControllerEpoch is: The controller epoch.
+	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
+	// FieldStopReplicaRequestControllerId is: The controller id.
+	FieldStopReplicaRequestControllerId = "ControllerId"
+	// FieldStopReplicaRequestDeletePartitions is: Whether these partitions should be deleted.
+	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
 	// FieldStopReplicaRequestTags is: The tagged fields.
 	FieldStopReplicaRequestTags = "Tags"
+	// FieldStopReplicaRequestTopicStates is: Each topic.
+	FieldStopReplicaRequestTopicStates = "TopicStates"
+	// FieldStopReplicaRequestTopicStatesPartitionStates is: The state of each partition
+	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is: Whether this partition should be deleted.
+	FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition = "DeletePartition"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch.
+	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
+	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
 	// FieldStopReplicaRequestTopicStatesPartitionStatesTags is: The tagged fields.
 	FieldStopReplicaRequestTopicStatesPartitionStatesTags = "Tags"
 	// FieldStopReplicaRequestTopicStatesTags is: The tagged fields.
 	FieldStopReplicaRequestTopicStatesTags = "Tags"
-	// FieldStopReplicaRequestDeletePartitions is: Whether these partitions should be deleted.
-	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
-	// FieldStopReplicaRequestTopicsName is: The topic name.
-	FieldStopReplicaRequestTopicsName = "Name"
-	// FieldStopReplicaRequestTopicStates is: Each topic.
-	FieldStopReplicaRequestTopicStates = "TopicStates"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch.
-	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
 	// FieldStopReplicaRequestTopicStatesTopicName is: The topic name.
 	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
-	// FieldStopReplicaRequestTopicStatesPartitionStates is: The state of each partition
-	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldStopReplicaRequestTopics is: The topics to stop.
+	FieldStopReplicaRequestTopics = "Topics"
+	// FieldStopReplicaRequestTopicsName is: The topic name.
+	FieldStopReplicaRequestTopicsName = "Name"
+	// FieldStopReplicaRequestTopicsPartitionIndexes is: The partition indexes.
+	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldStopReplicaRequestTopicsTags is: The tagged fields.
+	FieldStopReplicaRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/StopReplicaRequest.json

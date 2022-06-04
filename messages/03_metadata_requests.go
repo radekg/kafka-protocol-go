@@ -128,22 +128,22 @@ func init3MetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldMetadataRequestTopicsTags is: The tagged fields.
-	FieldMetadataRequestTopicsTags = "Tags"
-	// FieldMetadataRequestTags is: The tagged fields.
-	FieldMetadataRequestTags = "Tags"
-	// FieldMetadataRequestTopicsTopicId is: The topic id.
-	FieldMetadataRequestTopicsTopicId = "TopicId"
-	// FieldMetadataRequestTopics is: The topics to fetch metadata for.
-	FieldMetadataRequestTopics = "Topics"
-	// FieldMetadataRequestTopicsName is: The topic name.
-	FieldMetadataRequestTopicsName = "Name"
 	// FieldMetadataRequestAllowAutoTopicCreation is: If this is true, the broker may auto-create topics that we requested which do not already exist, if it is configured to do so.
 	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
 	// FieldMetadataRequestIncludeClusterAuthorizedOperations is: Whether to include cluster authorized operations.
 	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 	// FieldMetadataRequestIncludeTopicAuthorizedOperations is: Whether to include topic authorized operations.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
+	// FieldMetadataRequestTags is: The tagged fields.
+	FieldMetadataRequestTags = "Tags"
+	// FieldMetadataRequestTopics is: The topics to fetch metadata for.
+	FieldMetadataRequestTopics = "Topics"
+	// FieldMetadataRequestTopicsName is: The topic name.
+	FieldMetadataRequestTopicsName = "Name"
+	// FieldMetadataRequestTopicsTags is: The tagged fields.
+	FieldMetadataRequestTopicsTags = "Tags"
+	// FieldMetadataRequestTopicsTopicId is: The topic id.
+	FieldMetadataRequestTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataRequest.json

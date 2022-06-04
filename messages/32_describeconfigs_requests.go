@@ -62,22 +62,22 @@ func init32DescribeConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeConfigsRequestTags is: The tagged fields.
-	FieldDescribeConfigsRequestTags = "Tags"
-	// FieldDescribeConfigsRequestResources is: The resources whose configurations we want to describe.
-	FieldDescribeConfigsRequestResources = "Resources"
-	// FieldDescribeConfigsRequestResourcesResourceType is: The resource type.
-	FieldDescribeConfigsRequestResourcesResourceType = "ResourceType"
-	// FieldDescribeConfigsRequestResourcesResourceName is: The resource name.
-	FieldDescribeConfigsRequestResourcesResourceName = "ResourceName"
-	// FieldDescribeConfigsRequestResourcesConfigurationKeys is: The configuration keys to list, or null to list all configuration keys.
-	FieldDescribeConfigsRequestResourcesConfigurationKeys = "ConfigurationKeys"
-	// FieldDescribeConfigsRequestIncludeSynonyms is: True if we should include all synonyms.
-	FieldDescribeConfigsRequestIncludeSynonyms = "IncludeSynonyms"
 	// FieldDescribeConfigsRequestIncludeDocumentation is: True if we should include configuration documentation.
 	FieldDescribeConfigsRequestIncludeDocumentation = "IncludeDocumentation"
+	// FieldDescribeConfigsRequestIncludeSynonyms is: True if we should include all synonyms.
+	FieldDescribeConfigsRequestIncludeSynonyms = "IncludeSynonyms"
+	// FieldDescribeConfigsRequestResources is: The resources whose configurations we want to describe.
+	FieldDescribeConfigsRequestResources = "Resources"
+	// FieldDescribeConfigsRequestResourcesConfigurationKeys is: The configuration keys to list, or null to list all configuration keys.
+	FieldDescribeConfigsRequestResourcesConfigurationKeys = "ConfigurationKeys"
+	// FieldDescribeConfigsRequestResourcesResourceName is: The resource name.
+	FieldDescribeConfigsRequestResourcesResourceName = "ResourceName"
+	// FieldDescribeConfigsRequestResourcesResourceType is: The resource type.
+	FieldDescribeConfigsRequestResourcesResourceType = "ResourceType"
 	// FieldDescribeConfigsRequestResourcesTags is: The tagged fields.
 	FieldDescribeConfigsRequestResourcesTags = "Tags"
+	// FieldDescribeConfigsRequestTags is: The tagged fields.
+	FieldDescribeConfigsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeConfigsRequest.json

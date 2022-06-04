@@ -38,8 +38,6 @@ func init30CreateAclsResponse() []schema.Schema {
 }
 
 const (
-	// FieldCreateAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldCreateAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldCreateAclsResponseResults is: The results for each ACL creation.
 	FieldCreateAclsResponseResults = "Results"
 	// FieldCreateAclsResponseResultsErrorCode is: The result error, or zero if there was no error.
@@ -50,6 +48,8 @@ const (
 	FieldCreateAclsResponseResultsTags = "Tags"
 	// FieldCreateAclsResponseTags is: The tagged fields.
 	FieldCreateAclsResponseTags = "Tags"
+	// FieldCreateAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldCreateAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateAclsResponse.json

@@ -44,22 +44,22 @@ func init33AlterConfigsResponse() []schema.Schema {
 }
 
 const (
+	// FieldAlterConfigsResponseResponses is: The responses for each resource.
+	FieldAlterConfigsResponseResponses = "Responses"
+	// FieldAlterConfigsResponseResponsesErrorCode is: The resource error code.
+	FieldAlterConfigsResponseResponsesErrorCode = "ErrorCode"
 	// FieldAlterConfigsResponseResponsesErrorMessage is: The resource error message, or null if there was no error.
 	FieldAlterConfigsResponseResponsesErrorMessage = "ErrorMessage"
-	// FieldAlterConfigsResponseResponsesResourceType is: The resource type.
-	FieldAlterConfigsResponseResponsesResourceType = "ResourceType"
 	// FieldAlterConfigsResponseResponsesResourceName is: The resource name.
 	FieldAlterConfigsResponseResponsesResourceName = "ResourceName"
+	// FieldAlterConfigsResponseResponsesResourceType is: The resource type.
+	FieldAlterConfigsResponseResponsesResourceType = "ResourceType"
 	// FieldAlterConfigsResponseResponsesTags is: The tagged fields.
 	FieldAlterConfigsResponseResponsesTags = "Tags"
 	// FieldAlterConfigsResponseTags is: The tagged fields.
 	FieldAlterConfigsResponseTags = "Tags"
 	// FieldAlterConfigsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldAlterConfigsResponseResponses is: The responses for each resource.
-	FieldAlterConfigsResponseResponses = "Responses"
-	// FieldAlterConfigsResponseResponsesErrorCode is: The resource error code.
-	FieldAlterConfigsResponseResponsesErrorCode = "ErrorCode"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterConfigsResponse.json

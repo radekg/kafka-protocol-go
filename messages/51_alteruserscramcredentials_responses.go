@@ -21,20 +21,20 @@ func init51AlterUserScramCredentialsResponse() []schema.Schema {
 }
 
 const (
-	// FieldAlterUserScramCredentialsResponseTags is: The tagged fields.
-	FieldAlterUserScramCredentialsResponseTags = "Tags"
-	// FieldAlterUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAlterUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldAlterUserScramCredentialsResponseResults is: The results for deletions and alterations, one per affected user.
 	FieldAlterUserScramCredentialsResponseResults = "Results"
-	// FieldAlterUserScramCredentialsResponseResultsUser is: The user name.
-	FieldAlterUserScramCredentialsResponseResultsUser = "User"
 	// FieldAlterUserScramCredentialsResponseResultsErrorCode is: The error code.
 	FieldAlterUserScramCredentialsResponseResultsErrorCode = "ErrorCode"
 	// FieldAlterUserScramCredentialsResponseResultsErrorMessage is: The error message, if any.
 	FieldAlterUserScramCredentialsResponseResultsErrorMessage = "ErrorMessage"
 	// FieldAlterUserScramCredentialsResponseResultsTags is: The tagged fields.
 	FieldAlterUserScramCredentialsResponseResultsTags = "Tags"
+	// FieldAlterUserScramCredentialsResponseResultsUser is: The user name.
+	FieldAlterUserScramCredentialsResponseResultsUser = "User"
+	// FieldAlterUserScramCredentialsResponseTags is: The tagged fields.
+	FieldAlterUserScramCredentialsResponseTags = "Tags"
+	// FieldAlterUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAlterUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterUserScramCredentialsResponse.json

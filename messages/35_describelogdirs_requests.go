@@ -45,16 +45,16 @@ func init35DescribeLogDirsRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeLogDirsRequestTags is: The tagged fields.
+	FieldDescribeLogDirsRequestTags = "Tags"
 	// FieldDescribeLogDirsRequestTopics is: Each topic that we want to describe log directories for, or null for all topics.
 	FieldDescribeLogDirsRequestTopics = "Topics"
-	// FieldDescribeLogDirsRequestTopicsTopic is: The topic name
-	FieldDescribeLogDirsRequestTopicsTopic = "Topic"
 	// FieldDescribeLogDirsRequestTopicsPartitions is: The partition indexes.
 	FieldDescribeLogDirsRequestTopicsPartitions = "Partitions"
 	// FieldDescribeLogDirsRequestTopicsTags is: The tagged fields.
 	FieldDescribeLogDirsRequestTopicsTags = "Tags"
-	// FieldDescribeLogDirsRequestTags is: The tagged fields.
-	FieldDescribeLogDirsRequestTags = "Tags"
+	// FieldDescribeLogDirsRequestTopicsTopic is: The topic name
+	FieldDescribeLogDirsRequestTopicsTopic = "Topic"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeLogDirsRequest.json

@@ -28,32 +28,32 @@ func init46ListPartitionReassignmentsResponse() []schema.Schema {
 }
 
 const (
+	// FieldListPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error
+	FieldListPartitionReassignmentsResponseErrorCode = "ErrorCode"
+	// FieldListPartitionReassignmentsResponseErrorMessage is: The top-level error message, or null if there was no error.
+	FieldListPartitionReassignmentsResponseErrorMessage = "ErrorMessage"
+	// FieldListPartitionReassignmentsResponseTags is: The tagged fields.
+	FieldListPartitionReassignmentsResponseTags = "Tags"
+	// FieldListPartitionReassignmentsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldListPartitionReassignmentsResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldListPartitionReassignmentsResponseTopics is: The ongoing reassignments for each topic.
+	FieldListPartitionReassignmentsResponseTopics = "Topics"
+	// FieldListPartitionReassignmentsResponseTopicsName is: The topic name.
+	FieldListPartitionReassignmentsResponseTopicsName = "Name"
+	// FieldListPartitionReassignmentsResponseTopicsPartitions is: The ongoing reassignments for each partition.
+	FieldListPartitionReassignmentsResponseTopicsPartitions = "Partitions"
+	// FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas is: The set of replicas we are currently adding.
+	FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas = "AddingReplicas"
+	// FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex is: The index of the partition.
+	FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsRemovingReplicas is: The set of replicas we are currently removing.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsRemovingReplicas = "RemovingReplicas"
+	// FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas is: The current replica set.
+	FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas = "Replicas"
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsTags is: The tagged fields.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsTags = "Tags"
 	// FieldListPartitionReassignmentsResponseTopicsTags is: The tagged fields.
 	FieldListPartitionReassignmentsResponseTopicsTags = "Tags"
-	// FieldListPartitionReassignmentsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldListPartitionReassignmentsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldListPartitionReassignmentsResponseErrorMessage is: The top-level error message, or null if there was no error.
-	FieldListPartitionReassignmentsResponseErrorMessage = "ErrorMessage"
-	// FieldListPartitionReassignmentsResponseTopicsName is: The topic name.
-	FieldListPartitionReassignmentsResponseTopicsName = "Name"
-	// FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex is: The index of the partition.
-	FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas is: The current replica set.
-	FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas = "Replicas"
-	// FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas is: The set of replicas we are currently adding.
-	FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas = "AddingReplicas"
-	// FieldListPartitionReassignmentsResponseTags is: The tagged fields.
-	FieldListPartitionReassignmentsResponseTags = "Tags"
-	// FieldListPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error
-	FieldListPartitionReassignmentsResponseErrorCode = "ErrorCode"
-	// FieldListPartitionReassignmentsResponseTopics is: The ongoing reassignments for each topic.
-	FieldListPartitionReassignmentsResponseTopics = "Topics"
-	// FieldListPartitionReassignmentsResponseTopicsPartitions is: The ongoing reassignments for each partition.
-	FieldListPartitionReassignmentsResponseTopicsPartitions = "Partitions"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListPartitionReassignmentsResponse.json

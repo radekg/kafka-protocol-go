@@ -16,10 +16,10 @@ func init67AllocateProducerIdsRequest() []schema.Schema {
 }
 
 const (
-	// FieldAllocateProducerIdsRequestBrokerId is: The ID of the requesting broker
-	FieldAllocateProducerIdsRequestBrokerId = "BrokerId"
 	// FieldAllocateProducerIdsRequestBrokerEpoch is: The epoch of the requesting broker
 	FieldAllocateProducerIdsRequestBrokerEpoch = "BrokerEpoch"
+	// FieldAllocateProducerIdsRequestBrokerId is: The ID of the requesting broker
+	FieldAllocateProducerIdsRequestBrokerId = "BrokerId"
 	// FieldAllocateProducerIdsRequestTags is: The tagged fields.
 	FieldAllocateProducerIdsRequestTags = "Tags"
 )

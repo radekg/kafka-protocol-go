@@ -121,28 +121,28 @@ func init2ListOffsetsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListOffsetsRequestReplicaId is: The broker ID of the requestor, or -1 if this request is being made by a normal consumer.
-	FieldListOffsetsRequestReplicaId = "ReplicaId"
-	// FieldListOffsetsRequestTopicsName is: The topic name.
-	FieldListOffsetsRequestTopicsName = "Name"
-	// FieldListOffsetsRequestTopicsPartitionsTags is: The tagged fields.
-	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
-	// FieldListOffsetsRequestTopicsTags is: The tagged fields.
-	FieldListOffsetsRequestTopicsTags = "Tags"
-	// FieldListOffsetsRequestTopics is: Each topic in the request.
-	FieldListOffsetsRequestTopics = "Topics"
-	// FieldListOffsetsRequestTopicsPartitions is: Each partition in the request.
-	FieldListOffsetsRequestTopicsPartitions = "Partitions"
-	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is: The partition index.
-	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldListOffsetsRequestTopicsPartitionsTimestamp is: The current timestamp.
-	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
 	// FieldListOffsetsRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
 	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
-	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch.
-	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldListOffsetsRequestReplicaId is: The broker ID of the requestor, or -1 if this request is being made by a normal consumer.
+	FieldListOffsetsRequestReplicaId = "ReplicaId"
 	// FieldListOffsetsRequestTags is: The tagged fields.
 	FieldListOffsetsRequestTags = "Tags"
+	// FieldListOffsetsRequestTopics is: Each topic in the request.
+	FieldListOffsetsRequestTopics = "Topics"
+	// FieldListOffsetsRequestTopicsName is: The topic name.
+	FieldListOffsetsRequestTopicsName = "Name"
+	// FieldListOffsetsRequestTopicsPartitions is: Each partition in the request.
+	FieldListOffsetsRequestTopicsPartitions = "Partitions"
+	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch.
+	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is: The partition index.
+	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldListOffsetsRequestTopicsPartitionsTags is: The tagged fields.
+	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
+	// FieldListOffsetsRequestTopicsPartitionsTimestamp is: The current timestamp.
+	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
+	// FieldListOffsetsRequestTopicsTags is: The tagged fields.
+	FieldListOffsetsRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListOffsetsRequest.json

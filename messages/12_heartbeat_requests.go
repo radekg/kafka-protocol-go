@@ -47,14 +47,14 @@ func init12HeartbeatRequest() []schema.Schema {
 }
 
 const (
-	// FieldHeartbeatRequestGroupId is: The group id.
-	FieldHeartbeatRequestGroupId = "GroupId"
 	// FieldHeartbeatRequestGenerationId is: The generation of the group.
 	FieldHeartbeatRequestGenerationId = "GenerationId"
-	// FieldHeartbeatRequestMemberId is: The member ID.
-	FieldHeartbeatRequestMemberId = "MemberId"
+	// FieldHeartbeatRequestGroupId is: The group id.
+	FieldHeartbeatRequestGroupId = "GroupId"
 	// FieldHeartbeatRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldHeartbeatRequestGroupInstanceId = "GroupInstanceId"
+	// FieldHeartbeatRequestMemberId is: The member ID.
+	FieldHeartbeatRequestMemberId = "MemberId"
 	// FieldHeartbeatRequestTags is: The tagged fields.
 	FieldHeartbeatRequestTags = "Tags"
 )

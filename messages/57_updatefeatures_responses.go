@@ -23,10 +23,6 @@ func init57UpdateFeaturesResponse() []schema.Schema {
 }
 
 const (
-	// FieldUpdateFeaturesResponseResultsTags is: The tagged fields.
-	FieldUpdateFeaturesResponseResultsTags = "Tags"
-	// FieldUpdateFeaturesResponseTags is: The tagged fields.
-	FieldUpdateFeaturesResponseTags = "Tags"
 	// FieldUpdateFeaturesResponseErrorCode is: The top-level error code, or `0` if there was no top-level error.
 	FieldUpdateFeaturesResponseErrorCode = "ErrorCode"
 	// FieldUpdateFeaturesResponseErrorMessage is: The top-level error message, or `null` if there was no top-level error.
@@ -35,12 +31,16 @@ const (
 	FieldUpdateFeaturesResponseResults = "Results"
 	// FieldUpdateFeaturesResponseResultsErrorCode is: The feature update error code or `0` if the feature update succeeded.
 	FieldUpdateFeaturesResponseResultsErrorCode = "ErrorCode"
-	// FieldUpdateFeaturesResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldUpdateFeaturesResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldUpdateFeaturesResponseResultsFeature is: The name of the finalized feature.
-	FieldUpdateFeaturesResponseResultsFeature = "Feature"
 	// FieldUpdateFeaturesResponseResultsErrorMessage is: The feature update error, or `null` if the feature update succeeded.
 	FieldUpdateFeaturesResponseResultsErrorMessage = "ErrorMessage"
+	// FieldUpdateFeaturesResponseResultsFeature is: The name of the finalized feature.
+	FieldUpdateFeaturesResponseResultsFeature = "Feature"
+	// FieldUpdateFeaturesResponseResultsTags is: The tagged fields.
+	FieldUpdateFeaturesResponseResultsTags = "Tags"
+	// FieldUpdateFeaturesResponseTags is: The tagged fields.
+	FieldUpdateFeaturesResponseTags = "Tags"
+	// FieldUpdateFeaturesResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldUpdateFeaturesResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateFeaturesResponse.json

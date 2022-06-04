@@ -18,14 +18,14 @@ func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeUserScramCredentialsRequestTags is: The tagged fields.
+	FieldDescribeUserScramCredentialsRequestTags = "Tags"
 	// FieldDescribeUserScramCredentialsRequestUsers is: The users to describe, or null/empty to describe all users.
 	FieldDescribeUserScramCredentialsRequestUsers = "Users"
 	// FieldDescribeUserScramCredentialsRequestUsersName is: The user name.
 	FieldDescribeUserScramCredentialsRequestUsersName = "Name"
 	// FieldDescribeUserScramCredentialsRequestUsersTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsRequestUsersTags = "Tags"
-	// FieldDescribeUserScramCredentialsRequestTags is: The tagged fields.
-	FieldDescribeUserScramCredentialsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeUserScramCredentialsRequest.json

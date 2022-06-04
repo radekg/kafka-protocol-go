@@ -42,16 +42,16 @@ func init26EndTxnRequest() []schema.Schema {
 }
 
 const (
-	// FieldEndTxnRequestTransactionalId is: The ID of the transaction to end.
-	FieldEndTxnRequestTransactionalId = "TransactionalId"
-	// FieldEndTxnRequestProducerId is: The producer ID.
-	FieldEndTxnRequestProducerId = "ProducerId"
-	// FieldEndTxnRequestProducerEpoch is: The current epoch associated with the producer.
-	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
 	// FieldEndTxnRequestCommitted is: True if the transaction was committed, false if it was aborted.
 	FieldEndTxnRequestCommitted = "Committed"
+	// FieldEndTxnRequestProducerEpoch is: The current epoch associated with the producer.
+	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
+	// FieldEndTxnRequestProducerId is: The producer ID.
+	FieldEndTxnRequestProducerId = "ProducerId"
 	// FieldEndTxnRequestTags is: The tagged fields.
 	FieldEndTxnRequestTags = "Tags"
+	// FieldEndTxnRequestTransactionalId is: The ID of the transaction to end.
+	FieldEndTxnRequestTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/EndTxnRequest.json

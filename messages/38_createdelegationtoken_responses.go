@@ -49,26 +49,26 @@ func init38CreateDelegationTokenResponse() []schema.Schema {
 }
 
 const (
-	// FieldCreateDelegationTokenResponseMaxTimestampMs is: The maximum lifetime of this token.
-	FieldCreateDelegationTokenResponseMaxTimestampMs = "MaxTimestampMs"
-	// FieldCreateDelegationTokenResponsePrincipalType is: The principal type of the token owner.
-	FieldCreateDelegationTokenResponsePrincipalType = "PrincipalType"
-	// FieldCreateDelegationTokenResponsePrincipalName is: The name of the token owner.
-	FieldCreateDelegationTokenResponsePrincipalName = "PrincipalName"
-	// FieldCreateDelegationTokenResponseIssueTimestampMs is: When this token was generated.
-	FieldCreateDelegationTokenResponseIssueTimestampMs = "IssueTimestampMs"
-	// FieldCreateDelegationTokenResponseExpiryTimestampMs is: When this token expires.
-	FieldCreateDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
-	// FieldCreateDelegationTokenResponseTags is: The tagged fields.
-	FieldCreateDelegationTokenResponseTags = "Tags"
 	// FieldCreateDelegationTokenResponseErrorCode is: The top-level error, or zero if there was no error.
 	FieldCreateDelegationTokenResponseErrorCode = "ErrorCode"
-	// FieldCreateDelegationTokenResponseTokenId is: The token UUID.
-	FieldCreateDelegationTokenResponseTokenId = "TokenId"
+	// FieldCreateDelegationTokenResponseExpiryTimestampMs is: When this token expires.
+	FieldCreateDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
 	// FieldCreateDelegationTokenResponseHmac is: HMAC of the delegation token.
 	FieldCreateDelegationTokenResponseHmac = "Hmac"
+	// FieldCreateDelegationTokenResponseIssueTimestampMs is: When this token was generated.
+	FieldCreateDelegationTokenResponseIssueTimestampMs = "IssueTimestampMs"
+	// FieldCreateDelegationTokenResponseMaxTimestampMs is: The maximum lifetime of this token.
+	FieldCreateDelegationTokenResponseMaxTimestampMs = "MaxTimestampMs"
+	// FieldCreateDelegationTokenResponsePrincipalName is: The name of the token owner.
+	FieldCreateDelegationTokenResponsePrincipalName = "PrincipalName"
+	// FieldCreateDelegationTokenResponsePrincipalType is: The principal type of the token owner.
+	FieldCreateDelegationTokenResponsePrincipalType = "PrincipalType"
+	// FieldCreateDelegationTokenResponseTags is: The tagged fields.
+	FieldCreateDelegationTokenResponseTags = "Tags"
 	// FieldCreateDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldCreateDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldCreateDelegationTokenResponseTokenId is: The token UUID.
+	FieldCreateDelegationTokenResponseTokenId = "TokenId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateDelegationTokenResponse.json

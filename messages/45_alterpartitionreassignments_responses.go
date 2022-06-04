@@ -27,8 +27,12 @@ func init45AlterPartitionReassignmentsResponse() []schema.Schema {
 }
 
 const (
+	// FieldAlterPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error.
+	FieldAlterPartitionReassignmentsResponseErrorCode = "ErrorCode"
 	// FieldAlterPartitionReassignmentsResponseErrorMessage is: The top-level error message, or null if there was no error.
 	FieldAlterPartitionReassignmentsResponseErrorMessage = "ErrorMessage"
+	// FieldAlterPartitionReassignmentsResponseResponses is: The responses to topics to reassign.
+	FieldAlterPartitionReassignmentsResponseResponses = "Responses"
 	// FieldAlterPartitionReassignmentsResponseResponsesName is: The topic name
 	FieldAlterPartitionReassignmentsResponseResponsesName = "Name"
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitions is: The responses to partitions to reassign
@@ -37,20 +41,16 @@ const (
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorCode = "ErrorCode"
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorMessage is: The error message for this partition, or null if there was no error.
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorMessage = "ErrorMessage"
+	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex is: The partition index.
+	FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex = "PartitionIndex"
+	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags is: The tagged fields.
+	FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags = "Tags"
 	// FieldAlterPartitionReassignmentsResponseResponsesTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsResponseResponsesTags = "Tags"
 	// FieldAlterPartitionReassignmentsResponseTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsResponseTags = "Tags"
 	// FieldAlterPartitionReassignmentsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterPartitionReassignmentsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldAlterPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error.
-	FieldAlterPartitionReassignmentsResponseErrorCode = "ErrorCode"
-	// FieldAlterPartitionReassignmentsResponseResponses is: The responses to topics to reassign.
-	FieldAlterPartitionReassignmentsResponseResponses = "Responses"
-	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex is: The partition index.
-	FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex = "PartitionIndex"
-	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags is: The tagged fields.
-	FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionReassignmentsResponse.json

@@ -34,42 +34,42 @@ func init61DescribeProducersResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeProducersResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldDescribeProducersResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldDescribeProducersResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
-	FieldDescribeProducersResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId = "ProducerId"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp = "LastTimestamp"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch = "CoordinatorEpoch"
+	// FieldDescribeProducersResponseTags is: The tagged fields.
+	FieldDescribeProducersResponseTags = "Tags"
 	// FieldDescribeProducersResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeProducersResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch = "ProducerEpoch"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence = "LastSequence"
-	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset is:
-	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset = "CurrentTxnStartOffset"
 	// FieldDescribeProducersResponseTopics is: Each topic in the response.
 	FieldDescribeProducersResponseTopics = "Topics"
-	// FieldDescribeProducersResponseTopicsPartitionsErrorMessage is: The partition error message, which may be null if no additional details are available
-	FieldDescribeProducersResponseTopicsPartitionsErrorMessage = "ErrorMessage"
-	// FieldDescribeProducersResponseTopicsPartitionsTags is: The tagged fields.
-	FieldDescribeProducersResponseTopicsPartitionsTags = "Tags"
 	// FieldDescribeProducersResponseTopicsName is: The topic name
 	FieldDescribeProducersResponseTopicsName = "Name"
 	// FieldDescribeProducersResponseTopicsPartitions is: Each partition in the response.
 	FieldDescribeProducersResponseTopicsPartitions = "Partitions"
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducers is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducers = "ActiveProducers"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch = "CoordinatorEpoch"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset = "CurrentTxnStartOffset"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence = "LastSequence"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp = "LastTimestamp"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch = "ProducerEpoch"
+	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId is:
+	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId = "ProducerId"
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersTags is: The tagged fields.
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersTags = "Tags"
+	// FieldDescribeProducersResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
+	FieldDescribeProducersResponseTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldDescribeProducersResponseTopicsPartitionsErrorMessage is: The partition error message, which may be null if no additional details are available
+	FieldDescribeProducersResponseTopicsPartitionsErrorMessage = "ErrorMessage"
+	// FieldDescribeProducersResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldDescribeProducersResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldDescribeProducersResponseTopicsPartitionsTags is: The tagged fields.
+	FieldDescribeProducersResponseTopicsPartitionsTags = "Tags"
 	// FieldDescribeProducersResponseTopicsTags is: The tagged fields.
 	FieldDescribeProducersResponseTopicsTags = "Tags"
-	// FieldDescribeProducersResponseTags is: The tagged fields.
-	FieldDescribeProducersResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeProducersResponse.json

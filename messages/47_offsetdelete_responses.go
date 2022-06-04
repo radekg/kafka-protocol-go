@@ -22,12 +22,6 @@ func init47OffsetDeleteResponse() []schema.Schema {
 }
 
 const (
-	// FieldOffsetDeleteResponseTopicsPartitions is: The responses for each partition in the topic.
-	FieldOffsetDeleteResponseTopicsPartitions = "Partitions"
-	// FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex is: The partition index.
-	FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetDeleteResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
-	FieldOffsetDeleteResponseTopicsPartitionsErrorCode = "ErrorCode"
 	// FieldOffsetDeleteResponseErrorCode is: The top-level error code, or 0 if there was no error.
 	FieldOffsetDeleteResponseErrorCode = "ErrorCode"
 	// FieldOffsetDeleteResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
@@ -36,6 +30,12 @@ const (
 	FieldOffsetDeleteResponseTopics = "Topics"
 	// FieldOffsetDeleteResponseTopicsName is: The topic name.
 	FieldOffsetDeleteResponseTopicsName = "Name"
+	// FieldOffsetDeleteResponseTopicsPartitions is: The responses for each partition in the topic.
+	FieldOffsetDeleteResponseTopicsPartitions = "Partitions"
+	// FieldOffsetDeleteResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
+	FieldOffsetDeleteResponseTopicsPartitionsErrorCode = "ErrorCode"
+	// FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetDeleteResponse.json

@@ -164,32 +164,32 @@ func init11JoinGroupResponse() []schema.Schema {
 }
 
 const (
-	// FieldJoinGroupResponseMembersMemberId is: The group member ID.
-	FieldJoinGroupResponseMembersMemberId = "MemberId"
-	// FieldJoinGroupResponseMembersMetadata is: The group member metadata.
-	FieldJoinGroupResponseMembersMetadata = "Metadata"
-	// FieldJoinGroupResponseTags is: The tagged fields.
-	FieldJoinGroupResponseTags = "Tags"
-	// FieldJoinGroupResponseProtocolType is: The group protocol name.
-	FieldJoinGroupResponseProtocolType = "ProtocolType"
+	// FieldJoinGroupResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldJoinGroupResponseErrorCode = "ErrorCode"
 	// FieldJoinGroupResponseGenerationId is: The generation ID of the group.
 	FieldJoinGroupResponseGenerationId = "GenerationId"
 	// FieldJoinGroupResponseLeader is: The leader of the group.
 	FieldJoinGroupResponseLeader = "Leader"
-	// FieldJoinGroupResponseMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
-	FieldJoinGroupResponseMembersGroupInstanceId = "GroupInstanceId"
-	// FieldJoinGroupResponseMembersTags is: The tagged fields.
-	FieldJoinGroupResponseMembersTags = "Tags"
-	// FieldJoinGroupResponseMembers is:
-	FieldJoinGroupResponseMembers = "Members"
-	// FieldJoinGroupResponseSkipAssignment is: True if the leader must skip running the assignment.
-	FieldJoinGroupResponseSkipAssignment = "SkipAssignment"
-	// FieldJoinGroupResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldJoinGroupResponseErrorCode = "ErrorCode"
-	// FieldJoinGroupResponseProtocolName is: The group protocol selected by the coordinator.
-	FieldJoinGroupResponseProtocolName = "ProtocolName"
 	// FieldJoinGroupResponseMemberId is: The member ID assigned by the group coordinator.
 	FieldJoinGroupResponseMemberId = "MemberId"
+	// FieldJoinGroupResponseMembers is:
+	FieldJoinGroupResponseMembers = "Members"
+	// FieldJoinGroupResponseMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldJoinGroupResponseMembersGroupInstanceId = "GroupInstanceId"
+	// FieldJoinGroupResponseMembersMemberId is: The group member ID.
+	FieldJoinGroupResponseMembersMemberId = "MemberId"
+	// FieldJoinGroupResponseMembersMetadata is: The group member metadata.
+	FieldJoinGroupResponseMembersMetadata = "Metadata"
+	// FieldJoinGroupResponseMembersTags is: The tagged fields.
+	FieldJoinGroupResponseMembersTags = "Tags"
+	// FieldJoinGroupResponseProtocolName is: The group protocol selected by the coordinator.
+	FieldJoinGroupResponseProtocolName = "ProtocolName"
+	// FieldJoinGroupResponseProtocolType is: The group protocol name.
+	FieldJoinGroupResponseProtocolType = "ProtocolType"
+	// FieldJoinGroupResponseSkipAssignment is: True if the leader must skip running the assignment.
+	FieldJoinGroupResponseSkipAssignment = "SkipAssignment"
+	// FieldJoinGroupResponseTags is: The tagged fields.
+	FieldJoinGroupResponseTags = "Tags"
 	// FieldJoinGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldJoinGroupResponseThrottleTimeMs = "ThrottleTimeMs"
 )

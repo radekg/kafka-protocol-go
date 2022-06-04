@@ -35,10 +35,10 @@ const (
 	FieldExpireDelegationTokenResponseErrorCode = "ErrorCode"
 	// FieldExpireDelegationTokenResponseExpiryTimestampMs is: The timestamp in milliseconds at which this token expires.
 	FieldExpireDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
-	// FieldExpireDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldExpireDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldExpireDelegationTokenResponseTags is: The tagged fields.
 	FieldExpireDelegationTokenResponseTags = "Tags"
+	// FieldExpireDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldExpireDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ExpireDelegationTokenResponse.json

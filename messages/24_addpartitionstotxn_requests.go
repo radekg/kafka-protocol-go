@@ -55,10 +55,12 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 }
 
 const (
-	// FieldAddPartitionsToTxnRequestProducerId is: Current producer id in use by the transactional id.
-	FieldAddPartitionsToTxnRequestProducerId = "ProducerId"
 	// FieldAddPartitionsToTxnRequestProducerEpoch is: Current epoch associated with the producer id.
 	FieldAddPartitionsToTxnRequestProducerEpoch = "ProducerEpoch"
+	// FieldAddPartitionsToTxnRequestProducerId is: Current producer id in use by the transactional id.
+	FieldAddPartitionsToTxnRequestProducerId = "ProducerId"
+	// FieldAddPartitionsToTxnRequestTags is: The tagged fields.
+	FieldAddPartitionsToTxnRequestTags = "Tags"
 	// FieldAddPartitionsToTxnRequestTopics is: The partitions to add to the transaction.
 	FieldAddPartitionsToTxnRequestTopics = "Topics"
 	// FieldAddPartitionsToTxnRequestTopicsName is: The name of the topic.
@@ -67,8 +69,6 @@ const (
 	FieldAddPartitionsToTxnRequestTopicsPartitions = "Partitions"
 	// FieldAddPartitionsToTxnRequestTopicsTags is: The tagged fields.
 	FieldAddPartitionsToTxnRequestTopicsTags = "Tags"
-	// FieldAddPartitionsToTxnRequestTags is: The tagged fields.
-	FieldAddPartitionsToTxnRequestTags = "Tags"
 	// FieldAddPartitionsToTxnRequestTransactionalId is: The transactional id corresponding to the transaction.
 	FieldAddPartitionsToTxnRequestTransactionalId = "TransactionalId"
 )

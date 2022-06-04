@@ -38,14 +38,14 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateDelegationTokenRequestRenewers is: A list of those who are allowed to renew this token before it expires.
-	FieldCreateDelegationTokenRequestRenewers = "Renewers"
-	// FieldCreateDelegationTokenRequestRenewersPrincipalType is: The type of the Kafka principal.
-	FieldCreateDelegationTokenRequestRenewersPrincipalType = "PrincipalType"
-	// FieldCreateDelegationTokenRequestRenewersPrincipalName is: The name of the Kafka principal.
-	FieldCreateDelegationTokenRequestRenewersPrincipalName = "PrincipalName"
 	// FieldCreateDelegationTokenRequestMaxLifetimeMs is: The maximum lifetime of the token in milliseconds, or -1 to use the server side default.
 	FieldCreateDelegationTokenRequestMaxLifetimeMs = "MaxLifetimeMs"
+	// FieldCreateDelegationTokenRequestRenewers is: A list of those who are allowed to renew this token before it expires.
+	FieldCreateDelegationTokenRequestRenewers = "Renewers"
+	// FieldCreateDelegationTokenRequestRenewersPrincipalName is: The name of the Kafka principal.
+	FieldCreateDelegationTokenRequestRenewersPrincipalName = "PrincipalName"
+	// FieldCreateDelegationTokenRequestRenewersPrincipalType is: The type of the Kafka principal.
+	FieldCreateDelegationTokenRequestRenewersPrincipalType = "PrincipalType"
 	// FieldCreateDelegationTokenRequestRenewersTags is: The tagged fields.
 	FieldCreateDelegationTokenRequestRenewersTags = "Tags"
 	// FieldCreateDelegationTokenRequestTags is: The tagged fields.

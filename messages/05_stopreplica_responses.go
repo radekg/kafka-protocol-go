@@ -53,20 +53,20 @@ func init5StopReplicaResponse() []schema.Schema {
 }
 
 const (
-	// FieldStopReplicaResponsePartitionErrorsTags is: The tagged fields.
-	FieldStopReplicaResponsePartitionErrorsTags = "Tags"
-	// FieldStopReplicaResponseTags is: The tagged fields.
-	FieldStopReplicaResponseTags = "Tags"
 	// FieldStopReplicaResponseErrorCode is: The top-level error code, or 0 if there was no top-level error.
 	FieldStopReplicaResponseErrorCode = "ErrorCode"
 	// FieldStopReplicaResponsePartitionErrors is: The responses for each partition.
 	FieldStopReplicaResponsePartitionErrors = "PartitionErrors"
-	// FieldStopReplicaResponsePartitionErrorsTopicName is: The topic name.
-	FieldStopReplicaResponsePartitionErrorsTopicName = "TopicName"
-	// FieldStopReplicaResponsePartitionErrorsPartitionIndex is: The partition index.
-	FieldStopReplicaResponsePartitionErrorsPartitionIndex = "PartitionIndex"
 	// FieldStopReplicaResponsePartitionErrorsErrorCode is: The partition error code, or 0 if there was no partition error.
 	FieldStopReplicaResponsePartitionErrorsErrorCode = "ErrorCode"
+	// FieldStopReplicaResponsePartitionErrorsPartitionIndex is: The partition index.
+	FieldStopReplicaResponsePartitionErrorsPartitionIndex = "PartitionIndex"
+	// FieldStopReplicaResponsePartitionErrorsTags is: The tagged fields.
+	FieldStopReplicaResponsePartitionErrorsTags = "Tags"
+	// FieldStopReplicaResponsePartitionErrorsTopicName is: The topic name.
+	FieldStopReplicaResponsePartitionErrorsTopicName = "TopicName"
+	// FieldStopReplicaResponseTags is: The tagged fields.
+	FieldStopReplicaResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/StopReplicaResponse.json

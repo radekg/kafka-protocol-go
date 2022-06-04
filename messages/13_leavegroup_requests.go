@@ -59,22 +59,22 @@ func init13LeaveGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaveGroupRequestMembers is: List of leaving member identities.
-	FieldLeaveGroupRequestMembers = "Members"
-	// FieldLeaveGroupRequestMembersMemberId is: The member ID to remove from the group.
-	FieldLeaveGroupRequestMembersMemberId = "MemberId"
-	// FieldLeaveGroupRequestMembersGroupInstanceId is: The group instance ID to remove from the group.
-	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
-	// FieldLeaveGroupRequestMembersTags is: The tagged fields.
-	FieldLeaveGroupRequestMembersTags = "Tags"
-	// FieldLeaveGroupRequestTags is: The tagged fields.
-	FieldLeaveGroupRequestTags = "Tags"
-	// FieldLeaveGroupRequestMembersReason is: The reason why the member left the group.
-	FieldLeaveGroupRequestMembersReason = "Reason"
 	// FieldLeaveGroupRequestGroupId is: The ID of the group to leave.
 	FieldLeaveGroupRequestGroupId = "GroupId"
 	// FieldLeaveGroupRequestMemberId is: The member ID to remove from the group.
 	FieldLeaveGroupRequestMemberId = "MemberId"
+	// FieldLeaveGroupRequestMembers is: List of leaving member identities.
+	FieldLeaveGroupRequestMembers = "Members"
+	// FieldLeaveGroupRequestMembersGroupInstanceId is: The group instance ID to remove from the group.
+	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
+	// FieldLeaveGroupRequestMembersMemberId is: The member ID to remove from the group.
+	FieldLeaveGroupRequestMembersMemberId = "MemberId"
+	// FieldLeaveGroupRequestMembersReason is: The reason why the member left the group.
+	FieldLeaveGroupRequestMembersReason = "Reason"
+	// FieldLeaveGroupRequestMembersTags is: The tagged fields.
+	FieldLeaveGroupRequestMembersTags = "Tags"
+	// FieldLeaveGroupRequestTags is: The tagged fields.
+	FieldLeaveGroupRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaveGroupRequest.json

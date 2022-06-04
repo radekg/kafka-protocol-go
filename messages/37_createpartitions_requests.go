@@ -67,26 +67,26 @@ func init37CreatePartitionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreatePartitionsRequestTimeoutMs is: The time in ms to wait for the partitions to be created.
-	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
-	// FieldCreatePartitionsRequestTopicsAssignmentsTags is: The tagged fields.
-	FieldCreatePartitionsRequestTopicsAssignmentsTags = "Tags"
 	// FieldCreatePartitionsRequestTags is: The tagged fields.
 	FieldCreatePartitionsRequestTags = "Tags"
-	// FieldCreatePartitionsRequestTopicsAssignments is: The new partition assignments.
-	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
-	// FieldCreatePartitionsRequestTopicsName is: The topic name.
-	FieldCreatePartitionsRequestTopicsName = "Name"
-	// FieldCreatePartitionsRequestTopicsCount is: The new partition count.
-	FieldCreatePartitionsRequestTopicsCount = "Count"
-	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is: The assigned broker IDs.
-	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
-	// FieldCreatePartitionsRequestValidateOnly is: If true, then validate the request, but don't actually increase the number of partitions.
-	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
-	// FieldCreatePartitionsRequestTopicsTags is: The tagged fields.
-	FieldCreatePartitionsRequestTopicsTags = "Tags"
+	// FieldCreatePartitionsRequestTimeoutMs is: The time in ms to wait for the partitions to be created.
+	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
 	// FieldCreatePartitionsRequestTopics is: Each topic that we want to create new partitions inside.
 	FieldCreatePartitionsRequestTopics = "Topics"
+	// FieldCreatePartitionsRequestTopicsAssignments is: The new partition assignments.
+	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
+	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is: The assigned broker IDs.
+	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreatePartitionsRequestTopicsAssignmentsTags is: The tagged fields.
+	FieldCreatePartitionsRequestTopicsAssignmentsTags = "Tags"
+	// FieldCreatePartitionsRequestTopicsCount is: The new partition count.
+	FieldCreatePartitionsRequestTopicsCount = "Count"
+	// FieldCreatePartitionsRequestTopicsName is: The topic name.
+	FieldCreatePartitionsRequestTopicsName = "Name"
+	// FieldCreatePartitionsRequestTopicsTags is: The tagged fields.
+	FieldCreatePartitionsRequestTopicsTags = "Tags"
+	// FieldCreatePartitionsRequestValidateOnly is: If true, then validate the request, but don't actually increase the number of partitions.
+	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreatePartitionsRequest.json

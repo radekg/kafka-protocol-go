@@ -47,34 +47,34 @@ func init48DescribeClientQuotasResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeClientQuotasResponseErrorCode is: The error code, or `0` if the quota description succeeded.
-	FieldDescribeClientQuotasResponseErrorCode = "ErrorCode"
-	// FieldDescribeClientQuotasResponseEntriesEntityEntityType is: The entity type.
-	FieldDescribeClientQuotasResponseEntriesEntityEntityType = "EntityType"
-	// FieldDescribeClientQuotasResponseEntriesTags is: The tagged fields.
-	FieldDescribeClientQuotasResponseEntriesTags = "Tags"
-	// FieldDescribeClientQuotasResponseErrorMessage is: The error message, or `null` if the quota description succeeded.
-	FieldDescribeClientQuotasResponseErrorMessage = "ErrorMessage"
 	// FieldDescribeClientQuotasResponseEntries is: A result entry.
 	FieldDescribeClientQuotasResponseEntries = "Entries"
-	// FieldDescribeClientQuotasResponseEntriesValuesKey is: The quota configuration key.
-	FieldDescribeClientQuotasResponseEntriesValuesKey = "Key"
-	// FieldDescribeClientQuotasResponseEntriesValuesTags is: The tagged fields.
-	FieldDescribeClientQuotasResponseEntriesValuesTags = "Tags"
-	// FieldDescribeClientQuotasResponseTags is: The tagged fields.
-	FieldDescribeClientQuotasResponseTags = "Tags"
-	// FieldDescribeClientQuotasResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeClientQuotasResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldDescribeClientQuotasResponseEntriesEntity is: The quota entity description.
 	FieldDescribeClientQuotasResponseEntriesEntity = "Entity"
 	// FieldDescribeClientQuotasResponseEntriesEntityEntityName is: The entity name, or null if the default.
 	FieldDescribeClientQuotasResponseEntriesEntityEntityName = "EntityName"
-	// FieldDescribeClientQuotasResponseEntriesValues is: The quota values for the entity.
-	FieldDescribeClientQuotasResponseEntriesValues = "Values"
-	// FieldDescribeClientQuotasResponseEntriesValuesValue is: The quota configuration value.
-	FieldDescribeClientQuotasResponseEntriesValuesValue = "Value"
+	// FieldDescribeClientQuotasResponseEntriesEntityEntityType is: The entity type.
+	FieldDescribeClientQuotasResponseEntriesEntityEntityType = "EntityType"
 	// FieldDescribeClientQuotasResponseEntriesEntityTags is: The tagged fields.
 	FieldDescribeClientQuotasResponseEntriesEntityTags = "Tags"
+	// FieldDescribeClientQuotasResponseEntriesTags is: The tagged fields.
+	FieldDescribeClientQuotasResponseEntriesTags = "Tags"
+	// FieldDescribeClientQuotasResponseEntriesValues is: The quota values for the entity.
+	FieldDescribeClientQuotasResponseEntriesValues = "Values"
+	// FieldDescribeClientQuotasResponseEntriesValuesKey is: The quota configuration key.
+	FieldDescribeClientQuotasResponseEntriesValuesKey = "Key"
+	// FieldDescribeClientQuotasResponseEntriesValuesTags is: The tagged fields.
+	FieldDescribeClientQuotasResponseEntriesValuesTags = "Tags"
+	// FieldDescribeClientQuotasResponseEntriesValuesValue is: The quota configuration value.
+	FieldDescribeClientQuotasResponseEntriesValuesValue = "Value"
+	// FieldDescribeClientQuotasResponseErrorCode is: The error code, or `0` if the quota description succeeded.
+	FieldDescribeClientQuotasResponseErrorCode = "ErrorCode"
+	// FieldDescribeClientQuotasResponseErrorMessage is: The error message, or `null` if the quota description succeeded.
+	FieldDescribeClientQuotasResponseErrorMessage = "ErrorMessage"
+	// FieldDescribeClientQuotasResponseTags is: The tagged fields.
+	FieldDescribeClientQuotasResponseTags = "Tags"
+	// FieldDescribeClientQuotasResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeClientQuotasResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeClientQuotasResponse.json

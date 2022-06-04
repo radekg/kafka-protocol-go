@@ -34,12 +34,12 @@ func init25AddOffsetsToTxnResponse() []schema.Schema {
 }
 
 const (
-	// FieldAddOffsetsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAddOffsetsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldAddOffsetsToTxnResponseErrorCode is: The response error code, or 0 if there was no error.
 	FieldAddOffsetsToTxnResponseErrorCode = "ErrorCode"
 	// FieldAddOffsetsToTxnResponseTags is: The tagged fields.
 	FieldAddOffsetsToTxnResponseTags = "Tags"
+	// FieldAddOffsetsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAddOffsetsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddOffsetsToTxnResponse.json

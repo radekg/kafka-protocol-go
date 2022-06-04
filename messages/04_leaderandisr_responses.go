@@ -62,12 +62,6 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 }
 
 const (
-	// FieldLeaderAndIsrResponseTopicsTopicId is: The unique topic ID
-	FieldLeaderAndIsrResponseTopicsTopicId = "TopicId"
-	// FieldLeaderAndIsrResponseTopicsPartitionErrors is: Each partition.
-	FieldLeaderAndIsrResponseTopicsPartitionErrors = "PartitionErrors"
-	// FieldLeaderAndIsrResponseTopicsTags is: The tagged fields.
-	FieldLeaderAndIsrResponseTopicsTags = "Tags"
 	// FieldLeaderAndIsrResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldLeaderAndIsrResponseErrorCode = "ErrorCode"
 	// FieldLeaderAndIsrResponsePartitionErrors is: Each partition in v0 to v4 message.
@@ -76,6 +70,12 @@ const (
 	FieldLeaderAndIsrResponseTags = "Tags"
 	// FieldLeaderAndIsrResponseTopics is: Each topic
 	FieldLeaderAndIsrResponseTopics = "Topics"
+	// FieldLeaderAndIsrResponseTopicsPartitionErrors is: Each partition.
+	FieldLeaderAndIsrResponseTopicsPartitionErrors = "PartitionErrors"
+	// FieldLeaderAndIsrResponseTopicsTags is: The tagged fields.
+	FieldLeaderAndIsrResponseTopicsTags = "Tags"
+	// FieldLeaderAndIsrResponseTopicsTopicId is: The unique topic ID
+	FieldLeaderAndIsrResponseTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaderAndIsrResponse.json

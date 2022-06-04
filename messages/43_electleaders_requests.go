@@ -40,20 +40,20 @@ func init43ElectLeadersRequest() []schema.Schema {
 }
 
 const (
-	// FieldElectLeadersRequestTimeoutMs is: The time in ms to wait for the election to complete.
-	FieldElectLeadersRequestTimeoutMs = "TimeoutMs"
 	// FieldElectLeadersRequestElectionType is: Type of elections to conduct for the partition. A value of '0' elects the preferred replica. A value of '1' elects the first live replica if there are no in-sync replica.
 	FieldElectLeadersRequestElectionType = "ElectionType"
-	// FieldElectLeadersRequestTopicPartitionsTags is: The tagged fields.
-	FieldElectLeadersRequestTopicPartitionsTags = "Tags"
 	// FieldElectLeadersRequestTags is: The tagged fields.
 	FieldElectLeadersRequestTags = "Tags"
+	// FieldElectLeadersRequestTimeoutMs is: The time in ms to wait for the election to complete.
+	FieldElectLeadersRequestTimeoutMs = "TimeoutMs"
 	// FieldElectLeadersRequestTopicPartitions is: The topic partitions to elect leaders.
 	FieldElectLeadersRequestTopicPartitions = "TopicPartitions"
-	// FieldElectLeadersRequestTopicPartitionsTopic is: The name of a topic.
-	FieldElectLeadersRequestTopicPartitionsTopic = "Topic"
 	// FieldElectLeadersRequestTopicPartitionsPartitions is: The partitions of this topic whose leader should be elected.
 	FieldElectLeadersRequestTopicPartitionsPartitions = "Partitions"
+	// FieldElectLeadersRequestTopicPartitionsTags is: The tagged fields.
+	FieldElectLeadersRequestTopicPartitionsTags = "Tags"
+	// FieldElectLeadersRequestTopicPartitionsTopic is: The name of a topic.
+	FieldElectLeadersRequestTopicPartitionsTopic = "Topic"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ElectLeadersRequest.json

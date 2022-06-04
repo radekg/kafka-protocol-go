@@ -51,24 +51,24 @@ func init30CreateAclsRequest() []schema.Schema {
 const (
 	// FieldCreateAclsRequestCreations is: The ACLs that we want to create.
 	FieldCreateAclsRequestCreations = "Creations"
-	// FieldCreateAclsRequestCreationsResourceName is: The resource name for the ACL.
-	FieldCreateAclsRequestCreationsResourceName = "ResourceName"
+	// FieldCreateAclsRequestCreationsHost is: The host for the ACL.
+	FieldCreateAclsRequestCreationsHost = "Host"
 	// FieldCreateAclsRequestCreationsOperation is: The operation type for the ACL (read, write, etc.).
 	FieldCreateAclsRequestCreationsOperation = "Operation"
 	// FieldCreateAclsRequestCreationsPermissionType is: The permission type for the ACL (allow, deny, etc.).
 	FieldCreateAclsRequestCreationsPermissionType = "PermissionType"
-	// FieldCreateAclsRequestCreationsResourcePatternType is: The pattern type for the ACL.
-	FieldCreateAclsRequestCreationsResourcePatternType = "ResourcePatternType"
-	// FieldCreateAclsRequestTags is: The tagged fields.
-	FieldCreateAclsRequestTags = "Tags"
-	// FieldCreateAclsRequestCreationsResourceType is: The type of the resource.
-	FieldCreateAclsRequestCreationsResourceType = "ResourceType"
 	// FieldCreateAclsRequestCreationsPrincipal is: The principal for the ACL.
 	FieldCreateAclsRequestCreationsPrincipal = "Principal"
-	// FieldCreateAclsRequestCreationsHost is: The host for the ACL.
-	FieldCreateAclsRequestCreationsHost = "Host"
+	// FieldCreateAclsRequestCreationsResourceName is: The resource name for the ACL.
+	FieldCreateAclsRequestCreationsResourceName = "ResourceName"
+	// FieldCreateAclsRequestCreationsResourcePatternType is: The pattern type for the ACL.
+	FieldCreateAclsRequestCreationsResourcePatternType = "ResourcePatternType"
+	// FieldCreateAclsRequestCreationsResourceType is: The type of the resource.
+	FieldCreateAclsRequestCreationsResourceType = "ResourceType"
 	// FieldCreateAclsRequestCreationsTags is: The tagged fields.
 	FieldCreateAclsRequestCreationsTags = "Tags"
+	// FieldCreateAclsRequestTags is: The tagged fields.
+	FieldCreateAclsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateAclsRequest.json

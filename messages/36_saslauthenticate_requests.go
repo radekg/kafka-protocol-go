@@ -25,10 +25,10 @@ func init36SaslAuthenticateRequest() []schema.Schema {
 }
 
 const (
-	// FieldSaslAuthenticateRequestTags is: The tagged fields.
-	FieldSaslAuthenticateRequestTags = "Tags"
 	// FieldSaslAuthenticateRequestAuthBytes is: The SASL authentication bytes from the client, as defined by the SASL mechanism.
 	FieldSaslAuthenticateRequestAuthBytes = "AuthBytes"
+	// FieldSaslAuthenticateRequestTags is: The tagged fields.
+	FieldSaslAuthenticateRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SaslAuthenticateRequest.json

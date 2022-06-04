@@ -21,10 +21,10 @@ func init17SaslHandshakeResponse() []schema.Schema {
 }
 
 const (
-	// FieldSaslHandshakeResponseMechanisms is: The mechanisms enabled in the server.
-	FieldSaslHandshakeResponseMechanisms = "Mechanisms"
 	// FieldSaslHandshakeResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldSaslHandshakeResponseErrorCode = "ErrorCode"
+	// FieldSaslHandshakeResponseMechanisms is: The mechanisms enabled in the server.
+	FieldSaslHandshakeResponseMechanisms = "Mechanisms"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SaslHandshakeResponse.json

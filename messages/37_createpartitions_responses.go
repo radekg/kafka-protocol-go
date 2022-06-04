@@ -53,20 +53,20 @@ func init37CreatePartitionsResponse() []schema.Schema {
 }
 
 const (
-	// FieldCreatePartitionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldCreatePartitionsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldCreatePartitionsResponseResults is: The partition creation results for each topic.
 	FieldCreatePartitionsResponseResults = "Results"
-	// FieldCreatePartitionsResponseResultsName is: The topic name.
-	FieldCreatePartitionsResponseResultsName = "Name"
 	// FieldCreatePartitionsResponseResultsErrorCode is: The result error, or zero if there was no error.
 	FieldCreatePartitionsResponseResultsErrorCode = "ErrorCode"
 	// FieldCreatePartitionsResponseResultsErrorMessage is: The result message, or null if there was no error.
 	FieldCreatePartitionsResponseResultsErrorMessage = "ErrorMessage"
+	// FieldCreatePartitionsResponseResultsName is: The topic name.
+	FieldCreatePartitionsResponseResultsName = "Name"
 	// FieldCreatePartitionsResponseResultsTags is: The tagged fields.
 	FieldCreatePartitionsResponseResultsTags = "Tags"
 	// FieldCreatePartitionsResponseTags is: The tagged fields.
 	FieldCreatePartitionsResponseTags = "Tags"
+	// FieldCreatePartitionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldCreatePartitionsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreatePartitionsResponse.json

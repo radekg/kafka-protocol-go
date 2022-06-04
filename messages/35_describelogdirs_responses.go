@@ -90,38 +90,38 @@ func init35DescribeLogDirsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeLogDirsResponseResultsTopics is: Each topic.
-	FieldDescribeLogDirsResponseResultsTopics = "Topics"
-	// FieldDescribeLogDirsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize is: The size of the log segments in this partition in bytes.
-	FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize = "PartitionSize"
-	// FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey is: True if this log is created by AlterReplicaLogDirsRequest and will replace the current log of the replica in the future.
-	FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey = "IsFutureKey"
 	// FieldDescribeLogDirsResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeLogDirsResponseErrorCode = "ErrorCode"
-	// FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag is: The lag of the log's LEO w.r.t. partition's HW (if it is the current log for the partition) or current replica's LEO (if it is the future log for the partition)
-	FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag = "OffsetLag"
-	// FieldDescribeLogDirsResponseResultsTopicsPartitionsTags is: The tagged fields.
-	FieldDescribeLogDirsResponseResultsTopicsPartitionsTags = "Tags"
 	// FieldDescribeLogDirsResponseResults is: The log directories.
 	FieldDescribeLogDirsResponseResults = "Results"
 	// FieldDescribeLogDirsResponseResultsErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeLogDirsResponseResultsErrorCode = "ErrorCode"
 	// FieldDescribeLogDirsResponseResultsLogDir is: The absolute log directory path.
 	FieldDescribeLogDirsResponseResultsLogDir = "LogDir"
+	// FieldDescribeLogDirsResponseResultsTags is: The tagged fields.
+	FieldDescribeLogDirsResponseResultsTags = "Tags"
+	// FieldDescribeLogDirsResponseResultsTopics is: Each topic.
+	FieldDescribeLogDirsResponseResultsTopics = "Topics"
 	// FieldDescribeLogDirsResponseResultsTopicsName is: The topic name.
 	FieldDescribeLogDirsResponseResultsTopicsName = "Name"
 	// FieldDescribeLogDirsResponseResultsTopicsPartitions is:
 	FieldDescribeLogDirsResponseResultsTopicsPartitions = "Partitions"
+	// FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey is: True if this log is created by AlterReplicaLogDirsRequest and will replace the current log of the replica in the future.
+	FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey = "IsFutureKey"
+	// FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag is: The lag of the log's LEO w.r.t. partition's HW (if it is the current log for the partition) or current replica's LEO (if it is the future log for the partition)
+	FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag = "OffsetLag"
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize is: The size of the log segments in this partition in bytes.
+	FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize = "PartitionSize"
+	// FieldDescribeLogDirsResponseResultsTopicsPartitionsTags is: The tagged fields.
+	FieldDescribeLogDirsResponseResultsTopicsPartitionsTags = "Tags"
 	// FieldDescribeLogDirsResponseResultsTopicsTags is: The tagged fields.
 	FieldDescribeLogDirsResponseResultsTopicsTags = "Tags"
-	// FieldDescribeLogDirsResponseResultsTags is: The tagged fields.
-	FieldDescribeLogDirsResponseResultsTags = "Tags"
 	// FieldDescribeLogDirsResponseTags is: The tagged fields.
 	FieldDescribeLogDirsResponseTags = "Tags"
+	// FieldDescribeLogDirsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeLogDirsResponse.json

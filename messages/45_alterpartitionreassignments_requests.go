@@ -24,24 +24,24 @@ func init45AlterPartitionReassignmentsRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterPartitionReassignmentsRequestTags is: The tagged fields.
+	FieldAlterPartitionReassignmentsRequestTags = "Tags"
 	// FieldAlterPartitionReassignmentsRequestTimeoutMs is: The time in ms to wait for the request to complete.
 	FieldAlterPartitionReassignmentsRequestTimeoutMs = "TimeoutMs"
+	// FieldAlterPartitionReassignmentsRequestTopics is: The topics to reassign.
+	FieldAlterPartitionReassignmentsRequestTopics = "Topics"
 	// FieldAlterPartitionReassignmentsRequestTopicsName is: The topic name.
 	FieldAlterPartitionReassignmentsRequestTopicsName = "Name"
+	// FieldAlterPartitionReassignmentsRequestTopicsPartitions is: The partitions to reassign.
+	FieldAlterPartitionReassignmentsRequestTopicsPartitions = "Partitions"
+	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex is: The partition index.
+	FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas is: The replicas to place the partitions on, or null to cancel a pending reassignment for this partition.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas = "Replicas"
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags = "Tags"
 	// FieldAlterPartitionReassignmentsRequestTopicsTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsRequestTopicsTags = "Tags"
-	// FieldAlterPartitionReassignmentsRequestTags is: The tagged fields.
-	FieldAlterPartitionReassignmentsRequestTags = "Tags"
-	// FieldAlterPartitionReassignmentsRequestTopics is: The topics to reassign.
-	FieldAlterPartitionReassignmentsRequestTopics = "Topics"
-	// FieldAlterPartitionReassignmentsRequestTopicsPartitions is: The partitions to reassign.
-	FieldAlterPartitionReassignmentsRequestTopicsPartitions = "Partitions"
-	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex is: The partition index.
-	FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionReassignmentsRequest.json

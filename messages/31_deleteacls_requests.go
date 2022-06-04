@@ -51,24 +51,24 @@ func init31DeleteAclsRequest() []schema.Schema {
 const (
 	// FieldDeleteAclsRequestFilters is: The filters to use when deleting ACLs.
 	FieldDeleteAclsRequestFilters = "Filters"
-	// FieldDeleteAclsRequestTags is: The tagged fields.
-	FieldDeleteAclsRequestTags = "Tags"
-	// FieldDeleteAclsRequestFiltersOperation is: The ACL operation.
-	FieldDeleteAclsRequestFiltersOperation = "Operation"
-	// FieldDeleteAclsRequestFiltersPermissionType is: The permission type.
-	FieldDeleteAclsRequestFiltersPermissionType = "PermissionType"
-	// FieldDeleteAclsRequestFiltersPatternTypeFilter is: The pattern type.
-	FieldDeleteAclsRequestFiltersPatternTypeFilter = "PatternTypeFilter"
-	// FieldDeleteAclsRequestFiltersTags is: The tagged fields.
-	FieldDeleteAclsRequestFiltersTags = "Tags"
-	// FieldDeleteAclsRequestFiltersResourceTypeFilter is: The resource type.
-	FieldDeleteAclsRequestFiltersResourceTypeFilter = "ResourceTypeFilter"
-	// FieldDeleteAclsRequestFiltersResourceNameFilter is: The resource name.
-	FieldDeleteAclsRequestFiltersResourceNameFilter = "ResourceNameFilter"
-	// FieldDeleteAclsRequestFiltersPrincipalFilter is: The principal filter, or null to accept all principals.
-	FieldDeleteAclsRequestFiltersPrincipalFilter = "PrincipalFilter"
 	// FieldDeleteAclsRequestFiltersHostFilter is: The host filter, or null to accept all hosts.
 	FieldDeleteAclsRequestFiltersHostFilter = "HostFilter"
+	// FieldDeleteAclsRequestFiltersOperation is: The ACL operation.
+	FieldDeleteAclsRequestFiltersOperation = "Operation"
+	// FieldDeleteAclsRequestFiltersPatternTypeFilter is: The pattern type.
+	FieldDeleteAclsRequestFiltersPatternTypeFilter = "PatternTypeFilter"
+	// FieldDeleteAclsRequestFiltersPermissionType is: The permission type.
+	FieldDeleteAclsRequestFiltersPermissionType = "PermissionType"
+	// FieldDeleteAclsRequestFiltersPrincipalFilter is: The principal filter, or null to accept all principals.
+	FieldDeleteAclsRequestFiltersPrincipalFilter = "PrincipalFilter"
+	// FieldDeleteAclsRequestFiltersResourceNameFilter is: The resource name.
+	FieldDeleteAclsRequestFiltersResourceNameFilter = "ResourceNameFilter"
+	// FieldDeleteAclsRequestFiltersResourceTypeFilter is: The resource type.
+	FieldDeleteAclsRequestFiltersResourceTypeFilter = "ResourceTypeFilter"
+	// FieldDeleteAclsRequestFiltersTags is: The tagged fields.
+	FieldDeleteAclsRequestFiltersTags = "Tags"
+	// FieldDeleteAclsRequestTags is: The tagged fields.
+	FieldDeleteAclsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteAclsRequest.json

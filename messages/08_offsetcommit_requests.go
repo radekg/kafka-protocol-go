@@ -153,36 +153,36 @@ func init8OffsetCommitRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetCommitRequestTopicsPartitions is: Each partition to commit offsets for.
-	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
-	FieldOffsetCommitRequestMemberId = "MemberId"
-	// FieldOffsetCommitRequestTopicsName is: The topic name.
-	FieldOffsetCommitRequestTopicsName = "Name"
-	// FieldOffsetCommitRequestTags is: The tagged fields.
-	FieldOffsetCommitRequestTags = "Tags"
+	// FieldOffsetCommitRequestGenerationId is: The generation of the group.
+	FieldOffsetCommitRequestGenerationId = "GenerationId"
 	// FieldOffsetCommitRequestGroupId is: The unique group identifier.
 	FieldOffsetCommitRequestGroupId = "GroupId"
-	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is: The partition index.
-	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
 	// FieldOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+	// FieldOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
+	FieldOffsetCommitRequestMemberId = "MemberId"
+	// FieldOffsetCommitRequestRetentionTimeMs is: The time period in ms to retain the offset.
+	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
+	// FieldOffsetCommitRequestTags is: The tagged fields.
+	FieldOffsetCommitRequestTags = "Tags"
+	// FieldOffsetCommitRequestTopics is: The topics to commit offsets for.
+	FieldOffsetCommitRequestTopics = "Topics"
+	// FieldOffsetCommitRequestTopicsName is: The topic name.
+	FieldOffsetCommitRequestTopicsName = "Name"
+	// FieldOffsetCommitRequestTopicsPartitions is: Each partition to commit offsets for.
+	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of this partition.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
 	// FieldOffsetCommitRequestTopicsTags is: The tagged fields.
 	FieldOffsetCommitRequestTopicsTags = "Tags"
-	// FieldOffsetCommitRequestTopics is: The topics to commit offsets for.
-	FieldOffsetCommitRequestTopics = "Topics"
-	// FieldOffsetCommitRequestGenerationId is: The generation of the group.
-	FieldOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldOffsetCommitRequestRetentionTimeMs is: The time period in ms to retain the offset.
-	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of this partition.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetCommitRequest.json

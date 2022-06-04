@@ -80,22 +80,22 @@ func init20DeleteTopicsResponse() []schema.Schema {
 }
 
 const (
-	// FieldDeleteTopicsResponseResponsesName is: The topic name
-	FieldDeleteTopicsResponseResponsesName = "Name"
-	// FieldDeleteTopicsResponseResponsesErrorCode is: The deletion error, or 0 if the deletion succeeded.
-	FieldDeleteTopicsResponseResponsesErrorCode = "ErrorCode"
-	// FieldDeleteTopicsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDeleteTopicsResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldDeleteTopicsResponseResponsesTags is: The tagged fields.
-	FieldDeleteTopicsResponseResponsesTags = "Tags"
-	// FieldDeleteTopicsResponseTags is: The tagged fields.
-	FieldDeleteTopicsResponseTags = "Tags"
-	// FieldDeleteTopicsResponseResponsesErrorMessage is: The error message, or null if there was no error.
-	FieldDeleteTopicsResponseResponsesErrorMessage = "ErrorMessage"
-	// FieldDeleteTopicsResponseResponsesTopicId is: the unique topic ID
-	FieldDeleteTopicsResponseResponsesTopicId = "TopicId"
 	// FieldDeleteTopicsResponseResponses is: The results for each topic we tried to delete.
 	FieldDeleteTopicsResponseResponses = "Responses"
+	// FieldDeleteTopicsResponseResponsesErrorCode is: The deletion error, or 0 if the deletion succeeded.
+	FieldDeleteTopicsResponseResponsesErrorCode = "ErrorCode"
+	// FieldDeleteTopicsResponseResponsesErrorMessage is: The error message, or null if there was no error.
+	FieldDeleteTopicsResponseResponsesErrorMessage = "ErrorMessage"
+	// FieldDeleteTopicsResponseResponsesName is: The topic name
+	FieldDeleteTopicsResponseResponsesName = "Name"
+	// FieldDeleteTopicsResponseResponsesTags is: The tagged fields.
+	FieldDeleteTopicsResponseResponsesTags = "Tags"
+	// FieldDeleteTopicsResponseResponsesTopicId is: the unique topic ID
+	FieldDeleteTopicsResponseResponsesTopicId = "TopicId"
+	// FieldDeleteTopicsResponseTags is: The tagged fields.
+	FieldDeleteTopicsResponseTags = "Tags"
+	// FieldDeleteTopicsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDeleteTopicsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteTopicsResponse.json

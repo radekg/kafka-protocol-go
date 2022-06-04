@@ -65,7 +65,7 @@ func main() {
 	}
 
 	fullMessage := strings.Join(jsonLines, "\n")
-	msg := &MessageDefinition{}
+	msg := &messageDefinition{}
 	if err := json.Unmarshal([]byte(fullMessage), msg); err != nil {
 		panic(errors.Wrapf(err, "The schema for gen-type '%s' could not be decoded as JSON", path))
 	}

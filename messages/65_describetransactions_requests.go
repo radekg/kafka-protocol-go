@@ -15,10 +15,10 @@ func init65DescribeTransactionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeTransactionsRequestTransactionalIds is: Array of transactionalIds to include in describe results. If empty, then no results will be returned.
-	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
 	// FieldDescribeTransactionsRequestTags is: The tagged fields.
 	FieldDescribeTransactionsRequestTags = "Tags"
+	// FieldDescribeTransactionsRequestTransactionalIds is: Array of transactionalIds to include in describe results. If empty, then no results will be returned.
+	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeTransactionsRequest.json

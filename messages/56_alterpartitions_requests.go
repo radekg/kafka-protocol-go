@@ -46,32 +46,32 @@ func init56AlterPartitionRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is: The partition index
-	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is: The leader epoch of this partition
-	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is: The ISR for this partition
-	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
-	// FieldAlterPartitionRequestTopicsPartitionsTags is: The tagged fields.
-	FieldAlterPartitionRequestTopicsPartitionsTags = "Tags"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
-	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
-	// FieldAlterPartitionRequestBrokerId is: The ID of the requesting broker
-	FieldAlterPartitionRequestBrokerId = "BrokerId"
-	// FieldAlterPartitionRequestTopics is:
-	FieldAlterPartitionRequestTopics = "Topics"
-	// FieldAlterPartitionRequestTopicsPartitions is:
-	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
-	// FieldAlterPartitionRequestTopicsTags is: The tagged fields.
-	FieldAlterPartitionRequestTopicsTags = "Tags"
-	// FieldAlterPartitionRequestTags is: The tagged fields.
-	FieldAlterPartitionRequestTags = "Tags"
 	// FieldAlterPartitionRequestBrokerEpoch is: The epoch of the requesting broker
 	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
+	// FieldAlterPartitionRequestBrokerId is: The ID of the requesting broker
+	FieldAlterPartitionRequestBrokerId = "BrokerId"
+	// FieldAlterPartitionRequestTags is: The tagged fields.
+	FieldAlterPartitionRequestTags = "Tags"
+	// FieldAlterPartitionRequestTopics is:
+	FieldAlterPartitionRequestTopics = "Topics"
 	// FieldAlterPartitionRequestTopicsName is: The name of the topic to alter ISRs for
 	FieldAlterPartitionRequestTopicsName = "Name"
+	// FieldAlterPartitionRequestTopicsPartitions is:
+	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is: The leader epoch of this partition
+	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
+	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
+	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is: The ISR for this partition
+	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
 	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is: The expected epoch of the partition which is being updated. For legacy cluster this is the ZkVersion in the LeaderAndIsr request.
 	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
+	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is: The partition index
+	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldAlterPartitionRequestTopicsPartitionsTags is: The tagged fields.
+	FieldAlterPartitionRequestTopicsPartitionsTags = "Tags"
+	// FieldAlterPartitionRequestTopicsTags is: The tagged fields.
+	FieldAlterPartitionRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionRequest.json

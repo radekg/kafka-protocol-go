@@ -84,28 +84,28 @@ func init14SyncGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldSyncGroupRequestProtocolName is: The group protocol name.
-	FieldSyncGroupRequestProtocolName = "ProtocolName"
-	// FieldSyncGroupRequestGroupId is: The unique group identifier.
-	FieldSyncGroupRequestGroupId = "GroupId"
-	// FieldSyncGroupRequestGenerationId is: The generation of the group.
-	FieldSyncGroupRequestGenerationId = "GenerationId"
-	// FieldSyncGroupRequestMemberId is: The member ID assigned by the group.
-	FieldSyncGroupRequestMemberId = "MemberId"
 	// FieldSyncGroupRequestAssignments is: Each assignment.
 	FieldSyncGroupRequestAssignments = "Assignments"
-	// FieldSyncGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
-	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldSyncGroupRequestTags is: The tagged fields.
-	FieldSyncGroupRequestTags = "Tags"
-	// FieldSyncGroupRequestProtocolType is: The group protocol type.
-	FieldSyncGroupRequestProtocolType = "ProtocolType"
-	// FieldSyncGroupRequestAssignmentsMemberId is: The ID of the member to assign.
-	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
 	// FieldSyncGroupRequestAssignmentsAssignment is: The member assignment.
 	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
+	// FieldSyncGroupRequestAssignmentsMemberId is: The ID of the member to assign.
+	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
 	// FieldSyncGroupRequestAssignmentsTags is: The tagged fields.
 	FieldSyncGroupRequestAssignmentsTags = "Tags"
+	// FieldSyncGroupRequestGenerationId is: The generation of the group.
+	FieldSyncGroupRequestGenerationId = "GenerationId"
+	// FieldSyncGroupRequestGroupId is: The unique group identifier.
+	FieldSyncGroupRequestGroupId = "GroupId"
+	// FieldSyncGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
+	// FieldSyncGroupRequestMemberId is: The member ID assigned by the group.
+	FieldSyncGroupRequestMemberId = "MemberId"
+	// FieldSyncGroupRequestProtocolName is: The group protocol name.
+	FieldSyncGroupRequestProtocolName = "ProtocolName"
+	// FieldSyncGroupRequestProtocolType is: The group protocol type.
+	FieldSyncGroupRequestProtocolType = "ProtocolType"
+	// FieldSyncGroupRequestTags is: The tagged fields.
+	FieldSyncGroupRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SyncGroupRequest.json

@@ -40,14 +40,14 @@ func init10FindCoordinatorRequest() []schema.Schema {
 }
 
 const (
-	// FieldFindCoordinatorRequestTags is: The tagged fields.
-	FieldFindCoordinatorRequestTags = "Tags"
 	// FieldFindCoordinatorRequestCoordinatorKeys is: The coordinator keys.
 	FieldFindCoordinatorRequestCoordinatorKeys = "CoordinatorKeys"
 	// FieldFindCoordinatorRequestKey is: The coordinator key.
 	FieldFindCoordinatorRequestKey = "Key"
 	// FieldFindCoordinatorRequestKeyType is: The coordinator key type. (Group, transaction, etc.)
 	FieldFindCoordinatorRequestKeyType = "KeyType"
+	// FieldFindCoordinatorRequestTags is: The tagged fields.
+	FieldFindCoordinatorRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FindCoordinatorRequest.json

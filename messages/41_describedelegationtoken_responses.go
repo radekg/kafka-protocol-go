@@ -69,38 +69,38 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 }
 
 const (
-	// FieldDescribeDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldDescribeDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldDescribeDelegationTokenResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeDelegationTokenResponseErrorCode = "ErrorCode"
-	// FieldDescribeDelegationTokenResponseTokensPrincipalName is: The token principal name.
-	FieldDescribeDelegationTokenResponseTokensPrincipalName = "PrincipalName"
-	// FieldDescribeDelegationTokenResponseTokensIssueTimestamp is: The token issue timestamp in milliseconds.
-	FieldDescribeDelegationTokenResponseTokensIssueTimestamp = "IssueTimestamp"
-	// FieldDescribeDelegationTokenResponseTokensExpiryTimestamp is: The token expiry timestamp in milliseconds.
-	FieldDescribeDelegationTokenResponseTokensExpiryTimestamp = "ExpiryTimestamp"
-	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName is: The renewer principal name
-	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName = "PrincipalName"
-	// FieldDescribeDelegationTokenResponseTokensRenewers is: Those who are able to renew this token before it expires.
-	FieldDescribeDelegationTokenResponseTokensRenewers = "Renewers"
-	// FieldDescribeDelegationTokenResponseTokensMaxTimestamp is: The token maximum timestamp length in milliseconds.
-	FieldDescribeDelegationTokenResponseTokensMaxTimestamp = "MaxTimestamp"
-	// FieldDescribeDelegationTokenResponseTokensTokenId is: The token ID.
-	FieldDescribeDelegationTokenResponseTokensTokenId = "TokenId"
-	// FieldDescribeDelegationTokenResponseTokensHmac is: The token HMAC.
-	FieldDescribeDelegationTokenResponseTokensHmac = "Hmac"
-	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType is: The renewer principal type
-	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType = "PrincipalType"
-	// FieldDescribeDelegationTokenResponseTokensTags is: The tagged fields.
-	FieldDescribeDelegationTokenResponseTokensTags = "Tags"
-	// FieldDescribeDelegationTokenResponseTokens is: The tokens.
-	FieldDescribeDelegationTokenResponseTokens = "Tokens"
-	// FieldDescribeDelegationTokenResponseTokensPrincipalType is: The token principal type.
-	FieldDescribeDelegationTokenResponseTokensPrincipalType = "PrincipalType"
-	// FieldDescribeDelegationTokenResponseTokensRenewersTags is: The tagged fields.
-	FieldDescribeDelegationTokenResponseTokensRenewersTags = "Tags"
 	// FieldDescribeDelegationTokenResponseTags is: The tagged fields.
 	FieldDescribeDelegationTokenResponseTags = "Tags"
+	// FieldDescribeDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldDescribeDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldDescribeDelegationTokenResponseTokens is: The tokens.
+	FieldDescribeDelegationTokenResponseTokens = "Tokens"
+	// FieldDescribeDelegationTokenResponseTokensExpiryTimestamp is: The token expiry timestamp in milliseconds.
+	FieldDescribeDelegationTokenResponseTokensExpiryTimestamp = "ExpiryTimestamp"
+	// FieldDescribeDelegationTokenResponseTokensHmac is: The token HMAC.
+	FieldDescribeDelegationTokenResponseTokensHmac = "Hmac"
+	// FieldDescribeDelegationTokenResponseTokensIssueTimestamp is: The token issue timestamp in milliseconds.
+	FieldDescribeDelegationTokenResponseTokensIssueTimestamp = "IssueTimestamp"
+	// FieldDescribeDelegationTokenResponseTokensMaxTimestamp is: The token maximum timestamp length in milliseconds.
+	FieldDescribeDelegationTokenResponseTokensMaxTimestamp = "MaxTimestamp"
+	// FieldDescribeDelegationTokenResponseTokensPrincipalName is: The token principal name.
+	FieldDescribeDelegationTokenResponseTokensPrincipalName = "PrincipalName"
+	// FieldDescribeDelegationTokenResponseTokensPrincipalType is: The token principal type.
+	FieldDescribeDelegationTokenResponseTokensPrincipalType = "PrincipalType"
+	// FieldDescribeDelegationTokenResponseTokensRenewers is: Those who are able to renew this token before it expires.
+	FieldDescribeDelegationTokenResponseTokensRenewers = "Renewers"
+	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName is: The renewer principal name
+	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName = "PrincipalName"
+	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType is: The renewer principal type
+	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType = "PrincipalType"
+	// FieldDescribeDelegationTokenResponseTokensRenewersTags is: The tagged fields.
+	FieldDescribeDelegationTokenResponseTokensRenewersTags = "Tags"
+	// FieldDescribeDelegationTokenResponseTokensTags is: The tagged fields.
+	FieldDescribeDelegationTokenResponseTokensTags = "Tags"
+	// FieldDescribeDelegationTokenResponseTokensTokenId is: The token ID.
+	FieldDescribeDelegationTokenResponseTokensTokenId = "TokenId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeDelegationTokenResponse.json

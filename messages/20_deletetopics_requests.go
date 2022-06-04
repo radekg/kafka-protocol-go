@@ -58,20 +58,20 @@ func init20DeleteTopicsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteTopicsRequestTopicNames is: The names of the topics to delete
-	FieldDeleteTopicsRequestTopicNames = "TopicNames"
-	// FieldDeleteTopicsRequestTimeoutMs is: The length of time in milliseconds to wait for the deletions to complete.
-	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
 	// FieldDeleteTopicsRequestTags is: The tagged fields.
 	FieldDeleteTopicsRequestTags = "Tags"
+	// FieldDeleteTopicsRequestTimeoutMs is: The length of time in milliseconds to wait for the deletions to complete.
+	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
+	// FieldDeleteTopicsRequestTopicNames is: The names of the topics to delete
+	FieldDeleteTopicsRequestTopicNames = "TopicNames"
 	// FieldDeleteTopicsRequestTopics is: The name or topic ID of the topic
 	FieldDeleteTopicsRequestTopics = "Topics"
 	// FieldDeleteTopicsRequestTopicsName is: The topic name
 	FieldDeleteTopicsRequestTopicsName = "Name"
-	// FieldDeleteTopicsRequestTopicsTopicId is: The unique topic ID
-	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
 	// FieldDeleteTopicsRequestTopicsTags is: The tagged fields.
 	FieldDeleteTopicsRequestTopicsTags = "Tags"
+	// FieldDeleteTopicsRequestTopicsTopicId is: The unique topic ID
+	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteTopicsRequest.json

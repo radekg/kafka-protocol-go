@@ -155,28 +155,28 @@ func init11JoinGroupRequest() []schema.Schema {
 const (
 	// FieldJoinGroupRequestGroupId is: The group identifier.
 	FieldJoinGroupRequestGroupId = "GroupId"
-	// FieldJoinGroupRequestSessionTimeoutMs is: The coordinator considers the consumer dead if it receives no heartbeat after this timeout in milliseconds.
-	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
+	// FieldJoinGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
 	// FieldJoinGroupRequestMemberId is: The member id assigned by the group coordinator.
 	FieldJoinGroupRequestMemberId = "MemberId"
 	// FieldJoinGroupRequestProtocolType is: The unique name the for class of protocols implemented by the group we want to join.
 	FieldJoinGroupRequestProtocolType = "ProtocolType"
-	// FieldJoinGroupRequestProtocolsName is: The protocol name.
-	FieldJoinGroupRequestProtocolsName = "Name"
-	// FieldJoinGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
-	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldJoinGroupRequestProtocolsTags is: The tagged fields.
-	FieldJoinGroupRequestProtocolsTags = "Tags"
 	// FieldJoinGroupRequestProtocols is: The list of protocols that the member supports.
 	FieldJoinGroupRequestProtocols = "Protocols"
 	// FieldJoinGroupRequestProtocolsMetadata is: The protocol metadata.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
-	// FieldJoinGroupRequestRebalanceTimeoutMs is: The maximum time in milliseconds that the coordinator will wait for each member to rejoin when rebalancing the group.
-	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
-	// FieldJoinGroupRequestTags is: The tagged fields.
-	FieldJoinGroupRequestTags = "Tags"
+	// FieldJoinGroupRequestProtocolsName is: The protocol name.
+	FieldJoinGroupRequestProtocolsName = "Name"
+	// FieldJoinGroupRequestProtocolsTags is: The tagged fields.
+	FieldJoinGroupRequestProtocolsTags = "Tags"
 	// FieldJoinGroupRequestReason is: The reason why the member (re-)joins the group.
 	FieldJoinGroupRequestReason = "Reason"
+	// FieldJoinGroupRequestRebalanceTimeoutMs is: The maximum time in milliseconds that the coordinator will wait for each member to rejoin when rebalancing the group.
+	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
+	// FieldJoinGroupRequestSessionTimeoutMs is: The coordinator considers the consumer dead if it receives no heartbeat after this timeout in milliseconds.
+	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
+	// FieldJoinGroupRequestTags is: The tagged fields.
+	FieldJoinGroupRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/JoinGroupRequest.json

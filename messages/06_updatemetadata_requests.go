@@ -156,46 +156,46 @@ func init6UpdateMetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateMetadataRequestTags is: The tagged fields.
-	FieldUpdateMetadataRequestTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is: The port of this endpoint
-	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is: The hostname of this endpoint
-	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
-	// FieldUpdateMetadataRequestLiveBrokersRack is: The rack which this broker belongs to.
-	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
-	// FieldUpdateMetadataRequestTopicStatesTopicName is: The topic name.
-	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
-	// FieldUpdateMetadataRequestTopicStatesPartitionStates is: The partition that we would like to update.
-	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldUpdateMetadataRequestLiveBrokersTags is: The tagged fields.
-	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersId is: The broker id.
-	FieldUpdateMetadataRequestLiveBrokersId = "Id"
-	// FieldUpdateMetadataRequestTopicStatesTopicId is: The topic id.
-	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
-	// FieldUpdateMetadataRequestControllerId is: The controller id.
-	FieldUpdateMetadataRequestControllerId = "ControllerId"
+	// FieldUpdateMetadataRequestBrokerEpoch is: The broker epoch.
+	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
 	// FieldUpdateMetadataRequestControllerEpoch is: The controller epoch.
 	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
-	// FieldUpdateMetadataRequestTopicStates is: In newer versions of this RPC, each topic that we would like to update.
-	FieldUpdateMetadataRequestTopicStates = "TopicStates"
-	// FieldUpdateMetadataRequestTopicStatesTags is: The tagged fields.
-	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is: The tagged fields.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
-	// FieldUpdateMetadataRequestUngroupedPartitionStates is: In older versions of this RPC, each partition that we would like to update.
-	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+	// FieldUpdateMetadataRequestControllerId is: The controller id.
+	FieldUpdateMetadataRequestControllerId = "ControllerId"
 	// FieldUpdateMetadataRequestLiveBrokers is:
 	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
 	// FieldUpdateMetadataRequestLiveBrokersEndpoints is: The broker endpoints.
 	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is: The security protocol type.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is: The hostname of this endpoint
+	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is: The listener name.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
-	// FieldUpdateMetadataRequestBrokerEpoch is: The broker epoch.
-	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is: The port of this endpoint
+	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is: The security protocol type.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is: The tagged fields.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
+	// FieldUpdateMetadataRequestLiveBrokersId is: The broker id.
+	FieldUpdateMetadataRequestLiveBrokersId = "Id"
+	// FieldUpdateMetadataRequestLiveBrokersRack is: The rack which this broker belongs to.
+	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
+	// FieldUpdateMetadataRequestLiveBrokersTags is: The tagged fields.
+	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
+	// FieldUpdateMetadataRequestTags is: The tagged fields.
+	FieldUpdateMetadataRequestTags = "Tags"
+	// FieldUpdateMetadataRequestTopicStates is: In newer versions of this RPC, each topic that we would like to update.
+	FieldUpdateMetadataRequestTopicStates = "TopicStates"
+	// FieldUpdateMetadataRequestTopicStatesPartitionStates is: The partition that we would like to update.
+	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldUpdateMetadataRequestTopicStatesTags is: The tagged fields.
+	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
+	// FieldUpdateMetadataRequestTopicStatesTopicId is: The topic id.
+	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
+	// FieldUpdateMetadataRequestTopicStatesTopicName is: The topic name.
+	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
+	// FieldUpdateMetadataRequestUngroupedPartitionStates is: In older versions of this RPC, each partition that we would like to update.
+	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateMetadataRequest.json

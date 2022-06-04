@@ -18,16 +18,16 @@ func init67AllocateProducerIdsResponse() []schema.Schema {
 }
 
 const (
-	// FieldAllocateProducerIdsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAllocateProducerIdsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldAllocateProducerIdsResponseErrorCode is: The top level response error code
 	FieldAllocateProducerIdsResponseErrorCode = "ErrorCode"
-	// FieldAllocateProducerIdsResponseProducerIdStart is: The first producer ID in this range, inclusive
-	FieldAllocateProducerIdsResponseProducerIdStart = "ProducerIdStart"
 	// FieldAllocateProducerIdsResponseProducerIdLen is: The number of producer IDs in this range
 	FieldAllocateProducerIdsResponseProducerIdLen = "ProducerIdLen"
+	// FieldAllocateProducerIdsResponseProducerIdStart is: The first producer ID in this range, inclusive
+	FieldAllocateProducerIdsResponseProducerIdStart = "ProducerIdStart"
 	// FieldAllocateProducerIdsResponseTags is: The tagged fields.
 	FieldAllocateProducerIdsResponseTags = "Tags"
+	// FieldAllocateProducerIdsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAllocateProducerIdsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AllocateProducerIdsResponse.json

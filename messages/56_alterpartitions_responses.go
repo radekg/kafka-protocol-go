@@ -50,36 +50,36 @@ func init56AlterPartitionResponse() []schema.Schema {
 }
 
 const (
-	// FieldAlterPartitionResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAlterPartitionResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldAlterPartitionResponseTopicsPartitions is:
-	FieldAlterPartitionResponseTopicsPartitions = "Partitions"
-	// FieldAlterPartitionResponseTopicsPartitionsPartitionIndex is: The partition index
-	FieldAlterPartitionResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldAlterPartitionResponseErrorCode is: The top level response error code
 	FieldAlterPartitionResponseErrorCode = "ErrorCode"
-	// FieldAlterPartitionResponseTopics is:
-	FieldAlterPartitionResponseTopics = "Topics"
 	// FieldAlterPartitionResponseTags is: The tagged fields.
 	FieldAlterPartitionResponseTags = "Tags"
+	// FieldAlterPartitionResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAlterPartitionResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldAlterPartitionResponseTopics is:
+	FieldAlterPartitionResponseTopics = "Topics"
+	// FieldAlterPartitionResponseTopicsName is: The name of the topic
+	FieldAlterPartitionResponseTopicsName = "Name"
+	// FieldAlterPartitionResponseTopicsPartitions is:
+	FieldAlterPartitionResponseTopicsPartitions = "Partitions"
+	// FieldAlterPartitionResponseTopicsPartitionsErrorCode is: The partition level error code
+	FieldAlterPartitionResponseTopicsPartitionsErrorCode = "ErrorCode"
 	// FieldAlterPartitionResponseTopicsPartitionsIsr is: The in-sync replica IDs.
 	FieldAlterPartitionResponseTopicsPartitionsIsr = "Isr"
+	// FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch is: The leader epoch.
+	FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldAlterPartitionResponseTopicsPartitionsLeaderId is: The broker ID of the leader.
+	FieldAlterPartitionResponseTopicsPartitionsLeaderId = "LeaderId"
+	// FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
+	FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
+	// FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch is: The current epoch for the partition for KRaft controllers. The current ZK version for the legacy controllers.
+	FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch = "PartitionEpoch"
+	// FieldAlterPartitionResponseTopicsPartitionsPartitionIndex is: The partition index
+	FieldAlterPartitionResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldAlterPartitionResponseTopicsPartitionsTags is: The tagged fields.
 	FieldAlterPartitionResponseTopicsPartitionsTags = "Tags"
 	// FieldAlterPartitionResponseTopicsTags is: The tagged fields.
 	FieldAlterPartitionResponseTopicsTags = "Tags"
-	// FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
-	FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
-	// FieldAlterPartitionResponseTopicsName is: The name of the topic
-	FieldAlterPartitionResponseTopicsName = "Name"
-	// FieldAlterPartitionResponseTopicsPartitionsErrorCode is: The partition level error code
-	FieldAlterPartitionResponseTopicsPartitionsErrorCode = "ErrorCode"
-	// FieldAlterPartitionResponseTopicsPartitionsLeaderId is: The broker ID of the leader.
-	FieldAlterPartitionResponseTopicsPartitionsLeaderId = "LeaderId"
-	// FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch is: The leader epoch.
-	FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch is: The current epoch for the partition for KRaft controllers. The current ZK version for the legacy controllers.
-	FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch = "PartitionEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionResponse.json

@@ -63,36 +63,36 @@ func init10FindCoordinatorResponse() []schema.Schema {
 }
 
 const (
-	// FieldFindCoordinatorResponseErrorCode is: The error code, or 0 if there was no error.
-	FieldFindCoordinatorResponseErrorCode = "ErrorCode"
+	// FieldFindCoordinatorResponseCoordinators is: Each coordinator result in the response
+	FieldFindCoordinatorResponseCoordinators = "Coordinators"
+	// FieldFindCoordinatorResponseCoordinatorsErrorCode is: The error code, or 0 if there was no error.
+	FieldFindCoordinatorResponseCoordinatorsErrorCode = "ErrorCode"
 	// FieldFindCoordinatorResponseCoordinatorsErrorMessage is: The error message, or null if there was no error.
 	FieldFindCoordinatorResponseCoordinatorsErrorMessage = "ErrorMessage"
+	// FieldFindCoordinatorResponseCoordinatorsHost is: The host name.
+	FieldFindCoordinatorResponseCoordinatorsHost = "Host"
+	// FieldFindCoordinatorResponseCoordinatorsKey is: The coordinator key.
+	FieldFindCoordinatorResponseCoordinatorsKey = "Key"
+	// FieldFindCoordinatorResponseCoordinatorsNodeId is: The node id.
+	FieldFindCoordinatorResponseCoordinatorsNodeId = "NodeId"
+	// FieldFindCoordinatorResponseCoordinatorsPort is: The port.
+	FieldFindCoordinatorResponseCoordinatorsPort = "Port"
 	// FieldFindCoordinatorResponseCoordinatorsTags is: The tagged fields.
 	FieldFindCoordinatorResponseCoordinatorsTags = "Tags"
-	// FieldFindCoordinatorResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldFindCoordinatorResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldFindCoordinatorResponseTags is: The tagged fields.
-	FieldFindCoordinatorResponseTags = "Tags"
+	// FieldFindCoordinatorResponseErrorCode is: The error code, or 0 if there was no error.
+	FieldFindCoordinatorResponseErrorCode = "ErrorCode"
+	// FieldFindCoordinatorResponseErrorMessage is: The error message, or null if there was no error.
+	FieldFindCoordinatorResponseErrorMessage = "ErrorMessage"
+	// FieldFindCoordinatorResponseHost is: The host name.
+	FieldFindCoordinatorResponseHost = "Host"
 	// FieldFindCoordinatorResponseNodeId is: The node id.
 	FieldFindCoordinatorResponseNodeId = "NodeId"
 	// FieldFindCoordinatorResponsePort is: The port.
 	FieldFindCoordinatorResponsePort = "Port"
-	// FieldFindCoordinatorResponseCoordinatorsKey is: The coordinator key.
-	FieldFindCoordinatorResponseCoordinatorsKey = "Key"
-	// FieldFindCoordinatorResponseCoordinatorsErrorCode is: The error code, or 0 if there was no error.
-	FieldFindCoordinatorResponseCoordinatorsErrorCode = "ErrorCode"
-	// FieldFindCoordinatorResponseHost is: The host name.
-	FieldFindCoordinatorResponseHost = "Host"
-	// FieldFindCoordinatorResponseErrorMessage is: The error message, or null if there was no error.
-	FieldFindCoordinatorResponseErrorMessage = "ErrorMessage"
-	// FieldFindCoordinatorResponseCoordinators is: Each coordinator result in the response
-	FieldFindCoordinatorResponseCoordinators = "Coordinators"
-	// FieldFindCoordinatorResponseCoordinatorsNodeId is: The node id.
-	FieldFindCoordinatorResponseCoordinatorsNodeId = "NodeId"
-	// FieldFindCoordinatorResponseCoordinatorsHost is: The host name.
-	FieldFindCoordinatorResponseCoordinatorsHost = "Host"
-	// FieldFindCoordinatorResponseCoordinatorsPort is: The port.
-	FieldFindCoordinatorResponseCoordinatorsPort = "Port"
+	// FieldFindCoordinatorResponseTags is: The tagged fields.
+	FieldFindCoordinatorResponseTags = "Tags"
+	// FieldFindCoordinatorResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldFindCoordinatorResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FindCoordinatorResponse.json

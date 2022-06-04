@@ -48,24 +48,24 @@ func init34AlterReplicaLogDirsResponse() []schema.Schema {
 }
 
 const (
-	// FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode is: The error code, or 0 if there was no error.
-	FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode = "ErrorCode"
-	// FieldAlterReplicaLogDirsResponseTags is: The tagged fields.
-	FieldAlterReplicaLogDirsResponseTags = "Tags"
 	// FieldAlterReplicaLogDirsResponseResults is: The results for each topic.
 	FieldAlterReplicaLogDirsResponseResults = "Results"
-	// FieldAlterReplicaLogDirsResponseResultsTopicName is: The name of the topic.
-	FieldAlterReplicaLogDirsResponseResultsTopicName = "TopicName"
 	// FieldAlterReplicaLogDirsResponseResultsPartitions is: The results for each partition.
 	FieldAlterReplicaLogDirsResponseResultsPartitions = "Partitions"
+	// FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode is: The error code, or 0 if there was no error.
+	FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode = "ErrorCode"
 	// FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex is: The partition index.
 	FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldAlterReplicaLogDirsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldAlterReplicaLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
 	// FieldAlterReplicaLogDirsResponseResultsPartitionsTags is: The tagged fields.
 	FieldAlterReplicaLogDirsResponseResultsPartitionsTags = "Tags"
 	// FieldAlterReplicaLogDirsResponseResultsTags is: The tagged fields.
 	FieldAlterReplicaLogDirsResponseResultsTags = "Tags"
+	// FieldAlterReplicaLogDirsResponseResultsTopicName is: The name of the topic.
+	FieldAlterReplicaLogDirsResponseResultsTopicName = "TopicName"
+	// FieldAlterReplicaLogDirsResponseTags is: The tagged fields.
+	FieldAlterReplicaLogDirsResponseTags = "Tags"
+	// FieldAlterReplicaLogDirsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAlterReplicaLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterReplicaLogDirsResponse.json
