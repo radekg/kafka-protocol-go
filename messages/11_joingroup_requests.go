@@ -154,8 +154,14 @@ func init11JoinGroupRequest() []schema.Schema {
 }
 
 const (
+	// FieldJoinGroupRequestProtocolsName is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestProtocolsName = "Name"
 	// FieldJoinGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
+	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestTags = "Tags"
+	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestReason = "Reason"
 	// FieldJoinGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestGroupId = "GroupId"
 	// FieldJoinGroupRequestSessionTimeoutMs is a field name that can be used to resolve the correct struct field.
@@ -166,18 +172,12 @@ const (
 	FieldJoinGroupRequestProtocolType = "ProtocolType"
 	// FieldJoinGroupRequestProtocols is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocols = "Protocols"
-	// FieldJoinGroupRequestProtocolsName is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolsName = "Name"
 	// FieldJoinGroupRequestProtocolsMetadata is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
 	// FieldJoinGroupRequestRebalanceTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
 	// FieldJoinGroupRequestProtocolsTags is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsTags = "Tags"
-	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestTags = "Tags"
-	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestReason = "Reason"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/JoinGroupRequest.json

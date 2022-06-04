@@ -39,6 +39,7 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [x] `7`: ControlledShutdown
 - [x] `8`: OffsetCommit
 - [x] `9`: OffsetFetch
+
 - [x] `10`: FindCoordinator
 - [x] `11`: JoinGroup
 - [x] `12`: Heartbeat
@@ -49,16 +50,17 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [x] `17`: SaslHandshake
 - [x] `18`: ApiVersions
 - [x] `19`: CreateTopics
+
 - [x] `20`: DeleteTopics
-- [ ] `21`: DeleteRecords
-- [ ] `22`: InitProducerId
-- [ ] `23`: OffsetForLeaderEpoch
-- [ ] `24`: AddPartitionsToTxn
-- [ ] `25`: AddOffsetsToTxn
-- [ ] `26`: EndTxn
-- [ ] `27`: WriteTxnMarkers
-- [ ] `28`: TxnOffsetCommit
-- [ ] `29`: DescribeAcls
+- [x] `21`: DeleteRecords
+- [x] `22`: InitProducerId
+- [x] `23`: OffsetForLeaderEpoch
+- [x] `24`: AddPartitionsToTxn
+- [x] `25`: AddOffsetsToTxn
+- [x] `26`: EndTxn
+- [x] `27`: WriteTxnMarkers
+- [x] `28`: TxnOffsetCommit
+- [x] `29`: DescribeAcls
 
 - [ ] `30`: CreateAcls
 - [ ] `31`: DeleteAcls

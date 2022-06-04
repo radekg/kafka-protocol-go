@@ -122,28 +122,28 @@ func init2ListOffsetsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestReplicaId = "ReplicaId"
-	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
-	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldListOffsetsRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
-	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
-	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsTags = "Tags"
-	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTags = "Tags"
-	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopics = "Topics"
 	// FieldListOffsetsRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsName = "Name"
 	// FieldListOffsetsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitions = "Partitions"
+	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
+	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsTags = "Tags"
+	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestReplicaId = "ReplicaId"
+	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopics = "Topics"
+	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldListOffsetsRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
+	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
+	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListOffsetsRequest.json

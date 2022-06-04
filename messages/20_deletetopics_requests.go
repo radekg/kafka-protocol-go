@@ -59,10 +59,6 @@ func init20DeleteTopicsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteTopicsRequestTopicNames is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTopicNames = "TopicNames"
-	// FieldDeleteTopicsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
 	// FieldDeleteTopicsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteTopicsRequestTags = "Tags"
 	// FieldDeleteTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
@@ -73,6 +69,10 @@ const (
 	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
 	// FieldDeleteTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteTopicsRequestTopicsTags = "Tags"
+	// FieldDeleteTopicsRequestTopicNames is a field name that can be used to resolve the correct struct field.
+	FieldDeleteTopicsRequestTopicNames = "TopicNames"
+	// FieldDeleteTopicsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteTopicsRequest.json

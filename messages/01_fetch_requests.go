@@ -312,60 +312,60 @@ func init1FetchRequest() []schema.Schema {
 }
 
 const (
-	// FieldFetchRequestMinBytes is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMinBytes = "MinBytes"
+	// FieldFetchRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitions = "Partitions"
 	// FieldFetchRequestTopicsPartitionsLogStartOffset is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchRequestForgottenTopicsDataTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataTags = "Tags"
+	// FieldFetchRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTags = "Tags"
+	// FieldFetchRequestForgottenTopicsDataTopic is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
 	// FieldFetchRequestForgottenTopicsDataPartitions is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestForgottenTopicsDataPartitions = "Partitions"
 	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
-	// FieldFetchRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsTopicId = "TopicId"
-	// FieldFetchRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsTopic = "Topic"
-	// FieldFetchRequestTopicsPartitionsFetchOffset is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
-	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
-	// FieldFetchRequestForgottenTopicsDataTopicId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataTopicId = "TopicId"
-	// FieldFetchRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitions = "Partitions"
-	// FieldFetchRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopics = "Topics"
-	// FieldFetchRequestMaxWaitMs is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
-	// FieldFetchRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsPartition = "Partition"
-	// FieldFetchRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestIsolationLevel = "IsolationLevel"
-	// FieldFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsTags = "Tags"
-	// FieldFetchRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTags = "Tags"
-	// FieldFetchRequestMaxBytes is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMaxBytes = "MaxBytes"
-	// FieldFetchRequestSessionEpoch is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestSessionEpoch = "SessionEpoch"
-	// FieldFetchRequestForgottenTopicsData is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
-	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldFetchRequestClusterId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestClusterId = "ClusterId"
-	// FieldFetchRequestForgottenTopicsDataTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataTags = "Tags"
-	// FieldFetchRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestReplicaId = "ReplicaId"
-	// FieldFetchRequestSessionId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestSessionId = "SessionId"
-	// FieldFetchRequestForgottenTopicsDataTopic is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
-	// FieldFetchRequestRackId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestRackId = "RackId"
 	// FieldFetchRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTopicsPartitionsTags = "Tags"
+	// FieldFetchRequestMaxBytes is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMaxBytes = "MaxBytes"
+	// FieldFetchRequestSessionId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestSessionId = "SessionId"
+	// FieldFetchRequestRackId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestRackId = "RackId"
+	// FieldFetchRequestClusterId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestClusterId = "ClusterId"
+	// FieldFetchRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestIsolationLevel = "IsolationLevel"
+	// FieldFetchRequestSessionEpoch is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestSessionEpoch = "SessionEpoch"
+	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldFetchRequestForgottenTopicsDataTopicId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataTopicId = "TopicId"
+	// FieldFetchRequestMaxWaitMs is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
+	// FieldFetchRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopics = "Topics"
+	// FieldFetchRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsTopicId = "TopicId"
+	// FieldFetchRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestReplicaId = "ReplicaId"
+	// FieldFetchRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsPartition = "Partition"
+	// FieldFetchRequestTopicsPartitionsFetchOffset is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
+	// FieldFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsTags = "Tags"
+	// FieldFetchRequestMinBytes is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMinBytes = "MinBytes"
+	// FieldFetchRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsTopic = "Topic"
+	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
+	// FieldFetchRequestForgottenTopicsData is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FetchRequest.json

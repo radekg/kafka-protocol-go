@@ -24,10 +24,10 @@ func init16ListGroupsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListGroupsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldListGroupsRequestTags = "Tags"
 	// FieldListGroupsRequestStatesFilter is a field name that can be used to resolve the correct struct field.
 	FieldListGroupsRequestStatesFilter = "StatesFilter"
+	// FieldListGroupsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldListGroupsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListGroupsRequest.json

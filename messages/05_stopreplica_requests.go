@@ -61,40 +61,40 @@ func init5StopReplicaRequest() []schema.Schema {
 }
 
 const (
-	// FieldStopReplicaRequestDeletePartitions is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
-	// FieldStopReplicaRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicsTags = "Tags"
-	// FieldStopReplicaRequestTopicStates is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStates = "TopicStates"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
-	// FieldStopReplicaRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestControllerId = "ControllerId"
-	// FieldStopReplicaRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopics = "Topics"
-	// FieldStopReplicaRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicsName = "Name"
-	// FieldStopReplicaRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
+	// FieldStopReplicaRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
 	// FieldStopReplicaRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestTopicStatesTags = "Tags"
 	// FieldStopReplicaRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
 	// FieldStopReplicaRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldStopReplicaRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopics = "Topics"
+	// FieldStopReplicaRequestDeletePartitions is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
+	// FieldStopReplicaRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicsName = "Name"
 	// FieldStopReplicaRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestTags = "Tags"
-	// FieldStopReplicaRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
 	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition = "DeletePartition"
+	// FieldStopReplicaRequestControllerId is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestControllerId = "ControllerId"
+	// FieldStopReplicaRequestTopicStates is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicStates = "TopicStates"
+	// FieldStopReplicaRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
+	// FieldStopReplicaRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
 	// FieldStopReplicaRequestTopicStatesPartitionStatesTags is a field name that can be used to resolve the correct struct field.
 	FieldStopReplicaRequestTopicStatesPartitionStatesTags = "Tags"
-	// FieldStopReplicaRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
+	// FieldStopReplicaRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldStopReplicaRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/StopReplicaRequest.json

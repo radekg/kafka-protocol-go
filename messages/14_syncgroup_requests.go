@@ -87,26 +87,26 @@ func init14SyncGroupRequest() []schema.Schema {
 const (
 	// FieldSyncGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestGroupId = "GroupId"
-	// FieldSyncGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestMemberId = "MemberId"
-	// FieldSyncGroupRequestAssignmentsMemberId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
-	// FieldSyncGroupRequestAssignmentsAssignment is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
-	// FieldSyncGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestProtocolType = "ProtocolType"
-	// FieldSyncGroupRequestProtocolName is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestProtocolName = "ProtocolName"
 	// FieldSyncGroupRequestGenerationId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestGenerationId = "GenerationId"
-	// FieldSyncGroupRequestAssignments is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignments = "Assignments"
+	// FieldSyncGroupRequestAssignmentsAssignment is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
 	// FieldSyncGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldSyncGroupRequestAssignmentsTags is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsTags = "Tags"
 	// FieldSyncGroupRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestTags = "Tags"
+	// FieldSyncGroupRequestProtocolName is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestProtocolName = "ProtocolName"
+	// FieldSyncGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestMemberId = "MemberId"
+	// FieldSyncGroupRequestAssignments is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestAssignments = "Assignments"
+	// FieldSyncGroupRequestAssignmentsMemberId is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
+	// FieldSyncGroupRequestAssignmentsTags is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestAssignmentsTags = "Tags"
+	// FieldSyncGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestProtocolType = "ProtocolType"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SyncGroupRequest.json

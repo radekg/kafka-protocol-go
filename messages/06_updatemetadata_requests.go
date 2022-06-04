@@ -165,46 +165,46 @@ func init6UpdateMetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateMetadataRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
 	// FieldUpdateMetadataRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldUpdateMetadataRequestLiveBrokers is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
-	// FieldUpdateMetadataRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
-	// FieldUpdateMetadataRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
-	// FieldUpdateMetadataRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestControllerId = "ControllerId"
-	// FieldUpdateMetadataRequestLiveBrokersId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersId = "Id"
-	// FieldUpdateMetadataRequestLiveBrokersEndpoints is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
+	// FieldUpdateMetadataRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
 	// FieldUpdateMetadataRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
+	// FieldUpdateMetadataRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
+	// FieldUpdateMetadataRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
+	// FieldUpdateMetadataRequestLiveBrokersTags is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
+	// FieldUpdateMetadataRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
+	// FieldUpdateMetadataRequestLiveBrokers is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
+	// FieldUpdateMetadataRequestLiveBrokersId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersId = "Id"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
 	// FieldUpdateMetadataRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
-	// FieldUpdateMetadataRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
+	// FieldUpdateMetadataRequestControllerId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestControllerId = "ControllerId"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
 	// FieldUpdateMetadataRequestLiveBrokersRack is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
 	// FieldUpdateMetadataRequestTopicStates is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestTopicStates = "TopicStates"
 	// FieldUpdateMetadataRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
+	// FieldUpdateMetadataRequestLiveBrokersEndpoints is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateMetadataRequest.json

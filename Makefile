@@ -21,6 +21,15 @@ generate-request-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ApiVersionsRequest > messages/18_apiversions_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateTopicsRequest > messages/19_createtopics_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteTopicsRequest > messages/20_deletetopics_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteRecordsRequest > messages/21_deleterecords_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=InitProducerIdRequest > messages/22_initproducerid_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetForLeaderEpochRequest > messages/23_offsetforleaderepoch_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AddPartitionsToTxnRequest > messages/24_addpartitionstotxn_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AddOffsetsToTxnRequest > messages/25_addoffsetstotxn_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=EndTxnRequest > messages/26_endtxn_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=WriteTxnMarkersRequest > messages/27_writetxnmarkers_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=TxnOffsetCommitRequest > messages/28_txnoffsetcommit_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeAclsRequest > messages/29_describeacls_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeUserScramCredentialsRequest > messages/50_describeuserscramcredentials_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterUserScramCredentialsRequest > messages/51_alteruserscramcredentials_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterPartitionRequest > messages/56_alterpartitions_requests.go

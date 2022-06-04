@@ -20,16 +20,16 @@ func init61DescribeProducersRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeProducersRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldDescribeProducersRequestTags = "Tags"
+	// FieldDescribeProducersRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldDescribeProducersRequestTopics = "Topics"
 	// FieldDescribeProducersRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldDescribeProducersRequestTopicsName = "Name"
 	// FieldDescribeProducersRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
 	FieldDescribeProducersRequestTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldDescribeProducersRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldDescribeProducersRequestTopicsTags = "Tags"
-	// FieldDescribeProducersRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeProducersRequestTags = "Tags"
-	// FieldDescribeProducersRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldDescribeProducersRequestTopics = "Topics"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeProducersRequest.json

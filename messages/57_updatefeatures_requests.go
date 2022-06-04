@@ -22,8 +22,6 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
 	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
 	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is a field name that can be used to resolve the correct struct field.
@@ -36,6 +34,8 @@ const (
 	FieldUpdateFeaturesRequestFeatureUpdatesTags = "Tags"
 	// FieldUpdateFeaturesRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequestTags = "Tags"
+	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateFeaturesRequest.json

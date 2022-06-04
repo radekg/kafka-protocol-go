@@ -16,10 +16,10 @@ func init65DescribeTransactionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeTransactionsRequestTransactionalIds is a field name that can be used to resolve the correct struct field.
-	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
 	// FieldDescribeTransactionsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDescribeTransactionsRequestTags = "Tags"
+	// FieldDescribeTransactionsRequestTransactionalIds is a field name that can be used to resolve the correct struct field.
+	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeTransactionsRequest.json

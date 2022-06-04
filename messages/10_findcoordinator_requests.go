@@ -41,14 +41,14 @@ func init10FindCoordinatorRequest() []schema.Schema {
 }
 
 const (
-	// FieldFindCoordinatorRequestKey is a field name that can be used to resolve the correct struct field.
-	FieldFindCoordinatorRequestKey = "Key"
 	// FieldFindCoordinatorRequestKeyType is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestKeyType = "KeyType"
 	// FieldFindCoordinatorRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestTags = "Tags"
 	// FieldFindCoordinatorRequestCoordinatorKeys is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestCoordinatorKeys = "CoordinatorKeys"
+	// FieldFindCoordinatorRequestKey is a field name that can be used to resolve the correct struct field.
+	FieldFindCoordinatorRequestKey = "Key"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FindCoordinatorRequest.json

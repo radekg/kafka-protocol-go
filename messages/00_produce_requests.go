@@ -150,10 +150,6 @@ func init0ProduceRequest() []schema.Schema {
 }
 
 const (
-	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestAcks = "Acks"
-	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTags = "Tags"
 	// FieldProduceRequestTopicDataPartitionData is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionData = "PartitionData"
 	// FieldProduceRequestTopicDataPartitionDataIndex is a field name that can be used to resolve the correct struct field.
@@ -164,14 +160,18 @@ const (
 	FieldProduceRequestTransactionalId = "TransactionalId"
 	// FieldProduceRequestTopicDataPartitionDataTags is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
-	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTimeoutMs = "TimeoutMs"
+	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTags = "Tags"
 	// FieldProduceRequestTopicData is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicData = "TopicData"
 	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataName = "Name"
 	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataTags = "Tags"
+	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestAcks = "Acks"
+	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTimeoutMs = "TimeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceRequest.json

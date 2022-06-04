@@ -102,34 +102,34 @@ func init9OffsetFetchRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsTags = "Tags"
-	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTags = "Tags"
-	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroups = "Groups"
-	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsgroupId = "groupId"
 	// FieldOffsetFetchRequestGroupsTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopicsName = "Name"
-	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldOffsetFetchRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupId = "GroupId"
-	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsName = "Name"
 	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestRequireStable = "RequireStable"
-	// FieldOffsetFetchRequestGroupsTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestTopics = "Topics"
-	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsName = "Name"
+	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTags = "Tags"
+	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsgroupId = "groupId"
 	// FieldOffsetFetchRequestGroupsTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopics = "Topics"
+	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestGroupsTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetFetchRequest.json

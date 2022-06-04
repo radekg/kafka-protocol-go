@@ -173,8 +173,22 @@ func init19CreateTopicsRequest() []schema.Schema {
 }
 
 const (
+	// FieldCreateTopicsRequestTopicsConfigs is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigs = "Configs"
+	// FieldCreateTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsConfigsName is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigsName = "Name"
+	// FieldCreateTopicsRequestTopicsConfigsTags is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
 	// FieldCreateTopicsRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsName = "Name"
+	// FieldCreateTopicsRequestTopicsReplicationFactor is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsReplicationFactor = "ReplicationFactor"
+	// FieldCreateTopicsRequestTopicsAssignments is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
+	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
 	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
 	// FieldCreateTopicsRequestTopicsConfigsValue is a field name that can be used to resolve the correct struct field.
@@ -183,28 +197,14 @@ const (
 	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
 	// FieldCreateTopicsRequestTopicsAssignmentsTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsConfigsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsNumPartitions is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
-	// FieldCreateTopicsRequestTopicsReplicationFactor is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsReplicationFactor = "ReplicationFactor"
-	// FieldCreateTopicsRequestTopicsAssignments is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
-	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
-	// FieldCreateTopicsRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
-	// FieldCreateTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopics = "Topics"
-	// FieldCreateTopicsRequestTopicsConfigs is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigs = "Configs"
-	// FieldCreateTopicsRequestTopicsConfigsName is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsName = "Name"
-	// FieldCreateTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsTags = "Tags"
 	// FieldCreateTopicsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTags = "Tags"
+	// FieldCreateTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopics = "Topics"
+	// FieldCreateTopicsRequestTopicsNumPartitions is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
+	// FieldCreateTopicsRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateTopicsRequest.json
