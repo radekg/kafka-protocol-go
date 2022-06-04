@@ -7,7 +7,7 @@ func init1FetchRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: FetchRequest, API Key: 1, Version: 0
-		schema.NewSchema("FetchRequestv0", 
+		schema.NewSchema("FetchRequestv0",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -22,7 +22,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 1
-		schema.NewSchema("FetchRequestv1", 
+		schema.NewSchema("FetchRequestv1",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -37,7 +37,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 2
-		schema.NewSchema("FetchRequestv2", 
+		schema.NewSchema("FetchRequestv2",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -52,7 +52,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 3
-		schema.NewSchema("FetchRequestv3", 
+		schema.NewSchema("FetchRequestv3",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -68,7 +68,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 4
-		schema.NewSchema("FetchRequestv4", 
+		schema.NewSchema("FetchRequestv4",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -85,7 +85,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 5
-		schema.NewSchema("FetchRequestv5", 
+		schema.NewSchema("FetchRequestv5",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -103,7 +103,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 6
-		schema.NewSchema("FetchRequestv6", 
+		schema.NewSchema("FetchRequestv6",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -121,7 +121,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 7
-		schema.NewSchema("FetchRequestv7", 
+		schema.NewSchema("FetchRequestv7",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -145,7 +145,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 8
-		schema.NewSchema("FetchRequestv8", 
+		schema.NewSchema("FetchRequestv8",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -169,7 +169,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 9
-		schema.NewSchema("FetchRequestv9", 
+		schema.NewSchema("FetchRequestv9",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -194,7 +194,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 10
-		schema.NewSchema("FetchRequestv10", 
+		schema.NewSchema("FetchRequestv10",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -219,7 +219,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 11
-		schema.NewSchema("FetchRequestv11", 
+		schema.NewSchema("FetchRequestv11",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -245,7 +245,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 12
-		schema.NewSchema("FetchRequestv12", 
+		schema.NewSchema("FetchRequestv12",
 			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
@@ -277,7 +277,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 13
-		schema.NewSchema("FetchRequestv13", 
+		schema.NewSchema("FetchRequestv13",
 			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
@@ -307,65 +307,64 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestRackId, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldFetchRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitions = "Partitions"
-	// FieldFetchRequestTopicsPartitionsLogStartOffset is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
-	// FieldFetchRequestForgottenTopicsDataTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataTags = "Tags"
 	// FieldFetchRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTags = "Tags"
-	// FieldFetchRequestForgottenTopicsDataTopic is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
-	// FieldFetchRequestForgottenTopicsDataPartitions is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestForgottenTopicsDataPartitions = "Partitions"
-	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
-	// FieldFetchRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsTags = "Tags"
-	// FieldFetchRequestMaxBytes is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMaxBytes = "MaxBytes"
-	// FieldFetchRequestSessionId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestSessionId = "SessionId"
-	// FieldFetchRequestRackId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestRackId = "RackId"
-	// FieldFetchRequestClusterId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestClusterId = "ClusterId"
-	// FieldFetchRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestIsolationLevel = "IsolationLevel"
-	// FieldFetchRequestSessionEpoch is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestSessionEpoch = "SessionEpoch"
-	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 	// FieldFetchRequestForgottenTopicsDataTopicId is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestForgottenTopicsDataTopicId = "TopicId"
-	// FieldFetchRequestMaxWaitMs is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
-	// FieldFetchRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopics = "Topics"
-	// FieldFetchRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsTopicId = "TopicId"
-	// FieldFetchRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestReplicaId = "ReplicaId"
-	// FieldFetchRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsPartition = "Partition"
-	// FieldFetchRequestTopicsPartitionsFetchOffset is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
-	// FieldFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestTopicsTags = "Tags"
-	// FieldFetchRequestMinBytes is a field name that can be used to resolve the correct struct field.
-	FieldFetchRequestMinBytes = "MinBytes"
 	// FieldFetchRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTopicsTopic = "Topic"
 	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
+	// FieldFetchRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestIsolationLevel = "IsolationLevel"
+	// FieldFetchRequestSessionId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestSessionId = "SessionId"
+	// FieldFetchRequestForgottenTopicsDataTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataTags = "Tags"
+	// FieldFetchRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopics = "Topics"
+	// FieldFetchRequestTopicsPartitionsFetchOffset is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
+	// FieldFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsTags = "Tags"
 	// FieldFetchRequestForgottenTopicsData is a field name that can be used to resolve the correct struct field.
 	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
+	// FieldFetchRequestForgottenTopicsDataTopic is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
+	// FieldFetchRequestForgottenTopicsDataPartitions is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestForgottenTopicsDataPartitions = "Partitions"
+	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldFetchRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsPartition = "Partition"
+	// FieldFetchRequestTopicsPartitionsLogStartOffset is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchRequestSessionEpoch is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestSessionEpoch = "SessionEpoch"
+	// FieldFetchRequestRackId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestRackId = "RackId"
+	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
+	// FieldFetchRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitionsTags = "Tags"
+	// FieldFetchRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsTopicId = "TopicId"
+	// FieldFetchRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestReplicaId = "ReplicaId"
+	// FieldFetchRequestMinBytes is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMinBytes = "MinBytes"
+	// FieldFetchRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestTopicsPartitions = "Partitions"
+	// FieldFetchRequestMaxWaitMs is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
+	// FieldFetchRequestMaxBytes is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestMaxBytes = "MaxBytes"
+	// FieldFetchRequestClusterId is a field name that can be used to resolve the correct struct field.
+	FieldFetchRequestClusterId = "ClusterId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FetchRequest.json
@@ -473,4 +472,3 @@ const originalFetchRequestInput = `// Licensed to the Apache Software Foundation
   ]
 }
 `
-

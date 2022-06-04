@@ -30,6 +30,16 @@ generate-request-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=WriteTxnMarkersRequest > messages/27_writetxnmarkers_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=TxnOffsetCommitRequest > messages/28_txnoffsetcommit_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeAclsRequest > messages/29_describeacls_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateAclsRequest > messages/30_createacls_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteAclsRequest > messages/31_deleteacls_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeConfigsRequest > messages/32_describeconfigs_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterConfigsRequest > messages/33_alterconfigs_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterReplicaLogDirsRequest > messages/34_alterreplicalogdirs_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeLogDirsRequest > messages/35_describelogdirs_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=SaslAuthenticateRequest > messages/36_saslauthenticate_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreatePartitionsRequest > messages/37_createpartitions_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateDelegationTokenRequest > messages/38_createdelegationtoken_requests.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=RenewDelegationTokenRequest > messages/39_renewdelegationtoken_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeUserScramCredentialsRequest > messages/50_describeuserscramcredentials_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterUserScramCredentialsRequest > messages/51_alteruserscramcredentials_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AlterPartitionRequest > messages/56_alterpartitions_requests.go
@@ -39,3 +49,4 @@ generate-request-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeTransactionsRequest > messages/65_describetransactions_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListTransactionsRequest > messages/66_listtransactions_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AllocateProducerIdsRequest > messages/67_allocateproducerids_requests.go
+	go fmt ./...

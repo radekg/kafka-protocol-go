@@ -7,7 +7,7 @@ func init21DeleteRecordsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 0
-		schema.NewSchema("DeleteRecordsRequestv0", 
+		schema.NewSchema("DeleteRecordsRequestv0",
 			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
@@ -19,7 +19,7 @@ func init21DeleteRecordsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 1
-		schema.NewSchema("DeleteRecordsRequestv1", 
+		schema.NewSchema("DeleteRecordsRequestv1",
 			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
@@ -31,7 +31,7 @@ func init21DeleteRecordsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 2
-		schema.NewSchema("DeleteRecordsRequestv2", 
+		schema.NewSchema("DeleteRecordsRequestv2",
 			&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV2",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
@@ -44,19 +44,12 @@ func init21DeleteRecordsRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldDeleteRecordsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteRecordsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldDeleteRecordsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopics = "Topics"
-	// FieldDeleteRecordsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsName = "Name"
 	// FieldDeleteRecordsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsTags = "Tags"
-	// FieldDeleteRecordsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
 	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldDeleteRecordsRequestTopicsPartitionsOffset is a field name that can be used to resolve the correct struct field.
@@ -65,6 +58,12 @@ const (
 	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
 	// FieldDeleteRecordsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
+	// FieldDeleteRecordsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopics = "Topics"
+	// FieldDeleteRecordsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopicsName = "Name"
+	// FieldDeleteRecordsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
 	// FieldDeleteRecordsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTags = "Tags"
 )
@@ -113,4 +112,3 @@ const originalDeleteRecordsRequestInput = `// Licensed to the Apache Software Fo
   ]
 }
 `
-

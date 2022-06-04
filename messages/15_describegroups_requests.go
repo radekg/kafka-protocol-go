@@ -7,39 +7,38 @@ func init15DescribeGroupsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 0
-		schema.NewSchema("DescribeGroupsRequestv0", 
+		schema.NewSchema("DescribeGroupsRequestv0",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 1
-		schema.NewSchema("DescribeGroupsRequestv1", 
+		schema.NewSchema("DescribeGroupsRequestv1",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 2
-		schema.NewSchema("DescribeGroupsRequestv2", 
+		schema.NewSchema("DescribeGroupsRequestv2",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 3
-		schema.NewSchema("DescribeGroupsRequestv3", 
+		schema.NewSchema("DescribeGroupsRequestv3",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 4
-		schema.NewSchema("DescribeGroupsRequestv4", 
+		schema.NewSchema("DescribeGroupsRequestv4",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 5
-		schema.NewSchema("DescribeGroupsRequestv5", 
+		schema.NewSchema("DescribeGroupsRequestv5",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldDescribeGroupsRequestTags},
 		),
-
 	}
 }
 
@@ -90,4 +89,3 @@ const originalDescribeGroupsRequestInput = `// Licensed to the Apache Software F
   ]
 }
 `
-

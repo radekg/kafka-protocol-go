@@ -7,7 +7,7 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 0
-		schema.NewSchema("OffsetForLeaderEpochRequestv0", 
+		schema.NewSchema("OffsetForLeaderEpochRequestv0",
 			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
 				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
@@ -18,7 +18,7 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 1
-		schema.NewSchema("OffsetForLeaderEpochRequestv1", 
+		schema.NewSchema("OffsetForLeaderEpochRequestv1",
 			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
 				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
@@ -29,7 +29,7 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 2
-		schema.NewSchema("OffsetForLeaderEpochRequestv2", 
+		schema.NewSchema("OffsetForLeaderEpochRequestv2",
 			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV2",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
 				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
@@ -41,7 +41,7 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 3
-		schema.NewSchema("OffsetForLeaderEpochRequestv3", 
+		schema.NewSchema("OffsetForLeaderEpochRequestv3",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV3",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
@@ -54,7 +54,7 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 4
-		schema.NewSchema("OffsetForLeaderEpochRequestv4", 
+		schema.NewSchema("OffsetForLeaderEpochRequestv4",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV4",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStrCompact},
@@ -68,13 +68,16 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldOffsetForLeaderEpochRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldOffsetForLeaderEpochRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsTags = "Tags"
 	// FieldOffsetForLeaderEpochRequestTopicsTags is a field name that can be used to resolve the correct struct field.
@@ -87,12 +90,8 @@ const (
 	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
 	// FieldOffsetForLeaderEpochRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldOffsetForLeaderEpochRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetForLeaderEpochRequest.json
@@ -147,4 +146,3 @@ const originalOffsetForLeaderEpochRequestInput = `// Licensed to the Apache Soft
   ]
 }
 `
-

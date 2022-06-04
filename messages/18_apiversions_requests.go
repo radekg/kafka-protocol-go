@@ -13,12 +13,11 @@ func init18ApiVersionsRequest() []schema.Schema {
 		// Message: ApiVersionsRequest, API Key: 18, Version: 2
 		schema.NewSchema("ApiVersionsRequestv2"),
 		// Message: ApiVersionsRequest, API Key: 18, Version: 3
-		schema.NewSchema("ApiVersionsRequestv3", 
+		schema.NewSchema("ApiVersionsRequestv3",
 			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareName, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareVersion, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsRequestTags},
 		),
-
 	}
 }
 
@@ -65,4 +64,3 @@ const originalApiVersionsRequestInput = `// Licensed to the Apache Software Foun
   ]
 }
 `
-

@@ -7,48 +7,47 @@ func init10FindCoordinatorRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 0
-		schema.NewSchema("FindCoordinatorRequestv0", 
+		schema.NewSchema("FindCoordinatorRequestv0",
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStr},
 		),
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 1
-		schema.NewSchema("FindCoordinatorRequestv1", 
+		schema.NewSchema("FindCoordinatorRequestv1",
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKeyType, Ty: schema.TypeInt8},
 		),
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 2
-		schema.NewSchema("FindCoordinatorRequestv2", 
+		schema.NewSchema("FindCoordinatorRequestv2",
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKeyType, Ty: schema.TypeInt8},
 		),
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 3
-		schema.NewSchema("FindCoordinatorRequestv3", 
+		schema.NewSchema("FindCoordinatorRequestv3",
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKey, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKeyType, Ty: schema.TypeInt8},
 			&schema.SchemaTaggedFields{Name: FieldFindCoordinatorRequestTags},
 		),
 
 		// Message: FindCoordinatorRequest, API Key: 10, Version: 4
-		schema.NewSchema("FindCoordinatorRequestv4", 
+		schema.NewSchema("FindCoordinatorRequestv4",
 			&schema.Mfield{Name: FieldFindCoordinatorRequestKeyType, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFindCoordinatorRequestCoordinatorKeys, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldFindCoordinatorRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldFindCoordinatorRequestKey is a field name that can be used to resolve the correct struct field.
+	FieldFindCoordinatorRequestKey = "Key"
 	// FieldFindCoordinatorRequestKeyType is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestKeyType = "KeyType"
 	// FieldFindCoordinatorRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestTags = "Tags"
 	// FieldFindCoordinatorRequestCoordinatorKeys is a field name that can be used to resolve the correct struct field.
 	FieldFindCoordinatorRequestCoordinatorKeys = "CoordinatorKeys"
-	// FieldFindCoordinatorRequestKey is a field name that can be used to resolve the correct struct field.
-	FieldFindCoordinatorRequestKey = "Key"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FindCoordinatorRequest.json
@@ -91,4 +90,3 @@ const originalFindCoordinatorRequestInput = `// Licensed to the Apache Software 
   ]
 }
 `
-

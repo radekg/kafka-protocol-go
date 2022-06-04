@@ -7,35 +7,35 @@ func init3MetadataRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: MetadataRequest, API Key: 3, Version: 0
-		schema.NewSchema("MetadataRequestv0", 
+		schema.NewSchema("MetadataRequestv0",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 1
-		schema.NewSchema("MetadataRequestv1", 
+		schema.NewSchema("MetadataRequestv1",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 2
-		schema.NewSchema("MetadataRequestv2", 
+		schema.NewSchema("MetadataRequestv2",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV2",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 3
-		schema.NewSchema("MetadataRequestv3", 
+		schema.NewSchema("MetadataRequestv3",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV3",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 4
-		schema.NewSchema("MetadataRequestv4", 
+		schema.NewSchema("MetadataRequestv4",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV4",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
@@ -43,7 +43,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 5
-		schema.NewSchema("MetadataRequestv5", 
+		schema.NewSchema("MetadataRequestv5",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV5",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
@@ -51,7 +51,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 6
-		schema.NewSchema("MetadataRequestv6", 
+		schema.NewSchema("MetadataRequestv6",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV6",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
@@ -59,7 +59,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 7
-		schema.NewSchema("MetadataRequestv7", 
+		schema.NewSchema("MetadataRequestv7",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV7",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
@@ -67,7 +67,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 8
-		schema.NewSchema("MetadataRequestv8", 
+		schema.NewSchema("MetadataRequestv8",
 			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV8",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
@@ -77,7 +77,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 9
-		schema.NewSchema("MetadataRequestv9", 
+		schema.NewSchema("MetadataRequestv9",
 			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV9",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -89,7 +89,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 10
-		schema.NewSchema("MetadataRequestv10", 
+		schema.NewSchema("MetadataRequestv10",
 			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV10",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
@@ -102,7 +102,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 11
-		schema.NewSchema("MetadataRequestv11", 
+		schema.NewSchema("MetadataRequestv11",
 			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV11",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
@@ -114,7 +114,7 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 12
-		schema.NewSchema("MetadataRequestv12", 
+		schema.NewSchema("MetadataRequestv12",
 			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV12",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
@@ -124,11 +124,14 @@ func init3MetadataRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldMetadataRequestIncludeTopicAuthorizedOperations, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldMetadataRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldMetadataRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestTags = "Tags"
+	// FieldMetadataRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestTopicsTopicId = "TopicId"
 	// FieldMetadataRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestTopics = "Topics"
 	// FieldMetadataRequestTopicsName is a field name that can be used to resolve the correct struct field.
@@ -141,10 +144,6 @@ const (
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
 	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestTopicsTags = "Tags"
-	// FieldMetadataRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestTags = "Tags"
-	// FieldMetadataRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestTopicsTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataRequest.json
@@ -204,4 +203,3 @@ const originalMetadataRequestInput = `// Licensed to the Apache Software Foundat
   ]
 }
 `
-

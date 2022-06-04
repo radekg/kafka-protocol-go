@@ -7,11 +7,10 @@ func init60DescribeClusterRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DescribeClusterRequest, API Key: 60, Version: 0
-		schema.NewSchema("DescribeClusterRequestv0", 
+		schema.NewSchema("DescribeClusterRequestv0",
 			&schema.Mfield{Name: FieldDescribeClusterRequestIncludeClusterAuthorizedOperations, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldDescribeClusterRequestTags},
 		),
-
 	}
 }
 
@@ -51,4 +50,3 @@ const originalDescribeClusterRequestInput = `// Licensed to the Apache Software 
   ]
 }
 `
-

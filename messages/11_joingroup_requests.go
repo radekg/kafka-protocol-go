@@ -7,7 +7,7 @@ func init11JoinGroupRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 0
-		schema.NewSchema("JoinGroupRequestv0", 
+		schema.NewSchema("JoinGroupRequestv0",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
@@ -19,7 +19,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 1
-		schema.NewSchema("JoinGroupRequestv1", 
+		schema.NewSchema("JoinGroupRequestv1",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -32,7 +32,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 2
-		schema.NewSchema("JoinGroupRequestv2", 
+		schema.NewSchema("JoinGroupRequestv2",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -45,7 +45,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 3
-		schema.NewSchema("JoinGroupRequestv3", 
+		schema.NewSchema("JoinGroupRequestv3",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -58,7 +58,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 4
-		schema.NewSchema("JoinGroupRequestv4", 
+		schema.NewSchema("JoinGroupRequestv4",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -71,7 +71,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 5
-		schema.NewSchema("JoinGroupRequestv5", 
+		schema.NewSchema("JoinGroupRequestv5",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -85,7 +85,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 6
-		schema.NewSchema("JoinGroupRequestv6", 
+		schema.NewSchema("JoinGroupRequestv6",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -101,7 +101,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 7
-		schema.NewSchema("JoinGroupRequestv7", 
+		schema.NewSchema("JoinGroupRequestv7",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -117,7 +117,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 8
-		schema.NewSchema("JoinGroupRequestv8", 
+		schema.NewSchema("JoinGroupRequestv8",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -134,7 +134,7 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 9
-		schema.NewSchema("JoinGroupRequestv9", 
+		schema.NewSchema("JoinGroupRequestv9",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
@@ -149,35 +149,34 @@ func init11JoinGroupRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldJoinGroupRequestReason, Ty: schema.TypeStrCompactNullable},
 			&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldJoinGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestProtocolType = "ProtocolType"
 	// FieldJoinGroupRequestProtocolsName is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsName = "Name"
 	// FieldJoinGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestTags = "Tags"
+	// FieldJoinGroupRequestProtocolsTags is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestProtocolsTags = "Tags"
 	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestReason = "Reason"
+	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestTags = "Tags"
 	// FieldJoinGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestGroupId = "GroupId"
 	// FieldJoinGroupRequestSessionTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
 	// FieldJoinGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestMemberId = "MemberId"
-	// FieldJoinGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolType = "ProtocolType"
 	// FieldJoinGroupRequestProtocols is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocols = "Protocols"
 	// FieldJoinGroupRequestProtocolsMetadata is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
 	// FieldJoinGroupRequestRebalanceTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
-	// FieldJoinGroupRequestProtocolsTags is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/JoinGroupRequest.json
@@ -247,4 +246,3 @@ const originalJoinGroupRequestInput = `// Licensed to the Apache Software Founda
   ]
 }
 `
-

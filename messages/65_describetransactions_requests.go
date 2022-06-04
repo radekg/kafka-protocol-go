@@ -7,19 +7,18 @@ func init65DescribeTransactionsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DescribeTransactionsRequest, API Key: 65, Version: 0
-		schema.NewSchema("DescribeTransactionsRequestv0", 
+		schema.NewSchema("DescribeTransactionsRequestv0",
 			&schema.Mfield{Name: FieldDescribeTransactionsRequestTransactionalIds, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldDescribeTransactionsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldDescribeTransactionsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeTransactionsRequestTags = "Tags"
 	// FieldDescribeTransactionsRequestTransactionalIds is a field name that can be used to resolve the correct struct field.
 	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
+	// FieldDescribeTransactionsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldDescribeTransactionsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeTransactionsRequest.json
@@ -51,4 +50,3 @@ const originalDescribeTransactionsRequestInput = `// Licensed to the Apache Soft
   ]
 }
 `
-

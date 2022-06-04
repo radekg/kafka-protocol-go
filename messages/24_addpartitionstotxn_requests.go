@@ -7,7 +7,7 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 0
-		schema.NewSchema("AddPartitionsToTxnRequestv0", 
+		schema.NewSchema("AddPartitionsToTxnRequestv0",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -18,7 +18,7 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 1
-		schema.NewSchema("AddPartitionsToTxnRequestv1", 
+		schema.NewSchema("AddPartitionsToTxnRequestv1",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -29,7 +29,7 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 2
-		schema.NewSchema("AddPartitionsToTxnRequestv2", 
+		schema.NewSchema("AddPartitionsToTxnRequestv2",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -40,7 +40,7 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 3
-		schema.NewSchema("AddPartitionsToTxnRequestv3", 
+		schema.NewSchema("AddPartitionsToTxnRequestv3",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -51,13 +51,10 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldAddPartitionsToTxnRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldAddPartitionsToTxnRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTopics = "Topics"
 	// FieldAddPartitionsToTxnRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldAddPartitionsToTxnRequestTopicsName = "Name"
 	// FieldAddPartitionsToTxnRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
@@ -72,6 +69,8 @@ const (
 	FieldAddPartitionsToTxnRequestProducerId = "ProducerId"
 	// FieldAddPartitionsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAddPartitionsToTxnRequestProducerEpoch = "ProducerEpoch"
+	// FieldAddPartitionsToTxnRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldAddPartitionsToTxnRequestTopics = "Topics"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddPartitionsToTxnRequest.json
@@ -119,4 +118,3 @@ const originalAddPartitionsToTxnRequestInput = `// Licensed to the Apache Softwa
   ]
 }
 `
-

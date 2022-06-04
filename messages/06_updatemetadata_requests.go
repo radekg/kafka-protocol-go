@@ -7,22 +7,20 @@ func init6UpdateMetadataRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 0
-		schema.NewSchema("UpdateMetadataRequestv0", 
+		schema.NewSchema("UpdateMetadataRequestv0",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0",
-			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0")},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV0",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 			)},
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 1
-		schema.NewSchema("UpdateMetadataRequestv1", 
+		schema.NewSchema("UpdateMetadataRequestv1",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1",
-			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1")},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV1",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV1",
@@ -34,11 +32,10 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 2
-		schema.NewSchema("UpdateMetadataRequestv2", 
+		schema.NewSchema("UpdateMetadataRequestv2",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV2",
-			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV2")},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV2",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV2",
@@ -51,11 +48,10 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 3
-		schema.NewSchema("UpdateMetadataRequestv3", 
+		schema.NewSchema("UpdateMetadataRequestv3",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV3",
-			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV3")},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV3",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV3",
@@ -69,11 +65,10 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 4
-		schema.NewSchema("UpdateMetadataRequestv4", 
+		schema.NewSchema("UpdateMetadataRequestv4",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV4",
-			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV4")},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV4",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV4",
@@ -87,14 +82,13 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 5
-		schema.NewSchema("UpdateMetadataRequestv5", 
+		schema.NewSchema("UpdateMetadataRequestv5",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Array{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV5",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5",
-				)},
+				&schema.Array{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5")},
 			)},
 			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV5",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
@@ -109,14 +103,13 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 6
-		schema.NewSchema("UpdateMetadataRequestv6", 
+		schema.NewSchema("UpdateMetadataRequestv6",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV6",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6",
-				)},
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6")},
 				&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesTags},
 			)},
 			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV6",
@@ -135,15 +128,14 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 7
-		schema.NewSchema("UpdateMetadataRequestv7", 
+		schema.NewSchema("UpdateMetadataRequestv7",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV7",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV7",
-				)},
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV7")},
 				&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesTags},
 			)},
 			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV7",
@@ -160,51 +152,50 @@ func init6UpdateMetadataRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldUpdateMetadataRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
-	// FieldUpdateMetadataRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldUpdateMetadataRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTags = "Tags"
+	// FieldUpdateMetadataRequestControllerId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestControllerId = "ControllerId"
 	// FieldUpdateMetadataRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
-	// FieldUpdateMetadataRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
-	// FieldUpdateMetadataRequestLiveBrokersTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
-	// FieldUpdateMetadataRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
-	// FieldUpdateMetadataRequestLiveBrokers is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
-	// FieldUpdateMetadataRequestLiveBrokersId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersId = "Id"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
 	// FieldUpdateMetadataRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
-	// FieldUpdateMetadataRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestControllerId = "ControllerId"
+	// FieldUpdateMetadataRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTags = "Tags"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
+	// FieldUpdateMetadataRequestTopicStates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStates = "TopicStates"
+	// FieldUpdateMetadataRequestLiveBrokers is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
+	// FieldUpdateMetadataRequestLiveBrokersEndpoints is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
 	// FieldUpdateMetadataRequestLiveBrokersRack is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
-	// FieldUpdateMetadataRequestTopicStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStates = "TopicStates"
 	// FieldUpdateMetadataRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
 	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
-	// FieldUpdateMetadataRequestLiveBrokersEndpoints is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
+	// FieldUpdateMetadataRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldUpdateMetadataRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
+	// FieldUpdateMetadataRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+	// FieldUpdateMetadataRequestLiveBrokersId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersId = "Id"
+	// FieldUpdateMetadataRequestLiveBrokersTags is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
+	// FieldUpdateMetadataRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
+	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateMetadataRequest.json
@@ -305,4 +296,3 @@ const originalUpdateMetadataRequestInput = `// Licensed to the Apache Software F
   ]
 }
 `
-

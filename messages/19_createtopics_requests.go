@@ -7,7 +7,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 0
-		schema.NewSchema("CreateTopicsRequestv0", 
+		schema.NewSchema("CreateTopicsRequestv0",
 			&schema.Array{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -25,7 +25,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 1
-		schema.NewSchema("CreateTopicsRequestv1", 
+		schema.NewSchema("CreateTopicsRequestv1",
 			&schema.Array{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -44,7 +44,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 2
-		schema.NewSchema("CreateTopicsRequestv2", 
+		schema.NewSchema("CreateTopicsRequestv2",
 			&schema.Array{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV2",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -63,7 +63,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 3
-		schema.NewSchema("CreateTopicsRequestv3", 
+		schema.NewSchema("CreateTopicsRequestv3",
 			&schema.Array{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV3",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -82,7 +82,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 4
-		schema.NewSchema("CreateTopicsRequestv4", 
+		schema.NewSchema("CreateTopicsRequestv4",
 			&schema.Array{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV4",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -101,7 +101,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 5
-		schema.NewSchema("CreateTopicsRequestv5", 
+		schema.NewSchema("CreateTopicsRequestv5",
 			&schema.ArrayCompact{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV5",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -124,7 +124,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 6
-		schema.NewSchema("CreateTopicsRequestv6", 
+		schema.NewSchema("CreateTopicsRequestv6",
 			&schema.ArrayCompact{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV6",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -147,7 +147,7 @@ func init19CreateTopicsRequest() []schema.Schema {
 		),
 
 		// Message: CreateTopicsRequest, API Key: 19, Version: 7
-		schema.NewSchema("CreateTopicsRequestv7", 
+		schema.NewSchema("CreateTopicsRequestv7",
 			&schema.ArrayCompact{Name: FieldCreateTopicsRequestTopics, Ty: schema.NewSchema("TopicsV7",
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsRequestTopicsNumPartitions, Ty: schema.TypeInt32},
@@ -168,19 +168,12 @@ func init19CreateTopicsRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldCreateTopicsRequestvalidateOnly, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldCreateTopicsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldCreateTopicsRequestTopicsConfigs is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigs = "Configs"
-	// FieldCreateTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsConfigsName is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsName = "Name"
-	// FieldCreateTopicsRequestTopicsConfigsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
+	// FieldCreateTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopics = "Topics"
 	// FieldCreateTopicsRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsName = "Name"
 	// FieldCreateTopicsRequestTopicsReplicationFactor is a field name that can be used to resolve the correct struct field.
@@ -189,22 +182,28 @@ const (
 	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
 	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
-	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
-	// FieldCreateTopicsRequestTopicsConfigsValue is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
-	// FieldCreateTopicsRequestvalidateOnly is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
+	// FieldCreateTopicsRequestTopicsConfigsName is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigsName = "Name"
 	// FieldCreateTopicsRequestTopicsAssignmentsTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
 	// FieldCreateTopicsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequestTags = "Tags"
-	// FieldCreateTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopics = "Topics"
-	// FieldCreateTopicsRequestTopicsNumPartitions is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
+	// FieldCreateTopicsRequestvalidateOnly is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
+	// FieldCreateTopicsRequestTopicsConfigsValue is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
 	// FieldCreateTopicsRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
+	// FieldCreateTopicsRequestTopicsNumPartitions is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
+	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreateTopicsRequestTopicsConfigs is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigs = "Configs"
+	// FieldCreateTopicsRequestTopicsConfigsTags is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldCreateTopicsRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateTopicsRequest.json
@@ -272,4 +271,3 @@ const originalCreateTopicsRequestInput = `// Licensed to the Apache Software Fou
   ]
 }
 `
-

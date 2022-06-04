@@ -7,7 +7,7 @@ func init26EndTxnRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: EndTxnRequest, API Key: 26, Version: 0
-		schema.NewSchema("EndTxnRequestv0", 
+		schema.NewSchema("EndTxnRequestv0",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -15,7 +15,7 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 1
-		schema.NewSchema("EndTxnRequestv1", 
+		schema.NewSchema("EndTxnRequestv1",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -23,7 +23,7 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 2
-		schema.NewSchema("EndTxnRequestv2", 
+		schema.NewSchema("EndTxnRequestv2",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -31,28 +31,27 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 3
-		schema.NewSchema("EndTxnRequestv3", 
+		schema.NewSchema("EndTxnRequestv3",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldEndTxnRequestCommitted, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldEndTxnRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldEndTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	FieldEndTxnRequestTransactionalId = "TransactionalId"
+	// FieldEndTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
+	FieldEndTxnRequestProducerId = "ProducerId"
 	// FieldEndTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
 	// FieldEndTxnRequestCommitted is a field name that can be used to resolve the correct struct field.
 	FieldEndTxnRequestCommitted = "Committed"
 	// FieldEndTxnRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldEndTxnRequestTags = "Tags"
-	// FieldEndTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestTransactionalId = "TransactionalId"
-	// FieldEndTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestProducerId = "ProducerId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/EndTxnRequest.json
@@ -95,4 +94,3 @@ const originalEndTxnRequestInput = `// Licensed to the Apache Software Foundatio
   ]
 }
 `
-

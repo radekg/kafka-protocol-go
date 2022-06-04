@@ -7,7 +7,7 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: AddOffsetsToTxnRequest, API Key: 25, Version: 0
-		schema.NewSchema("AddOffsetsToTxnRequestv0", 
+		schema.NewSchema("AddOffsetsToTxnRequestv0",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -15,7 +15,7 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddOffsetsToTxnRequest, API Key: 25, Version: 1
-		schema.NewSchema("AddOffsetsToTxnRequestv1", 
+		schema.NewSchema("AddOffsetsToTxnRequestv1",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -23,7 +23,7 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddOffsetsToTxnRequest, API Key: 25, Version: 2
-		schema.NewSchema("AddOffsetsToTxnRequestv2", 
+		schema.NewSchema("AddOffsetsToTxnRequestv2",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -31,28 +31,27 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 		),
 
 		// Message: AddOffsetsToTxnRequest, API Key: 25, Version: 3
-		schema.NewSchema("AddOffsetsToTxnRequestv3", 
+		schema.NewSchema("AddOffsetsToTxnRequestv3",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldAddOffsetsToTxnRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldAddOffsetsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldAddOffsetsToTxnRequestProducerEpoch = "ProducerEpoch"
+	// FieldAddOffsetsToTxnRequestGroupId is a field name that can be used to resolve the correct struct field.
+	FieldAddOffsetsToTxnRequestGroupId = "GroupId"
 	// FieldAddOffsetsToTxnRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestTags = "Tags"
 	// FieldAddOffsetsToTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestTransactionalId = "TransactionalId"
 	// FieldAddOffsetsToTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestProducerId = "ProducerId"
-	// FieldAddOffsetsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAddOffsetsToTxnRequestProducerEpoch = "ProducerEpoch"
-	// FieldAddOffsetsToTxnRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldAddOffsetsToTxnRequestGroupId = "GroupId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddOffsetsToTxnRequest.json
@@ -95,4 +94,3 @@ const originalAddOffsetsToTxnRequestInput = `// Licensed to the Apache Software 
   ]
 }
 `
-

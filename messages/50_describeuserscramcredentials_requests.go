@@ -7,14 +7,13 @@ func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DescribeUserScramCredentialsRequest, API Key: 50, Version: 0
-		schema.NewSchema("DescribeUserScramCredentialsRequestv0", 
+		schema.NewSchema("DescribeUserScramCredentialsRequestv0",
 			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsRequestUsers, Ty: schema.NewSchema("UsersV0",
 				&schema.Mfield{Name: FieldDescribeUserScramCredentialsRequestUsersName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestUsersTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestTags},
 		),
-
 	}
 }
 
@@ -61,4 +60,3 @@ const originalDescribeUserScramCredentialsRequestInput = `// Licensed to the Apa
   ]
 }
 `
-

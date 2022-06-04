@@ -7,26 +7,26 @@ func init22InitProducerIdRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 0
-		schema.NewSchema("InitProducerIdRequestv0", 
+		schema.NewSchema("InitProducerIdRequestv0",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 1
-		schema.NewSchema("InitProducerIdRequestv1", 
+		schema.NewSchema("InitProducerIdRequestv1",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 2
-		schema.NewSchema("InitProducerIdRequestv2", 
+		schema.NewSchema("InitProducerIdRequestv2",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldInitProducerIdRequestTags},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 3
-		schema.NewSchema("InitProducerIdRequestv3", 
+		schema.NewSchema("InitProducerIdRequestv3",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdRequestProducerId, Ty: schema.TypeInt64},
@@ -35,18 +35,19 @@ func init22InitProducerIdRequest() []schema.Schema {
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 4
-		schema.NewSchema("InitProducerIdRequestv4", 
+		schema.NewSchema("InitProducerIdRequestv4",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldInitProducerIdRequestProducerEpoch, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldInitProducerIdRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldInitProducerIdRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
 	// FieldInitProducerIdRequestTransactionTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldInitProducerIdRequestTransactionTimeoutMs = "TransactionTimeoutMs"
 	// FieldInitProducerIdRequestTags is a field name that can be used to resolve the correct struct field.
@@ -55,8 +56,6 @@ const (
 	FieldInitProducerIdRequestProducerId = "ProducerId"
 	// FieldInitProducerIdRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldInitProducerIdRequestProducerEpoch = "ProducerEpoch"
-	// FieldInitProducerIdRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/InitProducerIdRequest.json
@@ -101,4 +100,3 @@ const originalInitProducerIdRequestInput = `// Licensed to the Apache Software F
   ]
 }
 `
-

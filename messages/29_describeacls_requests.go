@@ -7,7 +7,7 @@ func init29DescribeAclsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DescribeAclsRequest, API Key: 29, Version: 0
-		schema.NewSchema("DescribeAclsRequestv0", 
+		schema.NewSchema("DescribeAclsRequestv0",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPrincipalFilter, Ty: schema.TypeStrNullable},
@@ -17,7 +17,7 @@ func init29DescribeAclsRequest() []schema.Schema {
 		),
 
 		// Message: DescribeAclsRequest, API Key: 29, Version: 1
-		schema.NewSchema("DescribeAclsRequestv1", 
+		schema.NewSchema("DescribeAclsRequestv1",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPatternTypeFilter, Ty: schema.TypeInt8},
@@ -28,7 +28,7 @@ func init29DescribeAclsRequest() []schema.Schema {
 		),
 
 		// Message: DescribeAclsRequest, API Key: 29, Version: 2
-		schema.NewSchema("DescribeAclsRequestv2", 
+		schema.NewSchema("DescribeAclsRequestv2",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPatternTypeFilter, Ty: schema.TypeInt8},
@@ -38,19 +38,10 @@ func init29DescribeAclsRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldDescribeAclsRequestPermissionType, Ty: schema.TypeInt8},
 			&schema.SchemaTaggedFields{Name: FieldDescribeAclsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldDescribeAclsRequestPrincipalFilter is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
-	// FieldDescribeAclsRequestHostFilter is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestHostFilter = "HostFilter"
-	// FieldDescribeAclsRequestOperation is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestOperation = "Operation"
-	// FieldDescribeAclsRequestPermissionType is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestPermissionType = "PermissionType"
 	// FieldDescribeAclsRequestPatternTypeFilter is a field name that can be used to resolve the correct struct field.
 	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
 	// FieldDescribeAclsRequestTags is a field name that can be used to resolve the correct struct field.
@@ -59,6 +50,14 @@ const (
 	FieldDescribeAclsRequestResourceTypeFilter = "ResourceTypeFilter"
 	// FieldDescribeAclsRequestResourceNameFilter is a field name that can be used to resolve the correct struct field.
 	FieldDescribeAclsRequestResourceNameFilter = "ResourceNameFilter"
+	// FieldDescribeAclsRequestPrincipalFilter is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
+	// FieldDescribeAclsRequestHostFilter is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestHostFilter = "HostFilter"
+	// FieldDescribeAclsRequestOperation is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestOperation = "Operation"
+	// FieldDescribeAclsRequestPermissionType is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestPermissionType = "PermissionType"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeAclsRequest.json
@@ -104,4 +103,3 @@ const originalDescribeAclsRequestInput = `// Licensed to the Apache Software Fou
   ]
 }
 `
-

@@ -7,45 +7,45 @@ func init20DeleteTopicsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 0
-		schema.NewSchema("DeleteTopicsRequestv0", 
+		schema.NewSchema("DeleteTopicsRequestv0",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 1
-		schema.NewSchema("DeleteTopicsRequestv1", 
+		schema.NewSchema("DeleteTopicsRequestv1",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 2
-		schema.NewSchema("DeleteTopicsRequestv2", 
+		schema.NewSchema("DeleteTopicsRequestv2",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 3
-		schema.NewSchema("DeleteTopicsRequestv3", 
+		schema.NewSchema("DeleteTopicsRequestv3",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 4
-		schema.NewSchema("DeleteTopicsRequestv4", 
+		schema.NewSchema("DeleteTopicsRequestv4",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 5
-		schema.NewSchema("DeleteTopicsRequestv5", 
+		schema.NewSchema("DeleteTopicsRequestv5",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 6
-		schema.NewSchema("DeleteTopicsRequestv6", 
+		schema.NewSchema("DeleteTopicsRequestv6",
 			&schema.ArrayCompact{Name: FieldDeleteTopicsRequestTopics, Ty: schema.NewSchema("TopicsV6",
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsTopicId, Ty: schema.TypeUuid},
@@ -54,13 +54,10 @@ func init20DeleteTopicsRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldDeleteTopicsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTags = "Tags"
 	// FieldDeleteTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldDeleteTopicsRequestTopics = "Topics"
 	// FieldDeleteTopicsRequestTopicsName is a field name that can be used to resolve the correct struct field.
@@ -73,6 +70,8 @@ const (
 	FieldDeleteTopicsRequestTopicNames = "TopicNames"
 	// FieldDeleteTopicsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
+	// FieldDeleteTopicsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldDeleteTopicsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteTopicsRequest.json
@@ -119,4 +118,3 @@ const originalDeleteTopicsRequestInput = `// Licensed to the Apache Software Fou
   ]
 }
 `
-

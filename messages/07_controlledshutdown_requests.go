@@ -7,28 +7,27 @@ func init7ControlledShutdownRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 0
-		schema.NewSchema("ControlledShutdownRequestv0", 
+		schema.NewSchema("ControlledShutdownRequestv0",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 1
-		schema.NewSchema("ControlledShutdownRequestv1", 
+		schema.NewSchema("ControlledShutdownRequestv1",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 2
-		schema.NewSchema("ControlledShutdownRequestv2", 
+		schema.NewSchema("ControlledShutdownRequestv2",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerEpoch, Ty: schema.TypeInt64},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 3
-		schema.NewSchema("ControlledShutdownRequestv3", 
+		schema.NewSchema("ControlledShutdownRequestv3",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldControlledShutdownRequestTags},
 		),
-
 	}
 }
 
@@ -79,4 +78,3 @@ const originalControlledShutdownRequestInput = `// Licensed to the Apache Softwa
   ]
 }
 `
-

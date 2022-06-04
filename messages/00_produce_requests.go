@@ -7,7 +7,7 @@ func init0ProduceRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: ProduceRequest, API Key: 0, Version: 0
-		schema.NewSchema("ProduceRequestv0", 
+		schema.NewSchema("ProduceRequestv0",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV0",
@@ -20,7 +20,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 1
-		schema.NewSchema("ProduceRequestv1", 
+		schema.NewSchema("ProduceRequestv1",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV1",
@@ -33,7 +33,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 2
-		schema.NewSchema("ProduceRequestv2", 
+		schema.NewSchema("ProduceRequestv2",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV2",
@@ -46,7 +46,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 3
-		schema.NewSchema("ProduceRequestv3", 
+		schema.NewSchema("ProduceRequestv3",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -60,7 +60,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 4
-		schema.NewSchema("ProduceRequestv4", 
+		schema.NewSchema("ProduceRequestv4",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -74,7 +74,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 5
-		schema.NewSchema("ProduceRequestv5", 
+		schema.NewSchema("ProduceRequestv5",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -88,7 +88,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 6
-		schema.NewSchema("ProduceRequestv6", 
+		schema.NewSchema("ProduceRequestv6",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -102,7 +102,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 7
-		schema.NewSchema("ProduceRequestv7", 
+		schema.NewSchema("ProduceRequestv7",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -116,7 +116,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 8
-		schema.NewSchema("ProduceRequestv8", 
+		schema.NewSchema("ProduceRequestv8",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -130,7 +130,7 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 9
-		schema.NewSchema("ProduceRequestv9", 
+		schema.NewSchema("ProduceRequestv9",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
@@ -145,33 +145,32 @@ func init0ProduceRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldProduceRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataTags = "Tags"
+	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTags = "Tags"
+	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTimeoutMs = "TimeoutMs"
+	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataName = "Name"
 	// FieldProduceRequestTopicDataPartitionData is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionData = "PartitionData"
-	// FieldProduceRequestTopicDataPartitionDataIndex is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
 	// FieldProduceRequestTopicDataPartitionDataRecords is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionDataRecords = "Records"
 	// FieldProduceRequestTransactionalId is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTransactionalId = "TransactionalId"
 	// FieldProduceRequestTopicDataPartitionDataTags is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
-	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTags = "Tags"
-	// FieldProduceRequestTopicData is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicData = "TopicData"
-	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataName = "Name"
-	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataTags = "Tags"
 	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestAcks = "Acks"
-	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTimeoutMs = "TimeoutMs"
+	// FieldProduceRequestTopicData is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicData = "TopicData"
+	// FieldProduceRequestTopicDataPartitionDataIndex is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceRequest.json
@@ -234,4 +233,3 @@ const originalProduceRequestInput = `// Licensed to the Apache Software Foundati
   ]
 }
 `
-

@@ -7,7 +7,7 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: UpdateFeaturesRequest, API Key: 57, Version: 0
-		schema.NewSchema("UpdateFeaturesRequestv0", 
+		schema.NewSchema("UpdateFeaturesRequestv0",
 			&schema.Mfield{Name: FieldUpdateFeaturesRequesttimeoutMs, Ty: schema.TypeInt32},
 			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("FeatureUpdatesV0",
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesFeature, Ty: schema.TypeStrCompact},
@@ -17,7 +17,6 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldUpdateFeaturesRequestTags},
 		),
-
 	}
 }
 
@@ -76,4 +75,3 @@ const originalUpdateFeaturesRequestInput = `// Licensed to the Apache Software F
   ]
 }
 `
-

@@ -7,7 +7,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 0
-		schema.NewSchema("ListOffsetsRequestv0", 
+		schema.NewSchema("ListOffsetsRequestv0",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
@@ -19,7 +19,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 1
-		schema.NewSchema("ListOffsetsRequestv1", 
+		schema.NewSchema("ListOffsetsRequestv1",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
@@ -31,7 +31,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 2
-		schema.NewSchema("ListOffsetsRequestv2", 
+		schema.NewSchema("ListOffsetsRequestv2",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV2",
@@ -44,7 +44,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 3
-		schema.NewSchema("ListOffsetsRequestv3", 
+		schema.NewSchema("ListOffsetsRequestv3",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV3",
@@ -57,7 +57,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 4
-		schema.NewSchema("ListOffsetsRequestv4", 
+		schema.NewSchema("ListOffsetsRequestv4",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV4",
@@ -71,7 +71,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 5
-		schema.NewSchema("ListOffsetsRequestv5", 
+		schema.NewSchema("ListOffsetsRequestv5",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV5",
@@ -85,7 +85,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 6
-		schema.NewSchema("ListOffsetsRequestv6", 
+		schema.NewSchema("ListOffsetsRequestv6",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV6",
@@ -102,7 +102,7 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 7
-		schema.NewSchema("ListOffsetsRequestv7", 
+		schema.NewSchema("ListOffsetsRequestv7",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV7",
@@ -117,33 +117,32 @@ func init2ListOffsetsRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldListOffsetsRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldListOffsetsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsName = "Name"
-	// FieldListOffsetsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitions = "Partitions"
-	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
 	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsTags = "Tags"
-	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestReplicaId = "ReplicaId"
-	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopics = "Topics"
-	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTags = "Tags"
+	// FieldListOffsetsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsName = "Name"
+	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
 	// FieldListOffsetsRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
 	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
-	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTags = "Tags"
+	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestReplicaId = "ReplicaId"
+	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopics = "Topics"
+	// FieldListOffsetsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitions = "Partitions"
+	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListOffsetsRequest.json
@@ -207,4 +206,3 @@ const originalListOffsetsRequestInput = `// Licensed to the Apache Software Foun
   ]
 }
 `
-

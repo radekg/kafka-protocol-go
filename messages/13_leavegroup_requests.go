@@ -7,25 +7,25 @@ func init13LeaveGroupRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 0
-		schema.NewSchema("LeaveGroupRequestv0", 
+		schema.NewSchema("LeaveGroupRequestv0",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 1
-		schema.NewSchema("LeaveGroupRequestv1", 
+		schema.NewSchema("LeaveGroupRequestv1",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 2
-		schema.NewSchema("LeaveGroupRequestv2", 
+		schema.NewSchema("LeaveGroupRequestv2",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 3
-		schema.NewSchema("LeaveGroupRequestv3", 
+		schema.NewSchema("LeaveGroupRequestv3",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV3",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStr},
@@ -34,7 +34,7 @@ func init13LeaveGroupRequest() []schema.Schema {
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 4
-		schema.NewSchema("LeaveGroupRequestv4", 
+		schema.NewSchema("LeaveGroupRequestv4",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV4",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
@@ -45,7 +45,7 @@ func init13LeaveGroupRequest() []schema.Schema {
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 5
-		schema.NewSchema("LeaveGroupRequestv5", 
+		schema.NewSchema("LeaveGroupRequestv5",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV5",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
@@ -55,7 +55,6 @@ func init13LeaveGroupRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldLeaveGroupRequestTags},
 		),
-
 	}
 }
 
@@ -127,4 +126,3 @@ const originalLeaveGroupRequestInput = `// Licensed to the Apache Software Found
   ]
 }
 `
-

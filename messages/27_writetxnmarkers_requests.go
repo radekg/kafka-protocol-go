@@ -7,7 +7,7 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 0
-		schema.NewSchema("WriteTxnMarkersRequestv0", 
+		schema.NewSchema("WriteTxnMarkersRequestv0",
 			&schema.Array{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("MarkersV0",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
@@ -21,7 +21,7 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 		),
 
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 1
-		schema.NewSchema("WriteTxnMarkersRequestv1", 
+		schema.NewSchema("WriteTxnMarkersRequestv1",
 			&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("MarkersV1",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
@@ -36,33 +36,32 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldWriteTxnMarkersRequestMarkersProducerId is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
-	// FieldWriteTxnMarkersRequestMarkersTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
-	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldWriteTxnMarkersRequestMarkersTags is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
-	// FieldWriteTxnMarkersRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestTags = "Tags"
 	// FieldWriteTxnMarkersRequestMarkers is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkers = "Markers"
+	// FieldWriteTxnMarkersRequestMarkersProducerId is a field name that can be used to resolve the correct struct field.
+	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
 	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
 	// FieldWriteTxnMarkersRequestMarkersTransactionResult is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkersTransactionResult = "TransactionResult"
-	// FieldWriteTxnMarkersRequestMarkersTopics is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopics = "Topics"
 	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
+	// FieldWriteTxnMarkersRequestMarkersTopics is a field name that can be used to resolve the correct struct field.
+	FieldWriteTxnMarkersRequestMarkersTopics = "Topics"
+	// FieldWriteTxnMarkersRequestMarkersTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
+	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldWriteTxnMarkersRequestMarkersTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldWriteTxnMarkersRequestMarkersTopicsTags = "Tags"
+	// FieldWriteTxnMarkersRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldWriteTxnMarkersRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/WriteTxnMarkersRequest.json
@@ -111,4 +110,3 @@ const originalWriteTxnMarkersRequestInput = `// Licensed to the Apache Software 
   ]
 }
 `
-

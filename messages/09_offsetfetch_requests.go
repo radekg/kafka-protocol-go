@@ -7,7 +7,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 0
-		schema.NewSchema("OffsetFetchRequestv0", 
+		schema.NewSchema("OffsetFetchRequestv0",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -16,7 +16,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 1
-		schema.NewSchema("OffsetFetchRequestv1", 
+		schema.NewSchema("OffsetFetchRequestv1",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV1",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -25,7 +25,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 2
-		schema.NewSchema("OffsetFetchRequestv2", 
+		schema.NewSchema("OffsetFetchRequestv2",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV2",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -34,7 +34,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 3
-		schema.NewSchema("OffsetFetchRequestv3", 
+		schema.NewSchema("OffsetFetchRequestv3",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV3",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -43,7 +43,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 4
-		schema.NewSchema("OffsetFetchRequestv4", 
+		schema.NewSchema("OffsetFetchRequestv4",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV4",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -52,7 +52,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 5
-		schema.NewSchema("OffsetFetchRequestv5", 
+		schema.NewSchema("OffsetFetchRequestv5",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV5",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
@@ -61,7 +61,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 6
-		schema.NewSchema("OffsetFetchRequestv6", 
+		schema.NewSchema("OffsetFetchRequestv6",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV6",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
@@ -72,7 +72,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 7
-		schema.NewSchema("OffsetFetchRequestv7", 
+		schema.NewSchema("OffsetFetchRequestv7",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV7",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
@@ -84,7 +84,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 8
-		schema.NewSchema("OffsetFetchRequestv8", 
+		schema.NewSchema("OffsetFetchRequestv8",
 			&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroups, Ty: schema.NewSchema("GroupsV8",
 				&schema.Mfield{Name: FieldOffsetFetchRequestGroupsgroupId, Ty: schema.TypeStrCompact},
 				&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroupsTopics, Ty: schema.NewSchema("TopicsV8",
@@ -97,37 +97,36 @@ func init9OffsetFetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldOffsetFetchRequestRequireStable, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroups = "Groups"
-	// FieldOffsetFetchRequestGroupsTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopicsName = "Name"
 	// FieldOffsetFetchRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupId = "GroupId"
-	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestRequireStable = "RequireStable"
-	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestTopics = "Topics"
+	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+	// FieldOffsetFetchRequestGroupsTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTopicsName = "Name"
+	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTags = "Tags"
+	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroups = "Groups"
+	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestTopicsName = "Name"
 	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestTags = "Tags"
-	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestRequireStable = "RequireStable"
 	// FieldOffsetFetchRequestGroupsTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopics = "Topics"
-	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsTags = "Tags"
-	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
 	// FieldOffsetFetchRequestGroupsTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
 )
@@ -197,4 +196,3 @@ const originalOffsetFetchRequestInput = `// Licensed to the Apache Software Foun
   ]
 }
 `
-

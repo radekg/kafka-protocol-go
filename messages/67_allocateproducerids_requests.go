@@ -7,22 +7,21 @@ func init67AllocateProducerIdsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: AllocateProducerIdsRequest, API Key: 67, Version: 0
-		schema.NewSchema("AllocateProducerIdsRequestv0", 
+		schema.NewSchema("AllocateProducerIdsRequestv0",
 			&schema.Mfield{Name: FieldAllocateProducerIdsRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAllocateProducerIdsRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldAllocateProducerIdsRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldAllocateProducerIdsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldAllocateProducerIdsRequestTags = "Tags"
 	// FieldAllocateProducerIdsRequestBrokerId is a field name that can be used to resolve the correct struct field.
 	FieldAllocateProducerIdsRequestBrokerId = "BrokerId"
 	// FieldAllocateProducerIdsRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAllocateProducerIdsRequestBrokerEpoch = "BrokerEpoch"
-	// FieldAllocateProducerIdsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAllocateProducerIdsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AllocateProducerIdsRequest.json
@@ -56,4 +55,3 @@ const originalAllocateProducerIdsRequestInput = `// Licensed to the Apache Softw
   ]
 }
 `
-

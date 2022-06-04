@@ -7,7 +7,7 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 0
-		schema.NewSchema("TxnOffsetCommitRequestv0", 
+		schema.NewSchema("TxnOffsetCommitRequestv0",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
@@ -23,7 +23,7 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 1
-		schema.NewSchema("TxnOffsetCommitRequestv1", 
+		schema.NewSchema("TxnOffsetCommitRequestv1",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
@@ -39,7 +39,7 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 2
-		schema.NewSchema("TxnOffsetCommitRequestv2", 
+		schema.NewSchema("TxnOffsetCommitRequestv2",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
@@ -56,7 +56,7 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 3
-		schema.NewSchema("TxnOffsetCommitRequestv3", 
+		schema.NewSchema("TxnOffsetCommitRequestv3",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
@@ -77,45 +77,44 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldTxnOffsetCommitRequestTags},
 		),
-
 	}
 }
 
 const (
 	// FieldTxnOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestTopics = "Topics"
-	// FieldTxnOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
 	// FieldTxnOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldTxnOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestGroupId = "GroupId"
-	// FieldTxnOffsetCommitRequestProducerId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
-	// FieldTxnOffsetCommitRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
 	// FieldTxnOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
 	// FieldTxnOffsetCommitRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestTopicsTags = "Tags"
-	// FieldTxnOffsetCommitRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
+	// FieldTxnOffsetCommitRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
 	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldTxnOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsName = "Name"
+	// FieldTxnOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestGroupId = "GroupId"
+	// FieldTxnOffsetCommitRequestProducerId is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldTxnOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTags = "Tags"
+	// FieldTxnOffsetCommitRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
+	// FieldTxnOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
 	// FieldTxnOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestMemberId = "MemberId"
 	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
-	// FieldTxnOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTags = "Tags"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+	// FieldTxnOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldTxnOffsetCommitRequestTopicsName = "Name"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/TxnOffsetCommitRequest.json
@@ -181,4 +180,3 @@ const originalTxnOffsetCommitRequestInput = `// Licensed to the Apache Software 
   ]
 }
 `
-

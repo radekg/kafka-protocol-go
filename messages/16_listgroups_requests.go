@@ -15,11 +15,10 @@ func init16ListGroupsRequest() []schema.Schema {
 		// Message: ListGroupsRequest, API Key: 16, Version: 3
 		schema.NewSchema("ListGroupsRequestv3"),
 		// Message: ListGroupsRequest, API Key: 16, Version: 4
-		schema.NewSchema("ListGroupsRequestv4", 
+		schema.NewSchema("ListGroupsRequestv4",
 			&schema.Mfield{Name: FieldListGroupsRequestStatesFilter, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldListGroupsRequestTags},
 		),
-
 	}
 }
 
@@ -65,4 +64,3 @@ const originalListGroupsRequestInput = `// Licensed to the Apache Software Found
   ]
 }
 `
-

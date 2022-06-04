@@ -7,11 +7,10 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 0
-		schema.NewSchema("LeaderAndIsrRequestv0", 
+		schema.NewSchema("LeaderAndIsrRequestv0",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0",
-			)},
+			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0")},
 			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV0",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
@@ -20,11 +19,10 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 1
-		schema.NewSchema("LeaderAndIsrRequestv1", 
+		schema.NewSchema("LeaderAndIsrRequestv1",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1",
-			)},
+			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1")},
 			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV1",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
@@ -33,14 +31,13 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 2
-		schema.NewSchema("LeaderAndIsrRequestv2", 
+		schema.NewSchema("LeaderAndIsrRequestv2",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV2",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV2",
-				)},
+				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV2")},
 			)},
 			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV2",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
@@ -50,14 +47,13 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 3
-		schema.NewSchema("LeaderAndIsrRequestv3", 
+		schema.NewSchema("LeaderAndIsrRequestv3",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV3",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV3",
-				)},
+				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV3")},
 			)},
 			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV3",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
@@ -67,14 +63,13 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 4
-		schema.NewSchema("LeaderAndIsrRequestv4", 
+		schema.NewSchema("LeaderAndIsrRequestv4",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV4",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV4",
-				)},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV4")},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV4",
@@ -87,7 +82,7 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 5
-		schema.NewSchema("LeaderAndIsrRequestv5", 
+		schema.NewSchema("LeaderAndIsrRequestv5",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
@@ -95,8 +90,7 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV5",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5",
-				)},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5")},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV5",
@@ -109,7 +103,7 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 6
-		schema.NewSchema("LeaderAndIsrRequestv6", 
+		schema.NewSchema("LeaderAndIsrRequestv6",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
@@ -117,8 +111,7 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV6",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6",
-				)},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6")},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
 			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV6",
@@ -129,43 +122,42 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldLeaderAndIsrRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldLeaderAndIsrRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTags = "Tags"
-	// FieldLeaderAndIsrRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
-	// FieldLeaderAndIsrRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
-	// FieldLeaderAndIsrRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
-	// FieldLeaderAndIsrRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
 	// FieldLeaderAndIsrRequestType is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestType = "Type"
-	// FieldLeaderAndIsrRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestControllerId = "ControllerId"
-	// FieldLeaderAndIsrRequestLiveLeadersPort is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
+	// FieldLeaderAndIsrRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
 	// FieldLeaderAndIsrRequestTopicStates is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldLeaderAndIsrRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
+	// FieldLeaderAndIsrRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTags = "Tags"
 	// FieldLeaderAndIsrRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
+	// FieldLeaderAndIsrRequestLiveLeadersHostName is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
 	// FieldLeaderAndIsrRequestLiveLeaders is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
 	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
-	// FieldLeaderAndIsrRequestLiveLeadersHostName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
-	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldLeaderAndIsrRequestLiveLeadersPort is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
+	// FieldLeaderAndIsrRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
 	// FieldLeaderAndIsrRequestLiveLeadersTags is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestLiveLeadersTags = "Tags"
+	// FieldLeaderAndIsrRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
+	// FieldLeaderAndIsrRequestControllerId is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestControllerId = "ControllerId"
+	// FieldLeaderAndIsrRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaderAndIsrRequest.json
@@ -265,4 +257,3 @@ const originalLeaderAndIsrRequestInput = `// Licensed to the Apache Software Fou
   ]
 }
 `
-

@@ -7,7 +7,7 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: AlterUserScramCredentialsRequest, API Key: 51, Version: 0
-		schema.NewSchema("AlterUserScramCredentialsRequestv0", 
+		schema.NewSchema("AlterUserScramCredentialsRequestv0",
 			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestDeletions, Ty: schema.NewSchema("DeletionsV0",
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsMechanism, Ty: schema.TypeInt8},
@@ -23,15 +23,24 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
+	// FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword = "SaltedPassword"
+	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
 	// FieldAlterUserScramCredentialsRequestDeletionsName is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestDeletionsName = "Name"
+	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
 	// FieldAlterUserScramCredentialsRequestDeletionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestDeletionsTags = "Tags"
+	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
 	// FieldAlterUserScramCredentialsRequestUpsertionsIterations is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestUpsertionsIterations = "Iterations"
 	// FieldAlterUserScramCredentialsRequestUpsertionsSalt is a field name that can be used to resolve the correct struct field.
@@ -40,16 +49,6 @@ const (
 	FieldAlterUserScramCredentialsRequestUpsertionsTags = "Tags"
 	// FieldAlterUserScramCredentialsRequestDeletions is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestDeletions = "Deletions"
-	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
-	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
-	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
-	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
-	// FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword = "SaltedPassword"
 	// FieldAlterUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestTags = "Tags"
 )
@@ -101,4 +100,3 @@ const originalAlterUserScramCredentialsRequestInput = `// Licensed to the Apache
   ]
 }
 `
-

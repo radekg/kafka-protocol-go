@@ -7,7 +7,7 @@ func init14SyncGroupRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 0
-		schema.NewSchema("SyncGroupRequestv0", 
+		schema.NewSchema("SyncGroupRequestv0",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
@@ -18,7 +18,7 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 1
-		schema.NewSchema("SyncGroupRequestv1", 
+		schema.NewSchema("SyncGroupRequestv1",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
@@ -29,7 +29,7 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 2
-		schema.NewSchema("SyncGroupRequestv2", 
+		schema.NewSchema("SyncGroupRequestv2",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
@@ -40,7 +40,7 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 3
-		schema.NewSchema("SyncGroupRequestv3", 
+		schema.NewSchema("SyncGroupRequestv3",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
@@ -52,7 +52,7 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 4
-		schema.NewSchema("SyncGroupRequestv4", 
+		schema.NewSchema("SyncGroupRequestv4",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStrCompact},
@@ -66,7 +66,7 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 5
-		schema.NewSchema("SyncGroupRequestv5", 
+		schema.NewSchema("SyncGroupRequestv5",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStrCompact},
@@ -80,7 +80,6 @@ func init14SyncGroupRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldSyncGroupRequestTags},
 		),
-
 	}
 }
 
@@ -89,22 +88,22 @@ const (
 	FieldSyncGroupRequestGroupId = "GroupId"
 	// FieldSyncGroupRequestGenerationId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestGenerationId = "GenerationId"
-	// FieldSyncGroupRequestAssignmentsAssignment is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
-	// FieldSyncGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldSyncGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestTags = "Tags"
-	// FieldSyncGroupRequestProtocolName is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestProtocolName = "ProtocolName"
 	// FieldSyncGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestMemberId = "MemberId"
 	// FieldSyncGroupRequestAssignments is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestAssignments = "Assignments"
 	// FieldSyncGroupRequestAssignmentsMemberId is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
+	// FieldSyncGroupRequestAssignmentsAssignment is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
+	// FieldSyncGroupRequestProtocolName is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestProtocolName = "ProtocolName"
+	// FieldSyncGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
 	// FieldSyncGroupRequestAssignmentsTags is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestAssignmentsTags = "Tags"
+	// FieldSyncGroupRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldSyncGroupRequestTags = "Tags"
 	// FieldSyncGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
 	FieldSyncGroupRequestProtocolType = "ProtocolType"
 )
@@ -167,4 +166,3 @@ const originalSyncGroupRequestInput = `// Licensed to the Apache Software Founda
   ]
 }
 `
-

@@ -62,16 +62,16 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [x] `28`: TxnOffsetCommit
 - [x] `29`: DescribeAcls
 
-- [ ] `30`: CreateAcls
-- [ ] `31`: DeleteAcls
-- [ ] `32`: DescribeConfigs
-- [ ] `33`: AlterConfigs
-- [ ] `34`: AlterReplicaLogDirs
-- [ ] `35`: DescribeLogDirs
-- [ ] `36`: SaslAuthenticate
-- [ ] `37`: CreatePartitions
-- [ ] `38`: CreateDelegationToken
-- [ ] `39`: RenewDelegationToken
+- [x] `30`: CreateAcls
+- [x] `31`: DeleteAcls
+- [x] `32`: DescribeConfigs
+- [x] `33`: AlterConfigs
+- [x] `34`: AlterReplicaLogDirs
+- [x] `35`: DescribeLogDirs
+- [x] `36`: SaslAuthenticate
+- [x] `37`: CreatePartitions
+- [x] `38`: CreateDelegationToken
+- [x] `39`: RenewDelegationToken
 
 - [ ] `40`: ExpireDelegationToken
 - [ ] `41`: DescribeDelegationToken

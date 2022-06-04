@@ -7,28 +7,28 @@ func init12HeartbeatRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: HeartbeatRequest, API Key: 12, Version: 0
-		schema.NewSchema("HeartbeatRequestv0", 
+		schema.NewSchema("HeartbeatRequestv0",
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldHeartbeatRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: HeartbeatRequest, API Key: 12, Version: 1
-		schema.NewSchema("HeartbeatRequestv1", 
+		schema.NewSchema("HeartbeatRequestv1",
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldHeartbeatRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: HeartbeatRequest, API Key: 12, Version: 2
-		schema.NewSchema("HeartbeatRequestv2", 
+		schema.NewSchema("HeartbeatRequestv2",
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldHeartbeatRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: HeartbeatRequest, API Key: 12, Version: 3
-		schema.NewSchema("HeartbeatRequestv3", 
+		schema.NewSchema("HeartbeatRequestv3",
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldHeartbeatRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatRequestMemberId, Ty: schema.TypeStr},
@@ -36,18 +36,19 @@ func init12HeartbeatRequest() []schema.Schema {
 		),
 
 		// Message: HeartbeatRequest, API Key: 12, Version: 4
-		schema.NewSchema("HeartbeatRequestv4", 
+		schema.NewSchema("HeartbeatRequestv4",
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldHeartbeatRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldHeartbeatRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.SchemaTaggedFields{Name: FieldHeartbeatRequestTags},
 		),
-
 	}
 }
 
 const (
+	// FieldHeartbeatRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldHeartbeatRequestTags = "Tags"
 	// FieldHeartbeatRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldHeartbeatRequestGroupId = "GroupId"
 	// FieldHeartbeatRequestGenerationId is a field name that can be used to resolve the correct struct field.
@@ -56,8 +57,6 @@ const (
 	FieldHeartbeatRequestMemberId = "MemberId"
 	// FieldHeartbeatRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldHeartbeatRequestGroupInstanceId = "GroupInstanceId"
-	// FieldHeartbeatRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldHeartbeatRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/HeartbeatRequest.json
@@ -101,4 +100,3 @@ const originalHeartbeatRequestInput = `// Licensed to the Apache Software Founda
   ]
 }
 `
-

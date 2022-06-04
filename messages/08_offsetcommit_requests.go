@@ -7,7 +7,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 	return []schema.Schema{
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 0
-		schema.NewSchema("OffsetCommitRequestv0", 
+		schema.NewSchema("OffsetCommitRequestv0",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV0",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
@@ -20,7 +20,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 1
-		schema.NewSchema("OffsetCommitRequestv1", 
+		schema.NewSchema("OffsetCommitRequestv1",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -35,7 +35,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 2
-		schema.NewSchema("OffsetCommitRequestv2", 
+		schema.NewSchema("OffsetCommitRequestv2",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -51,7 +51,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 3
-		schema.NewSchema("OffsetCommitRequestv3", 
+		schema.NewSchema("OffsetCommitRequestv3",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -67,7 +67,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 4
-		schema.NewSchema("OffsetCommitRequestv4", 
+		schema.NewSchema("OffsetCommitRequestv4",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -83,7 +83,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 5
-		schema.NewSchema("OffsetCommitRequestv5", 
+		schema.NewSchema("OffsetCommitRequestv5",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -98,7 +98,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 6
-		schema.NewSchema("OffsetCommitRequestv6", 
+		schema.NewSchema("OffsetCommitRequestv6",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -114,7 +114,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 7
-		schema.NewSchema("OffsetCommitRequestv7", 
+		schema.NewSchema("OffsetCommitRequestv7",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
@@ -131,7 +131,7 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 8
-		schema.NewSchema("OffsetCommitRequestv8", 
+		schema.NewSchema("OffsetCommitRequestv8",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStrCompact},
@@ -149,41 +149,40 @@ func init8OffsetCommitRequest() []schema.Schema {
 			)},
 			&schema.SchemaTaggedFields{Name: FieldOffsetCommitRequestTags},
 		),
-
 	}
 }
 
 const (
-	// FieldOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopics = "Topics"
-	// FieldOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTags = "Tags"
-	// FieldOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsName = "Name"
 	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
-	// FieldOffsetCommitRequestRetentionTimeMs is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
 	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGroupId = "GroupId"
-	// FieldOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestMemberId = "MemberId"
 	// FieldOffsetCommitRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsTags = "Tags"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestGroupId = "GroupId"
+	// FieldOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopics = "Topics"
+	// FieldOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsName = "Name"
+	// FieldOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
 	// FieldOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
 	// FieldOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestMemberId = "MemberId"
+	// FieldOffsetCommitRequestRetentionTimeMs is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
+	// FieldOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+	// FieldOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetCommitRequest.json
@@ -256,4 +255,3 @@ const originalOffsetCommitRequestInput = `// Licensed to the Apache Software Fou
   ]
 }
 `
-
