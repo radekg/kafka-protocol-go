@@ -28,30 +28,30 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
+	// FieldAlterUserScramCredentialsRequestUpsertionsIterations is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsIterations = "Iterations"
 	// FieldAlterUserScramCredentialsRequestUpsertionsSalt is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestUpsertionsSalt = "Salt"
 	// FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestUpsertionsSaltedPassword = "SaltedPassword"
-	// FieldAlterUserScramCredentialsRequestDeletionsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsName = "Name"
-	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
-	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
-	// FieldAlterUserScramCredentialsRequestUpsertionsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsName = "Name"
-	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
-	// FieldAlterUserScramCredentialsRequestUpsertionsIterations is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestUpsertionsIterations = "Iterations"
 	// FieldAlterUserScramCredentialsRequestUpsertionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestUpsertionsTags = "Tags"
-	// FieldAlterUserScramCredentialsRequestDeletions is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletions = "Deletions"
-	// FieldAlterUserScramCredentialsRequestDeletionsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterUserScramCredentialsRequestDeletionsTags = "Tags"
 	// FieldAlterUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterUserScramCredentialsRequestTags = "Tags"
+	// FieldAlterUserScramCredentialsRequestDeletionsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsName = "Name"
+	// FieldAlterUserScramCredentialsRequestDeletionsTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsTags = "Tags"
+	// FieldAlterUserScramCredentialsRequestUpsertions is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertions = "Upsertions"
+	// FieldAlterUserScramCredentialsRequestUpsertionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestUpsertionsMechanism = "Mechanism"
+	// FieldAlterUserScramCredentialsRequestDeletions is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletions = "Deletions"
+	// FieldAlterUserScramCredentialsRequestDeletionsMechanism is a field name that can be used to resolve the correct struct field.
+	FieldAlterUserScramCredentialsRequestDeletionsMechanism = "Mechanism"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterUserScramCredentialsRequest.json

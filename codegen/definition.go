@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"strconv"
 	"strings"
 
@@ -203,6 +204,9 @@ func (d *MessageDefinition) MaxVersion() (int64, error) {
 
 func (d *MessageDefinition) MinFlexibleVersion() (int64, error) {
 	if d.FlexibleVersions != "" {
+		if d.FlexibleVersions == "none" {
+			return math.MaxInt64, nil
+		}
 		return strconv.ParseInt(strings.ReplaceAll(d.FlexibleVersions, "+", ""), 10, 64)
 	}
 	return -1, nil

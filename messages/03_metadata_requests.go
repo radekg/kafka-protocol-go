@@ -129,6 +129,12 @@ func init3MetadataRequest() []schema.Schema {
 }
 
 const (
+	// FieldMetadataRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestTopicsName = "Name"
+	// FieldMetadataRequestAllowAutoTopicCreation is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
+	// FieldMetadataRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 	// FieldMetadataRequestIncludeTopicAuthorizedOperations is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
 	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
@@ -139,12 +145,6 @@ const (
 	FieldMetadataRequestTopicsTopicId = "TopicId"
 	// FieldMetadataRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestTopics = "Topics"
-	// FieldMetadataRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestTopicsName = "Name"
-	// FieldMetadataRequestAllowAutoTopicCreation is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
-	// FieldMetadataRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataRequest.json

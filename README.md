@@ -33,23 +33,23 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [x] `1`: Fetch
 - [x] `2`: ListOffsets
 - [x] `3`: Metadata
-- [ ] `4`: LeaderAndIsr
-- [ ] `5`: StopReplica
-- [ ] `6`: UpdateMetadata
-- [ ] `7`: ControlledShutdown
+- [x] `4`: LeaderAndIsr
+- [x] `5`: StopReplica
+- [x] `6`: UpdateMetadata
+- [x] `7`: ControlledShutdown
 - [x] `8`: OffsetCommit
 - [x] `9`: OffsetFetch
 - [x] `10`: FindCoordinator
-- [ ] `11`: JoinGroup
+- [x] `11`: JoinGroup
 - [x] `12`: Heartbeat
-- [ ] `13`: LeaveGroup
-- [ ] `14`: SyncGroup
-- [ ] `15`: DescribeGroups
-- [ ] `16`: ListGroups
-- [ ] `17`: SaslHandshake
+- [x] `13`: LeaveGroup
+- [x] `14`: SyncGroup
+- [x] `15`: DescribeGroups
+- [x] `16`: ListGroups
+- [x] `17`: SaslHandshake
 - [x] `18`: ApiVersions
-- [ ] `19`: CreateTopics
-- [ ] `20`: DeleteTopics
+- [x] `19`: CreateTopics
+- [x] `20`: DeleteTopics
 - [ ] `21`: DeleteRecords
 - [ ] `22`: InitProducerId
 - [ ] `23`: OffsetForLeaderEpoch

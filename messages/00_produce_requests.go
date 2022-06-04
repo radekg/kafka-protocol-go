@@ -150,28 +150,28 @@ func init0ProduceRequest() []schema.Schema {
 }
 
 const (
-	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataTags = "Tags"
+	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestAcks = "Acks"
 	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTags = "Tags"
-	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataName = "Name"
+	// FieldProduceRequestTopicDataPartitionData is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataPartitionData = "PartitionData"
 	// FieldProduceRequestTopicDataPartitionDataIndex is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
 	// FieldProduceRequestTopicDataPartitionDataRecords is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicDataPartitionDataRecords = "Records"
-	// FieldProduceRequestTopicDataPartitionDataTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
 	// FieldProduceRequestTransactionalId is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTransactionalId = "TransactionalId"
-	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestAcks = "Acks"
+	// FieldProduceRequestTopicDataPartitionDataTags is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
 	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTimeoutMs = "TimeoutMs"
 	// FieldProduceRequestTopicData is a field name that can be used to resolve the correct struct field.
 	FieldProduceRequestTopicData = "TopicData"
-	// FieldProduceRequestTopicDataPartitionData is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionData = "PartitionData"
+	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataName = "Name"
+	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
+	FieldProduceRequestTopicDataTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceRequest.json

@@ -40,6 +40,7 @@ var (
 
 	// String types:
 	TypeStr                = &Str{}
+	TypeStrArray           = &StrArray{}
 	TypeStrCompact         = &StrCompact{}
 	TypeStrCompactArray    = &StrCompactArray{}
 	TypeStrCompactNullable = &StrCompactNullable{}
