@@ -165,40 +165,40 @@ func init0ProduceResponse() []schema.Schema {
 }
 
 const (
-	// FieldProduceResponseResponses is: Each produce response
-	FieldProduceResponseResponses = "Responses"
-	// FieldProduceResponseResponsesName is: The topic name
-	FieldProduceResponseResponsesName = "Name"
-	// FieldProduceResponseResponsesPartitionResponses is: Each partition that we produced to within the topic.
-	FieldProduceResponseResponsesPartitionResponses = "PartitionResponses"
-	// FieldProduceResponseResponsesPartitionResponsesIndex is: The partition index.
-	FieldProduceResponseResponsesPartitionResponsesIndex = "Index"
-	// FieldProduceResponseResponsesPartitionResponsesErrorCode is: The error code, or 0 if there was no error.
-	FieldProduceResponseResponsesPartitionResponsesErrorCode = "ErrorCode"
-	// FieldProduceResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
-	FieldProduceResponseThrottleTimeMs = "ThrottleTimeMs"
-	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage is: The error message of the record that caused the batch to be dropped
-	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage = "BatchIndexErrorMessage"
-	// FieldProduceResponseResponsesPartitionResponsesTags is: The tagged fields.
-	FieldProduceResponseResponsesPartitionResponsesTags = "Tags"
-	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex is: The batch index of the record that cause the batch to be dropped
-	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex = "BatchIndex"
-	// FieldProduceResponseResponsesPartitionResponsesErrorMessage is: The global error message summarizing the common root cause of the records that caused the batch to be dropped
-	FieldProduceResponseResponsesPartitionResponsesErrorMessage = "ErrorMessage"
-	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags is: The tagged fields.
-	FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags = "Tags"
 	// FieldProduceResponseResponsesTags is: The tagged fields.
 	FieldProduceResponseResponsesTags = "Tags"
-	// FieldProduceResponseTags is: The tagged fields.
-	FieldProduceResponseTags = "Tags"
-	// FieldProduceResponseResponsesPartitionResponsesBaseOffset is: The base offset.
-	FieldProduceResponseResponsesPartitionResponsesBaseOffset = "BaseOffset"
-	// FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs is: The timestamp returned by broker after appending the messages. If CreateTime is used for the topic, the timestamp will be -1.  If LogAppendTime is used for the topic, the timestamp will be the broker local time when the messages are appended.
-	FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs = "LogAppendTimeMs"
-	// FieldProduceResponseResponsesPartitionResponsesLogStartOffset is: The log start offset.
-	FieldProduceResponseResponsesPartitionResponsesLogStartOffset = "LogStartOffset"
+	// FieldProduceResponseResponses is: Each produce response
+	FieldProduceResponseResponses = "Responses"
+	// FieldProduceResponseResponsesPartitionResponses is: Each partition that we produced to within the topic.
+	FieldProduceResponseResponsesPartitionResponses = "PartitionResponses"
+	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex is: The batch index of the record that cause the batch to be dropped
+	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex = "BatchIndex"
+	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage is: The error message of the record that caused the batch to be dropped
+	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage = "BatchIndexErrorMessage"
+	// FieldProduceResponseResponsesPartitionResponsesErrorMessage is: The global error message summarizing the common root cause of the records that caused the batch to be dropped
+	FieldProduceResponseResponsesPartitionResponsesErrorMessage = "ErrorMessage"
+	// FieldProduceResponseResponsesPartitionResponsesTags is: The tagged fields.
+	FieldProduceResponseResponsesPartitionResponsesTags = "Tags"
+	// FieldProduceResponseResponsesPartitionResponsesErrorCode is: The error code, or 0 if there was no error.
+	FieldProduceResponseResponsesPartitionResponsesErrorCode = "ErrorCode"
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrors is: The batch indices of records that caused the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrors = "RecordErrors"
+	// FieldProduceResponseResponsesPartitionResponsesBaseOffset is: The base offset.
+	FieldProduceResponseResponsesPartitionResponsesBaseOffset = "BaseOffset"
+	// FieldProduceResponseResponsesPartitionResponsesLogStartOffset is: The log start offset.
+	FieldProduceResponseResponsesPartitionResponsesLogStartOffset = "LogStartOffset"
+	// FieldProduceResponseResponsesName is: The topic name
+	FieldProduceResponseResponsesName = "Name"
+	// FieldProduceResponseResponsesPartitionResponsesIndex is: The partition index.
+	FieldProduceResponseResponsesPartitionResponsesIndex = "Index"
+	// FieldProduceResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldProduceResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs is: The timestamp returned by broker after appending the messages. If CreateTime is used for the topic, the timestamp will be -1.  If LogAppendTime is used for the topic, the timestamp will be the broker local time when the messages are appended.
+	FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs = "LogAppendTimeMs"
+	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags is: The tagged fields.
+	FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags = "Tags"
+	// FieldProduceResponseTags is: The tagged fields.
+	FieldProduceResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceResponse.json

@@ -47,18 +47,18 @@ func init7ControlledShutdownResponse() []schema.Schema {
 }
 
 const (
-	// FieldControlledShutdownResponseRemainingPartitionsPartitionIndex is: The index of the partition.
-	FieldControlledShutdownResponseRemainingPartitionsPartitionIndex = "PartitionIndex"
-	// FieldControlledShutdownResponseRemainingPartitionsTags is: The tagged fields.
-	FieldControlledShutdownResponseRemainingPartitionsTags = "Tags"
-	// FieldControlledShutdownResponseTags is: The tagged fields.
-	FieldControlledShutdownResponseTags = "Tags"
 	// FieldControlledShutdownResponseErrorCode is: The top-level error code.
 	FieldControlledShutdownResponseErrorCode = "ErrorCode"
 	// FieldControlledShutdownResponseRemainingPartitions is: The partitions that the broker still leads.
 	FieldControlledShutdownResponseRemainingPartitions = "RemainingPartitions"
 	// FieldControlledShutdownResponseRemainingPartitionsTopicName is: The name of the topic.
 	FieldControlledShutdownResponseRemainingPartitionsTopicName = "TopicName"
+	// FieldControlledShutdownResponseRemainingPartitionsPartitionIndex is: The index of the partition.
+	FieldControlledShutdownResponseRemainingPartitionsPartitionIndex = "PartitionIndex"
+	// FieldControlledShutdownResponseRemainingPartitionsTags is: The tagged fields.
+	FieldControlledShutdownResponseRemainingPartitionsTags = "Tags"
+	// FieldControlledShutdownResponseTags is: The tagged fields.
+	FieldControlledShutdownResponseTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ControlledShutdownResponse.json

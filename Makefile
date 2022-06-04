@@ -76,4 +76,23 @@ generate-response-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetCommitResponse > $(CURRENT_DIR)messages/08_offsetcommit_responses.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetFetchResponse > $(CURRENT_DIR)messages/09_offsetfetch_responses.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=FindCoordinatorResponse > $(CURRENT_DIR)messages/10_findcoordinator_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=JoinGroupResponse > $(CURRENT_DIR)messages/11_joingroup_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=HeartbeatResponse > $(CURRENT_DIR)messages/12_heartbeat_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=LeaveGroupResponse > $(CURRENT_DIR)messages/13_leavegroup_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=SyncGroupResponse > $(CURRENT_DIR)messages/14_syncgroup_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeGroupsResponse > $(CURRENT_DIR)messages/15_describegroups_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListGroupsResponse > $(CURRENT_DIR)messages/16_listgroups_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=SaslHandshakeResponse > $(CURRENT_DIR)messages/17_saslhandshake_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ApiVersionsResponse > $(CURRENT_DIR)messages/18_apiversions_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=CreateTopicsResponse > $(CURRENT_DIR)messages/19_createtopics_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteTopicsResponse > $(CURRENT_DIR)messages/20_deletetopics_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DeleteRecordsResponse > $(CURRENT_DIR)messages/21_deleterecords_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=InitProducerIdResponse > $(CURRENT_DIR)messages/22_initproducerid_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetForLeaderEpochResponse > $(CURRENT_DIR)messages/23_offsetforleaderepoch_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AddPartitionsToTxnResponse > $(CURRENT_DIR)messages/24_addpartitionstotxn_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AddOffsetsToTxnResponse > $(CURRENT_DIR)messages/25_addoffsetstotxn_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=EndTxnResponse > $(CURRENT_DIR)messages/26_endtxn_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=WriteTxnMarkersResponse > $(CURRENT_DIR)messages/27_writetxnmarkers_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=TxnOffsetCommitResponse > $(CURRENT_DIR)messages/28_txnoffsetcommit_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=DescribeAclsResponse > $(CURRENT_DIR)messages/29_describeacls_responses.go
 	go fmt $(CURRENT_DIR)/messages/...

@@ -1,0 +1,79 @@
+package messages
+
+import "github.com/radekg/kafka-protocol-go/schema"
+
+func init25AddOffsetsToTxnResponse() []schema.Schema {
+
+	return []schema.Schema{
+
+		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 0
+		schema.NewSchema("AddOffsetsToTxnResponsev0",
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
+		),
+
+		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 1
+		schema.NewSchema("AddOffsetsToTxnResponsev1",
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
+		),
+
+		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 2
+		schema.NewSchema("AddOffsetsToTxnResponsev2",
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
+		),
+
+		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 3
+		schema.NewSchema("AddOffsetsToTxnResponsev3",
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.SchemaTaggedFields{Name: FieldAddOffsetsToTxnResponseTags},
+		),
+	}
+}
+
+const (
+	// FieldAddOffsetsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldAddOffsetsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldAddOffsetsToTxnResponseErrorCode is: The response error code, or 0 if there was no error.
+	FieldAddOffsetsToTxnResponseErrorCode = "ErrorCode"
+	// FieldAddOffsetsToTxnResponseTags is: The tagged fields.
+	FieldAddOffsetsToTxnResponseTags = "Tags"
+)
+
+// Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddOffsetsToTxnResponse.json
+const originalAddOffsetsToTxnResponseInput = `// Licensed to the Apache Software Foundation (ASF) under one or more
+// contributor license agreements.  See the NOTICE file distributed with
+// this work for additional information regarding copyright ownership.
+// The ASF licenses this file to You under the Apache License, Version 2.0
+// (the "License"); you may not use this file except in compliance with
+// the License.  You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "apiKey": 25,
+  "type": "response",
+  "name": "AddOffsetsToTxnResponse",
+  // Starting in version 1, on quota violation brokers send out responses before throttling.
+  //
+  // Version 2 adds the support for new error code PRODUCER_FENCED.
+  //
+  // Version 3 enables flexible versions.
+  "validVersions": "0-3",
+  "flexibleVersions": "3+",
+  "fields": [
+    { "name": "ThrottleTimeMs", "type": "int32", "versions": "0+",
+      "about": "Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota." },
+    { "name": "ErrorCode", "type": "int16", "versions": "0+",
+      "about": "The response error code, or 0 if there was no error." }
+  ]
+}
+`

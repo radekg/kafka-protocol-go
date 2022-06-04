@@ -53,6 +53,10 @@ func init5StopReplicaResponse() []schema.Schema {
 }
 
 const (
+	// FieldStopReplicaResponseErrorCode is: The top-level error code, or 0 if there was no top-level error.
+	FieldStopReplicaResponseErrorCode = "ErrorCode"
+	// FieldStopReplicaResponsePartitionErrors is: The responses for each partition.
+	FieldStopReplicaResponsePartitionErrors = "PartitionErrors"
 	// FieldStopReplicaResponsePartitionErrorsTopicName is: The topic name.
 	FieldStopReplicaResponsePartitionErrorsTopicName = "TopicName"
 	// FieldStopReplicaResponsePartitionErrorsPartitionIndex is: The partition index.
@@ -63,10 +67,6 @@ const (
 	FieldStopReplicaResponsePartitionErrorsTags = "Tags"
 	// FieldStopReplicaResponseTags is: The tagged fields.
 	FieldStopReplicaResponseTags = "Tags"
-	// FieldStopReplicaResponseErrorCode is: The top-level error code, or 0 if there was no top-level error.
-	FieldStopReplicaResponseErrorCode = "ErrorCode"
-	// FieldStopReplicaResponsePartitionErrors is: The responses for each partition.
-	FieldStopReplicaResponsePartitionErrors = "PartitionErrors"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/StopReplicaResponse.json
