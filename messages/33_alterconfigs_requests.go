@@ -51,26 +51,26 @@ func init33AlterConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterConfigsRequestResourcesResourceName is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
-	// FieldAlterConfigsRequestResourcesConfigsValue is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
-	// FieldAlterConfigsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
-	// FieldAlterConfigsRequestResourcesConfigsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
-	// FieldAlterConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesTags = "Tags"
-	// FieldAlterConfigsRequestResourcesResourceType is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
-	// FieldAlterConfigsRequestResourcesConfigs is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesConfigs = "Configs"
-	// FieldAlterConfigsRequestResourcesConfigsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesConfigsName = "Name"
-	// FieldAlterConfigsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestTags = "Tags"
-	// FieldAlterConfigsRequestResources is a field name that can be used to resolve the correct struct field.
+	// FieldAlterConfigsRequestResources is: The updates for each resource.
 	FieldAlterConfigsRequestResources = "Resources"
+	// FieldAlterConfigsRequestResourcesConfigsName is: The configuration key name.
+	FieldAlterConfigsRequestResourcesConfigsName = "Name"
+	// FieldAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
+	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
+	// FieldAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
+	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
+	// FieldAlterConfigsRequestTags is: The tagged fields.
+	FieldAlterConfigsRequestTags = "Tags"
+	// FieldAlterConfigsRequestResourcesResourceType is: The resource type.
+	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
+	// FieldAlterConfigsRequestResourcesResourceName is: The resource name.
+	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
+	// FieldAlterConfigsRequestResourcesConfigs is: The configurations.
+	FieldAlterConfigsRequestResourcesConfigs = "Configs"
+	// FieldAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
+	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
+	// FieldAlterConfigsRequestResourcesTags is: The tagged fields.
+	FieldAlterConfigsRequestResourcesTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterConfigsRequest.json

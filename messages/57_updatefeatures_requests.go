@@ -21,19 +21,19 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade is: When set to true, the finalized feature version level is allowed to be downgraded/deleted. The downgrade request will fail if the new maximum version level is a value that's not lower than the existing maximum finalized version level.
 	FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade = "AllowDowngrade"
-	// FieldUpdateFeaturesRequestFeatureUpdatesTags is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestFeatureUpdatesTags is: The tagged fields.
 	FieldUpdateFeaturesRequestFeatureUpdatesTags = "Tags"
-	// FieldUpdateFeaturesRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestTags is: The tagged fields.
 	FieldUpdateFeaturesRequestTags = "Tags"
-	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequesttimeoutMs is: How long to wait in milliseconds before timing out the request.
 	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
-	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestFeatureUpdates is: The list of updates to finalized features.
 	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
-	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is: The name of the finalized feature to be updated.
 	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
-	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is: The new maximum version level for the finalized feature. A value >= 1 is valid. A value < 1, is special, and can be used to request the deletion of the finalized feature.
 	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
 )
 

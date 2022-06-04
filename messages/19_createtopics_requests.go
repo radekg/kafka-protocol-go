@@ -172,38 +172,38 @@ func init19CreateTopicsRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateTopicsRequestTopicsConfigsName is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsName = "Name"
-	// FieldCreateTopicsRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
-	// FieldCreateTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopics = "Topics"
-	// FieldCreateTopicsRequestTopicsNumPartitions is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
-	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
-	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
-	// FieldCreateTopicsRequestvalidateOnly is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
-	// FieldCreateTopicsRequestTopicsAssignmentsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsConfigsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
-	// FieldCreateTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsTags = "Tags"
-	// FieldCreateTopicsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTags = "Tags"
-	// FieldCreateTopicsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsName = "Name"
-	// FieldCreateTopicsRequestTopicsReplicationFactor is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsReplicationFactor = "ReplicationFactor"
-	// FieldCreateTopicsRequestTopicsConfigsValue is a field name that can be used to resolve the correct struct field.
-	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
-	// FieldCreateTopicsRequestTopicsAssignments is a field name that can be used to resolve the correct struct field.
+	// FieldCreateTopicsRequestTopicsAssignments is: The manual partition assignment, or the empty array if we are using automatic assignment.
 	FieldCreateTopicsRequestTopicsAssignments = "Assignments"
-	// FieldCreateTopicsRequestTopicsConfigs is a field name that can be used to resolve the correct struct field.
+	// FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex is: The partition index.
+	FieldCreateTopicsRequestTopicsAssignmentsPartitionIndex = "PartitionIndex"
+	// FieldCreateTopicsRequestTopicsConfigs is: The custom topic configurations to set.
 	FieldCreateTopicsRequestTopicsConfigs = "Configs"
+	// FieldCreateTopicsRequestTopicsConfigsValue is: The configuration value.
+	FieldCreateTopicsRequestTopicsConfigsValue = "Value"
+	// FieldCreateTopicsRequestTopicsConfigsName is: The configuration name.
+	FieldCreateTopicsRequestTopicsConfigsName = "Name"
+	// FieldCreateTopicsRequestTopicsAssignmentsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsAssignmentsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsConfigsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsConfigsTags = "Tags"
+	// FieldCreateTopicsRequestTopicsTags is: The tagged fields.
+	FieldCreateTopicsRequestTopicsTags = "Tags"
+	// FieldCreateTopicsRequestTags is: The tagged fields.
+	FieldCreateTopicsRequestTags = "Tags"
+	// FieldCreateTopicsRequestTopics is: The topics to create.
+	FieldCreateTopicsRequestTopics = "Topics"
+	// FieldCreateTopicsRequestTopicsName is: The topic name.
+	FieldCreateTopicsRequestTopicsName = "Name"
+	// FieldCreateTopicsRequestTopicsNumPartitions is: The number of partitions to create in the topic, or -1 if we are either specifying a manual partition assignment or using the default partitions.
+	FieldCreateTopicsRequestTopicsNumPartitions = "NumPartitions"
+	// FieldCreateTopicsRequestTopicsReplicationFactor is: The number of replicas to create for each partition in the topic, or -1 if we are either specifying a manual partition assignment or using the default replication factor.
+	FieldCreateTopicsRequestTopicsReplicationFactor = "ReplicationFactor"
+	// FieldCreateTopicsRequestvalidateOnly is: If true, check that the topics can be created as specified, but don't create anything.
+	FieldCreateTopicsRequestvalidateOnly = "validateOnly"
+	// FieldCreateTopicsRequestTopicsAssignmentsBrokerIds is: The brokers to place the partition on.
+	FieldCreateTopicsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreateTopicsRequesttimeoutMs is: How long to wait in milliseconds before timing out the request.
+	FieldCreateTopicsRequesttimeoutMs = "timeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateTopicsRequest.json

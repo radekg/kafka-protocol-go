@@ -47,15 +47,15 @@ func init12HeartbeatRequest() []schema.Schema {
 }
 
 const (
-	// FieldHeartbeatRequestGroupId is a field name that can be used to resolve the correct struct field.
+	// FieldHeartbeatRequestGroupId is: The group id.
 	FieldHeartbeatRequestGroupId = "GroupId"
-	// FieldHeartbeatRequestGenerationId is a field name that can be used to resolve the correct struct field.
+	// FieldHeartbeatRequestGenerationId is: The generation of the group.
 	FieldHeartbeatRequestGenerationId = "GenerationId"
-	// FieldHeartbeatRequestMemberId is a field name that can be used to resolve the correct struct field.
+	// FieldHeartbeatRequestMemberId is: The member ID.
 	FieldHeartbeatRequestMemberId = "MemberId"
-	// FieldHeartbeatRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
+	// FieldHeartbeatRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldHeartbeatRequestGroupInstanceId = "GroupInstanceId"
-	// FieldHeartbeatRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldHeartbeatRequestTags is: The tagged fields.
 	FieldHeartbeatRequestTags = "Tags"
 )
 

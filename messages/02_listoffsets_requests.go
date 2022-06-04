@@ -121,28 +121,28 @@ func init2ListOffsetsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTags = "Tags"
-	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopics = "Topics"
-	// FieldListOffsetsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsName = "Name"
-	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
-	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
-	// FieldListOffsetsRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
-	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsTags = "Tags"
-	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
+	// FieldListOffsetsRequestReplicaId is: The broker ID of the requestor, or -1 if this request is being made by a normal consumer.
 	FieldListOffsetsRequestReplicaId = "ReplicaId"
-	// FieldListOffsetsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	// FieldListOffsetsRequestTopicsName is: The topic name.
+	FieldListOffsetsRequestTopicsName = "Name"
+	// FieldListOffsetsRequestTopicsPartitionsTags is: The tagged fields.
+	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
+	// FieldListOffsetsRequestTopicsTags is: The tagged fields.
+	FieldListOffsetsRequestTopicsTags = "Tags"
+	// FieldListOffsetsRequestTopics is: Each topic in the request.
+	FieldListOffsetsRequestTopics = "Topics"
+	// FieldListOffsetsRequestTopicsPartitions is: Each partition in the request.
 	FieldListOffsetsRequestTopicsPartitions = "Partitions"
-	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldListOffsetsRequestTopicsPartitionsTimestamp is: The current timestamp.
+	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
+	// FieldListOffsetsRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
+	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
+	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch.
+	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+	// FieldListOffsetsRequestTags is: The tagged fields.
+	FieldListOffsetsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListOffsetsRequest.json

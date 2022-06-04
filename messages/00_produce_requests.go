@@ -149,28 +149,28 @@ func init0ProduceRequest() []schema.Schema {
 }
 
 const (
-	// FieldProduceRequestTopicDataPartitionDataIndex is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
-	// FieldProduceRequestTopicDataPartitionDataTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
-	// FieldProduceRequestTopicDataTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataTags = "Tags"
-	// FieldProduceRequestAcks is a field name that can be used to resolve the correct struct field.
+	// FieldProduceRequestAcks is: The number of acknowledgments the producer requires the leader to have received before considering a request complete. Allowed values: 0 for no acknowledgments, 1 for only the leader and -1 for the full ISR.
 	FieldProduceRequestAcks = "Acks"
-	// FieldProduceRequestTopicData is a field name that can be used to resolve the correct struct field.
+	// FieldProduceRequestTopicData is: Each topic to produce to.
 	FieldProduceRequestTopicData = "TopicData"
-	// FieldProduceRequestTopicDataName is a field name that can be used to resolve the correct struct field.
+	// FieldProduceRequestTopicDataName is: The topic name.
 	FieldProduceRequestTopicDataName = "Name"
-	// FieldProduceRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTransactionalId = "TransactionalId"
-	// FieldProduceRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTags = "Tags"
-	// FieldProduceRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTimeoutMs = "TimeoutMs"
-	// FieldProduceRequestTopicDataPartitionData is a field name that can be used to resolve the correct struct field.
-	FieldProduceRequestTopicDataPartitionData = "PartitionData"
-	// FieldProduceRequestTopicDataPartitionDataRecords is a field name that can be used to resolve the correct struct field.
+	// FieldProduceRequestTopicDataPartitionDataRecords is: The record data to be produced.
 	FieldProduceRequestTopicDataPartitionDataRecords = "Records"
+	// FieldProduceRequestTransactionalId is: The transactional ID, or null if the producer is not transactional.
+	FieldProduceRequestTransactionalId = "TransactionalId"
+	// FieldProduceRequestTopicDataPartitionDataTags is: The tagged fields.
+	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
+	// FieldProduceRequestTimeoutMs is: The timeout to await a response in milliseconds.
+	FieldProduceRequestTimeoutMs = "TimeoutMs"
+	// FieldProduceRequestTopicDataPartitionData is: Each partition to produce to.
+	FieldProduceRequestTopicDataPartitionData = "PartitionData"
+	// FieldProduceRequestTopicDataPartitionDataIndex is: The partition index.
+	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
+	// FieldProduceRequestTopicDataTags is: The tagged fields.
+	FieldProduceRequestTopicDataTags = "Tags"
+	// FieldProduceRequestTags is: The tagged fields.
+	FieldProduceRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ProduceRequest.json

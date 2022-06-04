@@ -15,9 +15,9 @@ func init60DescribeClusterRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeClusterRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeClusterRequestIncludeClusterAuthorizedOperations is: Whether to include cluster authorized operations.
 	FieldDescribeClusterRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
-	// FieldDescribeClusterRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeClusterRequestTags is: The tagged fields.
 	FieldDescribeClusterRequestTags = "Tags"
 )
 

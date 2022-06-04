@@ -40,20 +40,20 @@ func init43ElectLeadersRequest() []schema.Schema {
 }
 
 const (
-	// FieldElectLeadersRequestTopicPartitionsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldElectLeadersRequestTopicPartitionsPartitions = "Partitions"
-	// FieldElectLeadersRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestTimeoutMs is: The time in ms to wait for the election to complete.
 	FieldElectLeadersRequestTimeoutMs = "TimeoutMs"
-	// FieldElectLeadersRequestElectionType is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestElectionType is: Type of elections to conduct for the partition. A value of '0' elects the preferred replica. A value of '1' elects the first live replica if there are no in-sync replica.
 	FieldElectLeadersRequestElectionType = "ElectionType"
-	// FieldElectLeadersRequestTopicPartitionsTags is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestTopicPartitionsTags is: The tagged fields.
 	FieldElectLeadersRequestTopicPartitionsTags = "Tags"
-	// FieldElectLeadersRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestTags is: The tagged fields.
 	FieldElectLeadersRequestTags = "Tags"
-	// FieldElectLeadersRequestTopicPartitions is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestTopicPartitions is: The topic partitions to elect leaders.
 	FieldElectLeadersRequestTopicPartitions = "TopicPartitions"
-	// FieldElectLeadersRequestTopicPartitionsTopic is a field name that can be used to resolve the correct struct field.
+	// FieldElectLeadersRequestTopicPartitionsTopic is: The name of a topic.
 	FieldElectLeadersRequestTopicPartitionsTopic = "Topic"
+	// FieldElectLeadersRequestTopicPartitionsPartitions is: The partitions of this topic whose leader should be elected.
+	FieldElectLeadersRequestTopicPartitionsPartitions = "Partitions"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ElectLeadersRequest.json

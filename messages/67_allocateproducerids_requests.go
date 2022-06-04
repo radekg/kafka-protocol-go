@@ -16,12 +16,12 @@ func init67AllocateProducerIdsRequest() []schema.Schema {
 }
 
 const (
-	// FieldAllocateProducerIdsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAllocateProducerIdsRequestTags = "Tags"
-	// FieldAllocateProducerIdsRequestBrokerId is a field name that can be used to resolve the correct struct field.
+	// FieldAllocateProducerIdsRequestBrokerId is: The ID of the requesting broker
 	FieldAllocateProducerIdsRequestBrokerId = "BrokerId"
-	// FieldAllocateProducerIdsRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldAllocateProducerIdsRequestBrokerEpoch is: The epoch of the requesting broker
 	FieldAllocateProducerIdsRequestBrokerEpoch = "BrokerEpoch"
+	// FieldAllocateProducerIdsRequestTags is: The tagged fields.
+	FieldAllocateProducerIdsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AllocateProducerIdsRequest.json

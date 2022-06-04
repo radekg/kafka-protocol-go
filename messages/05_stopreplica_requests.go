@@ -60,40 +60,40 @@ func init5StopReplicaRequest() []schema.Schema {
 }
 
 const (
-	// FieldStopReplicaRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestControllerId = "ControllerId"
-	// FieldStopReplicaRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicsName = "Name"
-	// FieldStopReplicaRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTags = "Tags"
-	// FieldStopReplicaRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldStopReplicaRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesTags = "Tags"
-	// FieldStopReplicaRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
-	// FieldStopReplicaRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldStopReplicaRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicsTags = "Tags"
-	// FieldStopReplicaRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is a field name that can be used to resolve the correct struct field.
+	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is: Whether this partition should be deleted.
 	FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition = "DeletePartition"
-	// FieldStopReplicaRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
-	// FieldStopReplicaRequestTopicStates is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStates = "TopicStates"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestTopicStatesPartitionStatesTags = "Tags"
-	// FieldStopReplicaRequestDeletePartitions is a field name that can be used to resolve the correct struct field.
-	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
-	// FieldStopReplicaRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldStopReplicaRequestControllerId is: The controller id.
+	FieldStopReplicaRequestControllerId = "ControllerId"
+	// FieldStopReplicaRequestControllerEpoch is: The controller epoch.
+	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
+	// FieldStopReplicaRequestTopics is: The topics to stop.
 	FieldStopReplicaRequestTopics = "Topics"
-	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldStopReplicaRequestTopicsPartitionIndexes is: The partition indexes.
+	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldStopReplicaRequestTopicsTags is: The tagged fields.
+	FieldStopReplicaRequestTopicsTags = "Tags"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
+	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
+	// FieldStopReplicaRequestBrokerEpoch is: The broker epoch.
+	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
+	// FieldStopReplicaRequestTags is: The tagged fields.
+	FieldStopReplicaRequestTags = "Tags"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesTags is: The tagged fields.
+	FieldStopReplicaRequestTopicStatesPartitionStatesTags = "Tags"
+	// FieldStopReplicaRequestTopicStatesTags is: The tagged fields.
+	FieldStopReplicaRequestTopicStatesTags = "Tags"
+	// FieldStopReplicaRequestDeletePartitions is: Whether these partitions should be deleted.
+	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
+	// FieldStopReplicaRequestTopicsName is: The topic name.
+	FieldStopReplicaRequestTopicsName = "Name"
+	// FieldStopReplicaRequestTopicStates is: Each topic.
+	FieldStopReplicaRequestTopicStates = "TopicStates"
+	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch.
 	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
+	// FieldStopReplicaRequestTopicStatesTopicName is: The topic name.
+	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
+	// FieldStopReplicaRequestTopicStatesPartitionStates is: The state of each partition
+	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/StopReplicaRequest.json

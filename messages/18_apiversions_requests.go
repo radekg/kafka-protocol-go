@@ -22,11 +22,11 @@ func init18ApiVersionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldApiVersionsRequestClientSoftwareVersion is a field name that can be used to resolve the correct struct field.
+	// FieldApiVersionsRequestClientSoftwareVersion is: The version of the client.
 	FieldApiVersionsRequestClientSoftwareVersion = "ClientSoftwareVersion"
-	// FieldApiVersionsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldApiVersionsRequestTags is: The tagged fields.
 	FieldApiVersionsRequestTags = "Tags"
-	// FieldApiVersionsRequestClientSoftwareName is a field name that can be used to resolve the correct struct field.
+	// FieldApiVersionsRequestClientSoftwareName is: The name of the client.
 	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 )
 

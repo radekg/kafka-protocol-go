@@ -153,36 +153,36 @@ func init8OffsetCommitRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldOffsetCommitRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsTags = "Tags"
-	// FieldOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTags = "Tags"
-	// FieldOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopics = "Topics"
-	// FieldOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsName = "Name"
-	// FieldOffsetCommitRequestRetentionTimeMs is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
-	// FieldOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
-	// FieldOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGroupId = "GroupId"
-	// FieldOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetCommitRequestTopicsPartitions is: Each partition to commit offsets for.
 	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
-	// FieldOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
 	FieldOffsetCommitRequestMemberId = "MemberId"
-	// FieldOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetCommitRequestTopicsName is: The topic name.
+	FieldOffsetCommitRequestTopicsName = "Name"
+	// FieldOffsetCommitRequestTags is: The tagged fields.
+	FieldOffsetCommitRequestTags = "Tags"
+	// FieldOffsetCommitRequestGroupId is: The unique group identifier.
+	FieldOffsetCommitRequestGroupId = "GroupId"
+	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is: The partition index.
+	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+	// FieldOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
+	// FieldOffsetCommitRequestTopicsTags is: The tagged fields.
+	FieldOffsetCommitRequestTopicsTags = "Tags"
+	// FieldOffsetCommitRequestTopics is: The topics to commit offsets for.
+	FieldOffsetCommitRequestTopics = "Topics"
+	// FieldOffsetCommitRequestGenerationId is: The generation of the group.
+	FieldOffsetCommitRequestGenerationId = "GenerationId"
+	// FieldOffsetCommitRequestRetentionTimeMs is: The time period in ms to retain the offset.
+	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of this partition.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetCommitRequest.json

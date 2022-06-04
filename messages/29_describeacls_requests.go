@@ -42,22 +42,22 @@ func init29DescribeAclsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeAclsRequestOperation is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestOperation = "Operation"
-	// FieldDescribeAclsRequestPermissionType is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestPermissionType = "PermissionType"
-	// FieldDescribeAclsRequestPatternTypeFilter is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
-	// FieldDescribeAclsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestTags = "Tags"
-	// FieldDescribeAclsRequestResourceTypeFilter is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeAclsRequestResourceTypeFilter is: The resource type.
 	FieldDescribeAclsRequestResourceTypeFilter = "ResourceTypeFilter"
-	// FieldDescribeAclsRequestResourceNameFilter is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeAclsRequestResourceNameFilter is: The resource name, or null to match any resource name.
 	FieldDescribeAclsRequestResourceNameFilter = "ResourceNameFilter"
-	// FieldDescribeAclsRequestPrincipalFilter is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeAclsRequestPrincipalFilter is: The principal to match, or null to match any principal.
 	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
-	// FieldDescribeAclsRequestHostFilter is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeAclsRequestHostFilter is: The host to match, or null to match any host.
 	FieldDescribeAclsRequestHostFilter = "HostFilter"
+	// FieldDescribeAclsRequestOperation is: The operation to match.
+	FieldDescribeAclsRequestOperation = "Operation"
+	// FieldDescribeAclsRequestPermissionType is: The permission type to match.
+	FieldDescribeAclsRequestPermissionType = "PermissionType"
+	// FieldDescribeAclsRequestPatternTypeFilter is: The resource pattern to match.
+	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
+	// FieldDescribeAclsRequestTags is: The tagged fields.
+	FieldDescribeAclsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeAclsRequest.json

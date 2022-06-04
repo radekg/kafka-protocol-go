@@ -59,22 +59,22 @@ func init13LeaveGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaveGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestTags = "Tags"
-	// FieldLeaveGroupRequestMembersReason is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMembersReason = "Reason"
-	// FieldLeaveGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestGroupId = "GroupId"
-	// FieldLeaveGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMemberId = "MemberId"
-	// FieldLeaveGroupRequestMembers is a field name that can be used to resolve the correct struct field.
+	// FieldLeaveGroupRequestMembers is: List of leaving member identities.
 	FieldLeaveGroupRequestMembers = "Members"
-	// FieldLeaveGroupRequestMembersMemberId is a field name that can be used to resolve the correct struct field.
+	// FieldLeaveGroupRequestMembersMemberId is: The member ID to remove from the group.
 	FieldLeaveGroupRequestMembersMemberId = "MemberId"
-	// FieldLeaveGroupRequestMembersGroupInstanceId is a field name that can be used to resolve the correct struct field.
+	// FieldLeaveGroupRequestMembersGroupInstanceId is: The group instance ID to remove from the group.
 	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
-	// FieldLeaveGroupRequestMembersTags is a field name that can be used to resolve the correct struct field.
+	// FieldLeaveGroupRequestMembersTags is: The tagged fields.
 	FieldLeaveGroupRequestMembersTags = "Tags"
+	// FieldLeaveGroupRequestTags is: The tagged fields.
+	FieldLeaveGroupRequestTags = "Tags"
+	// FieldLeaveGroupRequestMembersReason is: The reason why the member left the group.
+	FieldLeaveGroupRequestMembersReason = "Reason"
+	// FieldLeaveGroupRequestGroupId is: The ID of the group to leave.
+	FieldLeaveGroupRequestGroupId = "GroupId"
+	// FieldLeaveGroupRequestMemberId is: The member ID to remove from the group.
+	FieldLeaveGroupRequestMemberId = "MemberId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaveGroupRequest.json

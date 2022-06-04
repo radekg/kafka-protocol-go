@@ -72,26 +72,26 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetForLeaderEpochRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
-	// FieldOffsetForLeaderEpochRequestReplicaId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsTags = "Tags"
-	// FieldOffsetForLeaderEpochRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopics = "Topics"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is: An epoch used to fence consumers/replicas with old metadata. If the epoch provided by the client is larger than the current epoch known to the broker, then the UNKNOWN_LEADER_EPOCH error code will be returned. If the provided epoch is smaller, then the FENCED_LEADER_EPOCH error code will be returned.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldOffsetForLeaderEpochRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsTags = "Tags"
-	// FieldOffsetForLeaderEpochRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetForLeaderEpochRequestReplicaId is: The broker ID of the follower, of -1 if this request is from a consumer.
+	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsTags is: The tagged fields.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsTags = "Tags"
+	// FieldOffsetForLeaderEpochRequestTags is: The tagged fields.
 	FieldOffsetForLeaderEpochRequestTags = "Tags"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitions is: Each partition to get offsets for.
+	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is: The partition index.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is: The epoch to look up an offset for.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldOffsetForLeaderEpochRequestTopicsTags is: The tagged fields.
+	FieldOffsetForLeaderEpochRequestTopicsTags = "Tags"
+	// FieldOffsetForLeaderEpochRequestTopics is: Each topic to get offsets for.
+	FieldOffsetForLeaderEpochRequestTopics = "Topics"
+	// FieldOffsetForLeaderEpochRequestTopicsTopic is: The topic name.
+	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetForLeaderEpochRequest.json

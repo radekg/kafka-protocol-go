@@ -42,15 +42,15 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 }
 
 const (
-	// FieldAddOffsetsToTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	// FieldAddOffsetsToTxnRequestTransactionalId is: The transactional id corresponding to the transaction.
 	FieldAddOffsetsToTxnRequestTransactionalId = "TransactionalId"
-	// FieldAddOffsetsToTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
+	// FieldAddOffsetsToTxnRequestProducerId is: Current producer id in use by the transactional id.
 	FieldAddOffsetsToTxnRequestProducerId = "ProducerId"
-	// FieldAddOffsetsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldAddOffsetsToTxnRequestProducerEpoch is: Current epoch associated with the producer id.
 	FieldAddOffsetsToTxnRequestProducerEpoch = "ProducerEpoch"
-	// FieldAddOffsetsToTxnRequestGroupId is a field name that can be used to resolve the correct struct field.
+	// FieldAddOffsetsToTxnRequestGroupId is: The unique group identifier.
 	FieldAddOffsetsToTxnRequestGroupId = "GroupId"
-	// FieldAddOffsetsToTxnRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldAddOffsetsToTxnRequestTags is: The tagged fields.
 	FieldAddOffsetsToTxnRequestTags = "Tags"
 )
 

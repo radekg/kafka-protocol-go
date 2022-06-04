@@ -23,9 +23,9 @@ func init16ListGroupsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListGroupsRequestStatesFilter is a field name that can be used to resolve the correct struct field.
+	// FieldListGroupsRequestStatesFilter is: The states of the groups we want to list. If empty all groups are returned with their state.
 	FieldListGroupsRequestStatesFilter = "StatesFilter"
-	// FieldListGroupsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldListGroupsRequestTags is: The tagged fields.
 	FieldListGroupsRequestTags = "Tags"
 )
 

@@ -20,15 +20,15 @@ func init47OffsetDeleteRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetDeleteRequestGroupId is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetDeleteRequestGroupId is: The unique group identifier.
 	FieldOffsetDeleteRequestGroupId = "GroupId"
-	// FieldOffsetDeleteRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetDeleteRequestTopics is: The topics to delete offsets for
 	FieldOffsetDeleteRequestTopics = "Topics"
-	// FieldOffsetDeleteRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetDeleteRequestTopicsName is: The topic name.
 	FieldOffsetDeleteRequestTopicsName = "Name"
-	// FieldOffsetDeleteRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetDeleteRequestTopicsPartitions is: Each partition to delete offsets for.
 	FieldOffsetDeleteRequestTopicsPartitions = "Partitions"
-	// FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 )
 

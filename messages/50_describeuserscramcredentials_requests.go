@@ -18,13 +18,13 @@ func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeUserScramCredentialsRequestUsers is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeUserScramCredentialsRequestUsers is: The users to describe, or null/empty to describe all users.
 	FieldDescribeUserScramCredentialsRequestUsers = "Users"
-	// FieldDescribeUserScramCredentialsRequestUsersName is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeUserScramCredentialsRequestUsersName is: The user name.
 	FieldDescribeUserScramCredentialsRequestUsersName = "Name"
-	// FieldDescribeUserScramCredentialsRequestUsersTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeUserScramCredentialsRequestUsersTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsRequestUsersTags = "Tags"
-	// FieldDescribeUserScramCredentialsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeUserScramCredentialsRequestTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsRequestTags = "Tags"
 )
 

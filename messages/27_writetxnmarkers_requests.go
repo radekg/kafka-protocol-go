@@ -40,28 +40,28 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 }
 
 const (
-	// FieldWriteTxnMarkersRequestMarkersTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopicsTags = "Tags"
-	// FieldWriteTxnMarkersRequestMarkersProducerId is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
-	// FieldWriteTxnMarkersRequestMarkersTransactionResult is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTransactionResult = "TransactionResult"
-	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldWriteTxnMarkersRequestMarkersTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
-	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
-	// FieldWriteTxnMarkersRequestMarkersTags is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
-	// FieldWriteTxnMarkersRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldWriteTxnMarkersRequestTags is: The tagged fields.
 	FieldWriteTxnMarkersRequestTags = "Tags"
-	// FieldWriteTxnMarkersRequestMarkers is a field name that can be used to resolve the correct struct field.
+	// FieldWriteTxnMarkersRequestMarkers is: The transaction markers to be written.
 	FieldWriteTxnMarkersRequestMarkers = "Markers"
-	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
-	// FieldWriteTxnMarkersRequestMarkersTopics is a field name that can be used to resolve the correct struct field.
+	// FieldWriteTxnMarkersRequestMarkersTopics is: Each topic that we want to write transaction marker(s) for.
 	FieldWriteTxnMarkersRequestMarkersTopics = "Topics"
+	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is: The indexes of the partitions to write transaction markers for.
+	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldWriteTxnMarkersRequestMarkersTopicsTags is: The tagged fields.
+	FieldWriteTxnMarkersRequestMarkersTopicsTags = "Tags"
+	// FieldWriteTxnMarkersRequestMarkersTags is: The tagged fields.
+	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
+	// FieldWriteTxnMarkersRequestMarkersProducerId is: The current producer ID.
+	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
+	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is: The current epoch associated with the producer ID.
+	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
+	// FieldWriteTxnMarkersRequestMarkersTransactionResult is: The result of the transaction to write to the partitions (false = ABORT, true = COMMIT).
+	FieldWriteTxnMarkersRequestMarkersTransactionResult = "TransactionResult"
+	// FieldWriteTxnMarkersRequestMarkersTopicsName is: The topic name.
+	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
+	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is: Epoch associated with the transaction state partition hosted by this transaction coordinator
+	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/WriteTxnMarkersRequest.json

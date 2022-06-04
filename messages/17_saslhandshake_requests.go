@@ -19,7 +19,7 @@ func init17SaslHandshakeRequest() []schema.Schema {
 }
 
 const (
-	// FieldSaslHandshakeRequestMechanism is a field name that can be used to resolve the correct struct field.
+	// FieldSaslHandshakeRequestMechanism is: The SASL mechanism chosen by the client.
 	FieldSaslHandshakeRequestMechanism = "Mechanism"
 )
 

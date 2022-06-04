@@ -28,11 +28,11 @@ func init39RenewDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldRenewDelegationTokenRequestHmac is a field name that can be used to resolve the correct struct field.
+	// FieldRenewDelegationTokenRequestHmac is: The HMAC of the delegation token to be renewed.
 	FieldRenewDelegationTokenRequestHmac = "Hmac"
-	// FieldRenewDelegationTokenRequestRenewPeriodMs is a field name that can be used to resolve the correct struct field.
+	// FieldRenewDelegationTokenRequestRenewPeriodMs is: The renewal time period in milliseconds.
 	FieldRenewDelegationTokenRequestRenewPeriodMs = "RenewPeriodMs"
-	// FieldRenewDelegationTokenRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldRenewDelegationTokenRequestTags is: The tagged fields.
 	FieldRenewDelegationTokenRequestTags = "Tags"
 )
 

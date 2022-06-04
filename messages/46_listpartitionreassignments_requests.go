@@ -20,18 +20,18 @@ func init46ListPartitionReassignmentsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListPartitionReassignmentsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldListPartitionReassignmentsRequestTags = "Tags"
-	// FieldListPartitionReassignmentsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldListPartitionReassignmentsRequestTimeoutMs is: The time in ms to wait for the request to complete.
 	FieldListPartitionReassignmentsRequestTimeoutMs = "TimeoutMs"
-	// FieldListPartitionReassignmentsRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldListPartitionReassignmentsRequestTopics is: The topics to list partition reassignments for, or null to list everything.
 	FieldListPartitionReassignmentsRequestTopics = "Topics"
-	// FieldListPartitionReassignmentsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldListPartitionReassignmentsRequestTopicsName is: The topic name
 	FieldListPartitionReassignmentsRequestTopicsName = "Name"
-	// FieldListPartitionReassignmentsRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	// FieldListPartitionReassignmentsRequestTopicsPartitionIndexes is: The partitions to list partition reassignments for.
 	FieldListPartitionReassignmentsRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldListPartitionReassignmentsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	// FieldListPartitionReassignmentsRequestTopicsTags is: The tagged fields.
 	FieldListPartitionReassignmentsRequestTopicsTags = "Tags"
+	// FieldListPartitionReassignmentsRequestTags is: The tagged fields.
+	FieldListPartitionReassignmentsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListPartitionReassignmentsRequest.json

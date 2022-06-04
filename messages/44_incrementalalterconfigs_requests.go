@@ -40,28 +40,28 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldIncrementalAlterConfigsRequestResourcesResourceType is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesResourceType = "ResourceType"
-	// FieldIncrementalAlterConfigsRequestResourcesResourceName is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesResourceName = "ResourceName"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsName is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsName = "Name"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsTags is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsTags = "Tags"
-	// FieldIncrementalAlterConfigsRequestResources is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResources = "Resources"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigs is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesConfigs = "Configs"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation = "ConfigOperation"
-	// FieldIncrementalAlterConfigsRequestResourcesConfigsValue is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesConfigsValue = "Value"
-	// FieldIncrementalAlterConfigsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
+	// FieldIncrementalAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
 	FieldIncrementalAlterConfigsRequestValidateOnly = "ValidateOnly"
-	// FieldIncrementalAlterConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
-	FieldIncrementalAlterConfigsRequestResourcesTags = "Tags"
-	// FieldIncrementalAlterConfigsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsTags = "Tags"
+	// FieldIncrementalAlterConfigsRequestResources is: The incremental updates for each resource.
+	FieldIncrementalAlterConfigsRequestResources = "Resources"
+	// FieldIncrementalAlterConfigsRequestResourcesResourceName is: The resource name.
+	FieldIncrementalAlterConfigsRequestResourcesResourceName = "ResourceName"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigs is: The configurations.
+	FieldIncrementalAlterConfigsRequestResourcesConfigs = "Configs"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsName is: The configuration key name.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsName = "Name"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation is: The type (Set, Delete, Append, Subtract) of operation.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation = "ConfigOperation"
+	// FieldIncrementalAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
+	FieldIncrementalAlterConfigsRequestResourcesConfigsValue = "Value"
+	// FieldIncrementalAlterConfigsRequestTags is: The tagged fields.
 	FieldIncrementalAlterConfigsRequestTags = "Tags"
+	// FieldIncrementalAlterConfigsRequestResourcesResourceType is: The resource type.
+	FieldIncrementalAlterConfigsRequestResourcesResourceType = "ResourceType"
+	// FieldIncrementalAlterConfigsRequestResourcesTags is: The tagged fields.
+	FieldIncrementalAlterConfigsRequestResourcesTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/IncrementalAlterConfigsRequest.json

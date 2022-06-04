@@ -25,9 +25,9 @@ func init42DeleteGroupsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteGroupsRequestGroupsNames is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteGroupsRequestGroupsNames is: The group names to delete.
 	FieldDeleteGroupsRequestGroupsNames = "GroupsNames"
-	// FieldDeleteGroupsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteGroupsRequestTags is: The tagged fields.
 	FieldDeleteGroupsRequestTags = "Tags"
 )
 

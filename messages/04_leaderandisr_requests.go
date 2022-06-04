@@ -126,37 +126,37 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaderAndIsrRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
-	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
-	// FieldLeaderAndIsrRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestControllerId = "ControllerId"
-	// FieldLeaderAndIsrRequestLiveLeadersPort is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
-	// FieldLeaderAndIsrRequestLiveLeaders is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
-	// FieldLeaderAndIsrRequestLiveLeadersHostName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
-	// FieldLeaderAndIsrRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
-	// FieldLeaderAndIsrRequestTopicStates is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
-	// FieldLeaderAndIsrRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTags = "Tags"
-	// FieldLeaderAndIsrRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
-	// FieldLeaderAndIsrRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
+	// FieldLeaderAndIsrRequestUngroupedPartitionStates is: The state of each partition, in a v0 or v1 message.
 	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldLeaderAndIsrRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
-	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is: The state of each partition
 	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldLeaderAndIsrRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
+	// FieldLeaderAndIsrRequestTopicStatesTags is: The tagged fields.
 	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
-	// FieldLeaderAndIsrRequestLiveLeadersTags is a field name that can be used to resolve the correct struct field.
+	// FieldLeaderAndIsrRequestControllerId is: The current controller ID.
+	FieldLeaderAndIsrRequestControllerId = "ControllerId"
+	// FieldLeaderAndIsrRequestLiveLeaders is: The current live leaders.
+	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
+	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is: The leader's broker ID.
+	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
+	// FieldLeaderAndIsrRequestLiveLeadersHostName is: The leader's hostname.
+	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
+	// FieldLeaderAndIsrRequestLiveLeadersPort is: The leader's port.
+	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
+	// FieldLeaderAndIsrRequestBrokerEpoch is: The current broker epoch.
+	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
+	// FieldLeaderAndIsrRequestLiveLeadersTags is: The tagged fields.
 	FieldLeaderAndIsrRequestLiveLeadersTags = "Tags"
-	// FieldLeaderAndIsrRequestType is a field name that can be used to resolve the correct struct field.
+	// FieldLeaderAndIsrRequestControllerEpoch is: The current controller epoch.
+	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
+	// FieldLeaderAndIsrRequestTopicStatesTopicName is: The topic name.
+	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
+	// FieldLeaderAndIsrRequestTopicStatesTopicId is: The unique topic ID.
+	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
+	// FieldLeaderAndIsrRequestTopicStates is: Each topic.
+	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
+	// FieldLeaderAndIsrRequestTags is: The tagged fields.
+	FieldLeaderAndIsrRequestTags = "Tags"
+	// FieldLeaderAndIsrRequestType is: The type that indicates whether all topics are included in the request
 	FieldLeaderAndIsrRequestType = "Type"
 )
 

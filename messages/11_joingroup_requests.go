@@ -153,30 +153,30 @@ func init11JoinGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldJoinGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolType = "ProtocolType"
-	// FieldJoinGroupRequestProtocols is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocols = "Protocols"
-	// FieldJoinGroupRequestProtocolsName is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolsName = "Name"
-	// FieldJoinGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
+	// FieldJoinGroupRequestGroupId is: The group identifier.
 	FieldJoinGroupRequestGroupId = "GroupId"
-	// FieldJoinGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestMemberId = "MemberId"
-	// FieldJoinGroupRequestRebalanceTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
-	// FieldJoinGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldJoinGroupRequestProtocolsTags is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocolsTags = "Tags"
-	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestTags = "Tags"
-	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestReason = "Reason"
-	// FieldJoinGroupRequestSessionTimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldJoinGroupRequestSessionTimeoutMs is: The coordinator considers the consumer dead if it receives no heartbeat after this timeout in milliseconds.
 	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
-	// FieldJoinGroupRequestProtocolsMetadata is a field name that can be used to resolve the correct struct field.
+	// FieldJoinGroupRequestMemberId is: The member id assigned by the group coordinator.
+	FieldJoinGroupRequestMemberId = "MemberId"
+	// FieldJoinGroupRequestProtocolType is: The unique name the for class of protocols implemented by the group we want to join.
+	FieldJoinGroupRequestProtocolType = "ProtocolType"
+	// FieldJoinGroupRequestProtocolsName is: The protocol name.
+	FieldJoinGroupRequestProtocolsName = "Name"
+	// FieldJoinGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
+	// FieldJoinGroupRequestProtocolsTags is: The tagged fields.
+	FieldJoinGroupRequestProtocolsTags = "Tags"
+	// FieldJoinGroupRequestProtocols is: The list of protocols that the member supports.
+	FieldJoinGroupRequestProtocols = "Protocols"
+	// FieldJoinGroupRequestProtocolsMetadata is: The protocol metadata.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
+	// FieldJoinGroupRequestRebalanceTimeoutMs is: The maximum time in milliseconds that the coordinator will wait for each member to rejoin when rebalancing the group.
+	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
+	// FieldJoinGroupRequestTags is: The tagged fields.
+	FieldJoinGroupRequestTags = "Tags"
+	// FieldJoinGroupRequestReason is: The reason why the member (re-)joins the group.
+	FieldJoinGroupRequestReason = "Reason"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/JoinGroupRequest.json

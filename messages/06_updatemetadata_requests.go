@@ -156,46 +156,46 @@ func init6UpdateMetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateMetadataRequestLiveBrokersId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersId = "Id"
-	// FieldUpdateMetadataRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
-	// FieldUpdateMetadataRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
-	// FieldUpdateMetadataRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
-	// FieldUpdateMetadataRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateMetadataRequestTags is: The tagged fields.
 	FieldUpdateMetadataRequestTags = "Tags"
-	// FieldUpdateMetadataRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
-	// FieldUpdateMetadataRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestControllerId = "ControllerId"
-	// FieldUpdateMetadataRequestLiveBrokers is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
-	// FieldUpdateMetadataRequestLiveBrokersEndpoints is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
-	// FieldUpdateMetadataRequestLiveBrokersTags is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
-	// FieldUpdateMetadataRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
-	// FieldUpdateMetadataRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
-	// FieldUpdateMetadataRequestLiveBrokersRack is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
-	// FieldUpdateMetadataRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is: The port of this endpoint
 	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is a field name that can be used to resolve the correct struct field.
-	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
-	// FieldUpdateMetadataRequestTopicStates is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is: The hostname of this endpoint
+	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
+	// FieldUpdateMetadataRequestLiveBrokersRack is: The rack which this broker belongs to.
+	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
+	// FieldUpdateMetadataRequestTopicStatesTopicName is: The topic name.
+	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
+	// FieldUpdateMetadataRequestTopicStatesPartitionStates is: The partition that we would like to update.
+	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
+	// FieldUpdateMetadataRequestLiveBrokersTags is: The tagged fields.
+	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
+	// FieldUpdateMetadataRequestLiveBrokersId is: The broker id.
+	FieldUpdateMetadataRequestLiveBrokersId = "Id"
+	// FieldUpdateMetadataRequestTopicStatesTopicId is: The topic id.
+	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
+	// FieldUpdateMetadataRequestControllerId is: The controller id.
+	FieldUpdateMetadataRequestControllerId = "ControllerId"
+	// FieldUpdateMetadataRequestControllerEpoch is: The controller epoch.
+	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
+	// FieldUpdateMetadataRequestTopicStates is: In newer versions of this RPC, each topic that we would like to update.
 	FieldUpdateMetadataRequestTopicStates = "TopicStates"
-	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is a field name that can be used to resolve the correct struct field.
+	// FieldUpdateMetadataRequestTopicStatesTags is: The tagged fields.
+	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is: The tagged fields.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
+	// FieldUpdateMetadataRequestUngroupedPartitionStates is: In older versions of this RPC, each partition that we would like to update.
+	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+	// FieldUpdateMetadataRequestLiveBrokers is:
+	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
+	// FieldUpdateMetadataRequestLiveBrokersEndpoints is: The broker endpoints.
+	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is: The security protocol type.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
+	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is: The listener name.
+	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
+	// FieldUpdateMetadataRequestBrokerEpoch is: The broker epoch.
+	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateMetadataRequest.json

@@ -45,22 +45,22 @@ func init34AlterReplicaLogDirsRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterReplicaLogDirsRequestDirsTopics is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopics = "Topics"
-	// FieldAlterReplicaLogDirsRequestDirsTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopicsName = "Name"
-	// FieldAlterReplicaLogDirsRequestDirsTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopicsPartitions = "Partitions"
-	// FieldAlterReplicaLogDirsRequestDirsTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopicsTags = "Tags"
-	// FieldAlterReplicaLogDirsRequestDirsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTags = "Tags"
-	// FieldAlterReplicaLogDirsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestTags = "Tags"
-	// FieldAlterReplicaLogDirsRequestDirs is a field name that can be used to resolve the correct struct field.
+	// FieldAlterReplicaLogDirsRequestDirs is: The alterations to make for each directory.
 	FieldAlterReplicaLogDirsRequestDirs = "Dirs"
-	// FieldAlterReplicaLogDirsRequestDirsPath is a field name that can be used to resolve the correct struct field.
+	// FieldAlterReplicaLogDirsRequestDirsPath is: The absolute directory path.
 	FieldAlterReplicaLogDirsRequestDirsPath = "Path"
+	// FieldAlterReplicaLogDirsRequestDirsTopics is: The topics to add to the directory.
+	FieldAlterReplicaLogDirsRequestDirsTopics = "Topics"
+	// FieldAlterReplicaLogDirsRequestDirsTopicsName is: The topic name.
+	FieldAlterReplicaLogDirsRequestDirsTopicsName = "Name"
+	// FieldAlterReplicaLogDirsRequestDirsTopicsPartitions is: The partition indexes.
+	FieldAlterReplicaLogDirsRequestDirsTopicsPartitions = "Partitions"
+	// FieldAlterReplicaLogDirsRequestDirsTopicsTags is: The tagged fields.
+	FieldAlterReplicaLogDirsRequestDirsTopicsTags = "Tags"
+	// FieldAlterReplicaLogDirsRequestDirsTags is: The tagged fields.
+	FieldAlterReplicaLogDirsRequestDirsTags = "Tags"
+	// FieldAlterReplicaLogDirsRequestTags is: The tagged fields.
+	FieldAlterReplicaLogDirsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterReplicaLogDirsRequest.json

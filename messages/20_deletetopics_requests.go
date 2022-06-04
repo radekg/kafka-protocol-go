@@ -58,20 +58,20 @@ func init20DeleteTopicsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteTopicsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTopics = "Topics"
-	// FieldDeleteTopicsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTopicsName = "Name"
-	// FieldDeleteTopicsRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
-	// FieldDeleteTopicsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteTopicsRequestTopicsTags = "Tags"
-	// FieldDeleteTopicsRequestTopicNames is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteTopicsRequestTopicNames is: The names of the topics to delete
 	FieldDeleteTopicsRequestTopicNames = "TopicNames"
-	// FieldDeleteTopicsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteTopicsRequestTimeoutMs is: The length of time in milliseconds to wait for the deletions to complete.
 	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
-	// FieldDeleteTopicsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteTopicsRequestTags is: The tagged fields.
 	FieldDeleteTopicsRequestTags = "Tags"
+	// FieldDeleteTopicsRequestTopics is: The name or topic ID of the topic
+	FieldDeleteTopicsRequestTopics = "Topics"
+	// FieldDeleteTopicsRequestTopicsName is: The topic name
+	FieldDeleteTopicsRequestTopicsName = "Name"
+	// FieldDeleteTopicsRequestTopicsTopicId is: The unique topic ID
+	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
+	// FieldDeleteTopicsRequestTopicsTags is: The tagged fields.
+	FieldDeleteTopicsRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteTopicsRequest.json

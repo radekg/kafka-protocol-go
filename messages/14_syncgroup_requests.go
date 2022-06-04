@@ -84,28 +84,28 @@ func init14SyncGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldSyncGroupRequestAssignmentsMemberId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
-	// FieldSyncGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
-	// FieldSyncGroupRequestAssignmentsTags is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsTags = "Tags"
-	// FieldSyncGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestProtocolType = "ProtocolType"
-	// FieldSyncGroupRequestProtocolName is a field name that can be used to resolve the correct struct field.
+	// FieldSyncGroupRequestProtocolName is: The group protocol name.
 	FieldSyncGroupRequestProtocolName = "ProtocolName"
-	// FieldSyncGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
+	// FieldSyncGroupRequestGroupId is: The unique group identifier.
 	FieldSyncGroupRequestGroupId = "GroupId"
-	// FieldSyncGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestMemberId = "MemberId"
-	// FieldSyncGroupRequestAssignments is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignments = "Assignments"
-	// FieldSyncGroupRequestAssignmentsAssignment is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
-	// FieldSyncGroupRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldSyncGroupRequestTags = "Tags"
-	// FieldSyncGroupRequestGenerationId is a field name that can be used to resolve the correct struct field.
+	// FieldSyncGroupRequestGenerationId is: The generation of the group.
 	FieldSyncGroupRequestGenerationId = "GenerationId"
+	// FieldSyncGroupRequestMemberId is: The member ID assigned by the group.
+	FieldSyncGroupRequestMemberId = "MemberId"
+	// FieldSyncGroupRequestAssignments is: Each assignment.
+	FieldSyncGroupRequestAssignments = "Assignments"
+	// FieldSyncGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
+	// FieldSyncGroupRequestTags is: The tagged fields.
+	FieldSyncGroupRequestTags = "Tags"
+	// FieldSyncGroupRequestProtocolType is: The group protocol type.
+	FieldSyncGroupRequestProtocolType = "ProtocolType"
+	// FieldSyncGroupRequestAssignmentsMemberId is: The ID of the member to assign.
+	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
+	// FieldSyncGroupRequestAssignmentsAssignment is: The member assignment.
+	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
+	// FieldSyncGroupRequestAssignmentsTags is: The tagged fields.
+	FieldSyncGroupRequestAssignmentsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SyncGroupRequest.json

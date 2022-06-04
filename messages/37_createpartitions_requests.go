@@ -67,26 +67,26 @@ func init37CreatePartitionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreatePartitionsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTags = "Tags"
-	// FieldCreatePartitionsRequestTopicsCount is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsCount = "Count"
-	// FieldCreatePartitionsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	// FieldCreatePartitionsRequestTimeoutMs is: The time in ms to wait for the partitions to be created.
 	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
-	// FieldCreatePartitionsRequestTopicsAssignments is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
-	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
-	// FieldCreatePartitionsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
-	// FieldCreatePartitionsRequestTopicsAssignmentsTags is a field name that can be used to resolve the correct struct field.
+	// FieldCreatePartitionsRequestTopicsAssignmentsTags is: The tagged fields.
 	FieldCreatePartitionsRequestTopicsAssignmentsTags = "Tags"
-	// FieldCreatePartitionsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsTags = "Tags"
-	// FieldCreatePartitionsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopics = "Topics"
-	// FieldCreatePartitionsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldCreatePartitionsRequestTags is: The tagged fields.
+	FieldCreatePartitionsRequestTags = "Tags"
+	// FieldCreatePartitionsRequestTopicsAssignments is: The new partition assignments.
+	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
+	// FieldCreatePartitionsRequestTopicsName is: The topic name.
 	FieldCreatePartitionsRequestTopicsName = "Name"
+	// FieldCreatePartitionsRequestTopicsCount is: The new partition count.
+	FieldCreatePartitionsRequestTopicsCount = "Count"
+	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is: The assigned broker IDs.
+	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreatePartitionsRequestValidateOnly is: If true, then validate the request, but don't actually increase the number of partitions.
+	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
+	// FieldCreatePartitionsRequestTopicsTags is: The tagged fields.
+	FieldCreatePartitionsRequestTopicsTags = "Tags"
+	// FieldCreatePartitionsRequestTopics is: Each topic that we want to create new partitions inside.
+	FieldCreatePartitionsRequestTopics = "Topics"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreatePartitionsRequest.json

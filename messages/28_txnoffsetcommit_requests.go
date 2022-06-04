@@ -81,40 +81,40 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 }
 
 const (
-	// FieldTxnOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestMemberId = "MemberId"
-	// FieldTxnOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopics = "Topics"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
-	// FieldTxnOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldTxnOffsetCommitRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldTxnOffsetCommitRequestProducerEpoch is: The current epoch associated with the producer ID.
 	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
-	// FieldTxnOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldTxnOffsetCommitRequestTopicsName is: The topic name.
 	FieldTxnOffsetCommitRequestTopicsName = "Name"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
-	// FieldTxnOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTags = "Tags"
-	// FieldTxnOffsetCommitRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
-	// FieldTxnOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestGroupId = "GroupId"
-	// FieldTxnOffsetCommitRequestProducerId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
-	// FieldTxnOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldTxnOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is: The index of the partition within the topic.
 	FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldTxnOffsetCommitRequestTransactionalId is: The ID of the transaction.
+	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
+	// FieldTxnOffsetCommitRequestTags is: The tagged fields.
+	FieldTxnOffsetCommitRequestTags = "Tags"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of the last consumed record.
 	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
-	// FieldTxnOffsetCommitRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	// FieldTxnOffsetCommitRequestProducerId is: The current producer ID in use by the transactional ID.
+	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
+	// FieldTxnOffsetCommitRequestTopicsPartitions is: The partitions inside the topic that we want to committ offsets for.
+	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
+	// FieldTxnOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
+	FieldTxnOffsetCommitRequestMemberId = "MemberId"
+	// FieldTxnOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
+	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+	// FieldTxnOffsetCommitRequestTopicsTags is: The tagged fields.
 	FieldTxnOffsetCommitRequestTopicsTags = "Tags"
+	// FieldTxnOffsetCommitRequestGroupId is: The ID of the group.
+	FieldTxnOffsetCommitRequestGroupId = "GroupId"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
+	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldTxnOffsetCommitRequestGenerationId is: The generation of the consumer.
+	FieldTxnOffsetCommitRequestGenerationId = "GenerationId"
+	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
+	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
+	// FieldTxnOffsetCommitRequestTopics is: Each topic that we want to commit offsets for.
+	FieldTxnOffsetCommitRequestTopics = "Topics"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/TxnOffsetCommitRequest.json

@@ -46,32 +46,32 @@ func init56AlterPartitionRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterPartitionRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTags = "Tags"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
-	// FieldAlterPartitionRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
-	// FieldAlterPartitionRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopics = "Topics"
-	// FieldAlterPartitionRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsName = "Name"
-	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is: The partition index
 	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
-	// FieldAlterPartitionRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsTags = "Tags"
-	// FieldAlterPartitionRequestBrokerId is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestBrokerId = "BrokerId"
-	// FieldAlterPartitionRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is: The leader epoch of this partition
 	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
-	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
-	// FieldAlterPartitionRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is: The ISR for this partition
+	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
+	// FieldAlterPartitionRequestTopicsPartitionsTags is: The tagged fields.
 	FieldAlterPartitionRequestTopicsPartitionsTags = "Tags"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
+	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
+	// FieldAlterPartitionRequestBrokerId is: The ID of the requesting broker
+	FieldAlterPartitionRequestBrokerId = "BrokerId"
+	// FieldAlterPartitionRequestTopics is:
+	FieldAlterPartitionRequestTopics = "Topics"
+	// FieldAlterPartitionRequestTopicsPartitions is:
+	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
+	// FieldAlterPartitionRequestTopicsTags is: The tagged fields.
+	FieldAlterPartitionRequestTopicsTags = "Tags"
+	// FieldAlterPartitionRequestTags is: The tagged fields.
+	FieldAlterPartitionRequestTags = "Tags"
+	// FieldAlterPartitionRequestBrokerEpoch is: The epoch of the requesting broker
+	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
+	// FieldAlterPartitionRequestTopicsName is: The name of the topic to alter ISRs for
+	FieldAlterPartitionRequestTopicsName = "Name"
+	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is: The expected epoch of the partition which is being updated. For legacy cluster this is the ZkVersion in the LeaderAndIsr request.
+	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionRequest.json

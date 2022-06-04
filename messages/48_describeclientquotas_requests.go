@@ -31,20 +31,20 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeClientQuotasRequestComponentsTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeClientQuotasRequestComponentsTags = "Tags"
-	// FieldDescribeClientQuotasRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeClientQuotasRequestTags = "Tags"
-	// FieldDescribeClientQuotasRequestComponents is a field name that can be used to resolve the correct struct field.
-	FieldDescribeClientQuotasRequestComponents = "Components"
-	// FieldDescribeClientQuotasRequestComponentsEntityType is a field name that can be used to resolve the correct struct field.
-	FieldDescribeClientQuotasRequestComponentsEntityType = "EntityType"
-	// FieldDescribeClientQuotasRequestComponentsMatchType is a field name that can be used to resolve the correct struct field.
-	FieldDescribeClientQuotasRequestComponentsMatchType = "MatchType"
-	// FieldDescribeClientQuotasRequestComponentsMatch is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeClientQuotasRequestComponentsMatch is: The string to match against, or null if unused for the match type.
 	FieldDescribeClientQuotasRequestComponentsMatch = "Match"
-	// FieldDescribeClientQuotasRequestStrict is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeClientQuotasRequestStrict is: Whether the match is strict, i.e. should exclude entities with unspecified entity types.
 	FieldDescribeClientQuotasRequestStrict = "Strict"
+	// FieldDescribeClientQuotasRequestComponentsTags is: The tagged fields.
+	FieldDescribeClientQuotasRequestComponentsTags = "Tags"
+	// FieldDescribeClientQuotasRequestTags is: The tagged fields.
+	FieldDescribeClientQuotasRequestTags = "Tags"
+	// FieldDescribeClientQuotasRequestComponents is: Filter components to apply to quota entities.
+	FieldDescribeClientQuotasRequestComponents = "Components"
+	// FieldDescribeClientQuotasRequestComponentsEntityType is: The entity type that the filter component applies to.
+	FieldDescribeClientQuotasRequestComponentsEntityType = "EntityType"
+	// FieldDescribeClientQuotasRequestComponentsMatchType is: How to match the entity {0 = exact name, 1 = default name, 2 = any specified name}.
+	FieldDescribeClientQuotasRequestComponentsMatchType = "MatchType"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeClientQuotasRequest.json

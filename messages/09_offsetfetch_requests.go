@@ -101,34 +101,34 @@ func init9OffsetFetchRequest() []schema.Schema {
 }
 
 const (
-	// FieldOffsetFetchRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupId = "GroupId"
-	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsName = "Name"
-	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetFetchRequestRequireStable is: Whether broker should hold on returning unstable offsets but set a retriable error code for the partitions.
 	FieldOffsetFetchRequestRequireStable = "RequireStable"
-	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTags = "Tags"
-	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsTags = "Tags"
-	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTags = "Tags"
-	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsgroupId = "groupId"
-	// FieldOffsetFetchRequestGroupsTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetFetchRequestGroupsTopicsName is: The topic name.
 	FieldOffsetFetchRequestGroupsTopicsName = "Name"
-	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroups = "Groups"
-	// FieldOffsetFetchRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetFetchRequestTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
 	FieldOffsetFetchRequestTopics = "Topics"
-	// FieldOffsetFetchRequestGroupsTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTopics = "Topics"
-	// FieldOffsetFetchRequestGroupsTopicsTags is a field name that can be used to resolve the correct struct field.
+	// FieldOffsetFetchRequestTags is: The tagged fields.
+	FieldOffsetFetchRequestTags = "Tags"
+	// FieldOffsetFetchRequestGroupsTopicsTags is: The tagged fields.
 	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsTags is: The tagged fields.
+	FieldOffsetFetchRequestGroupsTags = "Tags"
+	// FieldOffsetFetchRequestGroupId is: The group to fetch offsets for.
+	FieldOffsetFetchRequestGroupId = "GroupId"
+	// FieldOffsetFetchRequestGroups is: Each group we would like to fetch offsets for
+	FieldOffsetFetchRequestGroups = "Groups"
+	// FieldOffsetFetchRequestGroupsgroupId is: The group ID.
+	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+	// FieldOffsetFetchRequestGroupsTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
+	FieldOffsetFetchRequestGroupsTopics = "Topics"
+	// FieldOffsetFetchRequestTopicsName is: The topic name.
+	FieldOffsetFetchRequestTopicsName = "Name"
+	// FieldOffsetFetchRequestTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
+	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestTopicsTags is: The tagged fields.
+	FieldOffsetFetchRequestTopicsTags = "Tags"
+	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
+	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetFetchRequest.json

@@ -128,21 +128,21 @@ func init3MetadataRequest() []schema.Schema {
 }
 
 const (
-	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestTopicsTags is: The tagged fields.
 	FieldMetadataRequestTopicsTags = "Tags"
-	// FieldMetadataRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestTags is: The tagged fields.
 	FieldMetadataRequestTags = "Tags"
-	// FieldMetadataRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestTopicsTopicId is: The topic id.
 	FieldMetadataRequestTopicsTopicId = "TopicId"
-	// FieldMetadataRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestTopics is: The topics to fetch metadata for.
 	FieldMetadataRequestTopics = "Topics"
-	// FieldMetadataRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestTopicsName is: The topic name.
 	FieldMetadataRequestTopicsName = "Name"
-	// FieldMetadataRequestAllowAutoTopicCreation is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestAllowAutoTopicCreation is: If this is true, the broker may auto-create topics that we requested which do not already exist, if it is configured to do so.
 	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
-	// FieldMetadataRequestIncludeClusterAuthorizedOperations is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestIncludeClusterAuthorizedOperations is: Whether to include cluster authorized operations.
 	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
-	// FieldMetadataRequestIncludeTopicAuthorizedOperations is a field name that can be used to resolve the correct struct field.
+	// FieldMetadataRequestIncludeTopicAuthorizedOperations is: Whether to include topic authorized operations.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
 )
 

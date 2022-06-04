@@ -55,22 +55,22 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 }
 
 const (
-	// FieldAddPartitionsToTxnRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTopicsName = "Name"
-	// FieldAddPartitionsToTxnRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTopicsPartitions = "Partitions"
-	// FieldAddPartitionsToTxnRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTopicsTags = "Tags"
-	// FieldAddPartitionsToTxnRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTags = "Tags"
-	// FieldAddPartitionsToTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldAddPartitionsToTxnRequestTransactionalId = "TransactionalId"
-	// FieldAddPartitionsToTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
+	// FieldAddPartitionsToTxnRequestProducerId is: Current producer id in use by the transactional id.
 	FieldAddPartitionsToTxnRequestProducerId = "ProducerId"
-	// FieldAddPartitionsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	// FieldAddPartitionsToTxnRequestProducerEpoch is: Current epoch associated with the producer id.
 	FieldAddPartitionsToTxnRequestProducerEpoch = "ProducerEpoch"
-	// FieldAddPartitionsToTxnRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldAddPartitionsToTxnRequestTopics is: The partitions to add to the transaction.
 	FieldAddPartitionsToTxnRequestTopics = "Topics"
+	// FieldAddPartitionsToTxnRequestTopicsName is: The name of the topic.
+	FieldAddPartitionsToTxnRequestTopicsName = "Name"
+	// FieldAddPartitionsToTxnRequestTopicsPartitions is: The partition indexes to add to the transaction
+	FieldAddPartitionsToTxnRequestTopicsPartitions = "Partitions"
+	// FieldAddPartitionsToTxnRequestTopicsTags is: The tagged fields.
+	FieldAddPartitionsToTxnRequestTopicsTags = "Tags"
+	// FieldAddPartitionsToTxnRequestTags is: The tagged fields.
+	FieldAddPartitionsToTxnRequestTags = "Tags"
+	// FieldAddPartitionsToTxnRequestTransactionalId is: The transactional id corresponding to the transaction.
+	FieldAddPartitionsToTxnRequestTransactionalId = "TransactionalId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddPartitionsToTxnRequest.json

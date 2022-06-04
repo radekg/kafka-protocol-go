@@ -62,21 +62,21 @@ func init32DescribeConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeConfigsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestTags is: The tagged fields.
 	FieldDescribeConfigsRequestTags = "Tags"
-	// FieldDescribeConfigsRequestResources is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestResources is: The resources whose configurations we want to describe.
 	FieldDescribeConfigsRequestResources = "Resources"
-	// FieldDescribeConfigsRequestResourcesResourceType is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestResourcesResourceType is: The resource type.
 	FieldDescribeConfigsRequestResourcesResourceType = "ResourceType"
-	// FieldDescribeConfigsRequestResourcesResourceName is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestResourcesResourceName is: The resource name.
 	FieldDescribeConfigsRequestResourcesResourceName = "ResourceName"
-	// FieldDescribeConfigsRequestResourcesConfigurationKeys is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestResourcesConfigurationKeys is: The configuration keys to list, or null to list all configuration keys.
 	FieldDescribeConfigsRequestResourcesConfigurationKeys = "ConfigurationKeys"
-	// FieldDescribeConfigsRequestIncludeSynonyms is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestIncludeSynonyms is: True if we should include all synonyms.
 	FieldDescribeConfigsRequestIncludeSynonyms = "IncludeSynonyms"
-	// FieldDescribeConfigsRequestIncludeDocumentation is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestIncludeDocumentation is: True if we should include configuration documentation.
 	FieldDescribeConfigsRequestIncludeDocumentation = "IncludeDocumentation"
-	// FieldDescribeConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeConfigsRequestResourcesTags is: The tagged fields.
 	FieldDescribeConfigsRequestResourcesTags = "Tags"
 )
 

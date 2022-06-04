@@ -40,13 +40,13 @@ func init10FindCoordinatorRequest() []schema.Schema {
 }
 
 const (
-	// FieldFindCoordinatorRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldFindCoordinatorRequestTags is: The tagged fields.
 	FieldFindCoordinatorRequestTags = "Tags"
-	// FieldFindCoordinatorRequestCoordinatorKeys is a field name that can be used to resolve the correct struct field.
+	// FieldFindCoordinatorRequestCoordinatorKeys is: The coordinator keys.
 	FieldFindCoordinatorRequestCoordinatorKeys = "CoordinatorKeys"
-	// FieldFindCoordinatorRequestKey is a field name that can be used to resolve the correct struct field.
+	// FieldFindCoordinatorRequestKey is: The coordinator key.
 	FieldFindCoordinatorRequestKey = "Key"
-	// FieldFindCoordinatorRequestKeyType is a field name that can be used to resolve the correct struct field.
+	// FieldFindCoordinatorRequestKeyType is: The coordinator key type. (Group, transaction, etc.)
 	FieldFindCoordinatorRequestKeyType = "KeyType"
 )
 

@@ -45,31 +45,31 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 }
 
 const (
-	// FieldAlterClientQuotasRequestEntriesEntityTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesEntityTags = "Tags"
-	// FieldAlterClientQuotasRequestEntriesOpsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesOpsTags = "Tags"
-	// FieldAlterClientQuotasRequestEntries is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntries = "Entries"
-	// FieldAlterClientQuotasRequestEntriesEntity is a field name that can be used to resolve the correct struct field.
+	// FieldAlterClientQuotasRequestEntriesEntity is: The quota entity to alter.
 	FieldAlterClientQuotasRequestEntriesEntity = "Entity"
-	// FieldAlterClientQuotasRequestEntriesEntityEntityType is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesEntityEntityType = "EntityType"
-	// FieldAlterClientQuotasRequestEntriesEntityEntityName is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesEntityEntityName = "EntityName"
-	// FieldAlterClientQuotasRequestEntriesOps is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesOps = "Ops"
-	// FieldAlterClientQuotasRequestEntriesOpsValue is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesOpsValue = "Value"
-	// FieldAlterClientQuotasRequestEntriesOpsKey is a field name that can be used to resolve the correct struct field.
-	FieldAlterClientQuotasRequestEntriesOpsKey = "Key"
-	// FieldAlterClientQuotasRequestEntriesOpsRemove is a field name that can be used to resolve the correct struct field.
+	// FieldAlterClientQuotasRequestEntriesOpsRemove is: Whether the quota configuration value should be removed, otherwise set.
 	FieldAlterClientQuotasRequestEntriesOpsRemove = "Remove"
-	// FieldAlterClientQuotasRequestValidateOnly is a field name that can be used to resolve the correct struct field.
+	// FieldAlterClientQuotasRequestEntriesOpsTags is: The tagged fields.
+	FieldAlterClientQuotasRequestEntriesOpsTags = "Tags"
+	// FieldAlterClientQuotasRequestEntriesOpsValue is: The value to set, otherwise ignored if the value is to be removed.
+	FieldAlterClientQuotasRequestEntriesOpsValue = "Value"
+	// FieldAlterClientQuotasRequestValidateOnly is: Whether the alteration should be validated, but not performed.
 	FieldAlterClientQuotasRequestValidateOnly = "ValidateOnly"
-	// FieldAlterClientQuotasRequestEntriesTags is a field name that can be used to resolve the correct struct field.
+	// FieldAlterClientQuotasRequestEntriesEntityTags is: The tagged fields.
+	FieldAlterClientQuotasRequestEntriesEntityTags = "Tags"
+	// FieldAlterClientQuotasRequestEntries is: The quota configuration entries to alter.
+	FieldAlterClientQuotasRequestEntries = "Entries"
+	// FieldAlterClientQuotasRequestEntriesEntityEntityType is: The entity type.
+	FieldAlterClientQuotasRequestEntriesEntityEntityType = "EntityType"
+	// FieldAlterClientQuotasRequestEntriesEntityEntityName is: The name of the entity, or null if the default.
+	FieldAlterClientQuotasRequestEntriesEntityEntityName = "EntityName"
+	// FieldAlterClientQuotasRequestEntriesOps is: An individual quota configuration entry to alter.
+	FieldAlterClientQuotasRequestEntriesOps = "Ops"
+	// FieldAlterClientQuotasRequestEntriesOpsKey is: The quota configuration key.
+	FieldAlterClientQuotasRequestEntriesOpsKey = "Key"
+	// FieldAlterClientQuotasRequestEntriesTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesTags = "Tags"
-	// FieldAlterClientQuotasRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldAlterClientQuotasRequestTags is: The tagged fields.
 	FieldAlterClientQuotasRequestTags = "Tags"
 )
 

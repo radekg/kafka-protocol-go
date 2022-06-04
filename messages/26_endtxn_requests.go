@@ -42,16 +42,16 @@ func init26EndTxnRequest() []schema.Schema {
 }
 
 const (
-	// FieldEndTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestProducerId = "ProducerId"
-	// FieldEndTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
-	// FieldEndTxnRequestCommitted is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestCommitted = "Committed"
-	// FieldEndTxnRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldEndTxnRequestTags = "Tags"
-	// FieldEndTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	// FieldEndTxnRequestTransactionalId is: The ID of the transaction to end.
 	FieldEndTxnRequestTransactionalId = "TransactionalId"
+	// FieldEndTxnRequestProducerId is: The producer ID.
+	FieldEndTxnRequestProducerId = "ProducerId"
+	// FieldEndTxnRequestProducerEpoch is: The current epoch associated with the producer.
+	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
+	// FieldEndTxnRequestCommitted is: True if the transaction was committed, false if it was aborted.
+	FieldEndTxnRequestCommitted = "Committed"
+	// FieldEndTxnRequestTags is: The tagged fields.
+	FieldEndTxnRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/EndTxnRequest.json

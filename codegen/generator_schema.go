@@ -5,6 +5,11 @@ import (
 	"strings"
 )
 
+type fieldWithDoc struct {
+	name string
+	doc  string
+}
+
 type fieldNameBuilder struct {
 	prefix []string
 }
@@ -23,10 +28,10 @@ func (d *fieldNameBuilder) generate() string {
 
 type fieldNameRegistry struct {
 	builder    *fieldNameBuilder
-	fieldNames map[string]string
+	fieldNames map[string]*fieldWithDoc
 }
 
-func (d *fieldNameRegistry) register(k, v string) {
+func (d *fieldNameRegistry) register(k string, v *fieldWithDoc) {
 	d.fieldNames[k] = v
 }
 
@@ -42,7 +47,10 @@ func (d *Field) Schema(version int64, nest int, flexible bool, namRegistry *fiel
 	lines := []string{}
 
 	fullVarName := namRegistry.builder.generate()
-	namRegistry.register(fullVarName, d.Name)
+	namRegistry.register(fullVarName, &fieldWithDoc{
+		name: d.Name,
+		doc:  d.About,
+	})
 
 	if typeSpec.RequiresCompactArrayWrap {
 
@@ -106,7 +114,7 @@ func (d *MessageDefinition) Schema() string {
 
 	nameRegistry := &fieldNameRegistry{
 		builder:    &fieldNameBuilder{prefix: []string{fmt.Sprintf("Field%s", d.Name)}},
-		fieldNames: map[string]string{},
+		fieldNames: map[string]*fieldWithDoc{},
 	}
 
 	lines := []string{
@@ -151,8 +159,8 @@ func (d *MessageDefinition) Schema() string {
 	lines = append(lines, "")
 	lines = append(lines, "const (")
 	for name, value := range nameRegistry.fieldNames {
-		lines = append(lines, fmt.Sprintf(`	// %s is a field name that can be used to resolve the correct struct field.`, name))
-		lines = append(lines, fmt.Sprintf(`	%s = "%s"`, name, value))
+		lines = append(lines, fmt.Sprintf(`	// %s is: %s`, name, value.doc))
+		lines = append(lines, fmt.Sprintf(`	%s = "%s"`, name, value.name))
 	}
 	lines = append(lines, ")")
 	lines = append(lines, "")

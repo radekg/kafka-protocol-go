@@ -43,12 +43,12 @@ func init15DescribeGroupsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeGroupsRequestGroups is a field name that can be used to resolve the correct struct field.
-	FieldDescribeGroupsRequestGroups = "Groups"
-	// FieldDescribeGroupsRequestIncludeAuthorizedOperations is a field name that can be used to resolve the correct struct field.
-	FieldDescribeGroupsRequestIncludeAuthorizedOperations = "IncludeAuthorizedOperations"
-	// FieldDescribeGroupsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeGroupsRequestTags is: The tagged fields.
 	FieldDescribeGroupsRequestTags = "Tags"
+	// FieldDescribeGroupsRequestGroups is: The names of the groups to describe
+	FieldDescribeGroupsRequestGroups = "Groups"
+	// FieldDescribeGroupsRequestIncludeAuthorizedOperations is: Whether to include authorized operations.
+	FieldDescribeGroupsRequestIncludeAuthorizedOperations = "IncludeAuthorizedOperations"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeGroupsRequest.json

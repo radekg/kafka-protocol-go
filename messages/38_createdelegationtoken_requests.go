@@ -38,18 +38,18 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateDelegationTokenRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateDelegationTokenRequestTags = "Tags"
-	// FieldCreateDelegationTokenRequestRenewers is a field name that can be used to resolve the correct struct field.
+	// FieldCreateDelegationTokenRequestRenewers is: A list of those who are allowed to renew this token before it expires.
 	FieldCreateDelegationTokenRequestRenewers = "Renewers"
-	// FieldCreateDelegationTokenRequestRenewersPrincipalType is a field name that can be used to resolve the correct struct field.
+	// FieldCreateDelegationTokenRequestRenewersPrincipalType is: The type of the Kafka principal.
 	FieldCreateDelegationTokenRequestRenewersPrincipalType = "PrincipalType"
-	// FieldCreateDelegationTokenRequestRenewersPrincipalName is a field name that can be used to resolve the correct struct field.
+	// FieldCreateDelegationTokenRequestRenewersPrincipalName is: The name of the Kafka principal.
 	FieldCreateDelegationTokenRequestRenewersPrincipalName = "PrincipalName"
-	// FieldCreateDelegationTokenRequestMaxLifetimeMs is a field name that can be used to resolve the correct struct field.
+	// FieldCreateDelegationTokenRequestMaxLifetimeMs is: The maximum lifetime of the token in milliseconds, or -1 to use the server side default.
 	FieldCreateDelegationTokenRequestMaxLifetimeMs = "MaxLifetimeMs"
-	// FieldCreateDelegationTokenRequestRenewersTags is a field name that can be used to resolve the correct struct field.
+	// FieldCreateDelegationTokenRequestRenewersTags is: The tagged fields.
 	FieldCreateDelegationTokenRequestRenewersTags = "Tags"
+	// FieldCreateDelegationTokenRequestTags is: The tagged fields.
+	FieldCreateDelegationTokenRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateDelegationTokenRequest.json

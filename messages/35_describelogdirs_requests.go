@@ -45,16 +45,16 @@ func init35DescribeLogDirsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeLogDirsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldDescribeLogDirsRequestTopicsPartitions = "Partitions"
-	// FieldDescribeLogDirsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeLogDirsRequestTopicsTags = "Tags"
-	// FieldDescribeLogDirsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeLogDirsRequestTags = "Tags"
-	// FieldDescribeLogDirsRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeLogDirsRequestTopics is: Each topic that we want to describe log directories for, or null for all topics.
 	FieldDescribeLogDirsRequestTopics = "Topics"
-	// FieldDescribeLogDirsRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeLogDirsRequestTopicsTopic is: The topic name
 	FieldDescribeLogDirsRequestTopicsTopic = "Topic"
+	// FieldDescribeLogDirsRequestTopicsPartitions is: The partition indexes.
+	FieldDescribeLogDirsRequestTopicsPartitions = "Partitions"
+	// FieldDescribeLogDirsRequestTopicsTags is: The tagged fields.
+	FieldDescribeLogDirsRequestTopicsTags = "Tags"
+	// FieldDescribeLogDirsRequestTags is: The tagged fields.
+	FieldDescribeLogDirsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeLogDirsRequest.json

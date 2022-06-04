@@ -128,7 +128,7 @@ func (d Fields) GetForVersion(v int64, flexible bool) Fields {
 			Type:             "schemaTags",
 			Versions:         fmt.Sprintf("%d+", v),
 			NullableVersions: "",
-			About:            "Additional tags",
+			About:            "The tagged fields.",
 			Fields:           Fields{},
 		})
 	}

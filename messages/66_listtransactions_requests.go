@@ -16,12 +16,12 @@ func init66ListTransactionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListTransactionsRequestStateFilters is a field name that can be used to resolve the correct struct field.
-	FieldListTransactionsRequestStateFilters = "StateFilters"
-	// FieldListTransactionsRequestProducerIdFilters is a field name that can be used to resolve the correct struct field.
-	FieldListTransactionsRequestProducerIdFilters = "ProducerIdFilters"
-	// FieldListTransactionsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldListTransactionsRequestTags is: The tagged fields.
 	FieldListTransactionsRequestTags = "Tags"
+	// FieldListTransactionsRequestStateFilters is: The transaction states to filter by: if empty, all transactions are returned; if non-empty, then only transactions matching one of the filtered states will be returned
+	FieldListTransactionsRequestStateFilters = "StateFilters"
+	// FieldListTransactionsRequestProducerIdFilters is: The producerIds to filter by: if empty, all transactions will be returned; if non-empty, only transactions which match one of the filtered producerIds will be returned
+	FieldListTransactionsRequestProducerIdFilters = "ProducerIdFilters"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ListTransactionsRequest.json

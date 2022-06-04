@@ -48,24 +48,24 @@ func init21DeleteRecordsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteRecordsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsName = "Name"
-	// FieldDeleteRecordsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
-	// FieldDeleteRecordsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsTags = "Tags"
-	// FieldDeleteRecordsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
-	// FieldDeleteRecordsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTags = "Tags"
-	// FieldDeleteRecordsRequestTopics is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteRecordsRequestTopics is: Each topic that we want to delete records from.
 	FieldDeleteRecordsRequestTopics = "Topics"
-	// FieldDeleteRecordsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
-	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
-	// FieldDeleteRecordsRequestTopicsPartitionsOffset is a field name that can be used to resolve the correct struct field.
+	// FieldDeleteRecordsRequestTags is: The tagged fields.
+	FieldDeleteRecordsRequestTags = "Tags"
+	// FieldDeleteRecordsRequestTopicsName is: The topic name.
+	FieldDeleteRecordsRequestTopicsName = "Name"
+	// FieldDeleteRecordsRequestTopicsPartitions is: Each partition that we want to delete records from.
+	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
+	// FieldDeleteRecordsRequestTopicsPartitionsOffset is: The deletion offset.
 	FieldDeleteRecordsRequestTopicsPartitionsOffset = "Offset"
+	// FieldDeleteRecordsRequestTimeoutMs is: How long to wait for the deletion to complete, in milliseconds.
+	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
+	// FieldDeleteRecordsRequestTopicsPartitionsTags is: The tagged fields.
+	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
+	// FieldDeleteRecordsRequestTopicsTags is: The tagged fields.
+	FieldDeleteRecordsRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteRecordsRequest.json

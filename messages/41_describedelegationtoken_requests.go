@@ -35,16 +35,16 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeDelegationTokenRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeDelegationTokenRequestTags = "Tags"
-	// FieldDescribeDelegationTokenRequestOwners is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeDelegationTokenRequestOwners is: Each owner that we want to describe delegation tokens for, or null to describe all tokens.
 	FieldDescribeDelegationTokenRequestOwners = "Owners"
-	// FieldDescribeDelegationTokenRequestOwnersPrincipalType is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeDelegationTokenRequestOwnersPrincipalType is: The owner principal type.
 	FieldDescribeDelegationTokenRequestOwnersPrincipalType = "PrincipalType"
-	// FieldDescribeDelegationTokenRequestOwnersPrincipalName is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeDelegationTokenRequestOwnersPrincipalName is: The owner principal name.
 	FieldDescribeDelegationTokenRequestOwnersPrincipalName = "PrincipalName"
-	// FieldDescribeDelegationTokenRequestOwnersTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeDelegationTokenRequestOwnersTags is: The tagged fields.
 	FieldDescribeDelegationTokenRequestOwnersTags = "Tags"
+	// FieldDescribeDelegationTokenRequestTags is: The tagged fields.
+	FieldDescribeDelegationTokenRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeDelegationTokenRequest.json

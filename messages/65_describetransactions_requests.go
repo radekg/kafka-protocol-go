@@ -15,9 +15,9 @@ func init65DescribeTransactionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeTransactionsRequestTransactionalIds is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeTransactionsRequestTransactionalIds is: Array of transactionalIds to include in describe results. If empty, then no results will be returned.
 	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
-	// FieldDescribeTransactionsRequestTags is a field name that can be used to resolve the correct struct field.
+	// FieldDescribeTransactionsRequestTags is: The tagged fields.
 	FieldDescribeTransactionsRequestTags = "Tags"
 )
 
