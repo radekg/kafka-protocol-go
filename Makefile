@@ -62,3 +62,18 @@ generate-request-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListTransactionsRequest > $(CURRENT_DIR)messages/66_listtransactions_requests.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AllocateProducerIdsRequest > $(CURRENT_DIR)messages/67_allocateproducerids_requests.go
 	go fmt $(CURRENT_DIR)/messages/...
+
+.PHONY: generate-response-types
+generate-response-types:
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ProduceResponse > $(CURRENT_DIR)messages/00_produce_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=FetchResponse > $(CURRENT_DIR)messages/01_fetch_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListOffsetsResponse > $(CURRENT_DIR)messages/02_listoffsets_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=MetadataResponse > $(CURRENT_DIR)messages/03_metadata_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=LeaderAndIsrResponse > $(CURRENT_DIR)messages/04_leaderandisr_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=StopReplicaResponse > $(CURRENT_DIR)messages/05_stopreplica_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=UpdateMetadataResponse > $(CURRENT_DIR)messages/06_updatemetadata_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ControlledShutdownResponse > $(CURRENT_DIR)messages/07_controlledshutdown_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetCommitResponse > $(CURRENT_DIR)messages/08_offsetcommit_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=OffsetFetchResponse > $(CURRENT_DIR)messages/09_offsetfetch_responses.go
+	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=FindCoordinatorResponse > $(CURRENT_DIR)messages/10_findcoordinator_responses.go
+	go fmt $(CURRENT_DIR)/messages/...

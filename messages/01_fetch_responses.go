@@ -1,0 +1,493 @@
+package messages
+
+import "github.com/radekg/kafka-protocol-go/schema"
+
+func init1FetchResponse() []schema.Schema {
+
+	return []schema.Schema{
+
+		// Message: FetchResponse, API Key: 1, Version: 0
+		schema.NewSchema("FetchResponsev0",
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV0",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 1
+		schema.NewSchema("FetchResponsev1",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV1",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV1",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 2
+		schema.NewSchema("FetchResponsev2",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV2",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV2",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 3
+		schema.NewSchema("FetchResponsev3",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV3",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV3",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 4
+		schema.NewSchema("FetchResponsev4",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV4",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV4",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV4",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 5
+		schema.NewSchema("FetchResponsev5",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV5",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV5",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV5",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 6
+		schema.NewSchema("FetchResponsev6",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV6",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV6",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV6",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 7
+		schema.NewSchema("FetchResponsev7",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV7",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV7",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV7",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 8
+		schema.NewSchema("FetchResponsev8",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV8",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV8",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV8",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 9
+		schema.NewSchema("FetchResponsev9",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV9",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV9",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV9",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 10
+		schema.NewSchema("FetchResponsev10",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV10",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV10",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV10",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 11
+		schema.NewSchema("FetchResponsev11",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.Array{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV11",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStr},
+				&schema.Array{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV11",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Array{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV11",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPreferredReadReplica, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesNullable},
+				)},
+			)},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 12
+		schema.NewSchema("FetchResponsev12",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.ArrayCompact{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV12",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopic, Ty: schema.TypeStrCompact},
+				&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV12",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpochV12",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeaderV12",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotIdV12",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
+					)},
+					&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV12",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPreferredReadReplica, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesCompactNullable},
+					&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsTags},
+				)},
+				&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesTags},
+			)},
+			&schema.SchemaTaggedFields{Name: FieldFetchResponseTags},
+		),
+
+		// Message: FetchResponse, API Key: 1, Version: 13
+		schema.NewSchema("FetchResponsev13",
+			&schema.Mfield{Name: FieldFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
+			&schema.Mfield{Name: FieldFetchResponseErrorCode, Ty: schema.TypeInt16},
+			&schema.Mfield{Name: FieldFetchResponseSessionId, Ty: schema.TypeInt32},
+			&schema.ArrayCompact{Name: FieldFetchResponseResponses, Ty: schema.NewSchema("ResponsesV13",
+				&schema.Mfield{Name: FieldFetchResponseResponsesTopicId, Ty: schema.TypeUuid},
+				&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV13",
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpochV13",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeaderV13",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotIdV13",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
+					)},
+					&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactionsV13",
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
+						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsTags},
+					)},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPreferredReadReplica, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesCompactNullable},
+					&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsTags},
+				)},
+				&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesTags},
+			)},
+			&schema.SchemaTaggedFields{Name: FieldFetchResponseTags},
+		),
+	}
+}
+
+const (
+	// FieldFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
+	FieldFetchResponseThrottleTimeMs = "ThrottleTimeMs"
+	// FieldFetchResponseResponsesPartitionsLogStartOffset is: The current log start offset.
+	FieldFetchResponseResponsesPartitionsLogStartOffset = "LogStartOffset"
+	// FieldFetchResponseResponsesPartitionsPreferredReadReplica is: The preferred read replica for the consumer to use on its next fetch request
+	FieldFetchResponseResponsesPartitionsPreferredReadReplica = "PreferredReadReplica"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset is:
+	FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset = "EndOffset"
+	// FieldFetchResponseResponsesPartitionsRecords is: The record data.
+	FieldFetchResponseResponsesPartitionsRecords = "Records"
+	// FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId is: The ID of the current leader or -1 if the leader is unknown.
+	FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId = "LeaderId"
+	// FieldFetchResponseResponsesPartitionsDivergingEpoch is: In case divergence is detected based on the `LastFetchedEpoch` and `FetchOffset` in the request, this field indicates the largest epoch and its end offset such that subsequent records are known to diverge
+	FieldFetchResponseResponsesPartitionsDivergingEpoch = "DivergingEpoch"
+	// FieldFetchResponseResponsesPartitions is: The topic partitions.
+	FieldFetchResponseResponsesPartitions = "Partitions"
+	// FieldFetchResponseErrorCode is: The top level response error code.
+	FieldFetchResponseErrorCode = "ErrorCode"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset is:
+	FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset = "EndOffset"
+	// FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch is: The latest known leader epoch
+	FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch = "LeaderEpoch"
+	// FieldFetchResponseResponsesPartitionsSnapshotId is: In the case of fetching an offset less than the LogStartOffset, this is the end offset and epoch that should be used in the FetchSnapshot request.
+	FieldFetchResponseResponsesPartitionsSnapshotId = "SnapshotId"
+	// FieldFetchResponseResponsesPartitionsPartitionIndex is: The partition index.
+	FieldFetchResponseResponsesPartitionsPartitionIndex = "PartitionIndex"
+	// FieldFetchResponseResponsesPartitionsHighWatermark is: The current high water mark.
+	FieldFetchResponseResponsesPartitionsHighWatermark = "HighWatermark"
+	// FieldFetchResponseResponsesPartitionsLastStableOffset is: The last stable offset (or LSO) of the partition. This is the last offset such that the state of all transactional records prior to this offset have been decided (ABORTED or COMMITTED)
+	FieldFetchResponseResponsesPartitionsLastStableOffset = "LastStableOffset"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId is: The producer id associated with the aborted transaction.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId = "ProducerId"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset is: The first offset in the aborted transaction.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset = "FirstOffset"
+	// FieldFetchResponseResponsesPartitionsCurrentLeader is:
+	FieldFetchResponseResponsesPartitionsCurrentLeader = "CurrentLeader"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsSnapshotIdTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsTags = "Tags"
+	// FieldFetchResponseResponsesTopic is: The topic name.
+	FieldFetchResponseResponsesTopic = "Topic"
+	// FieldFetchResponseResponsesTopicId is: The unique topic ID
+	FieldFetchResponseResponsesTopicId = "TopicId"
+	// FieldFetchResponseTags is: The tagged fields.
+	FieldFetchResponseTags = "Tags"
+	// FieldFetchResponseSessionId is: The fetch session ID, or 0 if this is not part of a fetch session.
+	FieldFetchResponseSessionId = "SessionId"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochEpoch is:
+	FieldFetchResponseResponsesPartitionsDivergingEpochEpoch = "Epoch"
+	// FieldFetchResponseResponsesPartitionsCurrentLeaderTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsCurrentLeaderTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsSnapshotIdEpoch is:
+	FieldFetchResponseResponsesPartitionsSnapshotIdEpoch = "Epoch"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactions is: The aborted transactions.
+	FieldFetchResponseResponsesPartitionsAbortedTransactions = "AbortedTransactions"
+	// FieldFetchResponseResponsesPartitionsErrorCode is: The error code, or 0 if there was no fetch error.
+	FieldFetchResponseResponsesPartitionsErrorCode = "ErrorCode"
+	// FieldFetchResponseResponsesPartitionsDivergingEpochTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsDivergingEpochTags = "Tags"
+	// FieldFetchResponseResponsesPartitionsAbortedTransactionsTags is: The tagged fields.
+	FieldFetchResponseResponsesPartitionsAbortedTransactionsTags = "Tags"
+	// FieldFetchResponseResponsesTags is: The tagged fields.
+	FieldFetchResponseResponsesTags = "Tags"
+	// FieldFetchResponseResponses is: The response topics.
+	FieldFetchResponseResponses = "Responses"
+)
+
+// Generated from Apache Kafka source code file: clients/src/main/resources/common/message/FetchResponse.json
+const originalFetchResponseInput = `// Licensed to the Apache Software Foundation (ASF) under one or more
+// contributor license agreements.  See the NOTICE file distributed with
+// this work for additional information regarding copyright ownership.
+// The ASF licenses this file to You under the Apache License, Version 2.0
+// (the "License"); you may not use this file except in compliance with
+// the License.  You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+{
+  "apiKey": 1,
+  "type": "response",
+  "name": "FetchResponse",
+  //
+  // Version 1 adds throttle time.
+  //
+  // Version 2 and 3 are the same as version 1. 
+  //
+  // Version 4 adds features for transactional consumption.
+  //
+  // Version 5 adds LogStartOffset to indicate the earliest available offset of
+  // partition data that can be consumed.
+  //
+  // Starting in version 6, we may return KAFKA_STORAGE_ERROR as an error code.
+  //
+  // Version 7 adds incremental fetch request support.
+  //
+  // Starting in version 8, on quota violation, brokers send out responses before throttling.
+  //
+  // Version 9 is the same as version 8.
+  //
+  // Version 10 indicates that the response data can use the ZStd compression
+  // algorithm, as described in KIP-110.
+  // Version 12 adds support for flexible versions, epoch detection through the 'TruncationOffset' field,
+  // and leader discovery through the 'CurrentLeader' field
+  //
+  // Version 13 replaces the topic name field with topic ID (KIP-516).
+  "validVersions": "0-13",
+  "flexibleVersions": "12+",
+  "fields": [
+    { "name": "ThrottleTimeMs", "type": "int32", "versions": "1+", "ignorable": true,
+      "about": "The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota." },
+    { "name": "ErrorCode", "type": "int16", "versions": "7+", "ignorable": true,
+      "about": "The top level response error code." },
+    { "name": "SessionId", "type": "int32", "versions": "7+", "default": "0", "ignorable": false,
+      "about": "The fetch session ID, or 0 if this is not part of a fetch session." },
+    { "name": "Responses", "type": "[]FetchableTopicResponse", "versions": "0+",
+      "about": "The response topics.", "fields": [
+      { "name": "Topic", "type": "string", "versions": "0-12", "ignorable": true, "entityType": "topicName",
+        "about": "The topic name." },
+      { "name": "TopicId", "type": "uuid", "versions": "13+", "ignorable": true, "about": "The unique topic ID"},
+      { "name": "Partitions", "type": "[]PartitionData", "versions": "0+",
+        "about": "The topic partitions.", "fields": [
+        { "name": "PartitionIndex", "type": "int32", "versions": "0+",
+          "about": "The partition index." },
+        { "name": "ErrorCode", "type": "int16", "versions": "0+",
+          "about": "The error code, or 0 if there was no fetch error." },
+        { "name": "HighWatermark", "type": "int64", "versions": "0+",
+          "about": "The current high water mark." },
+        { "name": "LastStableOffset", "type": "int64", "versions": "4+", "default": "-1", "ignorable": true,
+          "about": "The last stable offset (or LSO) of the partition. This is the last offset such that the state of all transactional records prior to this offset have been decided (ABORTED or COMMITTED)" },
+        { "name": "LogStartOffset", "type": "int64", "versions": "5+", "default": "-1", "ignorable": true,
+          "about": "The current log start offset." },
+        { "name": "DivergingEpoch", "type": "EpochEndOffset", "versions": "12+", "taggedVersions": "12+", "tag": 0,
+          "about": "In case divergence is detected based on the 'LastFetchedEpoch' and 'FetchOffset' in the request, this field indicates the largest epoch and its end offset such that subsequent records are known to diverge",
+          "fields": [
+            { "name": "Epoch", "type": "int32", "versions": "12+", "default": "-1" },
+            { "name": "EndOffset", "type": "int64", "versions": "12+", "default": "-1" }
+        ]},
+        { "name": "CurrentLeader", "type": "LeaderIdAndEpoch",
+          "versions": "12+", "taggedVersions": "12+", "tag": 1, "fields": [
+          { "name": "LeaderId", "type": "int32", "versions": "12+", "default": "-1", "entityType": "brokerId",
+            "about": "The ID of the current leader or -1 if the leader is unknown."},
+          { "name": "LeaderEpoch", "type": "int32", "versions": "12+", "default": "-1",
+            "about": "The latest known leader epoch"}
+        ]},
+        { "name": "SnapshotId", "type": "SnapshotId",
+          "versions": "12+", "taggedVersions": "12+", "tag": 2,
+          "about": "In the case of fetching an offset less than the LogStartOffset, this is the end offset and epoch that should be used in the FetchSnapshot request.",
+          "fields": [
+            { "name": "EndOffset", "type": "int64", "versions": "0+", "default": "-1" },
+            { "name": "Epoch", "type": "int32", "versions": "0+", "default": "-1" }
+        ]},
+        { "name": "AbortedTransactions", "type": "[]AbortedTransaction", "versions": "4+", "nullableVersions": "4+", "ignorable": true,
+          "about": "The aborted transactions.",  "fields": [
+          { "name": "ProducerId", "type": "int64", "versions": "4+", "entityType": "producerId",
+            "about": "The producer id associated with the aborted transaction." },
+          { "name": "FirstOffset", "type": "int64", "versions": "4+",
+            "about": "The first offset in the aborted transaction." }
+        ]},
+        { "name": "PreferredReadReplica", "type": "int32", "versions": "11+", "default": "-1", "ignorable": false, "entityType": "brokerId",
+          "about": "The preferred read replica for the consumer to use on its next fetch request"},
+        { "name": "Records", "type": "records", "versions": "0+", "nullableVersions": "0+", "about": "The record data."}
+      ]}
+    ]}
+  ]
+}
+`

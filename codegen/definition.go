@@ -107,6 +107,14 @@ func GetType(t string, flexible, nullable bool) *typeDescriptor {
 			SupportsFlexible: mt.SupportsFlexible,
 		}
 	}
+	if string(t[0]) != strings.ToLower(string(t[0])) {
+		return &typeDescriptor{
+			Name:              t,
+			IsSchema:          true,
+			RequiresArrayWrap: false,
+			SupportsFlexible:  false,
+		}
+	}
 	return &typeDescriptor{
 		Name:             fmt.Sprintf("!!! unknown type: %s", t),
 		SupportsFlexible: false,
