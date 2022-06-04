@@ -91,9 +91,16 @@ func (d *Field) Schema(version int64, nest int, flexible bool, namRegistry *fiel
 		} else {
 			line := fmt.Sprintf(`%s&schema.Mfield{Name: %s, Ty: `, linePrefix, fullVarName)
 			if !typeSpec.IsSchema {
-				line = fmt.Sprintf("%s%s},", line, typeSpec.FullName())
+				lines = append(lines, fmt.Sprintf("%s%s},", line, typeSpec.FullName()))
+			} else {
+				lines = append(lines, fmt.Sprintf(`%sschema.NewSchema("%sV%d",`, line, d.Name, version))
+				// Get subfields:
+				fieldsForVersion := d.Fields.GetForVersion(version, flexible)
+				for _, field := range fieldsForVersion {
+					lines = append(lines, field.Schema(version, nest+1, flexible, namRegistry))
+				}
+				lines = append(lines, fmt.Sprintf("%s)},", linePrefix))
 			}
-			lines = append(lines, line)
 		}
 
 	}
