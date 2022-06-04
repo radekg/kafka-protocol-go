@@ -20,6 +20,9 @@ var (
 	TypeBytesCompactNullable = &BytesCompact{} // Compact nullable bytes
 	TypeBytesNullable        = &Bytes{}        // TODO: proper implementation
 
+	// Float types:
+	TypeFloat64 = &Float64{}
+
 	// Int types:
 	TypeInt8              = &Int8{}
 	TypeInt16             = &Int16{}
@@ -35,9 +38,6 @@ var (
 	// TODO: add uint16
 	// TODO: add uint32
 
-	// Float types:
-	// TODO: add float64
-
 	// String types:
 	TypeStr                = &Str{}
 	TypeStrArray           = &StrArray{}
@@ -48,8 +48,6 @@ var (
 
 	// UUID types:
 	TypeUuid = &Uuid{}
-
-	// TODO: TypeInt32CompactArray
 )
 
 type EncoderDecoder interface {

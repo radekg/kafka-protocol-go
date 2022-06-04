@@ -2,6 +2,7 @@ package encoder
 
 import (
 	"encoding/binary"
+	"math"
 
 	"github.com/google/uuid"
 )
@@ -79,6 +80,12 @@ func (re *realEncoder) PutInt32Array(in []int32) error {
 
 func (re *realEncoder) PutInt64(in int64) {
 	binary.BigEndian.PutUint64(re.raw[re.off:], uint64(in))
+	re.off += 8
+}
+
+func (re *realEncoder) PutFloat64(in float64) {
+	bits := math.Float64bits(in)
+	binary.BigEndian.PutUint64(re.raw[re.off:], bits)
 	re.off += 8
 }
 

@@ -62,8 +62,6 @@ func init32DescribeConfigsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDescribeConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
-	FieldDescribeConfigsRequestResourcesTags = "Tags"
 	// FieldDescribeConfigsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDescribeConfigsRequestTags = "Tags"
 	// FieldDescribeConfigsRequestResources is a field name that can be used to resolve the correct struct field.
@@ -78,6 +76,8 @@ const (
 	FieldDescribeConfigsRequestIncludeSynonyms = "IncludeSynonyms"
 	// FieldDescribeConfigsRequestIncludeDocumentation is a field name that can be used to resolve the correct struct field.
 	FieldDescribeConfigsRequestIncludeDocumentation = "IncludeDocumentation"
+	// FieldDescribeConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
+	FieldDescribeConfigsRequestResourcesTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeConfigsRequest.json

@@ -49,26 +49,26 @@ func init30CreateAclsRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateAclsRequestCreationsOperation is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreationsOperation = "Operation"
-	// FieldCreateAclsRequestCreationsResourcePatternType is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreationsResourcePatternType = "ResourcePatternType"
 	// FieldCreateAclsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateAclsRequestTags = "Tags"
-	// FieldCreateAclsRequestCreations is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreations = "Creations"
-	// FieldCreateAclsRequestCreationsResourceType is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreationsResourceType = "ResourceType"
 	// FieldCreateAclsRequestCreationsResourceName is a field name that can be used to resolve the correct struct field.
 	FieldCreateAclsRequestCreationsResourceName = "ResourceName"
-	// FieldCreateAclsRequestCreationsPrincipal is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreationsPrincipal = "Principal"
-	// FieldCreateAclsRequestCreationsHost is a field name that can be used to resolve the correct struct field.
-	FieldCreateAclsRequestCreationsHost = "Host"
 	// FieldCreateAclsRequestCreationsPermissionType is a field name that can be used to resolve the correct struct field.
 	FieldCreateAclsRequestCreationsPermissionType = "PermissionType"
 	// FieldCreateAclsRequestCreationsTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateAclsRequestCreationsTags = "Tags"
+	// FieldCreateAclsRequestCreationsHost is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreationsHost = "Host"
+	// FieldCreateAclsRequestCreationsOperation is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreationsOperation = "Operation"
+	// FieldCreateAclsRequestCreationsResourcePatternType is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreationsResourcePatternType = "ResourcePatternType"
+	// FieldCreateAclsRequestCreations is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreations = "Creations"
+	// FieldCreateAclsRequestCreationsResourceType is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreationsResourceType = "ResourceType"
+	// FieldCreateAclsRequestCreationsPrincipal is a field name that can be used to resolve the correct struct field.
+	FieldCreateAclsRequestCreationsPrincipal = "Principal"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateAclsRequest.json

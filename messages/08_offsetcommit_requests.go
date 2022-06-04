@@ -155,34 +155,34 @@ func init8OffsetCommitRequest() []schema.Schema {
 const (
 	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestGenerationId = "GenerationId"
 	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
 	// FieldOffsetCommitRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsTags = "Tags"
-	// FieldOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGroupId = "GroupId"
+	// FieldOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTags = "Tags"
 	// FieldOffsetCommitRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopics = "Topics"
 	// FieldOffsetCommitRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestTopicsName = "Name"
-	// FieldOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
-	// FieldOffsetCommitRequestGenerationId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestGenerationId = "GenerationId"
-	// FieldOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
-	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
-	// FieldOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestMemberId = "MemberId"
 	// FieldOffsetCommitRequestRetentionTimeMs is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
 	// FieldOffsetCommitRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
-	// FieldOffsetCommitRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetCommitRequestTags = "Tags"
+	// FieldOffsetCommitRequestGroupId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestGroupId = "GroupId"
+	// FieldOffsetCommitRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+	// FieldOffsetCommitRequestMemberId is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestMemberId = "MemberId"
+	// FieldOffsetCommitRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetCommitRequest.json

@@ -32,12 +32,12 @@ func init7ControlledShutdownRequest() []schema.Schema {
 }
 
 const (
+	// FieldControlledShutdownRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldControlledShutdownRequestTags = "Tags"
 	// FieldControlledShutdownRequestBrokerId is a field name that can be used to resolve the correct struct field.
 	FieldControlledShutdownRequestBrokerId = "BrokerId"
 	// FieldControlledShutdownRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldControlledShutdownRequestBrokerEpoch = "BrokerEpoch"
-	// FieldControlledShutdownRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldControlledShutdownRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ControlledShutdownRequest.json

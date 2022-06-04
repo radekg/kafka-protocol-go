@@ -128,6 +128,8 @@ func init3MetadataRequest() []schema.Schema {
 }
 
 const (
+	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldMetadataRequestTopicsTags = "Tags"
 	// FieldMetadataRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestTags = "Tags"
 	// FieldMetadataRequestTopicsTopicId is a field name that can be used to resolve the correct struct field.
@@ -142,8 +144,6 @@ const (
 	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
 	// FieldMetadataRequestIncludeTopicAuthorizedOperations is a field name that can be used to resolve the correct struct field.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
-	// FieldMetadataRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldMetadataRequestTopicsTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/MetadataRequest.json

@@ -48,24 +48,24 @@ func init21DeleteRecordsRequest() []schema.Schema {
 }
 
 const (
+	// FieldDeleteRecordsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopicsName = "Name"
+	// FieldDeleteRecordsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
 	// FieldDeleteRecordsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsTags = "Tags"
+	// FieldDeleteRecordsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
+	// FieldDeleteRecordsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTags = "Tags"
+	// FieldDeleteRecordsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopics = "Topics"
+	// FieldDeleteRecordsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
 	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 	// FieldDeleteRecordsRequestTopicsPartitionsOffset is a field name that can be used to resolve the correct struct field.
 	FieldDeleteRecordsRequestTopicsPartitionsOffset = "Offset"
-	// FieldDeleteRecordsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
-	// FieldDeleteRecordsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
-	// FieldDeleteRecordsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopics = "Topics"
-	// FieldDeleteRecordsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsName = "Name"
-	// FieldDeleteRecordsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
-	// FieldDeleteRecordsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteRecordsRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteRecordsRequest.json

@@ -20,6 +20,9 @@ type DDef interface {
 	GetBytesCompact() ([]byte, error)
 	GetBytesNullable() ([]byte, error)
 
+	// Floats
+	GetFloat64() (float64, error)
+
 	// Integers and their arrays
 	GetInt8() (int8, error)
 	GetInt16() (int16, error)

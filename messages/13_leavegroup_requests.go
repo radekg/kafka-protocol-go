@@ -59,14 +59,6 @@ func init13LeaveGroupRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaveGroupRequestMembers is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMembers = "Members"
-	// FieldLeaveGroupRequestMembersMemberId is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMembersMemberId = "MemberId"
-	// FieldLeaveGroupRequestMembersGroupInstanceId is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
-	// FieldLeaveGroupRequestMembersTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaveGroupRequestMembersTags = "Tags"
 	// FieldLeaveGroupRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldLeaveGroupRequestTags = "Tags"
 	// FieldLeaveGroupRequestMembersReason is a field name that can be used to resolve the correct struct field.
@@ -75,6 +67,14 @@ const (
 	FieldLeaveGroupRequestGroupId = "GroupId"
 	// FieldLeaveGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
 	FieldLeaveGroupRequestMemberId = "MemberId"
+	// FieldLeaveGroupRequestMembers is a field name that can be used to resolve the correct struct field.
+	FieldLeaveGroupRequestMembers = "Members"
+	// FieldLeaveGroupRequestMembersMemberId is a field name that can be used to resolve the correct struct field.
+	FieldLeaveGroupRequestMembersMemberId = "MemberId"
+	// FieldLeaveGroupRequestMembersGroupInstanceId is a field name that can be used to resolve the correct struct field.
+	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
+	// FieldLeaveGroupRequestMembersTags is a field name that can be used to resolve the correct struct field.
+	FieldLeaveGroupRequestMembersTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaveGroupRequest.json

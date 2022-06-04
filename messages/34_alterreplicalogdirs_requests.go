@@ -45,6 +45,10 @@ func init34AlterReplicaLogDirsRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterReplicaLogDirsRequestDirsTopics is a field name that can be used to resolve the correct struct field.
+	FieldAlterReplicaLogDirsRequestDirsTopics = "Topics"
+	// FieldAlterReplicaLogDirsRequestDirsTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterReplicaLogDirsRequestDirsTopicsName = "Name"
 	// FieldAlterReplicaLogDirsRequestDirsTopicsPartitions is a field name that can be used to resolve the correct struct field.
 	FieldAlterReplicaLogDirsRequestDirsTopicsPartitions = "Partitions"
 	// FieldAlterReplicaLogDirsRequestDirsTopicsTags is a field name that can be used to resolve the correct struct field.
@@ -57,10 +61,6 @@ const (
 	FieldAlterReplicaLogDirsRequestDirs = "Dirs"
 	// FieldAlterReplicaLogDirsRequestDirsPath is a field name that can be used to resolve the correct struct field.
 	FieldAlterReplicaLogDirsRequestDirsPath = "Path"
-	// FieldAlterReplicaLogDirsRequestDirsTopics is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopics = "Topics"
-	// FieldAlterReplicaLogDirsRequestDirsTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterReplicaLogDirsRequestDirsTopicsName = "Name"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterReplicaLogDirsRequest.json

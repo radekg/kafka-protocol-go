@@ -95,6 +95,16 @@ func (rd *realDecoder) GetInt64() (int64, error) {
 	return tmp, nil
 }
 
+func (rd *realDecoder) GetFloat64() (float64, error) {
+	if rd.Remaining() < 8 {
+		rd.off = len(rd.raw)
+		return -1, errors.ErrInsufficientData
+	}
+	tmp := binary.BigEndian.Uint64(rd.raw[rd.off:])
+	rd.off += 8
+	return math.Float64frombits(tmp), nil
+}
+
 func (rd *realDecoder) GetVarint() (int64, error) {
 	tmp, n := binary.Uvarint(rd.raw[rd.off:])
 	if n == 0 {

@@ -38,10 +38,6 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 }
 
 const (
-	// FieldCreateDelegationTokenRequestMaxLifetimeMs is a field name that can be used to resolve the correct struct field.
-	FieldCreateDelegationTokenRequestMaxLifetimeMs = "MaxLifetimeMs"
-	// FieldCreateDelegationTokenRequestRenewersTags is a field name that can be used to resolve the correct struct field.
-	FieldCreateDelegationTokenRequestRenewersTags = "Tags"
 	// FieldCreateDelegationTokenRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldCreateDelegationTokenRequestTags = "Tags"
 	// FieldCreateDelegationTokenRequestRenewers is a field name that can be used to resolve the correct struct field.
@@ -50,6 +46,10 @@ const (
 	FieldCreateDelegationTokenRequestRenewersPrincipalType = "PrincipalType"
 	// FieldCreateDelegationTokenRequestRenewersPrincipalName is a field name that can be used to resolve the correct struct field.
 	FieldCreateDelegationTokenRequestRenewersPrincipalName = "PrincipalName"
+	// FieldCreateDelegationTokenRequestMaxLifetimeMs is a field name that can be used to resolve the correct struct field.
+	FieldCreateDelegationTokenRequestMaxLifetimeMs = "MaxLifetimeMs"
+	// FieldCreateDelegationTokenRequestRenewersTags is a field name that can be used to resolve the correct struct field.
+	FieldCreateDelegationTokenRequestRenewersTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreateDelegationTokenRequest.json

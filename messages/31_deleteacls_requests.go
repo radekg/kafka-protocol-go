@@ -49,26 +49,26 @@ func init31DeleteAclsRequest() []schema.Schema {
 }
 
 const (
-	// FieldDeleteAclsRequestFiltersHostFilter is a field name that can be used to resolve the correct struct field.
-	FieldDeleteAclsRequestFiltersHostFilter = "HostFilter"
-	// FieldDeleteAclsRequestFiltersOperation is a field name that can be used to resolve the correct struct field.
-	FieldDeleteAclsRequestFiltersOperation = "Operation"
-	// FieldDeleteAclsRequestFiltersTags is a field name that can be used to resolve the correct struct field.
-	FieldDeleteAclsRequestFiltersTags = "Tags"
 	// FieldDeleteAclsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldDeleteAclsRequestTags = "Tags"
-	// FieldDeleteAclsRequestFilters is a field name that can be used to resolve the correct struct field.
-	FieldDeleteAclsRequestFilters = "Filters"
+	// FieldDeleteAclsRequestFiltersResourceTypeFilter is a field name that can be used to resolve the correct struct field.
+	FieldDeleteAclsRequestFiltersResourceTypeFilter = "ResourceTypeFilter"
 	// FieldDeleteAclsRequestFiltersResourceNameFilter is a field name that can be used to resolve the correct struct field.
 	FieldDeleteAclsRequestFiltersResourceNameFilter = "ResourceNameFilter"
 	// FieldDeleteAclsRequestFiltersPrincipalFilter is a field name that can be used to resolve the correct struct field.
 	FieldDeleteAclsRequestFiltersPrincipalFilter = "PrincipalFilter"
+	// FieldDeleteAclsRequestFiltersHostFilter is a field name that can be used to resolve the correct struct field.
+	FieldDeleteAclsRequestFiltersHostFilter = "HostFilter"
+	// FieldDeleteAclsRequestFiltersOperation is a field name that can be used to resolve the correct struct field.
+	FieldDeleteAclsRequestFiltersOperation = "Operation"
 	// FieldDeleteAclsRequestFiltersPermissionType is a field name that can be used to resolve the correct struct field.
 	FieldDeleteAclsRequestFiltersPermissionType = "PermissionType"
+	// FieldDeleteAclsRequestFilters is a field name that can be used to resolve the correct struct field.
+	FieldDeleteAclsRequestFilters = "Filters"
 	// FieldDeleteAclsRequestFiltersPatternTypeFilter is a field name that can be used to resolve the correct struct field.
 	FieldDeleteAclsRequestFiltersPatternTypeFilter = "PatternTypeFilter"
-	// FieldDeleteAclsRequestFiltersResourceTypeFilter is a field name that can be used to resolve the correct struct field.
-	FieldDeleteAclsRequestFiltersResourceTypeFilter = "ResourceTypeFilter"
+	// FieldDeleteAclsRequestFiltersTags is a field name that can be used to resolve the correct struct field.
+	FieldDeleteAclsRequestFiltersTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DeleteAclsRequest.json

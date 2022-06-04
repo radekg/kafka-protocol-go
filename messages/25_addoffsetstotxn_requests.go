@@ -42,16 +42,16 @@ func init25AddOffsetsToTxnRequest() []schema.Schema {
 }
 
 const (
+	// FieldAddOffsetsToTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
+	FieldAddOffsetsToTxnRequestTransactionalId = "TransactionalId"
+	// FieldAddOffsetsToTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
+	FieldAddOffsetsToTxnRequestProducerId = "ProducerId"
 	// FieldAddOffsetsToTxnRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestProducerEpoch = "ProducerEpoch"
 	// FieldAddOffsetsToTxnRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestGroupId = "GroupId"
 	// FieldAddOffsetsToTxnRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldAddOffsetsToTxnRequestTags = "Tags"
-	// FieldAddOffsetsToTxnRequestTransactionalId is a field name that can be used to resolve the correct struct field.
-	FieldAddOffsetsToTxnRequestTransactionalId = "TransactionalId"
-	// FieldAddOffsetsToTxnRequestProducerId is a field name that can be used to resolve the correct struct field.
-	FieldAddOffsetsToTxnRequestProducerId = "ProducerId"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AddOffsetsToTxnRequest.json

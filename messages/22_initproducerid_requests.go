@@ -46,6 +46,8 @@ func init22InitProducerIdRequest() []schema.Schema {
 }
 
 const (
+	// FieldInitProducerIdRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldInitProducerIdRequestProducerEpoch = "ProducerEpoch"
 	// FieldInitProducerIdRequestTransactionalId is a field name that can be used to resolve the correct struct field.
 	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
 	// FieldInitProducerIdRequestTransactionTimeoutMs is a field name that can be used to resolve the correct struct field.
@@ -54,8 +56,6 @@ const (
 	FieldInitProducerIdRequestTags = "Tags"
 	// FieldInitProducerIdRequestProducerId is a field name that can be used to resolve the correct struct field.
 	FieldInitProducerIdRequestProducerId = "ProducerId"
-	// FieldInitProducerIdRequestProducerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldInitProducerIdRequestProducerEpoch = "ProducerEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/InitProducerIdRequest.json

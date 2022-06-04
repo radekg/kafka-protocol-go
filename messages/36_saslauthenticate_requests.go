@@ -25,10 +25,10 @@ func init36SaslAuthenticateRequest() []schema.Schema {
 }
 
 const (
-	// FieldSaslAuthenticateRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldSaslAuthenticateRequestTags = "Tags"
 	// FieldSaslAuthenticateRequestAuthBytes is a field name that can be used to resolve the correct struct field.
 	FieldSaslAuthenticateRequestAuthBytes = "AuthBytes"
+	// FieldSaslAuthenticateRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldSaslAuthenticateRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/SaslAuthenticateRequest.json

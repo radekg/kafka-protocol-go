@@ -22,12 +22,12 @@ func init18ApiVersionsRequest() []schema.Schema {
 }
 
 const (
-	// FieldApiVersionsRequestClientSoftwareName is a field name that can be used to resolve the correct struct field.
-	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 	// FieldApiVersionsRequestClientSoftwareVersion is a field name that can be used to resolve the correct struct field.
 	FieldApiVersionsRequestClientSoftwareVersion = "ClientSoftwareVersion"
 	// FieldApiVersionsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldApiVersionsRequestTags = "Tags"
+	// FieldApiVersionsRequestClientSoftwareName is a field name that can be used to resolve the correct struct field.
+	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/ApiVersionsRequest.json

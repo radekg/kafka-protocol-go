@@ -42,6 +42,10 @@ func init29DescribeAclsRequest() []schema.Schema {
 }
 
 const (
+	// FieldDescribeAclsRequestOperation is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestOperation = "Operation"
+	// FieldDescribeAclsRequestPermissionType is a field name that can be used to resolve the correct struct field.
+	FieldDescribeAclsRequestPermissionType = "PermissionType"
 	// FieldDescribeAclsRequestPatternTypeFilter is a field name that can be used to resolve the correct struct field.
 	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
 	// FieldDescribeAclsRequestTags is a field name that can be used to resolve the correct struct field.
@@ -54,10 +58,6 @@ const (
 	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
 	// FieldDescribeAclsRequestHostFilter is a field name that can be used to resolve the correct struct field.
 	FieldDescribeAclsRequestHostFilter = "HostFilter"
-	// FieldDescribeAclsRequestOperation is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestOperation = "Operation"
-	// FieldDescribeAclsRequestPermissionType is a field name that can be used to resolve the correct struct field.
-	FieldDescribeAclsRequestPermissionType = "PermissionType"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/DescribeAclsRequest.json

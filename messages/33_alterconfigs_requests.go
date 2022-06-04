@@ -53,24 +53,24 @@ func init33AlterConfigsRequest() []schema.Schema {
 const (
 	// FieldAlterConfigsRequestResourcesResourceName is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
+	// FieldAlterConfigsRequestResourcesConfigsValue is a field name that can be used to resolve the correct struct field.
+	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
 	// FieldAlterConfigsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
 	// FieldAlterConfigsRequestResourcesConfigsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
 	// FieldAlterConfigsRequestResourcesTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesTags = "Tags"
-	// FieldAlterConfigsRequestResourcesConfigsValue is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
-	// FieldAlterConfigsRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestTags = "Tags"
-	// FieldAlterConfigsRequestResources is a field name that can be used to resolve the correct struct field.
-	FieldAlterConfigsRequestResources = "Resources"
 	// FieldAlterConfigsRequestResourcesResourceType is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
 	// FieldAlterConfigsRequestResourcesConfigs is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesConfigs = "Configs"
 	// FieldAlterConfigsRequestResourcesConfigsName is a field name that can be used to resolve the correct struct field.
 	FieldAlterConfigsRequestResourcesConfigsName = "Name"
+	// FieldAlterConfigsRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterConfigsRequestTags = "Tags"
+	// FieldAlterConfigsRequestResources is a field name that can be used to resolve the correct struct field.
+	FieldAlterConfigsRequestResources = "Resources"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterConfigsRequest.json

@@ -47,8 +47,6 @@ func init12HeartbeatRequest() []schema.Schema {
 }
 
 const (
-	// FieldHeartbeatRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldHeartbeatRequestTags = "Tags"
 	// FieldHeartbeatRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldHeartbeatRequestGroupId = "GroupId"
 	// FieldHeartbeatRequestGenerationId is a field name that can be used to resolve the correct struct field.
@@ -57,6 +55,8 @@ const (
 	FieldHeartbeatRequestMemberId = "MemberId"
 	// FieldHeartbeatRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldHeartbeatRequestGroupInstanceId = "GroupInstanceId"
+	// FieldHeartbeatRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldHeartbeatRequestTags = "Tags"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/HeartbeatRequest.json

@@ -121,24 +121,24 @@ func init2ListOffsetsRequest() []schema.Schema {
 }
 
 const (
-	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsTags = "Tags"
 	// FieldListOffsetsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTags = "Tags"
+	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopics = "Topics"
 	// FieldListOffsetsRequestTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsName = "Name"
+	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
 	// FieldListOffsetsRequestTopicsPartitionsTimestamp is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
 	// FieldListOffsetsRequestIsolationLevel is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
 	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
-	// FieldListOffsetsRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
+	// FieldListOffsetsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldListOffsetsRequestTopicsTags = "Tags"
 	// FieldListOffsetsRequestReplicaId is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestReplicaId = "ReplicaId"
-	// FieldListOffsetsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldListOffsetsRequestTopics = "Topics"
 	// FieldListOffsetsRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
 	FieldListOffsetsRequestTopicsPartitions = "Partitions"
 	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.

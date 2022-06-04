@@ -126,38 +126,38 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 }
 
 const (
-	// FieldLeaderAndIsrRequestType is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestType = "Type"
+	// FieldLeaderAndIsrRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
+	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
+	// FieldLeaderAndIsrRequestControllerId is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestControllerId = "ControllerId"
+	// FieldLeaderAndIsrRequestLiveLeadersPort is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
+	// FieldLeaderAndIsrRequestLiveLeaders is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
+	// FieldLeaderAndIsrRequestLiveLeadersHostName is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
 	// FieldLeaderAndIsrRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
 	// FieldLeaderAndIsrRequestTopicStates is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
+	// FieldLeaderAndIsrRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTags = "Tags"
+	// FieldLeaderAndIsrRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
+	// FieldLeaderAndIsrRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+	// FieldLeaderAndIsrRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
 	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
 	// FieldLeaderAndIsrRequestTopicStatesTags is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
-	// FieldLeaderAndIsrRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTags = "Tags"
-	// FieldLeaderAndIsrRequestControllerEpoch is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
-	// FieldLeaderAndIsrRequestLiveLeadersHostName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
-	// FieldLeaderAndIsrRequestLiveLeaders is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
-	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
-	// FieldLeaderAndIsrRequestLiveLeadersPort is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
-	// FieldLeaderAndIsrRequestTopicStatesTopicName is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
 	// FieldLeaderAndIsrRequestLiveLeadersTags is a field name that can be used to resolve the correct struct field.
 	FieldLeaderAndIsrRequestLiveLeadersTags = "Tags"
-	// FieldLeaderAndIsrRequestTopicStatesTopicId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
-	// FieldLeaderAndIsrRequestControllerId is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestControllerId = "ControllerId"
-	// FieldLeaderAndIsrRequestUngroupedPartitionStates is a field name that can be used to resolve the correct struct field.
-	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+	// FieldLeaderAndIsrRequestType is a field name that can be used to resolve the correct struct field.
+	FieldLeaderAndIsrRequestType = "Type"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaderAndIsrRequest.json

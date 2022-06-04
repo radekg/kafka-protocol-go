@@ -35,6 +35,10 @@ func (pe *prepEncoder) PutInt64(in int64) {
 	pe.length += 8
 }
 
+func (pe *prepEncoder) PutFloat64(in float64) {
+	pe.length += 8
+}
+
 func (pe *prepEncoder) PutVarint(in int64) {
 	var buf [binary.MaxVarintLen64]byte
 	pe.length += binary.PutUvarint(buf[:], uint64(in))

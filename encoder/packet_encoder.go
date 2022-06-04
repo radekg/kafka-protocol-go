@@ -20,6 +20,9 @@ type EDef interface {
 	PutBytesCompact(in []byte) error
 	PutBytesNullable(in []byte) error
 
+	// Floats
+	PutFloat64(in float64)
+
 	// Integers and their arrays
 	PutInt8(in int8)
 	PutInt16(in int16)

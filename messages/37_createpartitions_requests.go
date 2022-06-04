@@ -69,24 +69,24 @@ func init37CreatePartitionsRequest() []schema.Schema {
 const (
 	// FieldCreatePartitionsRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldCreatePartitionsRequestTags = "Tags"
-	// FieldCreatePartitionsRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopics = "Topics"
-	// FieldCreatePartitionsRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsName = "Name"
-	// FieldCreatePartitionsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
-	// FieldCreatePartitionsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
-	// FieldCreatePartitionsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldCreatePartitionsRequestTopicsTags = "Tags"
 	// FieldCreatePartitionsRequestTopicsCount is a field name that can be used to resolve the correct struct field.
 	FieldCreatePartitionsRequestTopicsCount = "Count"
+	// FieldCreatePartitionsRequestTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
 	// FieldCreatePartitionsRequestTopicsAssignments is a field name that can be used to resolve the correct struct field.
 	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
 	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is a field name that can be used to resolve the correct struct field.
 	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+	// FieldCreatePartitionsRequestValidateOnly is a field name that can be used to resolve the correct struct field.
+	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
 	// FieldCreatePartitionsRequestTopicsAssignmentsTags is a field name that can be used to resolve the correct struct field.
 	FieldCreatePartitionsRequestTopicsAssignmentsTags = "Tags"
+	// FieldCreatePartitionsRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldCreatePartitionsRequestTopicsTags = "Tags"
+	// FieldCreatePartitionsRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldCreatePartitionsRequestTopics = "Topics"
+	// FieldCreatePartitionsRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldCreatePartitionsRequestTopicsName = "Name"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/CreatePartitionsRequest.json

@@ -73,16 +73,16 @@ The goal of this fork is to add support for all Apache Kafka® messages.
 - [x] `38`: CreateDelegationToken
 - [x] `39`: RenewDelegationToken
 
-- [ ] `40`: ExpireDelegationToken
-- [ ] `41`: DescribeDelegationToken
-- [ ] `42`: DeleteGroups
-- [ ] `43`: ElectLeaders
-- [ ] `44`: IncrementalAlterConfigs
-- [ ] `45`: AlterPartitionReassignments
-- [ ] `46`: ListPartitionReassignments
-- [ ] `47`: OffsetDelete
-- [ ] `48`: DescribeClientQuotas
-- [ ] `49`: AlterClientQuotas
+- [x] `40`: ExpireDelegationToken
+- [x] `41`: DescribeDelegationToken
+- [x] `42`: DeleteGroups
+- [x] `43`: ElectLeaders
+- [x] `44`: IncrementalAlterConfigs
+- [x] `45`: AlterPartitionReassignments
+- [x] `46`: ListPartitionReassignments
+- [x] `47`: OffsetDelete
+- [x] `48`: DescribeClientQuotas
+- [x] `49`: AlterClientQuotas
 
 - [x] `50`: DescribeUserScramCredentials
 - [x] `51`: AlterUserScramCredentials

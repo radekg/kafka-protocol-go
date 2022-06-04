@@ -103,28 +103,28 @@ func init9OffsetFetchRequest() []schema.Schema {
 const (
 	// FieldOffsetFetchRequestGroupId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupId = "GroupId"
-	// FieldOffsetFetchRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopics = "Topics"
+	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsName = "Name"
+	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestRequireStable = "RequireStable"
+	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroupsTags = "Tags"
 	// FieldOffsetFetchRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestTopicsTags = "Tags"
+	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTags = "Tags"
 	// FieldOffsetFetchRequestGroupsgroupId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsgroupId = "groupId"
 	// FieldOffsetFetchRequestGroupsTopicsName is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopicsName = "Name"
-	// FieldOffsetFetchRequestGroupsTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroupsTags = "Tags"
-	// FieldOffsetFetchRequestTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestGroups = "Groups"
 	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
-	// FieldOffsetFetchRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTopicsName = "Name"
-	// FieldOffsetFetchRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestTags = "Tags"
-	// FieldOffsetFetchRequestRequireStable is a field name that can be used to resolve the correct struct field.
-	FieldOffsetFetchRequestRequireStable = "RequireStable"
+	// FieldOffsetFetchRequestGroups is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestGroups = "Groups"
+	// FieldOffsetFetchRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldOffsetFetchRequestTopics = "Topics"
 	// FieldOffsetFetchRequestGroupsTopics is a field name that can be used to resolve the correct struct field.
 	FieldOffsetFetchRequestGroupsTopics = "Topics"
 	// FieldOffsetFetchRequestGroupsTopicsTags is a field name that can be used to resolve the correct struct field.

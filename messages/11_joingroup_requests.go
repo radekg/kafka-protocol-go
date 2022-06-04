@@ -155,28 +155,28 @@ func init11JoinGroupRequest() []schema.Schema {
 const (
 	// FieldJoinGroupRequestProtocolType is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolType = "ProtocolType"
+	// FieldJoinGroupRequestProtocols is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestProtocols = "Protocols"
 	// FieldJoinGroupRequestProtocolsName is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsName = "Name"
+	// FieldJoinGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestGroupId = "GroupId"
+	// FieldJoinGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestMemberId = "MemberId"
+	// FieldJoinGroupRequestRebalanceTimeoutMs is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
 	// FieldJoinGroupRequestGroupInstanceId is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
 	// FieldJoinGroupRequestProtocolsTags is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsTags = "Tags"
-	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestReason = "Reason"
 	// FieldJoinGroupRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestTags = "Tags"
-	// FieldJoinGroupRequestGroupId is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestGroupId = "GroupId"
+	// FieldJoinGroupRequestReason is a field name that can be used to resolve the correct struct field.
+	FieldJoinGroupRequestReason = "Reason"
 	// FieldJoinGroupRequestSessionTimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
-	// FieldJoinGroupRequestMemberId is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestMemberId = "MemberId"
-	// FieldJoinGroupRequestProtocols is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestProtocols = "Protocols"
 	// FieldJoinGroupRequestProtocolsMetadata is a field name that can be used to resolve the correct struct field.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
-	// FieldJoinGroupRequestRebalanceTimeoutMs is a field name that can be used to resolve the correct struct field.
-	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/JoinGroupRequest.json

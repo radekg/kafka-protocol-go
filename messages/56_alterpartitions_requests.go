@@ -46,32 +46,32 @@ func init56AlterPartitionRequest() []schema.Schema {
 }
 
 const (
+	// FieldAlterPartitionRequestTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTags = "Tags"
+	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
 	// FieldAlterPartitionRequestBrokerEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestBrokerEpoch = "BrokerEpoch"
 	// FieldAlterPartitionRequestTopics is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopics = "Topics"
+	// FieldAlterPartitionRequestTopicsName is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsName = "Name"
 	// FieldAlterPartitionRequestTopicsPartitionsPartitionIndex is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
+	// FieldAlterPartitionRequestTopicsTags is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsTags = "Tags"
+	// FieldAlterPartitionRequestBrokerId is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestBrokerId = "BrokerId"
+	// FieldAlterPartitionRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
 	// FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
 	// FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsPartitionsPartitionEpoch = "PartitionEpoch"
 	// FieldAlterPartitionRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldAlterPartitionRequestTopicsPartitionsTags = "Tags"
-	// FieldAlterPartitionRequestTopicsTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsTags = "Tags"
-	// FieldAlterPartitionRequestTags is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTags = "Tags"
-	// FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
-	// FieldAlterPartitionRequestBrokerId is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestBrokerId = "BrokerId"
-	// FieldAlterPartitionRequestTopicsName is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsName = "Name"
-	// FieldAlterPartitionRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitions = "Partitions"
-	// FieldAlterPartitionRequestTopicsPartitionsNewIsr is a field name that can be used to resolve the correct struct field.
-	FieldAlterPartitionRequestTopicsPartitionsNewIsr = "NewIsr"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/AlterPartitionRequest.json

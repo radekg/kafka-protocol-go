@@ -21,12 +21,6 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 }
 
 const (
-	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
-	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
-	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is a field name that can be used to resolve the correct struct field.
-	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
 	// FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade = "AllowDowngrade"
 	// FieldUpdateFeaturesRequestFeatureUpdatesTags is a field name that can be used to resolve the correct struct field.
@@ -35,6 +29,12 @@ const (
 	FieldUpdateFeaturesRequestTags = "Tags"
 	// FieldUpdateFeaturesRequesttimeoutMs is a field name that can be used to resolve the correct struct field.
 	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
+	// FieldUpdateFeaturesRequestFeatureUpdates is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
+	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
+	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is a field name that can be used to resolve the correct struct field.
+	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateFeaturesRequest.json

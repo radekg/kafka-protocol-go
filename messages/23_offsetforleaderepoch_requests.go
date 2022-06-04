@@ -72,26 +72,26 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 }
 
 const (
+	// FieldOffsetForLeaderEpochRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
 	// FieldOffsetForLeaderEpochRequestReplicaId is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsTags = "Tags"
+	// FieldOffsetForLeaderEpochRequestTopics is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopics = "Topics"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
+	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 	// FieldOffsetForLeaderEpochRequestTopicsTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTopicsTags = "Tags"
 	// FieldOffsetForLeaderEpochRequestTags is a field name that can be used to resolve the correct struct field.
 	FieldOffsetForLeaderEpochRequestTags = "Tags"
-	// FieldOffsetForLeaderEpochRequestTopics is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopics = "Topics"
-	// FieldOffsetForLeaderEpochRequestTopicsTopic is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitions is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
-	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is a field name that can be used to resolve the correct struct field.
-	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/OffsetForLeaderEpochRequest.json
