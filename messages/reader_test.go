@@ -16,8 +16,12 @@ func TestDiscoversMessageHeaderVersion(t *testing.T) {
 	expectedApiVersion := int16(1)
 	expectedCorrelationId := int32(9999)
 	expectedClientId := "some-test-client-id"
+
+	expectedTagTag := int64(1000)
+	expectedTagData := []byte("tag-data")
+
 	expectedTagBuffer := []schema.RawTaggedField{
-		schema.NewRawTaggedField(int64(1000), make([]byte, 50)),
+		schema.NewRawTaggedField(expectedTagTag, expectedTagData),
 	}
 
 	t.Run("it=discovers message header V2", func(tt *testing.T) {
@@ -47,7 +51,10 @@ func TestDiscoversMessageHeaderVersion(t *testing.T) {
 		assert.Equal(tt, expectedCorrelationId, header.CorrelationID())
 		assert.Equal(tt, expectedClientId, *header.ClientID())
 
-		assert.Equal(tt, len(expectedTagBuffer), len(header.Tags().Values()))
+		headerTags := header.Tags().Values()
+		assert.Equal(tt, len(expectedTagBuffer), len(headerTags))
+		assert.Equal(tt, expectedTagTag, headerTags[0].Tag())
+		assert.Equal(tt, string(expectedTagData), string(headerTags[0].Data()))
 	})
 
 	t.Run("it=discovers message header V1", func(tt *testing.T) {

@@ -98,7 +98,7 @@ Apache 2.0.
 ## Run tests
 
 ```sh
-go test -count=1 -v ./...
+make test-verbose
 ```
 
 ## Generating messages
