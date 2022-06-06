@@ -7,11 +7,11 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 0
 		schema.NewSchema("WriteTxnMarkersRequest:v0",
-			&schema.Array{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("Markers:v0",
+			&schema.Array{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("[]WritableTxnMarker:v0",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTransactionResult, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("Topics:v0",
+				&schema.Array{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopic:v0",
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 				)},
@@ -21,11 +21,11 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 1
 		schema.NewSchema("WriteTxnMarkersRequest:v1",
-			&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("Markers:v1",
+			&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("[]WritableTxnMarker:v1",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTransactionResult, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("Topics:v1",
+				&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopic:v1",
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersRequestMarkersTopicsTags},

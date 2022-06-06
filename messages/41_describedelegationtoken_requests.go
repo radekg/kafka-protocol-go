@@ -7,7 +7,7 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 0
 		schema.NewSchema("DescribeDelegationTokenRequest:v0",
-			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v0",
+			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("[]DescribeDelegationTokenOwner:v0",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStr},
 			)},
@@ -15,7 +15,7 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 1
 		schema.NewSchema("DescribeDelegationTokenRequest:v1",
-			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v1",
+			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("[]DescribeDelegationTokenOwner:v1",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStr},
 			)},
@@ -23,7 +23,7 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 2
 		schema.NewSchema("DescribeDelegationTokenRequest:v2",
-			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v2",
+			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("[]DescribeDelegationTokenOwner:v2",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldDescribeDelegationTokenRequestOwnersTags},

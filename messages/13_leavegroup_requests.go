@@ -26,7 +26,7 @@ func init13LeaveGroupRequest() []schema.Schema {
 		// Message: LeaveGroupRequest, API Key: 13, Version: 3
 		schema.NewSchema("LeaveGroupRequest:v3",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("Members:v3",
+			&schema.Array{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v3",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrNullable},
 			)},
@@ -35,7 +35,7 @@ func init13LeaveGroupRequest() []schema.Schema {
 		// Message: LeaveGroupRequest, API Key: 13, Version: 4
 		schema.NewSchema("LeaveGroupRequest:v4",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("Members:v4",
+			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v4",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldLeaveGroupRequestMembersTags},
@@ -46,7 +46,7 @@ func init13LeaveGroupRequest() []schema.Schema {
 		// Message: LeaveGroupRequest, API Key: 13, Version: 5
 		schema.NewSchema("LeaveGroupRequest:v5",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("Members:v5",
+			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v5",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersReason, Ty: schema.TypeStrCompactNullable},

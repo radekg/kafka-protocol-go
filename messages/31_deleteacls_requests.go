@@ -7,7 +7,7 @@ func init31DeleteAclsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DeleteAclsRequest, API Key: 31, Version: 0
 		schema.NewSchema("DeleteAclsRequest:v0",
-			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("Filters:v0",
+			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v0",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPrincipalFilter, Ty: schema.TypeStrNullable},
@@ -19,7 +19,7 @@ func init31DeleteAclsRequest() []schema.Schema {
 
 		// Message: DeleteAclsRequest, API Key: 31, Version: 1
 		schema.NewSchema("DeleteAclsRequest:v1",
-			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("Filters:v1",
+			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v1",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPatternTypeFilter, Ty: schema.TypeInt8},
@@ -32,7 +32,7 @@ func init31DeleteAclsRequest() []schema.Schema {
 
 		// Message: DeleteAclsRequest, API Key: 31, Version: 2
 		schema.NewSchema("DeleteAclsRequest:v2",
-			&schema.ArrayCompact{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("Filters:v2",
+			&schema.ArrayCompact{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v2",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPatternTypeFilter, Ty: schema.TypeInt8},

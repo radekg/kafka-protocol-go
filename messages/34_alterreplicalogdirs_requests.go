@@ -7,9 +7,9 @@ func init34AlterReplicaLogDirsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: AlterReplicaLogDirsRequest, API Key: 34, Version: 0
 		schema.NewSchema("AlterReplicaLogDirsRequest:v0",
-			&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("Dirs:v0",
+			&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("[]AlterReplicaLogDir:v0",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsPath, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("Topics:v0",
+				&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("[]AlterReplicaLogDirTopic:v0",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsPartitions, Ty: schema.TypeInt32Array},
 				)},
@@ -18,9 +18,9 @@ func init34AlterReplicaLogDirsRequest() []schema.Schema {
 
 		// Message: AlterReplicaLogDirsRequest, API Key: 34, Version: 1
 		schema.NewSchema("AlterReplicaLogDirsRequest:v1",
-			&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("Dirs:v1",
+			&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("[]AlterReplicaLogDir:v1",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsPath, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("Topics:v1",
+				&schema.Array{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("[]AlterReplicaLogDirTopic:v1",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsPartitions, Ty: schema.TypeInt32Array},
 				)},
@@ -29,9 +29,9 @@ func init34AlterReplicaLogDirsRequest() []schema.Schema {
 
 		// Message: AlterReplicaLogDirsRequest, API Key: 34, Version: 2
 		schema.NewSchema("AlterReplicaLogDirsRequest:v2",
-			&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("Dirs:v2",
+			&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsRequestDirs, Ty: schema.NewSchema("[]AlterReplicaLogDir:v2",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsPath, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("Topics:v2",
+				&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsRequestDirsTopics, Ty: schema.NewSchema("[]AlterReplicaLogDirTopic:v2",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsRequestDirsTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldAlterReplicaLogDirsRequestDirsTopicsTags},

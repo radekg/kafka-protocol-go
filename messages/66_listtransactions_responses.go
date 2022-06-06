@@ -10,7 +10,7 @@ func init66ListTransactionsResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldListTransactionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListTransactionsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldListTransactionsResponseUnknownStateFilters, Ty: schema.TypeStrCompactArray},
-			&schema.ArrayCompact{Name: FieldListTransactionsResponseTransactionStates, Ty: schema.NewSchema("TransactionStates:v0",
+			&schema.ArrayCompact{Name: FieldListTransactionsResponseTransactionStates, Ty: schema.NewSchema("[]TransactionState:v0",
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesTransactionalId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesTransactionState, Ty: schema.TypeStrCompact},

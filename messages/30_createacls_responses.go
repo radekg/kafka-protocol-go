@@ -8,7 +8,7 @@ func init30CreateAclsResponse() []schema.Schema {
 		// Message: CreateAclsResponse, API Key: 30, Version: 0
 		schema.NewSchema("CreateAclsResponse:v0",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("Results:v0",
+			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v0",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 			)},
@@ -17,7 +17,7 @@ func init30CreateAclsResponse() []schema.Schema {
 		// Message: CreateAclsResponse, API Key: 30, Version: 1
 		schema.NewSchema("CreateAclsResponse:v1",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("Results:v1",
+			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v1",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 			)},
@@ -26,7 +26,7 @@ func init30CreateAclsResponse() []schema.Schema {
 		// Message: CreateAclsResponse, API Key: 30, Version: 2
 		schema.NewSchema("CreateAclsResponse:v2",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("Results:v2",
+			&schema.ArrayCompact{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v2",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldCreateAclsResponseResultsTags},

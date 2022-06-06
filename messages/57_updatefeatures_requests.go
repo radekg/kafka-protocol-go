@@ -8,7 +8,7 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 		// Message: UpdateFeaturesRequest, API Key: 57, Version: 0
 		schema.NewSchema("UpdateFeaturesRequest:v0",
 			&schema.Mfield{Name: FieldUpdateFeaturesRequesttimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("FeatureUpdates:v0",
+			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("[]FeatureUpdateKey:v0",
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesFeature, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade, Ty: schema.TypeBool},

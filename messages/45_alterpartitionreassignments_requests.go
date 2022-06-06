@@ -8,9 +8,9 @@ func init45AlterPartitionReassignmentsRequest() []schema.Schema {
 		// Message: AlterPartitionReassignmentsRequest, API Key: 45, Version: 0
 		schema.NewSchema("AlterPartitionReassignmentsRequest:v0",
 			&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("[]ReassignableTopic:v0",
 				&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitions, Ty: schema.NewSchema("[]ReassignablePartition:v0",
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags},

@@ -7,7 +7,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 	return []schema.Schema{
 		// Message: CreateTopicsResponse, API Key: 19, Version: 0
 		schema.NewSchema("CreateTopicsResponse:v0",
-			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v0",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -15,7 +15,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 
 		// Message: CreateTopicsResponse, API Key: 19, Version: 1
 		schema.NewSchema("CreateTopicsResponse:v1",
-			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v1",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrNullable},
@@ -25,7 +25,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 2
 		schema.NewSchema("CreateTopicsResponse:v2",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v2",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrNullable},
@@ -35,7 +35,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 3
 		schema.NewSchema("CreateTopicsResponse:v3",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v3",
+			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v3",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrNullable},
@@ -45,7 +45,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 4
 		schema.NewSchema("CreateTopicsResponse:v4",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v4",
+			&schema.Array{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v4",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrNullable},
@@ -55,13 +55,13 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 5
 		schema.NewSchema("CreateTopicsResponse:v5",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v5",
+			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v5",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
-				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v5",
+				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("[]CreatableTopicConfigs:v5",
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsReadOnly, Ty: schema.TypeBool},
@@ -84,13 +84,13 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 6
 		schema.NewSchema("CreateTopicsResponse:v6",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v6",
+			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v6",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
-				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v6",
+				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("[]CreatableTopicConfigs:v6",
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsReadOnly, Ty: schema.TypeBool},
@@ -113,14 +113,14 @@ func init19CreateTopicsResponse() []schema.Schema {
 		// Message: CreateTopicsResponse, API Key: 19, Version: 7
 		schema.NewSchema("CreateTopicsResponse:v7",
 			&schema.Mfield{Name: FieldCreateTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("Topics:v7",
+			&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopics, Ty: schema.NewSchema("[]CreatableTopicResult:v7",
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
-				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v7",
+				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("[]CreatableTopicConfigs:v7",
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsConfigsReadOnly, Ty: schema.TypeBool},

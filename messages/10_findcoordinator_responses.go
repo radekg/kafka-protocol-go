@@ -47,7 +47,7 @@ func init10FindCoordinatorResponse() []schema.Schema {
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 4
 		schema.NewSchema("FindCoordinatorResponse:v4",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldFindCoordinatorResponseCoordinators, Ty: schema.NewSchema("Coordinators:v4",
+			&schema.ArrayCompact{Name: FieldFindCoordinatorResponseCoordinators, Ty: schema.NewSchema("[]Coordinator:v4",
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsKey, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsHost, Ty: schema.TypeStrCompact},

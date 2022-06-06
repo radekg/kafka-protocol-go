@@ -8,7 +8,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 0
 		schema.NewSchema("OffsetFetchRequest:v0",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v0",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -17,7 +17,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 1
 		schema.NewSchema("OffsetFetchRequest:v1",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v1",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -26,7 +26,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 2
 		schema.NewSchema("OffsetFetchRequest:v2",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v2",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -35,7 +35,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 3
 		schema.NewSchema("OffsetFetchRequest:v3",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v3",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v3",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -44,7 +44,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 4
 		schema.NewSchema("OffsetFetchRequest:v4",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v4",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v4",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -53,7 +53,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 5
 		schema.NewSchema("OffsetFetchRequest:v5",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v5",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v5",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
@@ -62,7 +62,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 6
 		schema.NewSchema("OffsetFetchRequest:v6",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v6",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v6",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTopicsTags},
@@ -73,7 +73,7 @@ func init9OffsetFetchRequest() []schema.Schema {
 		// Message: OffsetFetchRequest, API Key: 9, Version: 7
 		schema.NewSchema("OffsetFetchRequest:v7",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v7",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopic:v7",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTopicsTags},
@@ -84,9 +84,9 @@ func init9OffsetFetchRequest() []schema.Schema {
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 8
 		schema.NewSchema("OffsetFetchRequest:v8",
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroups, Ty: schema.NewSchema("Groups:v8",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroups, Ty: schema.NewSchema("[]OffsetFetchRequestGroup:v8",
 				&schema.Mfield{Name: FieldOffsetFetchRequestGroupsgroupId, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroupsTopics, Ty: schema.NewSchema("Topics:v8",
+				&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroupsTopics, Ty: schema.NewSchema("[]OffsetFetchRequestTopics:v8",
 					&schema.Mfield{Name: FieldOffsetFetchRequestGroupsTopicsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldOffsetFetchRequestGroupsTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestGroupsTopicsTags},

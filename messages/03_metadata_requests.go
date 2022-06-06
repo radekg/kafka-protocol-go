@@ -7,35 +7,35 @@ func init3MetadataRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: MetadataRequest, API Key: 3, Version: 0
 		schema.NewSchema("MetadataRequest:v0",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v0",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 1
 		schema.NewSchema("MetadataRequest:v1",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v1",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 2
 		schema.NewSchema("MetadataRequest:v2",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v2",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 3
 		schema.NewSchema("MetadataRequest:v3",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v3",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v3",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 4
 		schema.NewSchema("MetadataRequest:v4",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v4",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v4",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -43,7 +43,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 5
 		schema.NewSchema("MetadataRequest:v5",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v5",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v5",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -51,7 +51,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 6
 		schema.NewSchema("MetadataRequest:v6",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v6",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v6",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -59,7 +59,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 7
 		schema.NewSchema("MetadataRequest:v7",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v7",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v7",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -67,7 +67,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 8
 		schema.NewSchema("MetadataRequest:v8",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v8",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v8",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -77,7 +77,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 9
 		schema.NewSchema("MetadataRequest:v9",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v9",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v9",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
 			)},
@@ -89,7 +89,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 10
 		schema.NewSchema("MetadataRequest:v10",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v10",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v10",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -102,7 +102,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 11
 		schema.NewSchema("MetadataRequest:v11",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v11",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v11",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -114,7 +114,7 @@ func init3MetadataRequest() []schema.Schema {
 
 		// Message: MetadataRequest, API Key: 3, Version: 12
 		schema.NewSchema("MetadataRequest:v12",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("Topics:v12",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v12",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},

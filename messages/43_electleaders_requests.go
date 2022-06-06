@@ -7,7 +7,7 @@ func init43ElectLeadersRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: ElectLeadersRequest, API Key: 43, Version: 0
 		schema.NewSchema("ElectLeadersRequest:v0",
-			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitions:v0",
+			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v0",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32Array},
 			)},
@@ -17,7 +17,7 @@ func init43ElectLeadersRequest() []schema.Schema {
 		// Message: ElectLeadersRequest, API Key: 43, Version: 1
 		schema.NewSchema("ElectLeadersRequest:v1",
 			&schema.Mfield{Name: FieldElectLeadersRequestElectionType, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitions:v1",
+			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v1",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32Array},
 			)},
@@ -27,7 +27,7 @@ func init43ElectLeadersRequest() []schema.Schema {
 		// Message: ElectLeadersRequest, API Key: 43, Version: 2
 		schema.NewSchema("ElectLeadersRequest:v2",
 			&schema.Mfield{Name: FieldElectLeadersRequestElectionType, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitions:v2",
+			&schema.ArrayCompact{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v2",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldElectLeadersRequestTopicPartitionsTags},

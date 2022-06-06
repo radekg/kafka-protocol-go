@@ -8,7 +8,7 @@ func init51AlterUserScramCredentialsResponse() []schema.Schema {
 		// Message: AlterUserScramCredentialsResponse, API Key: 51, Version: 0
 		schema.NewSchema("AlterUserScramCredentialsResponse:v0",
 			&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsResponseResults, Ty: schema.NewSchema("Results:v0",
+			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsResponseResults, Ty: schema.NewSchema("[]AlterUserScramCredentialsResult:v0",
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsUser, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},

@@ -8,7 +8,7 @@ func init5StopReplicaResponse() []schema.Schema {
 		// Message: StopReplicaResponse, API Key: 5, Version: 0
 		schema.NewSchema("StopReplicaResponse:v0",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v0",
+			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("[]StopReplicaPartitionError:v0",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -18,7 +18,7 @@ func init5StopReplicaResponse() []schema.Schema {
 		// Message: StopReplicaResponse, API Key: 5, Version: 1
 		schema.NewSchema("StopReplicaResponse:v1",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v1",
+			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("[]StopReplicaPartitionError:v1",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -28,7 +28,7 @@ func init5StopReplicaResponse() []schema.Schema {
 		// Message: StopReplicaResponse, API Key: 5, Version: 2
 		schema.NewSchema("StopReplicaResponse:v2",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v2",
+			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("[]StopReplicaPartitionError:v2",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -40,7 +40,7 @@ func init5StopReplicaResponse() []schema.Schema {
 		// Message: StopReplicaResponse, API Key: 5, Version: 3
 		schema.NewSchema("StopReplicaResponse:v3",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v3",
+			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("[]StopReplicaPartitionError:v3",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},

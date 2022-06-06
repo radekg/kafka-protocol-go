@@ -8,7 +8,7 @@ func init7ControlledShutdownResponse() []schema.Schema {
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 0
 		schema.NewSchema("ControlledShutdownResponse:v0",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v0",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("[]RemainingPartition:v0",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
@@ -17,7 +17,7 @@ func init7ControlledShutdownResponse() []schema.Schema {
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 1
 		schema.NewSchema("ControlledShutdownResponse:v1",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v1",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("[]RemainingPartition:v1",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
@@ -26,7 +26,7 @@ func init7ControlledShutdownResponse() []schema.Schema {
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 2
 		schema.NewSchema("ControlledShutdownResponse:v2",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v2",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("[]RemainingPartition:v2",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
@@ -35,7 +35,7 @@ func init7ControlledShutdownResponse() []schema.Schema {
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 3
 		schema.NewSchema("ControlledShutdownResponse:v3",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v3",
+			&schema.ArrayCompact{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("[]RemainingPartition:v3",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.SchemaTaggedFields{Name: FieldControlledShutdownResponseRemainingPartitionsTags},

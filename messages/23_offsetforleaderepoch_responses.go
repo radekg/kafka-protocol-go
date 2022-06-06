@@ -7,9 +7,9 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 	return []schema.Schema{
 		// Message: OffsetForLeaderEpochResponse, API Key: 23, Version: 0
 		schema.NewSchema("OffsetForLeaderEpochResponse:v0",
-			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopicResult:v0",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("[]EpochEndOffset:v0",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsEndOffset, Ty: schema.TypeInt64},
@@ -19,9 +19,9 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 
 		// Message: OffsetForLeaderEpochResponse, API Key: 23, Version: 1
 		schema.NewSchema("OffsetForLeaderEpochResponse:v1",
-			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopicResult:v1",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
+				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("[]EpochEndOffset:v1",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -33,9 +33,9 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 		// Message: OffsetForLeaderEpochResponse, API Key: 23, Version: 2
 		schema.NewSchema("OffsetForLeaderEpochResponse:v2",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopicResult:v2",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
+				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("[]EpochEndOffset:v2",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -47,9 +47,9 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 		// Message: OffsetForLeaderEpochResponse, API Key: 23, Version: 3
 		schema.NewSchema("OffsetForLeaderEpochResponse:v3",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("Topics:v3",
+			&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopicResult:v3",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
+				&schema.Array{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("[]EpochEndOffset:v3",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -61,9 +61,9 @@ func init23OffsetForLeaderEpochResponse() []schema.Schema {
 		// Message: OffsetForLeaderEpochResponse, API Key: 23, Version: 4
 		schema.NewSchema("OffsetForLeaderEpochResponse:v4",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("Topics:v4",
+			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochResponseTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopicResult:v4",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsTopic, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v4",
+				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochResponseTopicsPartitions, Ty: schema.NewSchema("[]EpochEndOffset:v4",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochResponseTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
