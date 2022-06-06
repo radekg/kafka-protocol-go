@@ -5,27 +5,33 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init18ApiVersionsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ApiVersionsRequest, API Key: 18, Version: 0
-		schema.NewSchema("ApiVersionsRequestv0"),
+		schema.NewSchema("ApiVersionsRequest:v0"),
+
 		// Message: ApiVersionsRequest, API Key: 18, Version: 1
-		schema.NewSchema("ApiVersionsRequestv1"),
+		schema.NewSchema("ApiVersionsRequest:v1"),
+
 		// Message: ApiVersionsRequest, API Key: 18, Version: 2
-		schema.NewSchema("ApiVersionsRequestv2"),
+		schema.NewSchema("ApiVersionsRequest:v2"),
+
 		// Message: ApiVersionsRequest, API Key: 18, Version: 3
-		schema.NewSchema("ApiVersionsRequestv3",
+		schema.NewSchema("ApiVersionsRequest:v3",
 			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareName, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldApiVersionsRequestClientSoftwareVersion, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldApiVersionsRequestClientSoftwareName is: The name of the client.
 	FieldApiVersionsRequestClientSoftwareName = "ClientSoftwareName"
+
 	// FieldApiVersionsRequestClientSoftwareVersion is: The version of the client.
 	FieldApiVersionsRequestClientSoftwareVersion = "ClientSoftwareVersion"
+
 	// FieldApiVersionsRequestTags is: The tagged fields.
 	FieldApiVersionsRequestTags = "Tags"
 )

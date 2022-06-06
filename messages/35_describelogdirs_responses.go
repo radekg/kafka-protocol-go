@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init35DescribeLogDirsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeLogDirsResponse, API Key: 35, Version: 0
-		schema.NewSchema("DescribeLogDirsResponsev0",
+		schema.NewSchema("DescribeLogDirsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("Results:v0",
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsLogDir, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("TopicsV0",
+				&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("Topics:v0",
 					&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsName, Ty: schema.TypeStr},
-					&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+					&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag, Ty: schema.TypeInt64},
@@ -25,14 +24,14 @@ func init35DescribeLogDirsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeLogDirsResponse, API Key: 35, Version: 1
-		schema.NewSchema("DescribeLogDirsResponsev1",
+		schema.NewSchema("DescribeLogDirsResponse:v1",
 			&schema.Mfield{Name: FieldDescribeLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("Results:v1",
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsLogDir, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("TopicsV1",
+				&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("Topics:v1",
 					&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsName, Ty: schema.TypeStr},
-					&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+					&schema.Array{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag, Ty: schema.TypeInt64},
@@ -43,14 +42,14 @@ func init35DescribeLogDirsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeLogDirsResponse, API Key: 35, Version: 2
-		schema.NewSchema("DescribeLogDirsResponsev2",
+		schema.NewSchema("DescribeLogDirsResponse:v2",
 			&schema.Mfield{Name: FieldDescribeLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("Results:v2",
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsLogDir, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("TopicsV2",
+				&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("Topics:v2",
 					&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsName, Ty: schema.TypeStrCompact},
-					&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+					&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag, Ty: schema.TypeInt64},
@@ -65,15 +64,15 @@ func init35DescribeLogDirsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeLogDirsResponse, API Key: 35, Version: 3
-		schema.NewSchema("DescribeLogDirsResponsev3",
+		schema.NewSchema("DescribeLogDirsResponse:v3",
 			&schema.Mfield{Name: FieldDescribeLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeLogDirsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("ResultsV3",
+			&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResults, Ty: schema.NewSchema("Results:v3",
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsLogDir, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("TopicsV3",
+				&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopics, Ty: schema.NewSchema("Topics:v3",
 					&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsName, Ty: schema.TypeStrCompact},
-					&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+					&schema.ArrayCompact{Name: FieldDescribeLogDirsResponseResultsTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag, Ty: schema.TypeInt64},
@@ -87,39 +86,56 @@ func init35DescribeLogDirsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeLogDirsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeLogDirsResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeLogDirsResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeLogDirsResponseResults is: The log directories.
 	FieldDescribeLogDirsResponseResults = "Results"
+
 	// FieldDescribeLogDirsResponseResultsErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeLogDirsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldDescribeLogDirsResponseResultsLogDir is: The absolute log directory path.
 	FieldDescribeLogDirsResponseResultsLogDir = "LogDir"
+
 	// FieldDescribeLogDirsResponseResultsTags is: The tagged fields.
 	FieldDescribeLogDirsResponseResultsTags = "Tags"
+
 	// FieldDescribeLogDirsResponseResultsTopics is: Each topic.
 	FieldDescribeLogDirsResponseResultsTopics = "Topics"
+
 	// FieldDescribeLogDirsResponseResultsTopicsName is: The topic name.
 	FieldDescribeLogDirsResponseResultsTopicsName = "Name"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitions is:
 	FieldDescribeLogDirsResponseResultsTopicsPartitions = "Partitions"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey is: True if this log is created by AlterReplicaLogDirsRequest and will replace the current log of the replica in the future.
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsIsFutureKey = "IsFutureKey"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag is: The lag of the log's LEO w.r.t. partition's HW (if it is the current log for the partition) or current replica's LEO (if it is the future log for the partition)
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsOffsetLag = "OffsetLag"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize is: The size of the log segments in this partition in bytes.
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsPartitionSize = "PartitionSize"
+
 	// FieldDescribeLogDirsResponseResultsTopicsPartitionsTags is: The tagged fields.
 	FieldDescribeLogDirsResponseResultsTopicsPartitionsTags = "Tags"
+
 	// FieldDescribeLogDirsResponseResultsTopicsTags is: The tagged fields.
 	FieldDescribeLogDirsResponseResultsTopicsTags = "Tags"
+
 	// FieldDescribeLogDirsResponseTags is: The tagged fields.
 	FieldDescribeLogDirsResponseTags = "Tags"
+
 	// FieldDescribeLogDirsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

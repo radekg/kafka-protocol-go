@@ -5,10 +5,9 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init30CreateAclsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: CreateAclsRequest, API Key: 30, Version: 0
-		schema.NewSchema("CreateAclsRequestv0",
-			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("CreationsV0",
+		schema.NewSchema("CreateAclsRequest:v0",
+			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v0",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsPrincipal, Ty: schema.TypeStr},
@@ -19,8 +18,8 @@ func init30CreateAclsRequest() []schema.Schema {
 		),
 
 		// Message: CreateAclsRequest, API Key: 30, Version: 1
-		schema.NewSchema("CreateAclsRequestv1",
-			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("CreationsV1",
+		schema.NewSchema("CreateAclsRequest:v1",
+			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v1",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourcePatternType, Ty: schema.TypeInt8},
@@ -32,8 +31,8 @@ func init30CreateAclsRequest() []schema.Schema {
 		),
 
 		// Message: CreateAclsRequest, API Key: 30, Version: 2
-		schema.NewSchema("CreateAclsRequestv2",
-			&schema.ArrayCompact{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("CreationsV2",
+		schema.NewSchema("CreateAclsRequest:v2",
+			&schema.ArrayCompact{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v2",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourcePatternType, Ty: schema.TypeInt8},
@@ -46,27 +45,38 @@ func init30CreateAclsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldCreateAclsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldCreateAclsRequestCreations is: The ACLs that we want to create.
 	FieldCreateAclsRequestCreations = "Creations"
+
 	// FieldCreateAclsRequestCreationsHost is: The host for the ACL.
 	FieldCreateAclsRequestCreationsHost = "Host"
+
 	// FieldCreateAclsRequestCreationsOperation is: The operation type for the ACL (read, write, etc.).
 	FieldCreateAclsRequestCreationsOperation = "Operation"
+
 	// FieldCreateAclsRequestCreationsPermissionType is: The permission type for the ACL (allow, deny, etc.).
 	FieldCreateAclsRequestCreationsPermissionType = "PermissionType"
+
 	// FieldCreateAclsRequestCreationsPrincipal is: The principal for the ACL.
 	FieldCreateAclsRequestCreationsPrincipal = "Principal"
+
 	// FieldCreateAclsRequestCreationsResourceName is: The resource name for the ACL.
 	FieldCreateAclsRequestCreationsResourceName = "ResourceName"
+
 	// FieldCreateAclsRequestCreationsResourcePatternType is: The pattern type for the ACL.
 	FieldCreateAclsRequestCreationsResourcePatternType = "ResourcePatternType"
+
 	// FieldCreateAclsRequestCreationsResourceType is: The type of the resource.
 	FieldCreateAclsRequestCreationsResourceType = "ResourceType"
+
 	// FieldCreateAclsRequestCreationsTags is: The tagged fields.
 	FieldCreateAclsRequestCreationsTags = "Tags"
+
 	// FieldCreateAclsRequestTags is: The tagged fields.
 	FieldCreateAclsRequestTags = "Tags"
 )

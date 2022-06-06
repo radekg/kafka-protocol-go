@@ -5,39 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init25AddOffsetsToTxnResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 0
-		schema.NewSchema("AddOffsetsToTxnResponsev0",
+		schema.NewSchema("AddOffsetsToTxnResponse:v0",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 1
-		schema.NewSchema("AddOffsetsToTxnResponsev1",
+		schema.NewSchema("AddOffsetsToTxnResponse:v1",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 2
-		schema.NewSchema("AddOffsetsToTxnResponsev2",
+		schema.NewSchema("AddOffsetsToTxnResponse:v2",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: AddOffsetsToTxnResponse, API Key: 25, Version: 3
-		schema.NewSchema("AddOffsetsToTxnResponsev3",
+		schema.NewSchema("AddOffsetsToTxnResponse:v3",
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAddOffsetsToTxnResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldAddOffsetsToTxnResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAddOffsetsToTxnResponseErrorCode is: The response error code, or 0 if there was no error.
 	FieldAddOffsetsToTxnResponseErrorCode = "ErrorCode"
+
 	// FieldAddOffsetsToTxnResponseTags is: The tagged fields.
 	FieldAddOffsetsToTxnResponseTags = "Tags"
+
 	// FieldAddOffsetsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAddOffsetsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 )

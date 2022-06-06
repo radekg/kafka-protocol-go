@@ -5,38 +5,37 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init7ControlledShutdownResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 0
-		schema.NewSchema("ControlledShutdownResponsev0",
+		schema.NewSchema("ControlledShutdownResponse:v0",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitionsV0",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v0",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
 		),
 
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 1
-		schema.NewSchema("ControlledShutdownResponsev1",
+		schema.NewSchema("ControlledShutdownResponse:v1",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitionsV1",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v1",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
 		),
 
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 2
-		schema.NewSchema("ControlledShutdownResponsev2",
+		schema.NewSchema("ControlledShutdownResponse:v2",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitionsV2",
+			&schema.Array{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v2",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 			)},
 		),
 
 		// Message: ControlledShutdownResponse, API Key: 7, Version: 3
-		schema.NewSchema("ControlledShutdownResponsev3",
+		schema.NewSchema("ControlledShutdownResponse:v3",
 			&schema.Mfield{Name: FieldControlledShutdownResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitionsV3",
+			&schema.ArrayCompact{Name: FieldControlledShutdownResponseRemainingPartitions, Ty: schema.NewSchema("RemainingPartitions:v3",
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldControlledShutdownResponseRemainingPartitionsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.SchemaTaggedFields{Name: FieldControlledShutdownResponseRemainingPartitionsTags},
@@ -44,19 +43,26 @@ func init7ControlledShutdownResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldControlledShutdownResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldControlledShutdownResponseErrorCode is: The top-level error code.
 	FieldControlledShutdownResponseErrorCode = "ErrorCode"
+
 	// FieldControlledShutdownResponseRemainingPartitions is: The partitions that the broker still leads.
 	FieldControlledShutdownResponseRemainingPartitions = "RemainingPartitions"
+
 	// FieldControlledShutdownResponseRemainingPartitionsPartitionIndex is: The index of the partition.
 	FieldControlledShutdownResponseRemainingPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldControlledShutdownResponseRemainingPartitionsTags is: The tagged fields.
 	FieldControlledShutdownResponseRemainingPartitionsTags = "Tags"
+
 	// FieldControlledShutdownResponseRemainingPartitionsTopicName is: The name of the topic.
 	FieldControlledShutdownResponseRemainingPartitionsTopicName = "TopicName"
+
 	// FieldControlledShutdownResponseTags is: The tagged fields.
 	FieldControlledShutdownResponseTags = "Tags"
 )

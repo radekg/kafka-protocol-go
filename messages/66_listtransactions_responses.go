@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init66ListTransactionsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListTransactionsResponse, API Key: 66, Version: 0
-		schema.NewSchema("ListTransactionsResponsev0",
+		schema.NewSchema("ListTransactionsResponse:v0",
 			&schema.Mfield{Name: FieldListTransactionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListTransactionsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldListTransactionsResponseUnknownStateFilters, Ty: schema.TypeStrCompactArray},
-			&schema.ArrayCompact{Name: FieldListTransactionsResponseTransactionStates, Ty: schema.NewSchema("TransactionStatesV0",
+			&schema.ArrayCompact{Name: FieldListTransactionsResponseTransactionStates, Ty: schema.NewSchema("TransactionStates:v0",
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesTransactionalId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldListTransactionsResponseTransactionStatesTransactionState, Ty: schema.TypeStrCompact},
@@ -20,25 +19,35 @@ func init66ListTransactionsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListTransactionsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListTransactionsResponseErrorCode is:
 	FieldListTransactionsResponseErrorCode = "ErrorCode"
+
 	// FieldListTransactionsResponseTags is: The tagged fields.
 	FieldListTransactionsResponseTags = "Tags"
+
 	// FieldListTransactionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListTransactionsResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldListTransactionsResponseTransactionStates is:
 	FieldListTransactionsResponseTransactionStates = "TransactionStates"
+
 	// FieldListTransactionsResponseTransactionStatesProducerId is:
 	FieldListTransactionsResponseTransactionStatesProducerId = "ProducerId"
+
 	// FieldListTransactionsResponseTransactionStatesTags is: The tagged fields.
 	FieldListTransactionsResponseTransactionStatesTags = "Tags"
+
 	// FieldListTransactionsResponseTransactionStatesTransactionState is: The current transaction state of the producer
 	FieldListTransactionsResponseTransactionStatesTransactionState = "TransactionState"
+
 	// FieldListTransactionsResponseTransactionStatesTransactionalId is:
 	FieldListTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
+
 	// FieldListTransactionsResponseUnknownStateFilters is: Set of state filters provided in the request which were unknown to the transaction coordinator
 	FieldListTransactionsResponseUnknownStateFilters = "UnknownStateFilters"
 )

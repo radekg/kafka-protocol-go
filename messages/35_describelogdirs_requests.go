@@ -5,26 +5,25 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init35DescribeLogDirsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeLogDirsRequest, API Key: 35, Version: 0
-		schema.NewSchema("DescribeLogDirsRequestv0",
-			&schema.Array{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("DescribeLogDirsRequest:v0",
+			&schema.Array{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: DescribeLogDirsRequest, API Key: 35, Version: 1
-		schema.NewSchema("DescribeLogDirsRequestv1",
-			&schema.Array{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("DescribeLogDirsRequest:v1",
+			&schema.Array{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: DescribeLogDirsRequest, API Key: 35, Version: 2
-		schema.NewSchema("DescribeLogDirsRequestv2",
-			&schema.ArrayCompact{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("DescribeLogDirsRequest:v2",
+			&schema.ArrayCompact{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsTopic, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldDescribeLogDirsRequestTopicsTags},
@@ -33,8 +32,8 @@ func init35DescribeLogDirsRequest() []schema.Schema {
 		),
 
 		// Message: DescribeLogDirsRequest, API Key: 35, Version: 3
-		schema.NewSchema("DescribeLogDirsRequestv3",
-			&schema.ArrayCompact{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("TopicsV3",
+		schema.NewSchema("DescribeLogDirsRequest:v3",
+			&schema.ArrayCompact{Name: FieldDescribeLogDirsRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsTopic, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeLogDirsRequestTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldDescribeLogDirsRequestTopicsTags},
@@ -42,17 +41,23 @@ func init35DescribeLogDirsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeLogDirsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeLogDirsRequestTags is: The tagged fields.
 	FieldDescribeLogDirsRequestTags = "Tags"
+
 	// FieldDescribeLogDirsRequestTopics is: Each topic that we want to describe log directories for, or null for all topics.
 	FieldDescribeLogDirsRequestTopics = "Topics"
+
 	// FieldDescribeLogDirsRequestTopicsPartitions is: The partition indexes.
 	FieldDescribeLogDirsRequestTopicsPartitions = "Partitions"
+
 	// FieldDescribeLogDirsRequestTopicsTags is: The tagged fields.
 	FieldDescribeLogDirsRequestTopicsTags = "Tags"
+
 	// FieldDescribeLogDirsRequestTopicsTopic is: The topic name
 	FieldDescribeLogDirsRequestTopicsTopic = "Topic"
 )

@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init31DeleteAclsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteAclsResponse, API Key: 31, Version: 0
-		schema.NewSchema("DeleteAclsResponsev0",
+		schema.NewSchema("DeleteAclsResponse:v0",
 			&schema.Mfield{Name: FieldDeleteAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResultsV0",
+			&schema.Array{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResults:v0",
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorMessage, Ty: schema.TypeStrNullable},
-				&schema.Array{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAclsV0",
+				&schema.Array{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAcls:v0",
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType, Ty: schema.TypeInt8},
@@ -26,12 +25,12 @@ func init31DeleteAclsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteAclsResponse, API Key: 31, Version: 1
-		schema.NewSchema("DeleteAclsResponsev1",
+		schema.NewSchema("DeleteAclsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResultsV1",
+			&schema.Array{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResults:v1",
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorMessage, Ty: schema.TypeStrNullable},
-				&schema.Array{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAclsV1",
+				&schema.Array{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAcls:v1",
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType, Ty: schema.TypeInt8},
@@ -46,12 +45,12 @@ func init31DeleteAclsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteAclsResponse, API Key: 31, Version: 2
-		schema.NewSchema("DeleteAclsResponsev2",
+		schema.NewSchema("DeleteAclsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResultsV2",
+			&schema.ArrayCompact{Name: FieldDeleteAclsResponseFilterResults, Ty: schema.NewSchema("FilterResults:v2",
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.ArrayCompact{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAclsV2",
+				&schema.ArrayCompact{Name: FieldDeleteAclsResponseFilterResultsMatchingAcls, Ty: schema.NewSchema("MatchingAcls:v2",
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType, Ty: schema.TypeInt8},
@@ -68,41 +67,59 @@ func init31DeleteAclsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteAclsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteAclsResponseFilterResults is: The results for each filter.
 	FieldDeleteAclsResponseFilterResults = "FilterResults"
+
 	// FieldDeleteAclsResponseFilterResultsErrorCode is: The error code, or 0 if the filter succeeded.
 	FieldDeleteAclsResponseFilterResultsErrorCode = "ErrorCode"
+
 	// FieldDeleteAclsResponseFilterResultsErrorMessage is: The error message, or null if the filter succeeded.
 	FieldDeleteAclsResponseFilterResultsErrorMessage = "ErrorMessage"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAcls is: The ACLs which matched this filter.
 	FieldDeleteAclsResponseFilterResultsMatchingAcls = "MatchingAcls"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode is: The deletion error code, or 0 if the deletion succeeded.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsErrorCode = "ErrorCode"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage is: The deletion error message, or null if the deletion succeeded.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsErrorMessage = "ErrorMessage"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsHost is: The ACL host.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsHost = "Host"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsOperation is: The ACL operation.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsOperation = "Operation"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsPatternType is: The ACL resource pattern type.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsPatternType = "PatternType"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType is: The ACL permission type.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsPermissionType = "PermissionType"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal is: The ACL principal.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsPrincipal = "Principal"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName is: The ACL resource name.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceName = "ResourceName"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType is: The ACL resource type.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsResourceType = "ResourceType"
+
 	// FieldDeleteAclsResponseFilterResultsMatchingAclsTags is: The tagged fields.
 	FieldDeleteAclsResponseFilterResultsMatchingAclsTags = "Tags"
+
 	// FieldDeleteAclsResponseFilterResultsTags is: The tagged fields.
 	FieldDeleteAclsResponseFilterResultsTags = "Tags"
+
 	// FieldDeleteAclsResponseTags is: The tagged fields.
 	FieldDeleteAclsResponseTags = "Tags"
+
 	// FieldDeleteAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDeleteAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

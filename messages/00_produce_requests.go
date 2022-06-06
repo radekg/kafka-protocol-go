@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init0ProduceRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ProduceRequest, API Key: 0, Version: 0
-		schema.NewSchema("ProduceRequestv0",
+		schema.NewSchema("ProduceRequest:v0",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV0",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v0",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV0",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v0",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -20,12 +19,12 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 1
-		schema.NewSchema("ProduceRequestv1",
+		schema.NewSchema("ProduceRequest:v1",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV1",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v1",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV1",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v1",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -33,12 +32,12 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 2
-		schema.NewSchema("ProduceRequestv2",
+		schema.NewSchema("ProduceRequest:v2",
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV2",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v2",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV2",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v2",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -46,13 +45,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 3
-		schema.NewSchema("ProduceRequestv3",
+		schema.NewSchema("ProduceRequest:v3",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV3",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v3",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV3",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v3",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -60,13 +59,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 4
-		schema.NewSchema("ProduceRequestv4",
+		schema.NewSchema("ProduceRequest:v4",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV4",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v4",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV4",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v4",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -74,13 +73,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 5
-		schema.NewSchema("ProduceRequestv5",
+		schema.NewSchema("ProduceRequest:v5",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV5",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v5",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV5",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v5",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -88,13 +87,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 6
-		schema.NewSchema("ProduceRequestv6",
+		schema.NewSchema("ProduceRequest:v6",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV6",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v6",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV6",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v6",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -102,13 +101,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 7
-		schema.NewSchema("ProduceRequestv7",
+		schema.NewSchema("ProduceRequest:v7",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV7",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v7",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV7",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v7",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -116,13 +115,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 8
-		schema.NewSchema("ProduceRequestv8",
+		schema.NewSchema("ProduceRequest:v8",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV8",
+			&schema.Array{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v8",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV8",
+				&schema.Array{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v8",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesNullable},
 				)},
@@ -130,13 +129,13 @@ func init0ProduceRequest() []schema.Schema {
 		),
 
 		// Message: ProduceRequest, API Key: 0, Version: 9
-		schema.NewSchema("ProduceRequestv9",
+		schema.NewSchema("ProduceRequest:v9",
 			&schema.Mfield{Name: FieldProduceRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldProduceRequestAcks, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldProduceRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicDataV9",
+			&schema.ArrayCompact{Name: FieldProduceRequestTopicData, Ty: schema.NewSchema("TopicData:v9",
 				&schema.Mfield{Name: FieldProduceRequestTopicDataName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionDataV9",
+				&schema.ArrayCompact{Name: FieldProduceRequestTopicDataPartitionData, Ty: schema.NewSchema("PartitionData:v9",
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceRequestTopicDataPartitionDataRecords, Ty: schema.TypeBytesCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldProduceRequestTopicDataPartitionDataTags},
@@ -146,29 +145,41 @@ func init0ProduceRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldProduceRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldProduceRequestAcks is: The number of acknowledgments the producer requires the leader to have received before considering a request complete. Allowed values: 0 for no acknowledgments, 1 for only the leader and -1 for the full ISR.
 	FieldProduceRequestAcks = "Acks"
+
 	// FieldProduceRequestTags is: The tagged fields.
 	FieldProduceRequestTags = "Tags"
+
 	// FieldProduceRequestTimeoutMs is: The timeout to await a response in milliseconds.
 	FieldProduceRequestTimeoutMs = "TimeoutMs"
+
 	// FieldProduceRequestTopicData is: Each topic to produce to.
 	FieldProduceRequestTopicData = "TopicData"
+
 	// FieldProduceRequestTopicDataName is: The topic name.
 	FieldProduceRequestTopicDataName = "Name"
+
 	// FieldProduceRequestTopicDataPartitionData is: Each partition to produce to.
 	FieldProduceRequestTopicDataPartitionData = "PartitionData"
+
 	// FieldProduceRequestTopicDataPartitionDataIndex is: The partition index.
 	FieldProduceRequestTopicDataPartitionDataIndex = "Index"
+
 	// FieldProduceRequestTopicDataPartitionDataRecords is: The record data to be produced.
 	FieldProduceRequestTopicDataPartitionDataRecords = "Records"
+
 	// FieldProduceRequestTopicDataPartitionDataTags is: The tagged fields.
 	FieldProduceRequestTopicDataPartitionDataTags = "Tags"
+
 	// FieldProduceRequestTopicDataTags is: The tagged fields.
 	FieldProduceRequestTopicDataTags = "Tags"
+
 	// FieldProduceRequestTransactionalId is: The transactional ID, or null if the producer is not transactional.
 	FieldProduceRequestTransactionalId = "TransactionalId"
 )

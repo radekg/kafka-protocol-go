@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init28TxnOffsetCommitRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 0
-		schema.NewSchema("TxnOffsetCommitRequestv0",
+		schema.NewSchema("TxnOffsetCommitRequest:v0",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -23,14 +22,14 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 1
-		schema.NewSchema("TxnOffsetCommitRequestv1",
+		schema.NewSchema("TxnOffsetCommitRequest:v1",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -39,14 +38,14 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 2
-		schema.NewSchema("TxnOffsetCommitRequestv2",
+		schema.NewSchema("TxnOffsetCommitRequest:v2",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -56,7 +55,7 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitRequest, API Key: 28, Version: 3
-		schema.NewSchema("TxnOffsetCommitRequestv3",
+		schema.NewSchema("TxnOffsetCommitRequest:v3",
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestProducerId, Ty: schema.TypeInt64},
@@ -64,9 +63,9 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldTxnOffsetCommitRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.ArrayCompact{Name: FieldTxnOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.ArrayCompact{Name: FieldTxnOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -78,41 +77,59 @@ func init28TxnOffsetCommitRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldTxnOffsetCommitRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldTxnOffsetCommitRequestGenerationId is: The generation of the consumer.
 	FieldTxnOffsetCommitRequestGenerationId = "GenerationId"
+
 	// FieldTxnOffsetCommitRequestGroupId is: The ID of the group.
 	FieldTxnOffsetCommitRequestGroupId = "GroupId"
+
 	// FieldTxnOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldTxnOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+
 	// FieldTxnOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
 	FieldTxnOffsetCommitRequestMemberId = "MemberId"
+
 	// FieldTxnOffsetCommitRequestProducerEpoch is: The current epoch associated with the producer ID.
 	FieldTxnOffsetCommitRequestProducerEpoch = "ProducerEpoch"
+
 	// FieldTxnOffsetCommitRequestProducerId is: The current producer ID in use by the transactional ID.
 	FieldTxnOffsetCommitRequestProducerId = "ProducerId"
+
 	// FieldTxnOffsetCommitRequestTags is: The tagged fields.
 	FieldTxnOffsetCommitRequestTags = "Tags"
+
 	// FieldTxnOffsetCommitRequestTopics is: Each topic that we want to commit offsets for.
 	FieldTxnOffsetCommitRequestTopics = "Topics"
+
 	// FieldTxnOffsetCommitRequestTopicsName is: The topic name.
 	FieldTxnOffsetCommitRequestTopicsName = "Name"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitions is: The partitions inside the topic that we want to committ offsets for.
 	FieldTxnOffsetCommitRequestTopicsPartitions = "Partitions"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of the last consumed record.
 	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
 	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
 	FieldTxnOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex is: The index of the partition within the topic.
 	FieldTxnOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldTxnOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
 	FieldTxnOffsetCommitRequestTopicsPartitionsTags = "Tags"
+
 	// FieldTxnOffsetCommitRequestTopicsTags is: The tagged fields.
 	FieldTxnOffsetCommitRequestTopicsTags = "Tags"
+
 	// FieldTxnOffsetCommitRequestTransactionalId is: The ID of the transaction.
 	FieldTxnOffsetCommitRequestTransactionalId = "TransactionalId"
 )

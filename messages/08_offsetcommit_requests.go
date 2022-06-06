@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init8OffsetCommitRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetCommitRequest, API Key: 8, Version: 0
-		schema.NewSchema("OffsetCommitRequestv0",
+		schema.NewSchema("OffsetCommitRequest:v0",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -20,13 +19,13 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 1
-		schema.NewSchema("OffsetCommitRequestv1",
+		schema.NewSchema("OffsetCommitRequest:v1",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -35,14 +34,14 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 2
-		schema.NewSchema("OffsetCommitRequestv2",
+		schema.NewSchema("OffsetCommitRequest:v2",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestRetentionTimeMs, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -51,14 +50,14 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 3
-		schema.NewSchema("OffsetCommitRequestv3",
+		schema.NewSchema("OffsetCommitRequest:v3",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestRetentionTimeMs, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -67,14 +66,14 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 4
-		schema.NewSchema("OffsetCommitRequestv4",
+		schema.NewSchema("OffsetCommitRequest:v4",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestRetentionTimeMs, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v4",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v4",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -83,13 +82,13 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 5
-		schema.NewSchema("OffsetCommitRequestv5",
+		schema.NewSchema("OffsetCommitRequest:v5",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v5",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v5",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata, Ty: schema.TypeStrNullable},
@@ -98,13 +97,13 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 6
-		schema.NewSchema("OffsetCommitRequestv6",
+		schema.NewSchema("OffsetCommitRequest:v6",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v6",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -114,14 +113,14 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 7
-		schema.NewSchema("OffsetCommitRequestv7",
+		schema.NewSchema("OffsetCommitRequest:v7",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupInstanceId, Ty: schema.TypeStrNullable},
-			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.Array{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v7",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.Array{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v7",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -131,14 +130,14 @@ func init8OffsetCommitRequest() []schema.Schema {
 		),
 
 		// Message: OffsetCommitRequest, API Key: 8, Version: 8
-		schema.NewSchema("OffsetCommitRequestv8",
+		schema.NewSchema("OffsetCommitRequest:v8",
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldOffsetCommitRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldOffsetCommitRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("TopicsV8",
+			&schema.ArrayCompact{Name: FieldOffsetCommitRequestTopics, Ty: schema.NewSchema("Topics:v8",
 				&schema.Mfield{Name: FieldOffsetCommitRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV8",
+				&schema.ArrayCompact{Name: FieldOffsetCommitRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v8",
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -150,37 +149,53 @@ func init8OffsetCommitRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldOffsetCommitRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetCommitRequestGenerationId is: The generation of the group.
 	FieldOffsetCommitRequestGenerationId = "GenerationId"
+
 	// FieldOffsetCommitRequestGroupId is: The unique group identifier.
 	FieldOffsetCommitRequestGroupId = "GroupId"
+
 	// FieldOffsetCommitRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldOffsetCommitRequestGroupInstanceId = "GroupInstanceId"
+
 	// FieldOffsetCommitRequestMemberId is: The member ID assigned by the group coordinator.
 	FieldOffsetCommitRequestMemberId = "MemberId"
+
 	// FieldOffsetCommitRequestRetentionTimeMs is: The time period in ms to retain the offset.
 	FieldOffsetCommitRequestRetentionTimeMs = "RetentionTimeMs"
+
 	// FieldOffsetCommitRequestTags is: The tagged fields.
 	FieldOffsetCommitRequestTags = "Tags"
+
 	// FieldOffsetCommitRequestTopics is: The topics to commit offsets for.
 	FieldOffsetCommitRequestTopics = "Topics"
+
 	// FieldOffsetCommitRequestTopicsName is: The topic name.
 	FieldOffsetCommitRequestTopicsName = "Name"
+
 	// FieldOffsetCommitRequestTopicsPartitions is: Each partition to commit offsets for.
 	FieldOffsetCommitRequestTopicsPartitions = "Partitions"
+
 	// FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch is: The leader epoch of this partition.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+
 	// FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata is: Any associated metadata the client wants to keep.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedMetadata = "CommittedMetadata"
+
 	// FieldOffsetCommitRequestTopicsPartitionsCommittedOffset is: The message offset to be committed.
 	FieldOffsetCommitRequestTopicsPartitionsCommittedOffset = "CommittedOffset"
+
 	// FieldOffsetCommitRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetCommitRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldOffsetCommitRequestTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetCommitRequestTopicsPartitionsTags = "Tags"
+
 	// FieldOffsetCommitRequestTopicsTags is: The tagged fields.
 	FieldOffsetCommitRequestTopicsTags = "Tags"
 )

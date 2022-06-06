@@ -5,25 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init6UpdateMetadataRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 0
-		schema.NewSchema("UpdateMetadataRequestv0",
+		schema.NewSchema("UpdateMetadataRequest:v0",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0")},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV0",
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStates:v0",
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v0",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
 			)},
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 1
-		schema.NewSchema("UpdateMetadataRequestv1",
+		schema.NewSchema("UpdateMetadataRequest:v1",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1")},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV1",
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStates:v1",
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v1",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV1",
+				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v1",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol, Ty: schema.TypeInt16},
@@ -32,13 +49,22 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 2
-		schema.NewSchema("UpdateMetadataRequestv2",
+		schema.NewSchema("UpdateMetadataRequest:v2",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV2")},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV2",
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStates:v2",
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v2",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV2",
+				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v2",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol, Ty: schema.TypeInt16},
@@ -48,13 +74,22 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 3
-		schema.NewSchema("UpdateMetadataRequestv3",
+		schema.NewSchema("UpdateMetadataRequest:v3",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV3")},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV3",
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStates:v3",
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v3",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV3",
+				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v3",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsListener, Ty: schema.TypeStr},
@@ -65,13 +100,23 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 4
-		schema.NewSchema("UpdateMetadataRequestv4",
+		schema.NewSchema("UpdateMetadataRequest:v4",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV4")},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV4",
+			&schema.Array{Name: FieldUpdateMetadataRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStates:v4",
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldUpdateMetadataRequestUngroupedPartitionStatesOfflineReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v4",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV4",
+				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v4",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsListener, Ty: schema.TypeStr},
@@ -82,17 +127,26 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 5
-		schema.NewSchema("UpdateMetadataRequestv5",
+		schema.NewSchema("UpdateMetadataRequest:v5",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV5",
+			&schema.Array{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStates:v5",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5")},
+				&schema.Array{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStates:v5",
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesOfflineReplicas, Ty: schema.TypeInt32Array},
+				)},
 			)},
-			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV5",
+			&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v5",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV5",
+				&schema.Array{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v5",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsListener, Ty: schema.TypeStr},
@@ -103,18 +157,28 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 6
-		schema.NewSchema("UpdateMetadataRequestv6",
+		schema.NewSchema("UpdateMetadataRequest:v6",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV6",
+			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStates:v6",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6")},
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStates:v6",
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesOfflineReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesTags},
 			)},
-			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV6",
+			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v6",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV6",
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v6",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsListener, Ty: schema.TypeStrCompact},
@@ -128,19 +192,29 @@ func init6UpdateMetadataRequest() []schema.Schema {
 		),
 
 		// Message: UpdateMetadataRequest, API Key: 6, Version: 7
-		schema.NewSchema("UpdateMetadataRequestv7",
+		schema.NewSchema("UpdateMetadataRequest:v7",
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateMetadataRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStatesV7",
+			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStates, Ty: schema.NewSchema("TopicStates:v7",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV7")},
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStates:v7",
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesOfflineReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesPartitionStatesTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTopicStatesTags},
 			)},
-			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokersV7",
+			&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokers, Ty: schema.NewSchema("LiveBrokers:v7",
 				&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersId, Ty: schema.TypeInt32},
-				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("EndpointsV7",
+				&schema.ArrayCompact{Name: FieldUpdateMetadataRequestLiveBrokersEndpoints, Ty: schema.NewSchema("Endpoints:v7",
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsPort, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsHost, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldUpdateMetadataRequestLiveBrokersEndpointsListener, Ty: schema.TypeStrCompact},
@@ -153,49 +227,124 @@ func init6UpdateMetadataRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldUpdateMetadataRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldUpdateMetadataRequestBrokerEpoch is: The broker epoch.
 	FieldUpdateMetadataRequestBrokerEpoch = "BrokerEpoch"
+
 	// FieldUpdateMetadataRequestControllerEpoch is: The controller epoch.
 	FieldUpdateMetadataRequestControllerEpoch = "ControllerEpoch"
+
 	// FieldUpdateMetadataRequestControllerId is: The controller id.
 	FieldUpdateMetadataRequestControllerId = "ControllerId"
+
 	// FieldUpdateMetadataRequestLiveBrokers is:
 	FieldUpdateMetadataRequestLiveBrokers = "LiveBrokers"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpoints is: The broker endpoints.
 	FieldUpdateMetadataRequestLiveBrokersEndpoints = "Endpoints"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsHost is: The hostname of this endpoint
 	FieldUpdateMetadataRequestLiveBrokersEndpointsHost = "Host"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsListener is: The listener name.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsListener = "Listener"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsPort is: The port of this endpoint
 	FieldUpdateMetadataRequestLiveBrokersEndpointsPort = "Port"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol is: The security protocol type.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsSecurityProtocol = "SecurityProtocol"
+
 	// FieldUpdateMetadataRequestLiveBrokersEndpointsTags is: The tagged fields.
 	FieldUpdateMetadataRequestLiveBrokersEndpointsTags = "Tags"
+
 	// FieldUpdateMetadataRequestLiveBrokersId is: The broker id.
 	FieldUpdateMetadataRequestLiveBrokersId = "Id"
+
 	// FieldUpdateMetadataRequestLiveBrokersRack is: The rack which this broker belongs to.
 	FieldUpdateMetadataRequestLiveBrokersRack = "Rack"
+
 	// FieldUpdateMetadataRequestLiveBrokersTags is: The tagged fields.
 	FieldUpdateMetadataRequestLiveBrokersTags = "Tags"
+
 	// FieldUpdateMetadataRequestTags is: The tagged fields.
 	FieldUpdateMetadataRequestTags = "Tags"
+
 	// FieldUpdateMetadataRequestTopicStates is: In newer versions of this RPC, each topic that we would like to update.
 	FieldUpdateMetadataRequestTopicStates = "TopicStates"
+
 	// FieldUpdateMetadataRequestTopicStatesPartitionStates is: The partition that we would like to update.
 	FieldUpdateMetadataRequestTopicStatesPartitionStates = "PartitionStates"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesControllerEpoch is: The controller epoch.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesControllerEpoch = "ControllerEpoch"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesIsr is: The brokers which are in the ISR for this partition.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesIsr = "Isr"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesLeader is: The ID of the broker which is the current partition leader.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesLeader = "Leader"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch of this partition.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesOfflineReplicas is: The replicas of this partition which are offline.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesOfflineReplicas = "OfflineReplicas"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesReplicas is: All the replicas of this partition.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesReplicas = "Replicas"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesTags is: The tagged fields.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesTags = "Tags"
+
+	// FieldUpdateMetadataRequestTopicStatesPartitionStatesZkVersion is: The Zookeeper version.
+	FieldUpdateMetadataRequestTopicStatesPartitionStatesZkVersion = "ZkVersion"
+
 	// FieldUpdateMetadataRequestTopicStatesTags is: The tagged fields.
 	FieldUpdateMetadataRequestTopicStatesTags = "Tags"
+
 	// FieldUpdateMetadataRequestTopicStatesTopicId is: The topic id.
 	FieldUpdateMetadataRequestTopicStatesTopicId = "TopicId"
+
 	// FieldUpdateMetadataRequestTopicStatesTopicName is: The topic name.
 	FieldUpdateMetadataRequestTopicStatesTopicName = "TopicName"
+
 	// FieldUpdateMetadataRequestUngroupedPartitionStates is: In older versions of this RPC, each partition that we would like to update.
 	FieldUpdateMetadataRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch is: The controller epoch.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesControllerEpoch = "ControllerEpoch"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesIsr is: The brokers which are in the ISR for this partition.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesIsr = "Isr"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesLeader is: The ID of the broker which is the current partition leader.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesLeader = "Leader"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch is: The leader epoch of this partition.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesLeaderEpoch = "LeaderEpoch"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesOfflineReplicas is: The replicas of this partition which are offline.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesOfflineReplicas = "OfflineReplicas"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex is: The partition index.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesPartitionIndex = "PartitionIndex"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas is: All the replicas of this partition.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesReplicas = "Replicas"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName is: In older versions of this RPC, the topic name.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesTopicName = "TopicName"
+
+	// FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion is: The Zookeeper version.
+	FieldUpdateMetadataRequestUngroupedPartitionStatesZkVersion = "ZkVersion"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/UpdateMetadataRequest.json

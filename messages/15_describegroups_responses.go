@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init15DescribeGroupsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 0
-		schema.NewSchema("DescribeGroupsResponsev0",
-			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV0",
+		schema.NewSchema("DescribeGroupsResponse:v0",
+			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v0",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV0",
+				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v0",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientHost, Ty: schema.TypeStr},
@@ -25,15 +24,15 @@ func init15DescribeGroupsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 1
-		schema.NewSchema("DescribeGroupsResponsev1",
+		schema.NewSchema("DescribeGroupsResponse:v1",
 			&schema.Mfield{Name: FieldDescribeGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV1",
+			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v1",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV1",
+				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v1",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientHost, Ty: schema.TypeStr},
@@ -44,15 +43,15 @@ func init15DescribeGroupsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 2
-		schema.NewSchema("DescribeGroupsResponsev2",
+		schema.NewSchema("DescribeGroupsResponse:v2",
 			&schema.Mfield{Name: FieldDescribeGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV2",
+			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v2",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV2",
+				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v2",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientHost, Ty: schema.TypeStr},
@@ -63,15 +62,15 @@ func init15DescribeGroupsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 3
-		schema.NewSchema("DescribeGroupsResponsev3",
+		schema.NewSchema("DescribeGroupsResponse:v3",
 			&schema.Mfield{Name: FieldDescribeGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV3",
+			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v3",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV3",
+				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v3",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientHost, Ty: schema.TypeStr},
@@ -83,15 +82,15 @@ func init15DescribeGroupsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 4
-		schema.NewSchema("DescribeGroupsResponsev4",
+		schema.NewSchema("DescribeGroupsResponse:v4",
 			&schema.Mfield{Name: FieldDescribeGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV4",
+			&schema.Array{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v4",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV4",
+				&schema.Array{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v4",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersGroupInstanceId, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStr},
@@ -104,15 +103,15 @@ func init15DescribeGroupsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeGroupsResponse, API Key: 15, Version: 5
-		schema.NewSchema("DescribeGroupsResponsev5",
+		schema.NewSchema("DescribeGroupsResponse:v5",
 			&schema.Mfield{Name: FieldDescribeGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("GroupsV5",
+			&schema.ArrayCompact{Name: FieldDescribeGroupsResponseGroups, Ty: schema.NewSchema("Groups:v5",
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsGroupState, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsProtocolData, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("MembersV5",
+				&schema.ArrayCompact{Name: FieldDescribeGroupsResponseGroupsMembers, Ty: schema.NewSchema("Members:v5",
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersMemberId, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldDescribeGroupsResponseGroupsMembersClientId, Ty: schema.TypeStrCompact},
@@ -127,43 +126,62 @@ func init15DescribeGroupsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeGroupsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeGroupsResponseGroups is: Each described group.
 	FieldDescribeGroupsResponseGroups = "Groups"
+
 	// FieldDescribeGroupsResponseGroupsAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this group.
 	FieldDescribeGroupsResponseGroupsAuthorizedOperations = "AuthorizedOperations"
+
 	// FieldDescribeGroupsResponseGroupsErrorCode is: The describe error, or 0 if there was no error.
 	FieldDescribeGroupsResponseGroupsErrorCode = "ErrorCode"
+
 	// FieldDescribeGroupsResponseGroupsGroupId is: The group ID string.
 	FieldDescribeGroupsResponseGroupsGroupId = "GroupId"
+
 	// FieldDescribeGroupsResponseGroupsGroupState is: The group state string, or the empty string.
 	FieldDescribeGroupsResponseGroupsGroupState = "GroupState"
+
 	// FieldDescribeGroupsResponseGroupsMembers is: The group members.
 	FieldDescribeGroupsResponseGroupsMembers = "Members"
+
 	// FieldDescribeGroupsResponseGroupsMembersClientHost is: The client host.
 	FieldDescribeGroupsResponseGroupsMembersClientHost = "ClientHost"
+
 	// FieldDescribeGroupsResponseGroupsMembersClientId is: The client ID used in the member's latest join group request.
 	FieldDescribeGroupsResponseGroupsMembersClientId = "ClientId"
+
 	// FieldDescribeGroupsResponseGroupsMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldDescribeGroupsResponseGroupsMembersGroupInstanceId = "GroupInstanceId"
+
 	// FieldDescribeGroupsResponseGroupsMembersMemberAssignment is: The current assignment provided by the group leader.
 	FieldDescribeGroupsResponseGroupsMembersMemberAssignment = "MemberAssignment"
+
 	// FieldDescribeGroupsResponseGroupsMembersMemberId is: The member ID assigned by the group coordinator.
 	FieldDescribeGroupsResponseGroupsMembersMemberId = "MemberId"
+
 	// FieldDescribeGroupsResponseGroupsMembersMemberMetadata is: The metadata corresponding to the current group protocol in use.
 	FieldDescribeGroupsResponseGroupsMembersMemberMetadata = "MemberMetadata"
+
 	// FieldDescribeGroupsResponseGroupsMembersTags is: The tagged fields.
 	FieldDescribeGroupsResponseGroupsMembersTags = "Tags"
+
 	// FieldDescribeGroupsResponseGroupsProtocolData is: The group protocol data, or the empty string.
 	FieldDescribeGroupsResponseGroupsProtocolData = "ProtocolData"
+
 	// FieldDescribeGroupsResponseGroupsProtocolType is: The group protocol type, or the empty string.
 	FieldDescribeGroupsResponseGroupsProtocolType = "ProtocolType"
+
 	// FieldDescribeGroupsResponseGroupsTags is: The tagged fields.
 	FieldDescribeGroupsResponseGroupsTags = "Tags"
+
 	// FieldDescribeGroupsResponseTags is: The tagged fields.
 	FieldDescribeGroupsResponseTags = "Tags"
+
 	// FieldDescribeGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

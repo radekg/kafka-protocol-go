@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init28TxnOffsetCommitResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: TxnOffsetCommitResponse, API Key: 28, Version: 0
-		schema.NewSchema("TxnOffsetCommitResponsev0",
+		schema.NewSchema("TxnOffsetCommitResponse:v0",
 			&schema.Mfield{Name: FieldTxnOffsetCommitResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -19,11 +18,11 @@ func init28TxnOffsetCommitResponse() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitResponse, API Key: 28, Version: 1
-		schema.NewSchema("TxnOffsetCommitResponsev1",
+		schema.NewSchema("TxnOffsetCommitResponse:v1",
 			&schema.Mfield{Name: FieldTxnOffsetCommitResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -31,11 +30,11 @@ func init28TxnOffsetCommitResponse() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitResponse, API Key: 28, Version: 2
-		schema.NewSchema("TxnOffsetCommitResponsev2",
+		schema.NewSchema("TxnOffsetCommitResponse:v2",
 			&schema.Mfield{Name: FieldTxnOffsetCommitResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -43,11 +42,11 @@ func init28TxnOffsetCommitResponse() []schema.Schema {
 		),
 
 		// Message: TxnOffsetCommitResponse, API Key: 28, Version: 3
-		schema.NewSchema("TxnOffsetCommitResponsev3",
+		schema.NewSchema("TxnOffsetCommitResponse:v3",
 			&schema.Mfield{Name: FieldTxnOffsetCommitResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.ArrayCompact{Name: FieldTxnOffsetCommitResponseTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.ArrayCompact{Name: FieldTxnOffsetCommitResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.SchemaTaggedFields{Name: FieldTxnOffsetCommitResponseTopicsPartitionsTags},
@@ -57,25 +56,35 @@ func init28TxnOffsetCommitResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldTxnOffsetCommitResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldTxnOffsetCommitResponseTags is: The tagged fields.
 	FieldTxnOffsetCommitResponseTags = "Tags"
+
 	// FieldTxnOffsetCommitResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldTxnOffsetCommitResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldTxnOffsetCommitResponseTopics is: The responses for each topic.
 	FieldTxnOffsetCommitResponseTopics = "Topics"
+
 	// FieldTxnOffsetCommitResponseTopicsName is: The topic name.
 	FieldTxnOffsetCommitResponseTopicsName = "Name"
+
 	// FieldTxnOffsetCommitResponseTopicsPartitions is: The responses for each partition in the topic.
 	FieldTxnOffsetCommitResponseTopicsPartitions = "Partitions"
+
 	// FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldTxnOffsetCommitResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldTxnOffsetCommitResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldTxnOffsetCommitResponseTopicsPartitionsTags is: The tagged fields.
 	FieldTxnOffsetCommitResponseTopicsPartitionsTags = "Tags"
+
 	// FieldTxnOffsetCommitResponseTopicsTags is: The tagged fields.
 	FieldTxnOffsetCommitResponseTopicsTags = "Tags"
 )

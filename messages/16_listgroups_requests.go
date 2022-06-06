@@ -5,26 +5,32 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init16ListGroupsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListGroupsRequest, API Key: 16, Version: 0
-		schema.NewSchema("ListGroupsRequestv0"),
+		schema.NewSchema("ListGroupsRequest:v0"),
+
 		// Message: ListGroupsRequest, API Key: 16, Version: 1
-		schema.NewSchema("ListGroupsRequestv1"),
+		schema.NewSchema("ListGroupsRequest:v1"),
+
 		// Message: ListGroupsRequest, API Key: 16, Version: 2
-		schema.NewSchema("ListGroupsRequestv2"),
+		schema.NewSchema("ListGroupsRequest:v2"),
+
 		// Message: ListGroupsRequest, API Key: 16, Version: 3
-		schema.NewSchema("ListGroupsRequestv3"),
+		schema.NewSchema("ListGroupsRequest:v3"),
+
 		// Message: ListGroupsRequest, API Key: 16, Version: 4
-		schema.NewSchema("ListGroupsRequestv4",
+		schema.NewSchema("ListGroupsRequest:v4",
 			&schema.Mfield{Name: FieldListGroupsRequestStatesFilter, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldListGroupsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListGroupsRequestStatesFilter is: The states of the groups we want to list. If empty all groups are returned with their state.
 	FieldListGroupsRequestStatesFilter = "StatesFilter"
+
 	// FieldListGroupsRequestTags is: The tagged fields.
 	FieldListGroupsRequestTags = "Tags"
 )

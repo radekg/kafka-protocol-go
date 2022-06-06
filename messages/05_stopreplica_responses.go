@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init5StopReplicaResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: StopReplicaResponse, API Key: 5, Version: 0
-		schema.NewSchema("StopReplicaResponsev0",
+		schema.NewSchema("StopReplicaResponse:v0",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV0",
+			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v0",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -17,9 +16,9 @@ func init5StopReplicaResponse() []schema.Schema {
 		),
 
 		// Message: StopReplicaResponse, API Key: 5, Version: 1
-		schema.NewSchema("StopReplicaResponsev1",
+		schema.NewSchema("StopReplicaResponse:v1",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV1",
+			&schema.Array{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v1",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -27,9 +26,9 @@ func init5StopReplicaResponse() []schema.Schema {
 		),
 
 		// Message: StopReplicaResponse, API Key: 5, Version: 2
-		schema.NewSchema("StopReplicaResponsev2",
+		schema.NewSchema("StopReplicaResponse:v2",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV2",
+			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v2",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -39,9 +38,9 @@ func init5StopReplicaResponse() []schema.Schema {
 		),
 
 		// Message: StopReplicaResponse, API Key: 5, Version: 3
-		schema.NewSchema("StopReplicaResponsev3",
+		schema.NewSchema("StopReplicaResponse:v3",
 			&schema.Mfield{Name: FieldStopReplicaResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV3",
+			&schema.ArrayCompact{Name: FieldStopReplicaResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v3",
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldStopReplicaResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -50,21 +49,29 @@ func init5StopReplicaResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldStopReplicaResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldStopReplicaResponseErrorCode is: The top-level error code, or 0 if there was no top-level error.
 	FieldStopReplicaResponseErrorCode = "ErrorCode"
+
 	// FieldStopReplicaResponsePartitionErrors is: The responses for each partition.
 	FieldStopReplicaResponsePartitionErrors = "PartitionErrors"
+
 	// FieldStopReplicaResponsePartitionErrorsErrorCode is: The partition error code, or 0 if there was no partition error.
 	FieldStopReplicaResponsePartitionErrorsErrorCode = "ErrorCode"
+
 	// FieldStopReplicaResponsePartitionErrorsPartitionIndex is: The partition index.
 	FieldStopReplicaResponsePartitionErrorsPartitionIndex = "PartitionIndex"
+
 	// FieldStopReplicaResponsePartitionErrorsTags is: The tagged fields.
 	FieldStopReplicaResponsePartitionErrorsTags = "Tags"
+
 	// FieldStopReplicaResponsePartitionErrorsTopicName is: The topic name.
 	FieldStopReplicaResponsePartitionErrorsTopicName = "TopicName"
+
 	// FieldStopReplicaResponseTags is: The tagged fields.
 	FieldStopReplicaResponseTags = "Tags"
 )

@@ -5,29 +5,34 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init47OffsetDeleteRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetDeleteRequest, API Key: 47, Version: 0
-		schema.NewSchema("OffsetDeleteRequestv0",
+		schema.NewSchema("OffsetDeleteRequest:v0",
 			&schema.Mfield{Name: FieldOffsetDeleteRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetDeleteRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldOffsetDeleteRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldOffsetDeleteRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetDeleteRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldOffsetDeleteRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 				)},
 			)},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetDeleteRequestGroupId is: The unique group identifier.
 	FieldOffsetDeleteRequestGroupId = "GroupId"
+
 	// FieldOffsetDeleteRequestTopics is: The topics to delete offsets for
 	FieldOffsetDeleteRequestTopics = "Topics"
+
 	// FieldOffsetDeleteRequestTopicsName is: The topic name.
 	FieldOffsetDeleteRequestTopicsName = "Name"
+
 	// FieldOffsetDeleteRequestTopicsPartitions is: Each partition to delete offsets for.
 	FieldOffsetDeleteRequestTopicsPartitions = "Partitions"
+
 	// FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
 )

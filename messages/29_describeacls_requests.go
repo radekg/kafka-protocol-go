@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init29DescribeAclsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeAclsRequest, API Key: 29, Version: 0
-		schema.NewSchema("DescribeAclsRequestv0",
+		schema.NewSchema("DescribeAclsRequest:v0",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPrincipalFilter, Ty: schema.TypeStrNullable},
@@ -17,7 +16,7 @@ func init29DescribeAclsRequest() []schema.Schema {
 		),
 
 		// Message: DescribeAclsRequest, API Key: 29, Version: 1
-		schema.NewSchema("DescribeAclsRequestv1",
+		schema.NewSchema("DescribeAclsRequest:v1",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPatternTypeFilter, Ty: schema.TypeInt8},
@@ -28,7 +27,7 @@ func init29DescribeAclsRequest() []schema.Schema {
 		),
 
 		// Message: DescribeAclsRequest, API Key: 29, Version: 2
-		schema.NewSchema("DescribeAclsRequestv2",
+		schema.NewSchema("DescribeAclsRequest:v2",
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceTypeFilter, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldDescribeAclsRequestResourceNameFilter, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldDescribeAclsRequestPatternTypeFilter, Ty: schema.TypeInt8},
@@ -39,23 +38,32 @@ func init29DescribeAclsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeAclsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeAclsRequestHostFilter is: The host to match, or null to match any host.
 	FieldDescribeAclsRequestHostFilter = "HostFilter"
+
 	// FieldDescribeAclsRequestOperation is: The operation to match.
 	FieldDescribeAclsRequestOperation = "Operation"
+
 	// FieldDescribeAclsRequestPatternTypeFilter is: The resource pattern to match.
 	FieldDescribeAclsRequestPatternTypeFilter = "PatternTypeFilter"
+
 	// FieldDescribeAclsRequestPermissionType is: The permission type to match.
 	FieldDescribeAclsRequestPermissionType = "PermissionType"
+
 	// FieldDescribeAclsRequestPrincipalFilter is: The principal to match, or null to match any principal.
 	FieldDescribeAclsRequestPrincipalFilter = "PrincipalFilter"
+
 	// FieldDescribeAclsRequestResourceNameFilter is: The resource name, or null to match any resource name.
 	FieldDescribeAclsRequestResourceNameFilter = "ResourceNameFilter"
+
 	// FieldDescribeAclsRequestResourceTypeFilter is: The resource type.
 	FieldDescribeAclsRequestResourceTypeFilter = "ResourceTypeFilter"
+
 	// FieldDescribeAclsRequestTags is: The tagged fields.
 	FieldDescribeAclsRequestTags = "Tags"
 )

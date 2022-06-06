@@ -5,59 +5,58 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init14SyncGroupRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: SyncGroupRequest, API Key: 14, Version: 0
-		schema.NewSchema("SyncGroupRequestv0",
+		schema.NewSchema("SyncGroupRequest:v0",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV0",
+			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v0",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 1
-		schema.NewSchema("SyncGroupRequestv1",
+		schema.NewSchema("SyncGroupRequest:v1",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV1",
+			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v1",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 2
-		schema.NewSchema("SyncGroupRequestv2",
+		schema.NewSchema("SyncGroupRequest:v2",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV2",
+			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v2",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 3
-		schema.NewSchema("SyncGroupRequestv3",
+		schema.NewSchema("SyncGroupRequest:v3",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupInstanceId, Ty: schema.TypeStrNullable},
-			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV3",
+			&schema.Array{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v3",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 4
-		schema.NewSchema("SyncGroupRequestv4",
+		schema.NewSchema("SyncGroupRequest:v4",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV4",
+			&schema.ArrayCompact{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v4",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldSyncGroupRequestAssignmentsTags},
@@ -66,14 +65,14 @@ func init14SyncGroupRequest() []schema.Schema {
 		),
 
 		// Message: SyncGroupRequest, API Key: 14, Version: 5
-		schema.NewSchema("SyncGroupRequestv5",
+		schema.NewSchema("SyncGroupRequest:v5",
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldSyncGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldSyncGroupRequestProtocolType, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldSyncGroupRequestProtocolName, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("AssignmentsV5",
+			&schema.ArrayCompact{Name: FieldSyncGroupRequestAssignments, Ty: schema.NewSchema("Assignments:v5",
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldSyncGroupRequestAssignmentsAssignment, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldSyncGroupRequestAssignmentsTags},
@@ -81,29 +80,41 @@ func init14SyncGroupRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldSyncGroupRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldSyncGroupRequestAssignments is: Each assignment.
 	FieldSyncGroupRequestAssignments = "Assignments"
+
 	// FieldSyncGroupRequestAssignmentsAssignment is: The member assignment.
 	FieldSyncGroupRequestAssignmentsAssignment = "Assignment"
+
 	// FieldSyncGroupRequestAssignmentsMemberId is: The ID of the member to assign.
 	FieldSyncGroupRequestAssignmentsMemberId = "MemberId"
+
 	// FieldSyncGroupRequestAssignmentsTags is: The tagged fields.
 	FieldSyncGroupRequestAssignmentsTags = "Tags"
+
 	// FieldSyncGroupRequestGenerationId is: The generation of the group.
 	FieldSyncGroupRequestGenerationId = "GenerationId"
+
 	// FieldSyncGroupRequestGroupId is: The unique group identifier.
 	FieldSyncGroupRequestGroupId = "GroupId"
+
 	// FieldSyncGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldSyncGroupRequestGroupInstanceId = "GroupInstanceId"
+
 	// FieldSyncGroupRequestMemberId is: The member ID assigned by the group.
 	FieldSyncGroupRequestMemberId = "MemberId"
+
 	// FieldSyncGroupRequestProtocolName is: The group protocol name.
 	FieldSyncGroupRequestProtocolName = "ProtocolName"
+
 	// FieldSyncGroupRequestProtocolType is: The group protocol type.
 	FieldSyncGroupRequestProtocolType = "ProtocolType"
+
 	// FieldSyncGroupRequestTags is: The tagged fields.
 	FieldSyncGroupRequestTags = "Tags"
 )

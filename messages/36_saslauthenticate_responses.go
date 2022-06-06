@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init36SaslAuthenticateResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: SaslAuthenticateResponse, API Key: 36, Version: 0
-		schema.NewSchema("SaslAuthenticateResponsev0",
+		schema.NewSchema("SaslAuthenticateResponse:v0",
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorMessage, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseAuthBytes, Ty: schema.TypeBytes},
 		),
 
 		// Message: SaslAuthenticateResponse, API Key: 36, Version: 1
-		schema.NewSchema("SaslAuthenticateResponsev1",
+		schema.NewSchema("SaslAuthenticateResponse:v1",
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorMessage, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseAuthBytes, Ty: schema.TypeBytes},
@@ -22,7 +21,7 @@ func init36SaslAuthenticateResponse() []schema.Schema {
 		),
 
 		// Message: SaslAuthenticateResponse, API Key: 36, Version: 2
-		schema.NewSchema("SaslAuthenticateResponsev2",
+		schema.NewSchema("SaslAuthenticateResponse:v2",
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldSaslAuthenticateResponseAuthBytes, Ty: schema.TypeBytesCompact},
@@ -30,17 +29,23 @@ func init36SaslAuthenticateResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldSaslAuthenticateResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldSaslAuthenticateResponseAuthBytes is: The SASL authentication bytes from the server, as defined by the SASL mechanism.
 	FieldSaslAuthenticateResponseAuthBytes = "AuthBytes"
+
 	// FieldSaslAuthenticateResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldSaslAuthenticateResponseErrorCode = "ErrorCode"
+
 	// FieldSaslAuthenticateResponseErrorMessage is: The error message, or null if there was no error.
 	FieldSaslAuthenticateResponseErrorMessage = "ErrorMessage"
+
 	// FieldSaslAuthenticateResponseSessionLifetimeMs is: The SASL authentication bytes from the server, as defined by the SASL mechanism.
 	FieldSaslAuthenticateResponseSessionLifetimeMs = "SessionLifetimeMs"
+
 	// FieldSaslAuthenticateResponseTags is: The tagged fields.
 	FieldSaslAuthenticateResponseTags = "Tags"
 )

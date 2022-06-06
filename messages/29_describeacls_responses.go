@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init29DescribeAclsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeAclsResponse, API Key: 29, Version: 0
-		schema.NewSchema("DescribeAclsResponsev0",
+		schema.NewSchema("DescribeAclsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorMessage, Ty: schema.TypeStrNullable},
-			&schema.Array{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("ResourcesV0",
+			&schema.Array{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("Resources:v0",
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("AclsV0",
+				&schema.Array{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("Acls:v0",
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsPrincipal, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsOperation, Ty: schema.TypeInt8},
@@ -24,15 +23,15 @@ func init29DescribeAclsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeAclsResponse, API Key: 29, Version: 1
-		schema.NewSchema("DescribeAclsResponsev1",
+		schema.NewSchema("DescribeAclsResponse:v1",
 			&schema.Mfield{Name: FieldDescribeAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorMessage, Ty: schema.TypeStrNullable},
-			&schema.Array{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("ResourcesV1",
+			&schema.Array{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("Resources:v1",
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesPatternType, Ty: schema.TypeInt8},
-				&schema.Array{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("AclsV1",
+				&schema.Array{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("Acls:v1",
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsPrincipal, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsHost, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsOperation, Ty: schema.TypeInt8},
@@ -42,15 +41,15 @@ func init29DescribeAclsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeAclsResponse, API Key: 29, Version: 2
-		schema.NewSchema("DescribeAclsResponsev2",
+		schema.NewSchema("DescribeAclsResponse:v2",
 			&schema.Mfield{Name: FieldDescribeAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeAclsResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("ResourcesV2",
+			&schema.ArrayCompact{Name: FieldDescribeAclsResponseResources, Ty: schema.NewSchema("Resources:v2",
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesResourceName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeAclsResponseResourcesPatternType, Ty: schema.TypeInt8},
-				&schema.ArrayCompact{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("AclsV2",
+				&schema.ArrayCompact{Name: FieldDescribeAclsResponseResourcesAcls, Ty: schema.NewSchema("Acls:v2",
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsPrincipal, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsHost, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeAclsResponseResourcesAclsOperation, Ty: schema.TypeInt8},
@@ -62,37 +61,53 @@ func init29DescribeAclsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeAclsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeAclsResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeAclsResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeAclsResponseErrorMessage is: The error message, or null if there was no error.
 	FieldDescribeAclsResponseErrorMessage = "ErrorMessage"
+
 	// FieldDescribeAclsResponseResources is: Each Resource that is referenced in an ACL.
 	FieldDescribeAclsResponseResources = "Resources"
+
 	// FieldDescribeAclsResponseResourcesAcls is: The ACLs.
 	FieldDescribeAclsResponseResourcesAcls = "Acls"
+
 	// FieldDescribeAclsResponseResourcesAclsHost is: The ACL host.
 	FieldDescribeAclsResponseResourcesAclsHost = "Host"
+
 	// FieldDescribeAclsResponseResourcesAclsOperation is: The ACL operation.
 	FieldDescribeAclsResponseResourcesAclsOperation = "Operation"
+
 	// FieldDescribeAclsResponseResourcesAclsPermissionType is: The ACL permission type.
 	FieldDescribeAclsResponseResourcesAclsPermissionType = "PermissionType"
+
 	// FieldDescribeAclsResponseResourcesAclsPrincipal is: The ACL principal.
 	FieldDescribeAclsResponseResourcesAclsPrincipal = "Principal"
+
 	// FieldDescribeAclsResponseResourcesAclsTags is: The tagged fields.
 	FieldDescribeAclsResponseResourcesAclsTags = "Tags"
+
 	// FieldDescribeAclsResponseResourcesPatternType is: The resource pattern type.
 	FieldDescribeAclsResponseResourcesPatternType = "PatternType"
+
 	// FieldDescribeAclsResponseResourcesResourceName is: The resource name.
 	FieldDescribeAclsResponseResourcesResourceName = "ResourceName"
+
 	// FieldDescribeAclsResponseResourcesResourceType is: The resource type.
 	FieldDescribeAclsResponseResourcesResourceType = "ResourceType"
+
 	// FieldDescribeAclsResponseResourcesTags is: The tagged fields.
 	FieldDescribeAclsResponseResourcesTags = "Tags"
+
 	// FieldDescribeAclsResponseTags is: The tagged fields.
 	FieldDescribeAclsResponseTags = "Tags"
+
 	// FieldDescribeAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

@@ -5,21 +5,24 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init66ListTransactionsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListTransactionsRequest, API Key: 66, Version: 0
-		schema.NewSchema("ListTransactionsRequestv0",
+		schema.NewSchema("ListTransactionsRequest:v0",
 			&schema.Mfield{Name: FieldListTransactionsRequestStateFilters, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldListTransactionsRequestProducerIdFilters, Ty: schema.TypeInt64CompactArray},
 			&schema.SchemaTaggedFields{Name: FieldListTransactionsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListTransactionsRequestProducerIdFilters is: The producerIds to filter by: if empty, all transactions will be returned; if non-empty, only transactions which match one of the filtered producerIds will be returned
 	FieldListTransactionsRequestProducerIdFilters = "ProducerIdFilters"
+
 	// FieldListTransactionsRequestStateFilters is: The transaction states to filter by: if empty, all transactions are returned; if non-empty, then only transactions matching one of the filtered states will be returned
 	FieldListTransactionsRequestStateFilters = "StateFilters"
+
 	// FieldListTransactionsRequestTags is: The tagged fields.
 	FieldListTransactionsRequestTags = "Tags"
 )

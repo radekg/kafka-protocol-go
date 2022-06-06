@@ -5,65 +5,64 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init9OffsetFetchRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetFetchRequest, API Key: 9, Version: 0
-		schema.NewSchema("OffsetFetchRequestv0",
+		schema.NewSchema("OffsetFetchRequest:v0",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 1
-		schema.NewSchema("OffsetFetchRequestv1",
+		schema.NewSchema("OffsetFetchRequest:v1",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 2
-		schema.NewSchema("OffsetFetchRequestv2",
+		schema.NewSchema("OffsetFetchRequest:v2",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 3
-		schema.NewSchema("OffsetFetchRequestv3",
+		schema.NewSchema("OffsetFetchRequest:v3",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 4
-		schema.NewSchema("OffsetFetchRequestv4",
+		schema.NewSchema("OffsetFetchRequest:v4",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v4",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 5
-		schema.NewSchema("OffsetFetchRequestv5",
+		schema.NewSchema("OffsetFetchRequest:v5",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v5",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 6
-		schema.NewSchema("OffsetFetchRequestv6",
+		schema.NewSchema("OffsetFetchRequest:v6",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTopicsTags},
@@ -72,9 +71,9 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 7
-		schema.NewSchema("OffsetFetchRequestv7",
+		schema.NewSchema("OffsetFetchRequest:v7",
 			&schema.Mfield{Name: FieldOffsetFetchRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestTopics, Ty: schema.NewSchema("Topics:v7",
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldOffsetFetchRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTopicsTags},
@@ -84,10 +83,10 @@ func init9OffsetFetchRequest() []schema.Schema {
 		),
 
 		// Message: OffsetFetchRequest, API Key: 9, Version: 8
-		schema.NewSchema("OffsetFetchRequestv8",
-			&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroups, Ty: schema.NewSchema("GroupsV8",
+		schema.NewSchema("OffsetFetchRequest:v8",
+			&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroups, Ty: schema.NewSchema("Groups:v8",
 				&schema.Mfield{Name: FieldOffsetFetchRequestGroupsgroupId, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroupsTopics, Ty: schema.NewSchema("TopicsV8",
+				&schema.ArrayCompact{Name: FieldOffsetFetchRequestGroupsTopics, Ty: schema.NewSchema("Topics:v8",
 					&schema.Mfield{Name: FieldOffsetFetchRequestGroupsTopicsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldOffsetFetchRequestGroupsTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestGroupsTopicsTags},
@@ -98,35 +97,50 @@ func init9OffsetFetchRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldOffsetFetchRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetFetchRequestGroupId is: The group to fetch offsets for.
 	FieldOffsetFetchRequestGroupId = "GroupId"
+
 	// FieldOffsetFetchRequestGroups is: Each group we would like to fetch offsets for
 	FieldOffsetFetchRequestGroups = "Groups"
+
 	// FieldOffsetFetchRequestGroupsTags is: The tagged fields.
 	FieldOffsetFetchRequestGroupsTags = "Tags"
+
 	// FieldOffsetFetchRequestGroupsTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
 	FieldOffsetFetchRequestGroupsTopics = "Topics"
+
 	// FieldOffsetFetchRequestGroupsTopicsName is: The topic name.
 	FieldOffsetFetchRequestGroupsTopicsName = "Name"
+
 	// FieldOffsetFetchRequestGroupsTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
 	FieldOffsetFetchRequestGroupsTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldOffsetFetchRequestGroupsTopicsTags is: The tagged fields.
 	FieldOffsetFetchRequestGroupsTopicsTags = "Tags"
+
 	// FieldOffsetFetchRequestGroupsgroupId is: The group ID.
 	FieldOffsetFetchRequestGroupsgroupId = "groupId"
+
 	// FieldOffsetFetchRequestRequireStable is: Whether broker should hold on returning unstable offsets but set a retriable error code for the partitions.
 	FieldOffsetFetchRequestRequireStable = "RequireStable"
+
 	// FieldOffsetFetchRequestTags is: The tagged fields.
 	FieldOffsetFetchRequestTags = "Tags"
+
 	// FieldOffsetFetchRequestTopics is: Each topic we would like to fetch offsets for, or null to fetch offsets for all topics.
 	FieldOffsetFetchRequestTopics = "Topics"
+
 	// FieldOffsetFetchRequestTopicsName is: The topic name.
 	FieldOffsetFetchRequestTopicsName = "Name"
+
 	// FieldOffsetFetchRequestTopicsPartitionIndexes is: The partition indexes we would like to fetch offsets for.
 	FieldOffsetFetchRequestTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldOffsetFetchRequestTopicsTags is: The tagged fields.
 	FieldOffsetFetchRequestTopicsTags = "Tags"
 )

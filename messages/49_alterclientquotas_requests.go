@@ -5,15 +5,14 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init49AlterClientQuotasRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterClientQuotasRequest, API Key: 49, Version: 0
-		schema.NewSchema("AlterClientQuotasRequestv0",
-			&schema.Array{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("EntriesV0",
-				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("EntityV0",
+		schema.NewSchema("AlterClientQuotasRequest:v0",
+			&schema.Array{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("Entries:v0",
+				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("Entity:v0",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityName, Ty: schema.TypeStrNullable},
 				)},
-				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("OpsV0",
+				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("Ops:v0",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsKey, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsValue, Ty: schema.TypeFloat64},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsRemove, Ty: schema.TypeBool},
@@ -23,14 +22,14 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 		),
 
 		// Message: AlterClientQuotasRequest, API Key: 49, Version: 1
-		schema.NewSchema("AlterClientQuotasRequestv1",
-			&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("EntriesV1",
-				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("EntityV1",
+		schema.NewSchema("AlterClientQuotasRequest:v1",
+			&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("Entries:v1",
+				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("Entity:v1",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityType, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityName, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldAlterClientQuotasRequestEntriesEntityTags},
 				)},
-				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("OpsV1",
+				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("Ops:v1",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsKey, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsValue, Ty: schema.TypeFloat64},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsRemove, Ty: schema.TypeBool},
@@ -42,33 +41,47 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterClientQuotasRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterClientQuotasRequestEntries is: The quota configuration entries to alter.
 	FieldAlterClientQuotasRequestEntries = "Entries"
+
 	// FieldAlterClientQuotasRequestEntriesEntity is: The quota entity to alter.
 	FieldAlterClientQuotasRequestEntriesEntity = "Entity"
+
 	// FieldAlterClientQuotasRequestEntriesEntityEntityName is: The name of the entity, or null if the default.
 	FieldAlterClientQuotasRequestEntriesEntityEntityName = "EntityName"
+
 	// FieldAlterClientQuotasRequestEntriesEntityEntityType is: The entity type.
 	FieldAlterClientQuotasRequestEntriesEntityEntityType = "EntityType"
+
 	// FieldAlterClientQuotasRequestEntriesEntityTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesEntityTags = "Tags"
+
 	// FieldAlterClientQuotasRequestEntriesOps is: An individual quota configuration entry to alter.
 	FieldAlterClientQuotasRequestEntriesOps = "Ops"
+
 	// FieldAlterClientQuotasRequestEntriesOpsKey is: The quota configuration key.
 	FieldAlterClientQuotasRequestEntriesOpsKey = "Key"
+
 	// FieldAlterClientQuotasRequestEntriesOpsRemove is: Whether the quota configuration value should be removed, otherwise set.
 	FieldAlterClientQuotasRequestEntriesOpsRemove = "Remove"
+
 	// FieldAlterClientQuotasRequestEntriesOpsTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesOpsTags = "Tags"
+
 	// FieldAlterClientQuotasRequestEntriesOpsValue is: The value to set, otherwise ignored if the value is to be removed.
 	FieldAlterClientQuotasRequestEntriesOpsValue = "Value"
+
 	// FieldAlterClientQuotasRequestEntriesTags is: The tagged fields.
 	FieldAlterClientQuotasRequestEntriesTags = "Tags"
+
 	// FieldAlterClientQuotasRequestTags is: The tagged fields.
 	FieldAlterClientQuotasRequestTags = "Tags"
+
 	// FieldAlterClientQuotasRequestValidateOnly is: Whether the alteration should be validated, but not performed.
 	FieldAlterClientQuotasRequestValidateOnly = "ValidateOnly"
 )

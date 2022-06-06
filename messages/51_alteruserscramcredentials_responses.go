@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init51AlterUserScramCredentialsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterUserScramCredentialsResponse, API Key: 51, Version: 0
-		schema.NewSchema("AlterUserScramCredentialsResponsev0",
+		schema.NewSchema("AlterUserScramCredentialsResponse:v0",
 			&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsResponseResults, Ty: schema.NewSchema("Results:v0",
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsUser, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -18,21 +17,29 @@ func init51AlterUserScramCredentialsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterUserScramCredentialsResponseResults is: The results for deletions and alterations, one per affected user.
 	FieldAlterUserScramCredentialsResponseResults = "Results"
+
 	// FieldAlterUserScramCredentialsResponseResultsErrorCode is: The error code.
 	FieldAlterUserScramCredentialsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldAlterUserScramCredentialsResponseResultsErrorMessage is: The error message, if any.
 	FieldAlterUserScramCredentialsResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldAlterUserScramCredentialsResponseResultsTags is: The tagged fields.
 	FieldAlterUserScramCredentialsResponseResultsTags = "Tags"
+
 	// FieldAlterUserScramCredentialsResponseResultsUser is: The user name.
 	FieldAlterUserScramCredentialsResponseResultsUser = "User"
+
 	// FieldAlterUserScramCredentialsResponseTags is: The tagged fields.
 	FieldAlterUserScramCredentialsResponseTags = "Tags"
+
 	// FieldAlterUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

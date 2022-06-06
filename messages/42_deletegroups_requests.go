@@ -5,28 +5,30 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init42DeleteGroupsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteGroupsRequest, API Key: 42, Version: 0
-		schema.NewSchema("DeleteGroupsRequestv0",
+		schema.NewSchema("DeleteGroupsRequest:v0",
 			&schema.Mfield{Name: FieldDeleteGroupsRequestGroupsNames, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DeleteGroupsRequest, API Key: 42, Version: 1
-		schema.NewSchema("DeleteGroupsRequestv1",
+		schema.NewSchema("DeleteGroupsRequest:v1",
 			&schema.Mfield{Name: FieldDeleteGroupsRequestGroupsNames, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DeleteGroupsRequest, API Key: 42, Version: 2
-		schema.NewSchema("DeleteGroupsRequestv2",
+		schema.NewSchema("DeleteGroupsRequest:v2",
 			&schema.Mfield{Name: FieldDeleteGroupsRequestGroupsNames, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldDeleteGroupsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteGroupsRequestGroupsNames is: The group names to delete.
 	FieldDeleteGroupsRequestGroupsNames = "GroupsNames"
+
 	// FieldDeleteGroupsRequestTags is: The tagged fields.
 	FieldDeleteGroupsRequestTags = "Tags"
 )

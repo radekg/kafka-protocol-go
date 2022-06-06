@@ -5,39 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init26EndTxnResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: EndTxnResponse, API Key: 26, Version: 0
-		schema.NewSchema("EndTxnResponsev0",
+		schema.NewSchema("EndTxnResponse:v0",
 			&schema.Mfield{Name: FieldEndTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldEndTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: EndTxnResponse, API Key: 26, Version: 1
-		schema.NewSchema("EndTxnResponsev1",
+		schema.NewSchema("EndTxnResponse:v1",
 			&schema.Mfield{Name: FieldEndTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldEndTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: EndTxnResponse, API Key: 26, Version: 2
-		schema.NewSchema("EndTxnResponsev2",
+		schema.NewSchema("EndTxnResponse:v2",
 			&schema.Mfield{Name: FieldEndTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldEndTxnResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: EndTxnResponse, API Key: 26, Version: 3
-		schema.NewSchema("EndTxnResponsev3",
+		schema.NewSchema("EndTxnResponse:v3",
 			&schema.Mfield{Name: FieldEndTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldEndTxnResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldEndTxnResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldEndTxnResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldEndTxnResponseErrorCode = "ErrorCode"
+
 	// FieldEndTxnResponseTags is: The tagged fields.
 	FieldEndTxnResponseTags = "Tags"
+
 	// FieldEndTxnResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldEndTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 )
