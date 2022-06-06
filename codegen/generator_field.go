@@ -33,15 +33,23 @@ func (d fields) forVersion(v int64, flexible bool) fields {
 }
 
 type field struct {
-	Name             string `json:"name"`
-	Type             string `json:"type"`
-	Versions         string `json:"versions"`
-	NullableVersions string `json:"nullableVersions"`
-	About            string `json:"About"`
-	Fields           fields `json:"fields"`
+	Name             string  `json:"name"`
+	Type             string  `json:"type"`
+	Versions         string  `json:"versions"`
+	NullableVersions string  `json:"nullableVersions"`
+	Tag              *int    `json:"tag,omitempty"`
+	TaggedVersions   *string `json:"taggedVersions,omitempty"`
+	About            string  `json:"About"`
+	Fields           fields  `json:"fields"`
 }
 
 func (d *field) appliesToVersion(v int64) bool {
+
+	// a tag is not a field
+	if d.Tag != nil {
+		return false
+	}
+
 	if strings.HasSuffix(d.Versions, "+") {
 		minVersion, err := strconv.ParseInt(strings.TrimSuffix(d.Versions, "+"), 10, 64)
 		if err != nil {
