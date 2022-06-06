@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init27WriteTxnMarkersResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: WriteTxnMarkersResponse, API Key: 27, Version: 0
-		schema.NewSchema("WriteTxnMarkersResponsev0",
-			&schema.Array{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("MarkersV0",
+		schema.NewSchema("WriteTxnMarkersResponse:v0",
+			&schema.Array{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("Markers:v0",
 				&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersProducerId, Ty: schema.TypeInt64},
-				&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("TopicsV0",
+				&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("Topics:v0",
 					&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsName, Ty: schema.TypeStr},
-					&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+					&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					)},
@@ -21,12 +20,12 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 		),
 
 		// Message: WriteTxnMarkersResponse, API Key: 27, Version: 1
-		schema.NewSchema("WriteTxnMarkersResponsev1",
-			&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("MarkersV1",
+		schema.NewSchema("WriteTxnMarkersResponse:v1",
+			&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("Markers:v1",
 				&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersProducerId, Ty: schema.TypeInt64},
-				&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("TopicsV1",
+				&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("Topics:v1",
 					&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsName, Ty: schema.TypeStrCompact},
-					&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+					&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 						&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags},
@@ -38,29 +37,41 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldWriteTxnMarkersResponseMarkers is: The results for writing makers.
 	FieldWriteTxnMarkersResponseMarkers = "Markers"
+
 	// FieldWriteTxnMarkersResponseMarkersProducerId is: The current producer ID in use by the transactional ID.
 	FieldWriteTxnMarkersResponseMarkersProducerId = "ProducerId"
+
 	// FieldWriteTxnMarkersResponseMarkersTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseMarkersTags = "Tags"
+
 	// FieldWriteTxnMarkersResponseMarkersTopics is: The results by topic.
 	FieldWriteTxnMarkersResponseMarkersTopics = "Topics"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsName is: The topic name.
 	FieldWriteTxnMarkersResponseMarkersTopicsName = "Name"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitions is: The results by partition.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitions = "Partitions"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex is: The partition index.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags = "Tags"
+
 	// FieldWriteTxnMarkersResponseMarkersTopicsTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseMarkersTopicsTags = "Tags"
+
 	// FieldWriteTxnMarkersResponseTags is: The tagged fields.
 	FieldWriteTxnMarkersResponseTags = "Tags"
 )

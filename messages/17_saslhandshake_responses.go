@@ -5,24 +5,26 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init17SaslHandshakeResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: SaslHandshakeResponse, API Key: 17, Version: 0
-		schema.NewSchema("SaslHandshakeResponsev0",
+		schema.NewSchema("SaslHandshakeResponse:v0",
 			&schema.Mfield{Name: FieldSaslHandshakeResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSaslHandshakeResponseMechanisms, Ty: schema.TypeStrArray},
 		),
 
 		// Message: SaslHandshakeResponse, API Key: 17, Version: 1
-		schema.NewSchema("SaslHandshakeResponsev1",
+		schema.NewSchema("SaslHandshakeResponse:v1",
 			&schema.Mfield{Name: FieldSaslHandshakeResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSaslHandshakeResponseMechanisms, Ty: schema.TypeStrArray},
 		),
 	}
+
 }
 
 const (
+
 	// FieldSaslHandshakeResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldSaslHandshakeResponseErrorCode = "ErrorCode"
+
 	// FieldSaslHandshakeResponseMechanisms is: The mechanisms enabled in the server.
 	FieldSaslHandshakeResponseMechanisms = "Mechanisms"
 )

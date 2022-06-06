@@ -5,26 +5,25 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init41DescribeDelegationTokenRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 0
-		schema.NewSchema("DescribeDelegationTokenRequestv0",
-			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("OwnersV0",
+		schema.NewSchema("DescribeDelegationTokenRequest:v0",
+			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v0",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 1
-		schema.NewSchema("DescribeDelegationTokenRequestv1",
-			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("OwnersV1",
+		schema.NewSchema("DescribeDelegationTokenRequest:v1",
+			&schema.Array{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v1",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: DescribeDelegationTokenRequest, API Key: 41, Version: 2
-		schema.NewSchema("DescribeDelegationTokenRequestv2",
-			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("OwnersV2",
+		schema.NewSchema("DescribeDelegationTokenRequest:v2",
+			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenRequestOwners, Ty: schema.NewSchema("Owners:v2",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenRequestOwnersPrincipalName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldDescribeDelegationTokenRequestOwnersTags},
@@ -32,17 +31,23 @@ func init41DescribeDelegationTokenRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeDelegationTokenRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeDelegationTokenRequestOwners is: Each owner that we want to describe delegation tokens for, or null to describe all tokens.
 	FieldDescribeDelegationTokenRequestOwners = "Owners"
+
 	// FieldDescribeDelegationTokenRequestOwnersPrincipalName is: The owner principal name.
 	FieldDescribeDelegationTokenRequestOwnersPrincipalName = "PrincipalName"
+
 	// FieldDescribeDelegationTokenRequestOwnersPrincipalType is: The owner principal type.
 	FieldDescribeDelegationTokenRequestOwnersPrincipalType = "PrincipalType"
+
 	// FieldDescribeDelegationTokenRequestOwnersTags is: The tagged fields.
 	FieldDescribeDelegationTokenRequestOwnersTags = "Tags"
+
 	// FieldDescribeDelegationTokenRequestTags is: The tagged fields.
 	FieldDescribeDelegationTokenRequestTags = "Tags"
 )

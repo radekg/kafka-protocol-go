@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init49AlterClientQuotasResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterClientQuotasResponse, API Key: 49, Version: 0
-		schema.NewSchema("AlterClientQuotasResponsev0",
+		schema.NewSchema("AlterClientQuotasResponse:v0",
 			&schema.Mfield{Name: FieldAlterClientQuotasResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterClientQuotasResponseEntries, Ty: schema.NewSchema("EntriesV0",
+			&schema.Array{Name: FieldAlterClientQuotasResponseEntries, Ty: schema.NewSchema("Entries:v0",
 				&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesErrorMessage, Ty: schema.TypeStrNullable},
-				&schema.Array{Name: FieldAlterClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("EntityV0",
+				&schema.Array{Name: FieldAlterClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("Entity:v0",
 					&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesEntityEntityType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesEntityEntityName, Ty: schema.TypeStrNullable},
 				)},
@@ -20,12 +19,12 @@ func init49AlterClientQuotasResponse() []schema.Schema {
 		),
 
 		// Message: AlterClientQuotasResponse, API Key: 49, Version: 1
-		schema.NewSchema("AlterClientQuotasResponsev1",
+		schema.NewSchema("AlterClientQuotasResponse:v1",
 			&schema.Mfield{Name: FieldAlterClientQuotasResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterClientQuotasResponseEntries, Ty: schema.NewSchema("EntriesV1",
+			&schema.ArrayCompact{Name: FieldAlterClientQuotasResponseEntries, Ty: schema.NewSchema("Entries:v1",
 				&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.ArrayCompact{Name: FieldAlterClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("EntityV1",
+				&schema.ArrayCompact{Name: FieldAlterClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("Entity:v1",
 					&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesEntityEntityType, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterClientQuotasResponseEntriesEntityEntityName, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldAlterClientQuotasResponseEntriesEntityTags},
@@ -35,27 +34,38 @@ func init49AlterClientQuotasResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterClientQuotasResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterClientQuotasResponseEntries is: The quota configuration entries to alter.
 	FieldAlterClientQuotasResponseEntries = "Entries"
+
 	// FieldAlterClientQuotasResponseEntriesEntity is: The quota entity to alter.
 	FieldAlterClientQuotasResponseEntriesEntity = "Entity"
+
 	// FieldAlterClientQuotasResponseEntriesEntityEntityName is: The name of the entity, or null if the default.
 	FieldAlterClientQuotasResponseEntriesEntityEntityName = "EntityName"
+
 	// FieldAlterClientQuotasResponseEntriesEntityEntityType is: The entity type.
 	FieldAlterClientQuotasResponseEntriesEntityEntityType = "EntityType"
+
 	// FieldAlterClientQuotasResponseEntriesEntityTags is: The tagged fields.
 	FieldAlterClientQuotasResponseEntriesEntityTags = "Tags"
+
 	// FieldAlterClientQuotasResponseEntriesErrorCode is: The error code, or `0` if the quota alteration succeeded.
 	FieldAlterClientQuotasResponseEntriesErrorCode = "ErrorCode"
+
 	// FieldAlterClientQuotasResponseEntriesErrorMessage is: The error message, or `null` if the quota alteration succeeded.
 	FieldAlterClientQuotasResponseEntriesErrorMessage = "ErrorMessage"
+
 	// FieldAlterClientQuotasResponseEntriesTags is: The tagged fields.
 	FieldAlterClientQuotasResponseEntriesTags = "Tags"
+
 	// FieldAlterClientQuotasResponseTags is: The tagged fields.
 	FieldAlterClientQuotasResponseTags = "Tags"
+
 	// FieldAlterClientQuotasResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterClientQuotasResponseThrottleTimeMs = "ThrottleTimeMs"
 )

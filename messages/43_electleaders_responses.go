@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init43ElectLeadersResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ElectLeadersResponse, API Key: 43, Version: 0
-		schema.NewSchema("ElectLeadersResponsev0",
+		schema.NewSchema("ElectLeadersResponse:v0",
 			&schema.Mfield{Name: FieldElectLeadersResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResultsV0",
+			&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResults:v0",
 				&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResultV0",
+				&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResult:v0",
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage, Ty: schema.TypeStrNullable},
@@ -20,12 +19,12 @@ func init43ElectLeadersResponse() []schema.Schema {
 		),
 
 		// Message: ElectLeadersResponse, API Key: 43, Version: 1
-		schema.NewSchema("ElectLeadersResponsev1",
+		schema.NewSchema("ElectLeadersResponse:v1",
 			&schema.Mfield{Name: FieldElectLeadersResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldElectLeadersResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResultsV1",
+			&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResults:v1",
 				&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResultV1",
+				&schema.Array{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResult:v1",
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage, Ty: schema.TypeStrNullable},
@@ -34,12 +33,12 @@ func init43ElectLeadersResponse() []schema.Schema {
 		),
 
 		// Message: ElectLeadersResponse, API Key: 43, Version: 2
-		schema.NewSchema("ElectLeadersResponsev2",
+		schema.NewSchema("ElectLeadersResponse:v2",
 			&schema.Mfield{Name: FieldElectLeadersResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldElectLeadersResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResultsV2",
+			&schema.ArrayCompact{Name: FieldElectLeadersResponseReplicaElectionResults, Ty: schema.NewSchema("ReplicaElectionResults:v2",
 				&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsTopic, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResultV2",
+				&schema.ArrayCompact{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResult, Ty: schema.NewSchema("PartitionResult:v2",
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -50,29 +49,41 @@ func init43ElectLeadersResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldElectLeadersResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldElectLeadersResponseErrorCode is: The top level response error code.
 	FieldElectLeadersResponseErrorCode = "ErrorCode"
+
 	// FieldElectLeadersResponseReplicaElectionResults is: The election results, or an empty array if the requester did not have permission and the request asks for all partitions.
 	FieldElectLeadersResponseReplicaElectionResults = "ReplicaElectionResults"
+
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResult is: The results for each partition
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResult = "PartitionResult"
+
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode is: The result error, or zero if there was no error.
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorCode = "ErrorCode"
+
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage is: The result message, or null if there was no error.
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultErrorMessage = "ErrorMessage"
+
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId is: The partition id
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultPartitionId = "PartitionId"
+
 	// FieldElectLeadersResponseReplicaElectionResultsPartitionResultTags is: The tagged fields.
 	FieldElectLeadersResponseReplicaElectionResultsPartitionResultTags = "Tags"
+
 	// FieldElectLeadersResponseReplicaElectionResultsTags is: The tagged fields.
 	FieldElectLeadersResponseReplicaElectionResultsTags = "Tags"
+
 	// FieldElectLeadersResponseReplicaElectionResultsTopic is: The topic name
 	FieldElectLeadersResponseReplicaElectionResultsTopic = "Topic"
+
 	// FieldElectLeadersResponseTags is: The tagged fields.
 	FieldElectLeadersResponseTags = "Tags"
+
 	// FieldElectLeadersResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldElectLeadersResponseThrottleTimeMs = "ThrottleTimeMs"
 )

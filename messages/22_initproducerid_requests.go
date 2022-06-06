@@ -5,28 +5,27 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init22InitProducerIdRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: InitProducerIdRequest, API Key: 22, Version: 0
-		schema.NewSchema("InitProducerIdRequestv0",
+		schema.NewSchema("InitProducerIdRequest:v0",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 1
-		schema.NewSchema("InitProducerIdRequestv1",
+		schema.NewSchema("InitProducerIdRequest:v1",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 2
-		schema.NewSchema("InitProducerIdRequestv2",
+		schema.NewSchema("InitProducerIdRequest:v2",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldInitProducerIdRequestTags},
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 3
-		schema.NewSchema("InitProducerIdRequestv3",
+		schema.NewSchema("InitProducerIdRequest:v3",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdRequestProducerId, Ty: schema.TypeInt64},
@@ -35,7 +34,7 @@ func init22InitProducerIdRequest() []schema.Schema {
 		),
 
 		// Message: InitProducerIdRequest, API Key: 22, Version: 4
-		schema.NewSchema("InitProducerIdRequestv4",
+		schema.NewSchema("InitProducerIdRequest:v4",
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionalId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldInitProducerIdRequestTransactionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdRequestProducerId, Ty: schema.TypeInt64},
@@ -43,17 +42,23 @@ func init22InitProducerIdRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldInitProducerIdRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldInitProducerIdRequestProducerEpoch is: The producer's current epoch. This will be checked against the producer epoch on the broker, and the request will return an error if they do not match.
 	FieldInitProducerIdRequestProducerEpoch = "ProducerEpoch"
+
 	// FieldInitProducerIdRequestProducerId is: The producer id. This is used to disambiguate requests if a transactional id is reused following its expiration.
 	FieldInitProducerIdRequestProducerId = "ProducerId"
+
 	// FieldInitProducerIdRequestTags is: The tagged fields.
 	FieldInitProducerIdRequestTags = "Tags"
+
 	// FieldInitProducerIdRequestTransactionTimeoutMs is: The time in ms to wait before aborting idle transactions sent by this producer. This is only relevant if a TransactionalId has been defined.
 	FieldInitProducerIdRequestTransactionTimeoutMs = "TransactionTimeoutMs"
+
 	// FieldInitProducerIdRequestTransactionalId is: The transactional id, or null if the producer is not transactional.
 	FieldInitProducerIdRequestTransactionalId = "TransactionalId"
 )

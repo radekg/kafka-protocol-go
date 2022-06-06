@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init33AlterConfigsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterConfigsResponse, API Key: 33, Version: 0
-		schema.NewSchema("AlterConfigsResponsev0",
+		schema.NewSchema("AlterConfigsResponse:v0",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v0",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -18,9 +17,9 @@ func init33AlterConfigsResponse() []schema.Schema {
 		),
 
 		// Message: AlterConfigsResponse, API Key: 33, Version: 1
-		schema.NewSchema("AlterConfigsResponsev1",
+		schema.NewSchema("AlterConfigsResponse:v1",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("ResponsesV1",
+			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v1",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -29,9 +28,9 @@ func init33AlterConfigsResponse() []schema.Schema {
 		),
 
 		// Message: AlterConfigsResponse, API Key: 33, Version: 2
-		schema.NewSchema("AlterConfigsResponsev2",
+		schema.NewSchema("AlterConfigsResponse:v2",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("ResponsesV2",
+			&schema.ArrayCompact{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v2",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -41,23 +40,32 @@ func init33AlterConfigsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterConfigsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterConfigsResponseResponses is: The responses for each resource.
 	FieldAlterConfigsResponseResponses = "Responses"
+
 	// FieldAlterConfigsResponseResponsesErrorCode is: The resource error code.
 	FieldAlterConfigsResponseResponsesErrorCode = "ErrorCode"
+
 	// FieldAlterConfigsResponseResponsesErrorMessage is: The resource error message, or null if there was no error.
 	FieldAlterConfigsResponseResponsesErrorMessage = "ErrorMessage"
+
 	// FieldAlterConfigsResponseResponsesResourceName is: The resource name.
 	FieldAlterConfigsResponseResponsesResourceName = "ResourceName"
+
 	// FieldAlterConfigsResponseResponsesResourceType is: The resource type.
 	FieldAlterConfigsResponseResponsesResourceType = "ResourceType"
+
 	// FieldAlterConfigsResponseResponsesTags is: The tagged fields.
 	FieldAlterConfigsResponseResponsesTags = "Tags"
+
 	// FieldAlterConfigsResponseTags is: The tagged fields.
 	FieldAlterConfigsResponseTags = "Tags"
+
 	// FieldAlterConfigsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

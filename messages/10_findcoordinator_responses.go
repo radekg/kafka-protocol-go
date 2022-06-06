@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init10FindCoordinatorResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 0
-		schema.NewSchema("FindCoordinatorResponsev0",
+		schema.NewSchema("FindCoordinatorResponse:v0",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseNodeId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseHost, Ty: schema.TypeStr},
@@ -15,7 +14,7 @@ func init10FindCoordinatorResponse() []schema.Schema {
 		),
 
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 1
-		schema.NewSchema("FindCoordinatorResponsev1",
+		schema.NewSchema("FindCoordinatorResponse:v1",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorMessage, Ty: schema.TypeStrNullable},
@@ -25,7 +24,7 @@ func init10FindCoordinatorResponse() []schema.Schema {
 		),
 
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 2
-		schema.NewSchema("FindCoordinatorResponsev2",
+		schema.NewSchema("FindCoordinatorResponse:v2",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorMessage, Ty: schema.TypeStrNullable},
@@ -35,7 +34,7 @@ func init10FindCoordinatorResponse() []schema.Schema {
 		),
 
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 3
-		schema.NewSchema("FindCoordinatorResponsev3",
+		schema.NewSchema("FindCoordinatorResponse:v3",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldFindCoordinatorResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -46,9 +45,9 @@ func init10FindCoordinatorResponse() []schema.Schema {
 		),
 
 		// Message: FindCoordinatorResponse, API Key: 10, Version: 4
-		schema.NewSchema("FindCoordinatorResponsev4",
+		schema.NewSchema("FindCoordinatorResponse:v4",
 			&schema.Mfield{Name: FieldFindCoordinatorResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldFindCoordinatorResponseCoordinators, Ty: schema.NewSchema("CoordinatorsV4",
+			&schema.ArrayCompact{Name: FieldFindCoordinatorResponseCoordinators, Ty: schema.NewSchema("Coordinators:v4",
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsKey, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldFindCoordinatorResponseCoordinatorsHost, Ty: schema.TypeStrCompact},
@@ -60,37 +59,53 @@ func init10FindCoordinatorResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldFindCoordinatorResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldFindCoordinatorResponseCoordinators is: Each coordinator result in the response
 	FieldFindCoordinatorResponseCoordinators = "Coordinators"
+
 	// FieldFindCoordinatorResponseCoordinatorsErrorCode is: The error code, or 0 if there was no error.
 	FieldFindCoordinatorResponseCoordinatorsErrorCode = "ErrorCode"
+
 	// FieldFindCoordinatorResponseCoordinatorsErrorMessage is: The error message, or null if there was no error.
 	FieldFindCoordinatorResponseCoordinatorsErrorMessage = "ErrorMessage"
+
 	// FieldFindCoordinatorResponseCoordinatorsHost is: The host name.
 	FieldFindCoordinatorResponseCoordinatorsHost = "Host"
+
 	// FieldFindCoordinatorResponseCoordinatorsKey is: The coordinator key.
 	FieldFindCoordinatorResponseCoordinatorsKey = "Key"
+
 	// FieldFindCoordinatorResponseCoordinatorsNodeId is: The node id.
 	FieldFindCoordinatorResponseCoordinatorsNodeId = "NodeId"
+
 	// FieldFindCoordinatorResponseCoordinatorsPort is: The port.
 	FieldFindCoordinatorResponseCoordinatorsPort = "Port"
+
 	// FieldFindCoordinatorResponseCoordinatorsTags is: The tagged fields.
 	FieldFindCoordinatorResponseCoordinatorsTags = "Tags"
+
 	// FieldFindCoordinatorResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldFindCoordinatorResponseErrorCode = "ErrorCode"
+
 	// FieldFindCoordinatorResponseErrorMessage is: The error message, or null if there was no error.
 	FieldFindCoordinatorResponseErrorMessage = "ErrorMessage"
+
 	// FieldFindCoordinatorResponseHost is: The host name.
 	FieldFindCoordinatorResponseHost = "Host"
+
 	// FieldFindCoordinatorResponseNodeId is: The node id.
 	FieldFindCoordinatorResponseNodeId = "NodeId"
+
 	// FieldFindCoordinatorResponsePort is: The port.
 	FieldFindCoordinatorResponsePort = "Port"
+
 	// FieldFindCoordinatorResponseTags is: The tagged fields.
 	FieldFindCoordinatorResponseTags = "Tags"
+
 	// FieldFindCoordinatorResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldFindCoordinatorResponseThrottleTimeMs = "ThrottleTimeMs"
 )

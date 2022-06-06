@@ -5,46 +5,45 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init24AddPartitionsToTxnRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 0
-		schema.NewSchema("AddPartitionsToTxnRequestv0",
+		schema.NewSchema("AddPartitionsToTxnRequest:v0",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 1
-		schema.NewSchema("AddPartitionsToTxnRequestv1",
+		schema.NewSchema("AddPartitionsToTxnRequest:v1",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 2
-		schema.NewSchema("AddPartitionsToTxnRequestv2",
+		schema.NewSchema("AddPartitionsToTxnRequest:v2",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: AddPartitionsToTxnRequest, API Key: 24, Version: 3
-		schema.NewSchema("AddPartitionsToTxnRequestv3",
+		schema.NewSchema("AddPartitionsToTxnRequest:v3",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldAddPartitionsToTxnRequestProducerEpoch, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.ArrayCompact{Name: FieldAddPartitionsToTxnRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAddPartitionsToTxnRequestTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldAddPartitionsToTxnRequestTopicsTags},
@@ -52,23 +51,32 @@ func init24AddPartitionsToTxnRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAddPartitionsToTxnRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAddPartitionsToTxnRequestProducerEpoch is: Current epoch associated with the producer id.
 	FieldAddPartitionsToTxnRequestProducerEpoch = "ProducerEpoch"
+
 	// FieldAddPartitionsToTxnRequestProducerId is: Current producer id in use by the transactional id.
 	FieldAddPartitionsToTxnRequestProducerId = "ProducerId"
+
 	// FieldAddPartitionsToTxnRequestTags is: The tagged fields.
 	FieldAddPartitionsToTxnRequestTags = "Tags"
+
 	// FieldAddPartitionsToTxnRequestTopics is: The partitions to add to the transaction.
 	FieldAddPartitionsToTxnRequestTopics = "Topics"
+
 	// FieldAddPartitionsToTxnRequestTopicsName is: The name of the topic.
 	FieldAddPartitionsToTxnRequestTopicsName = "Name"
+
 	// FieldAddPartitionsToTxnRequestTopicsPartitions is: The partition indexes to add to the transaction
 	FieldAddPartitionsToTxnRequestTopicsPartitions = "Partitions"
+
 	// FieldAddPartitionsToTxnRequestTopicsTags is: The tagged fields.
 	FieldAddPartitionsToTxnRequestTopicsTags = "Tags"
+
 	// FieldAddPartitionsToTxnRequestTransactionalId is: The transactional id corresponding to the transaction.
 	FieldAddPartitionsToTxnRequestTransactionalId = "TransactionalId"
 )

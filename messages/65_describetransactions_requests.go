@@ -5,18 +5,20 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init65DescribeTransactionsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeTransactionsRequest, API Key: 65, Version: 0
-		schema.NewSchema("DescribeTransactionsRequestv0",
+		schema.NewSchema("DescribeTransactionsRequest:v0",
 			&schema.Mfield{Name: FieldDescribeTransactionsRequestTransactionalIds, Ty: schema.TypeStrCompactArray},
 			&schema.SchemaTaggedFields{Name: FieldDescribeTransactionsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeTransactionsRequestTags is: The tagged fields.
 	FieldDescribeTransactionsRequestTags = "Tags"
+
 	// FieldDescribeTransactionsRequestTransactionalIds is: Array of transactionalIds to include in describe results. If empty, then no results will be returned.
 	FieldDescribeTransactionsRequestTransactionalIds = "TransactionalIds"
 )

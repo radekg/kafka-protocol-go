@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init21DeleteRecordsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteRecordsResponse, API Key: 21, Version: 0
-		schema.NewSchema("DeleteRecordsResponsev0",
+		schema.NewSchema("DeleteRecordsResponse:v0",
 			&schema.Mfield{Name: FieldDeleteRecordsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsLowWatermark, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
@@ -20,11 +19,11 @@ func init21DeleteRecordsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsResponse, API Key: 21, Version: 1
-		schema.NewSchema("DeleteRecordsResponsev1",
+		schema.NewSchema("DeleteRecordsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteRecordsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsLowWatermark, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
@@ -33,11 +32,11 @@ func init21DeleteRecordsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsResponse, API Key: 21, Version: 2
-		schema.NewSchema("DeleteRecordsResponsev2",
+		schema.NewSchema("DeleteRecordsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteRecordsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.ArrayCompact{Name: FieldDeleteRecordsResponseTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.ArrayCompact{Name: FieldDeleteRecordsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsLowWatermark, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldDeleteRecordsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
@@ -48,27 +47,38 @@ func init21DeleteRecordsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteRecordsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteRecordsResponseTags is: The tagged fields.
 	FieldDeleteRecordsResponseTags = "Tags"
+
 	// FieldDeleteRecordsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDeleteRecordsResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldDeleteRecordsResponseTopics is: Each topic that we wanted to delete records from.
 	FieldDeleteRecordsResponseTopics = "Topics"
+
 	// FieldDeleteRecordsResponseTopicsName is: The topic name.
 	FieldDeleteRecordsResponseTopicsName = "Name"
+
 	// FieldDeleteRecordsResponseTopicsPartitions is: Each partition that we wanted to delete records from.
 	FieldDeleteRecordsResponseTopicsPartitions = "Partitions"
+
 	// FieldDeleteRecordsResponseTopicsPartitionsErrorCode is: The deletion error code, or 0 if the deletion succeeded.
 	FieldDeleteRecordsResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldDeleteRecordsResponseTopicsPartitionsLowWatermark is: The partition low water mark.
 	FieldDeleteRecordsResponseTopicsPartitionsLowWatermark = "LowWatermark"
+
 	// FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDeleteRecordsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldDeleteRecordsResponseTopicsPartitionsTags is: The tagged fields.
 	FieldDeleteRecordsResponseTopicsPartitionsTags = "Tags"
+
 	// FieldDeleteRecordsResponseTopicsTags is: The tagged fields.
 	FieldDeleteRecordsResponseTopicsTags = "Tags"
 )

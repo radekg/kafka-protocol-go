@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init57UpdateFeaturesRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: UpdateFeaturesRequest, API Key: 57, Version: 0
-		schema.NewSchema("UpdateFeaturesRequestv0",
+		schema.NewSchema("UpdateFeaturesRequest:v0",
 			&schema.Mfield{Name: FieldUpdateFeaturesRequesttimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("FeatureUpdatesV0",
+			&schema.ArrayCompact{Name: FieldUpdateFeaturesRequestFeatureUpdates, Ty: schema.NewSchema("FeatureUpdates:v0",
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesFeature, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade, Ty: schema.TypeBool},
@@ -18,21 +17,29 @@ func init57UpdateFeaturesRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldUpdateFeaturesRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldUpdateFeaturesRequestFeatureUpdates is: The list of updates to finalized features.
 	FieldUpdateFeaturesRequestFeatureUpdates = "FeatureUpdates"
+
 	// FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade is: When set to true, the finalized feature version level is allowed to be downgraded/deleted. The downgrade request will fail if the new maximum version level is a value that's not lower than the existing maximum finalized version level.
 	FieldUpdateFeaturesRequestFeatureUpdatesAllowDowngrade = "AllowDowngrade"
+
 	// FieldUpdateFeaturesRequestFeatureUpdatesFeature is: The name of the finalized feature to be updated.
 	FieldUpdateFeaturesRequestFeatureUpdatesFeature = "Feature"
+
 	// FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel is: The new maximum version level for the finalized feature. A value >= 1 is valid. A value < 1, is special, and can be used to request the deletion of the finalized feature.
 	FieldUpdateFeaturesRequestFeatureUpdatesMaxVersionLevel = "MaxVersionLevel"
+
 	// FieldUpdateFeaturesRequestFeatureUpdatesTags is: The tagged fields.
 	FieldUpdateFeaturesRequestFeatureUpdatesTags = "Tags"
+
 	// FieldUpdateFeaturesRequestTags is: The tagged fields.
 	FieldUpdateFeaturesRequestTags = "Tags"
+
 	// FieldUpdateFeaturesRequesttimeoutMs is: How long to wait in milliseconds before timing out the request.
 	FieldUpdateFeaturesRequesttimeoutMs = "timeoutMs"
 )

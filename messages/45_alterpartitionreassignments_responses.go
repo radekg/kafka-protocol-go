@@ -5,15 +5,14 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init45AlterPartitionReassignmentsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterPartitionReassignmentsResponse, API Key: 45, Version: 0
-		schema.NewSchema("AlterPartitionReassignmentsResponsev0",
+		schema.NewSchema("AlterPartitionReassignmentsResponse:v0",
 			&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsResponseResponses, Ty: schema.NewSchema("Responses:v0",
 				&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseResponsesName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsResponseResponsesPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsResponseResponsesPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -24,31 +23,44 @@ func init45AlterPartitionReassignmentsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterPartitionReassignmentsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error.
 	FieldAlterPartitionReassignmentsResponseErrorCode = "ErrorCode"
+
 	// FieldAlterPartitionReassignmentsResponseErrorMessage is: The top-level error message, or null if there was no error.
 	FieldAlterPartitionReassignmentsResponseErrorMessage = "ErrorMessage"
+
 	// FieldAlterPartitionReassignmentsResponseResponses is: The responses to topics to reassign.
 	FieldAlterPartitionReassignmentsResponseResponses = "Responses"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesName is: The topic name
 	FieldAlterPartitionReassignmentsResponseResponsesName = "Name"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitions is: The responses to partitions to reassign
 	FieldAlterPartitionReassignmentsResponseResponsesPartitions = "Partitions"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorCode is: The error code for this partition, or 0 if there was no error.
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorCode = "ErrorCode"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorMessage is: The error message for this partition, or null if there was no error.
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsErrorMessage = "ErrorMessage"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex is: The partition index.
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsResponseResponsesPartitionsTags = "Tags"
+
 	// FieldAlterPartitionReassignmentsResponseResponsesTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsResponseResponsesTags = "Tags"
+
 	// FieldAlterPartitionReassignmentsResponseTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsResponseTags = "Tags"
+
 	// FieldAlterPartitionReassignmentsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterPartitionReassignmentsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

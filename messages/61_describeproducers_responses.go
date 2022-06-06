@@ -5,17 +5,16 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init61DescribeProducersResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeProducersResponse, API Key: 61, Version: 0
-		schema.NewSchema("DescribeProducersResponsev0",
+		schema.NewSchema("DescribeProducersResponse:v0",
 			&schema.Mfield{Name: FieldDescribeProducersResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldDescribeProducersResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsErrorMessage, Ty: schema.TypeStrCompactNullable},
-					&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopicsPartitionsActiveProducers, Ty: schema.NewSchema("ActiveProducersV0",
+					&schema.ArrayCompact{Name: FieldDescribeProducersResponseTopicsPartitionsActiveProducers, Ty: schema.NewSchema("ActiveProducers:v0",
 						&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence, Ty: schema.TypeInt32},
@@ -31,43 +30,62 @@ func init61DescribeProducersResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeProducersResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeProducersResponseTags is: The tagged fields.
 	FieldDescribeProducersResponseTags = "Tags"
+
 	// FieldDescribeProducersResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeProducersResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldDescribeProducersResponseTopics is: Each topic in the response.
 	FieldDescribeProducersResponseTopics = "Topics"
+
 	// FieldDescribeProducersResponseTopicsName is: The topic name
 	FieldDescribeProducersResponseTopicsName = "Name"
+
 	// FieldDescribeProducersResponseTopicsPartitions is: Each partition in the response.
 	FieldDescribeProducersResponseTopicsPartitions = "Partitions"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducers is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducers = "ActiveProducers"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCoordinatorEpoch = "CoordinatorEpoch"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersCurrentTxnStartOffset = "CurrentTxnStartOffset"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastSequence = "LastSequence"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersLastTimestamp = "LastTimestamp"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerEpoch = "ProducerEpoch"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId is:
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersProducerId = "ProducerId"
+
 	// FieldDescribeProducersResponseTopicsPartitionsActiveProducersTags is: The tagged fields.
 	FieldDescribeProducersResponseTopicsPartitionsActiveProducersTags = "Tags"
+
 	// FieldDescribeProducersResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
 	FieldDescribeProducersResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldDescribeProducersResponseTopicsPartitionsErrorMessage is: The partition error message, which may be null if no additional details are available
 	FieldDescribeProducersResponseTopicsPartitionsErrorMessage = "ErrorMessage"
+
 	// FieldDescribeProducersResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDescribeProducersResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldDescribeProducersResponseTopicsPartitionsTags is: The tagged fields.
 	FieldDescribeProducersResponseTopicsPartitionsTags = "Tags"
+
 	// FieldDescribeProducersResponseTopicsTags is: The tagged fields.
 	FieldDescribeProducersResponseTopicsTags = "Tags"
 )

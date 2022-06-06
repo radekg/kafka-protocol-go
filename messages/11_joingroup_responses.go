@@ -5,84 +5,83 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init11JoinGroupResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: JoinGroupResponse, API Key: 11, Version: 0
-		schema.NewSchema("JoinGroupResponsev0",
+		schema.NewSchema("JoinGroupResponse:v0",
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV0",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v0",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 1
-		schema.NewSchema("JoinGroupResponsev1",
+		schema.NewSchema("JoinGroupResponse:v1",
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV1",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v1",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 2
-		schema.NewSchema("JoinGroupResponsev2",
+		schema.NewSchema("JoinGroupResponse:v2",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV2",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v2",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 3
-		schema.NewSchema("JoinGroupResponsev3",
+		schema.NewSchema("JoinGroupResponse:v3",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV3",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v3",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 4
-		schema.NewSchema("JoinGroupResponsev4",
+		schema.NewSchema("JoinGroupResponse:v4",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV4",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v4",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 5
-		schema.NewSchema("JoinGroupResponsev5",
+		schema.NewSchema("JoinGroupResponse:v5",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV5",
+			&schema.Array{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v5",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytes},
@@ -90,14 +89,14 @@ func init11JoinGroupResponse() []schema.Schema {
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 6
-		schema.NewSchema("JoinGroupResponsev6",
+		schema.NewSchema("JoinGroupResponse:v6",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV6",
+			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v6",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytesCompact},
@@ -107,7 +106,7 @@ func init11JoinGroupResponse() []schema.Schema {
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 7
-		schema.NewSchema("JoinGroupResponsev7",
+		schema.NewSchema("JoinGroupResponse:v7",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
@@ -115,7 +114,7 @@ func init11JoinGroupResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV7",
+			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v7",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytesCompact},
@@ -125,7 +124,7 @@ func init11JoinGroupResponse() []schema.Schema {
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 8
-		schema.NewSchema("JoinGroupResponsev8",
+		schema.NewSchema("JoinGroupResponse:v8",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
@@ -133,7 +132,7 @@ func init11JoinGroupResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldJoinGroupResponseProtocolName, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV8",
+			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v8",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytesCompact},
@@ -143,7 +142,7 @@ func init11JoinGroupResponse() []schema.Schema {
 		),
 
 		// Message: JoinGroupResponse, API Key: 11, Version: 9
-		schema.NewSchema("JoinGroupResponsev9",
+		schema.NewSchema("JoinGroupResponse:v9",
 			&schema.Mfield{Name: FieldJoinGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldJoinGroupResponseGenerationId, Ty: schema.TypeInt32},
@@ -152,7 +151,7 @@ func init11JoinGroupResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldJoinGroupResponseLeader, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupResponseSkipAssignment, Ty: schema.TypeBool},
 			&schema.Mfield{Name: FieldJoinGroupResponseMemberId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("MembersV9",
+			&schema.ArrayCompact{Name: FieldJoinGroupResponseMembers, Ty: schema.NewSchema("Members:v9",
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldJoinGroupResponseMembersMetadata, Ty: schema.TypeBytesCompact},
@@ -161,35 +160,50 @@ func init11JoinGroupResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldJoinGroupResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldJoinGroupResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldJoinGroupResponseErrorCode = "ErrorCode"
+
 	// FieldJoinGroupResponseGenerationId is: The generation ID of the group.
 	FieldJoinGroupResponseGenerationId = "GenerationId"
+
 	// FieldJoinGroupResponseLeader is: The leader of the group.
 	FieldJoinGroupResponseLeader = "Leader"
+
 	// FieldJoinGroupResponseMemberId is: The member ID assigned by the group coordinator.
 	FieldJoinGroupResponseMemberId = "MemberId"
+
 	// FieldJoinGroupResponseMembers is:
 	FieldJoinGroupResponseMembers = "Members"
+
 	// FieldJoinGroupResponseMembersGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldJoinGroupResponseMembersGroupInstanceId = "GroupInstanceId"
+
 	// FieldJoinGroupResponseMembersMemberId is: The group member ID.
 	FieldJoinGroupResponseMembersMemberId = "MemberId"
+
 	// FieldJoinGroupResponseMembersMetadata is: The group member metadata.
 	FieldJoinGroupResponseMembersMetadata = "Metadata"
+
 	// FieldJoinGroupResponseMembersTags is: The tagged fields.
 	FieldJoinGroupResponseMembersTags = "Tags"
+
 	// FieldJoinGroupResponseProtocolName is: The group protocol selected by the coordinator.
 	FieldJoinGroupResponseProtocolName = "ProtocolName"
+
 	// FieldJoinGroupResponseProtocolType is: The group protocol name.
 	FieldJoinGroupResponseProtocolType = "ProtocolType"
+
 	// FieldJoinGroupResponseSkipAssignment is: True if the leader must skip running the assignment.
 	FieldJoinGroupResponseSkipAssignment = "SkipAssignment"
+
 	// FieldJoinGroupResponseTags is: The tagged fields.
 	FieldJoinGroupResponseTags = "Tags"
+
 	// FieldJoinGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldJoinGroupResponseThrottleTimeMs = "ThrottleTimeMs"
 )

@@ -5,48 +5,51 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init15DescribeGroupsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 0
-		schema.NewSchema("DescribeGroupsRequestv0",
+		schema.NewSchema("DescribeGroupsRequest:v0",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 1
-		schema.NewSchema("DescribeGroupsRequestv1",
+		schema.NewSchema("DescribeGroupsRequest:v1",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 2
-		schema.NewSchema("DescribeGroupsRequestv2",
+		schema.NewSchema("DescribeGroupsRequest:v2",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 3
-		schema.NewSchema("DescribeGroupsRequestv3",
+		schema.NewSchema("DescribeGroupsRequest:v3",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 4
-		schema.NewSchema("DescribeGroupsRequestv4",
+		schema.NewSchema("DescribeGroupsRequest:v4",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 		),
 
 		// Message: DescribeGroupsRequest, API Key: 15, Version: 5
-		schema.NewSchema("DescribeGroupsRequestv5",
+		schema.NewSchema("DescribeGroupsRequest:v5",
 			&schema.Mfield{Name: FieldDescribeGroupsRequestGroups, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDescribeGroupsRequestIncludeAuthorizedOperations, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldDescribeGroupsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeGroupsRequestGroups is: The names of the groups to describe
 	FieldDescribeGroupsRequestGroups = "Groups"
+
 	// FieldDescribeGroupsRequestIncludeAuthorizedOperations is: Whether to include authorized operations.
 	FieldDescribeGroupsRequestIncludeAuthorizedOperations = "IncludeAuthorizedOperations"
+
 	// FieldDescribeGroupsRequestTags is: The tagged fields.
 	FieldDescribeGroupsRequestTags = "Tags"
 )

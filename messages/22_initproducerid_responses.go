@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init22InitProducerIdResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: InitProducerIdResponse, API Key: 22, Version: 0
-		schema.NewSchema("InitProducerIdResponsev0",
+		schema.NewSchema("InitProducerIdResponse:v0",
 			&schema.Mfield{Name: FieldInitProducerIdResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldInitProducerIdResponseProducerId, Ty: schema.TypeInt64},
@@ -15,7 +14,7 @@ func init22InitProducerIdResponse() []schema.Schema {
 		),
 
 		// Message: InitProducerIdResponse, API Key: 22, Version: 1
-		schema.NewSchema("InitProducerIdResponsev1",
+		schema.NewSchema("InitProducerIdResponse:v1",
 			&schema.Mfield{Name: FieldInitProducerIdResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldInitProducerIdResponseProducerId, Ty: schema.TypeInt64},
@@ -23,7 +22,7 @@ func init22InitProducerIdResponse() []schema.Schema {
 		),
 
 		// Message: InitProducerIdResponse, API Key: 22, Version: 2
-		schema.NewSchema("InitProducerIdResponsev2",
+		schema.NewSchema("InitProducerIdResponse:v2",
 			&schema.Mfield{Name: FieldInitProducerIdResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldInitProducerIdResponseProducerId, Ty: schema.TypeInt64},
@@ -32,7 +31,7 @@ func init22InitProducerIdResponse() []schema.Schema {
 		),
 
 		// Message: InitProducerIdResponse, API Key: 22, Version: 3
-		schema.NewSchema("InitProducerIdResponsev3",
+		schema.NewSchema("InitProducerIdResponse:v3",
 			&schema.Mfield{Name: FieldInitProducerIdResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldInitProducerIdResponseProducerId, Ty: schema.TypeInt64},
@@ -41,7 +40,7 @@ func init22InitProducerIdResponse() []schema.Schema {
 		),
 
 		// Message: InitProducerIdResponse, API Key: 22, Version: 4
-		schema.NewSchema("InitProducerIdResponsev4",
+		schema.NewSchema("InitProducerIdResponse:v4",
 			&schema.Mfield{Name: FieldInitProducerIdResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldInitProducerIdResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldInitProducerIdResponseProducerId, Ty: schema.TypeInt64},
@@ -49,17 +48,23 @@ func init22InitProducerIdResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldInitProducerIdResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldInitProducerIdResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldInitProducerIdResponseErrorCode = "ErrorCode"
+
 	// FieldInitProducerIdResponseProducerEpoch is: The current epoch associated with the producer id.
 	FieldInitProducerIdResponseProducerEpoch = "ProducerEpoch"
+
 	// FieldInitProducerIdResponseProducerId is: The current producer id.
 	FieldInitProducerIdResponseProducerId = "ProducerId"
+
 	// FieldInitProducerIdResponseTags is: The tagged fields.
 	FieldInitProducerIdResponseTags = "Tags"
+
 	// FieldInitProducerIdResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldInitProducerIdResponseThrottleTimeMs = "ThrottleTimeMs"
 )

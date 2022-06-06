@@ -5,12 +5,11 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init21DeleteRecordsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 0
-		schema.NewSchema("DeleteRecordsRequestv0",
-			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("DeleteRecordsRequest:v0",
+			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 				)},
@@ -19,10 +18,10 @@ func init21DeleteRecordsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 1
-		schema.NewSchema("DeleteRecordsRequestv1",
-			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("DeleteRecordsRequest:v1",
+			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 				)},
@@ -31,10 +30,10 @@ func init21DeleteRecordsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 2
-		schema.NewSchema("DeleteRecordsRequestv2",
-			&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("DeleteRecordsRequest:v2",
+			&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 					&schema.SchemaTaggedFields{Name: FieldDeleteRecordsRequestTopicsPartitionsTags},
@@ -45,25 +44,35 @@ func init21DeleteRecordsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteRecordsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteRecordsRequestTags is: The tagged fields.
 	FieldDeleteRecordsRequestTags = "Tags"
+
 	// FieldDeleteRecordsRequestTimeoutMs is: How long to wait for the deletion to complete, in milliseconds.
 	FieldDeleteRecordsRequestTimeoutMs = "TimeoutMs"
+
 	// FieldDeleteRecordsRequestTopics is: Each topic that we want to delete records from.
 	FieldDeleteRecordsRequestTopics = "Topics"
+
 	// FieldDeleteRecordsRequestTopicsName is: The topic name.
 	FieldDeleteRecordsRequestTopicsName = "Name"
+
 	// FieldDeleteRecordsRequestTopicsPartitions is: Each partition that we want to delete records from.
 	FieldDeleteRecordsRequestTopicsPartitions = "Partitions"
+
 	// FieldDeleteRecordsRequestTopicsPartitionsOffset is: The deletion offset.
 	FieldDeleteRecordsRequestTopicsPartitionsOffset = "Offset"
+
 	// FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldDeleteRecordsRequestTopicsPartitionsTags is: The tagged fields.
 	FieldDeleteRecordsRequestTopicsPartitionsTags = "Tags"
+
 	// FieldDeleteRecordsRequestTopicsTags is: The tagged fields.
 	FieldDeleteRecordsRequestTopicsTags = "Tags"
 )

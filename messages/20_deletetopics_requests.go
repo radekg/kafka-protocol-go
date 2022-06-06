@@ -5,48 +5,47 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init20DeleteTopicsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 0
-		schema.NewSchema("DeleteTopicsRequestv0",
+		schema.NewSchema("DeleteTopicsRequest:v0",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 1
-		schema.NewSchema("DeleteTopicsRequestv1",
+		schema.NewSchema("DeleteTopicsRequest:v1",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 2
-		schema.NewSchema("DeleteTopicsRequestv2",
+		schema.NewSchema("DeleteTopicsRequest:v2",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 3
-		schema.NewSchema("DeleteTopicsRequestv3",
+		schema.NewSchema("DeleteTopicsRequest:v3",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 4
-		schema.NewSchema("DeleteTopicsRequestv4",
+		schema.NewSchema("DeleteTopicsRequest:v4",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 5
-		schema.NewSchema("DeleteTopicsRequestv5",
+		schema.NewSchema("DeleteTopicsRequest:v5",
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTopicNames, Ty: schema.TypeStrCompactArray},
 			&schema.Mfield{Name: FieldDeleteTopicsRequestTimeoutMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 6
-		schema.NewSchema("DeleteTopicsRequestv6",
-			&schema.ArrayCompact{Name: FieldDeleteTopicsRequestTopics, Ty: schema.NewSchema("TopicsV6",
+		schema.NewSchema("DeleteTopicsRequest:v6",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsRequestTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTopicsTags},
@@ -55,21 +54,29 @@ func init20DeleteTopicsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteTopicsRequestTags is: The tagged fields.
 	FieldDeleteTopicsRequestTags = "Tags"
+
 	// FieldDeleteTopicsRequestTimeoutMs is: The length of time in milliseconds to wait for the deletions to complete.
 	FieldDeleteTopicsRequestTimeoutMs = "TimeoutMs"
+
 	// FieldDeleteTopicsRequestTopicNames is: The names of the topics to delete
 	FieldDeleteTopicsRequestTopicNames = "TopicNames"
+
 	// FieldDeleteTopicsRequestTopics is: The name or topic ID of the topic
 	FieldDeleteTopicsRequestTopics = "Topics"
+
 	// FieldDeleteTopicsRequestTopicsName is: The topic name
 	FieldDeleteTopicsRequestTopicsName = "Name"
+
 	// FieldDeleteTopicsRequestTopicsTags is: The tagged fields.
 	FieldDeleteTopicsRequestTopicsTags = "Tags"
+
 	// FieldDeleteTopicsRequestTopicsTopicId is: The unique topic ID
 	FieldDeleteTopicsRequestTopicsTopicId = "TopicId"
 )

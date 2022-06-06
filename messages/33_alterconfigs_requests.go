@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init33AlterConfigsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterConfigsRequest, API Key: 33, Version: 0
-		schema.NewSchema("AlterConfigsRequestv0",
-			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("ResourcesV0",
+		schema.NewSchema("AlterConfigsRequest:v0",
+			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v0",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("ConfigsV0",
+				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v0",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
 				)},
@@ -20,11 +19,11 @@ func init33AlterConfigsRequest() []schema.Schema {
 		),
 
 		// Message: AlterConfigsRequest, API Key: 33, Version: 1
-		schema.NewSchema("AlterConfigsRequestv1",
-			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("ResourcesV1",
+		schema.NewSchema("AlterConfigsRequest:v1",
+			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v1",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("ConfigsV1",
+				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v1",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
 				)},
@@ -33,11 +32,11 @@ func init33AlterConfigsRequest() []schema.Schema {
 		),
 
 		// Message: AlterConfigsRequest, API Key: 33, Version: 2
-		schema.NewSchema("AlterConfigsRequestv2",
-			&schema.ArrayCompact{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("ResourcesV2",
+		schema.NewSchema("AlterConfigsRequest:v2",
+			&schema.ArrayCompact{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v2",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("ConfigsV2",
+				&schema.ArrayCompact{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v2",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldAlterConfigsRequestResourcesConfigsTags},
@@ -48,27 +47,38 @@ func init33AlterConfigsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterConfigsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterConfigsRequestResources is: The updates for each resource.
 	FieldAlterConfigsRequestResources = "Resources"
+
 	// FieldAlterConfigsRequestResourcesConfigs is: The configurations.
 	FieldAlterConfigsRequestResourcesConfigs = "Configs"
+
 	// FieldAlterConfigsRequestResourcesConfigsName is: The configuration key name.
 	FieldAlterConfigsRequestResourcesConfigsName = "Name"
+
 	// FieldAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
 	FieldAlterConfigsRequestResourcesConfigsTags = "Tags"
+
 	// FieldAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
 	FieldAlterConfigsRequestResourcesConfigsValue = "Value"
+
 	// FieldAlterConfigsRequestResourcesResourceName is: The resource name.
 	FieldAlterConfigsRequestResourcesResourceName = "ResourceName"
+
 	// FieldAlterConfigsRequestResourcesResourceType is: The resource type.
 	FieldAlterConfigsRequestResourcesResourceType = "ResourceType"
+
 	// FieldAlterConfigsRequestResourcesTags is: The tagged fields.
 	FieldAlterConfigsRequestResourcesTags = "Tags"
+
 	// FieldAlterConfigsRequestTags is: The tagged fields.
 	FieldAlterConfigsRequestTags = "Tags"
+
 	// FieldAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
 	FieldAlterConfigsRequestValidateOnly = "ValidateOnly"
 )

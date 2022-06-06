@@ -5,75 +5,132 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init4LeaderAndIsrResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 0
-		schema.NewSchema("LeaderAndIsrResponsev0",
+		schema.NewSchema("LeaderAndIsrResponse:v0",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV0")},
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v0",
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
+			)},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 1
-		schema.NewSchema("LeaderAndIsrResponsev1",
+		schema.NewSchema("LeaderAndIsrResponse:v1",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV1")},
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v1",
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
+			)},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 2
-		schema.NewSchema("LeaderAndIsrResponsev2",
+		schema.NewSchema("LeaderAndIsrResponse:v2",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV2")},
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v2",
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
+			)},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 3
-		schema.NewSchema("LeaderAndIsrResponsev3",
+		schema.NewSchema("LeaderAndIsrResponse:v3",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV3")},
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v3",
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
+			)},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 4
-		schema.NewSchema("LeaderAndIsrResponsev4",
+		schema.NewSchema("LeaderAndIsrResponse:v4",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrorsV4")},
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v4",
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
+				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponsePartitionErrorsTags},
+			)},
 			&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTags},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 5
-		schema.NewSchema("LeaderAndIsrResponsev5",
+		schema.NewSchema("LeaderAndIsrResponse:v5",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("Topics:v5",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrorsV5")},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrors:v5",
+					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTags},
 		),
 
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 6
-		schema.NewSchema("LeaderAndIsrResponsev6",
+		schema.NewSchema("LeaderAndIsrResponse:v6",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrorsV6")},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrors:v6",
+					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldLeaderAndIsrResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldLeaderAndIsrResponseErrorCode = "ErrorCode"
+
 	// FieldLeaderAndIsrResponsePartitionErrors is: Each partition in v0 to v4 message.
 	FieldLeaderAndIsrResponsePartitionErrors = "PartitionErrors"
+
+	// FieldLeaderAndIsrResponsePartitionErrorsErrorCode is: The partition error code, or 0 if there was no error.
+	FieldLeaderAndIsrResponsePartitionErrorsErrorCode = "ErrorCode"
+
+	// FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex is: The partition index.
+	FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex = "PartitionIndex"
+
+	// FieldLeaderAndIsrResponsePartitionErrorsTags is: The tagged fields.
+	FieldLeaderAndIsrResponsePartitionErrorsTags = "Tags"
+
+	// FieldLeaderAndIsrResponsePartitionErrorsTopicName is: The topic name.
+	FieldLeaderAndIsrResponsePartitionErrorsTopicName = "TopicName"
+
 	// FieldLeaderAndIsrResponseTags is: The tagged fields.
 	FieldLeaderAndIsrResponseTags = "Tags"
+
 	// FieldLeaderAndIsrResponseTopics is: Each topic
 	FieldLeaderAndIsrResponseTopics = "Topics"
+
 	// FieldLeaderAndIsrResponseTopicsPartitionErrors is: Each partition.
 	FieldLeaderAndIsrResponseTopicsPartitionErrors = "PartitionErrors"
+
+	// FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode is: The partition error code, or 0 if there was no error.
+	FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode = "ErrorCode"
+
+	// FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex is: The partition index.
+	FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex = "PartitionIndex"
+
+	// FieldLeaderAndIsrResponseTopicsPartitionErrorsTags is: The tagged fields.
+	FieldLeaderAndIsrResponseTopicsPartitionErrorsTags = "Tags"
+
 	// FieldLeaderAndIsrResponseTopicsTags is: The tagged fields.
 	FieldLeaderAndIsrResponseTopicsTags = "Tags"
+
 	// FieldLeaderAndIsrResponseTopicsTopicId is: The unique topic ID
 	FieldLeaderAndIsrResponseTopicsTopicId = "TopicId"
 )

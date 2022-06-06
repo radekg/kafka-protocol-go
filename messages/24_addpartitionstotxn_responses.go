@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init24AddPartitionsToTxnResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AddPartitionsToTxnResponse, API Key: 24, Version: 0
-		schema.NewSchema("AddPartitionsToTxnResponsev0",
+		schema.NewSchema("AddPartitionsToTxnResponse:v0",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("Results:v0",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("ResultsV0",
+				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("Results:v0",
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -19,11 +18,11 @@ func init24AddPartitionsToTxnResponse() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnResponse, API Key: 24, Version: 1
-		schema.NewSchema("AddPartitionsToTxnResponsev1",
+		schema.NewSchema("AddPartitionsToTxnResponse:v1",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("Results:v1",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("ResultsV1",
+				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("Results:v1",
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -31,11 +30,11 @@ func init24AddPartitionsToTxnResponse() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnResponse, API Key: 24, Version: 2
-		schema.NewSchema("AddPartitionsToTxnResponsev2",
+		schema.NewSchema("AddPartitionsToTxnResponse:v2",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.Array{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("Results:v2",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("ResultsV2",
+				&schema.Array{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("Results:v2",
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -43,11 +42,11 @@ func init24AddPartitionsToTxnResponse() []schema.Schema {
 		),
 
 		// Message: AddPartitionsToTxnResponse, API Key: 24, Version: 3
-		schema.NewSchema("AddPartitionsToTxnResponsev3",
+		schema.NewSchema("AddPartitionsToTxnResponse:v3",
 			&schema.Mfield{Name: FieldAddPartitionsToTxnResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("ResultsV3",
+			&schema.ArrayCompact{Name: FieldAddPartitionsToTxnResponseResults, Ty: schema.NewSchema("Results:v3",
 				&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("ResultsV3",
+				&schema.ArrayCompact{Name: FieldAddPartitionsToTxnResponseResultsResults, Ty: schema.NewSchema("Results:v3",
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAddPartitionsToTxnResponseResultsResultsErrorCode, Ty: schema.TypeInt16},
 					&schema.SchemaTaggedFields{Name: FieldAddPartitionsToTxnResponseResultsResultsTags},
@@ -57,25 +56,35 @@ func init24AddPartitionsToTxnResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAddPartitionsToTxnResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAddPartitionsToTxnResponseResults is: The results for each topic.
 	FieldAddPartitionsToTxnResponseResults = "Results"
+
 	// FieldAddPartitionsToTxnResponseResultsName is: The topic name.
 	FieldAddPartitionsToTxnResponseResultsName = "Name"
+
 	// FieldAddPartitionsToTxnResponseResultsResults is: The results for each partition
 	FieldAddPartitionsToTxnResponseResultsResults = "Results"
+
 	// FieldAddPartitionsToTxnResponseResultsResultsErrorCode is: The response error code.
 	FieldAddPartitionsToTxnResponseResultsResultsErrorCode = "ErrorCode"
+
 	// FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex is: The partition indexes.
 	FieldAddPartitionsToTxnResponseResultsResultsPartitionIndex = "PartitionIndex"
+
 	// FieldAddPartitionsToTxnResponseResultsResultsTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseResultsResultsTags = "Tags"
+
 	// FieldAddPartitionsToTxnResponseResultsTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseResultsTags = "Tags"
+
 	// FieldAddPartitionsToTxnResponseTags is: The tagged fields.
 	FieldAddPartitionsToTxnResponseTags = "Tags"
+
 	// FieldAddPartitionsToTxnResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAddPartitionsToTxnResponseThrottleTimeMs = "ThrottleTimeMs"
 )

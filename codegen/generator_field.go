@@ -1,9 +1,11 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"strconv"
 	"strings"
+	"text/template"
 
 	"github.com/pkg/errors"
 )
@@ -80,75 +82,123 @@ func (d *field) nullable(v int64) bool {
 	return false
 }
 
-func (d *field) generateSchema(version int64, nest int, flexible bool, namRegistry *fieldNameRegistry) string {
+func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest int, namRegistry *fieldNameRegistry) {
 
 	namRegistry.builder.add(d.Name)
 	defer namRegistry.builder.pop()
 
-	linePrefix := strings.Repeat("	", nest)
+	newField := &irField{
+		APIName:           d.Name,
+		APIVersion:        parent.GetAPIVersion(),
+		Fields:            []*irField{},
+		Flexible:          parent.GetFlexible(),
+		ConstantFieldName: namRegistry.builder.generate(),
+		Nullable:          d.nullable(parent.GetAPIVersion()),
+		Whitespace: strings.Repeat("	", nest),
+	}
 
-	isNullable := d.nullable(version)
-	typeSpec := getSchemaType(d.Type, flexible, isNullable)
-	lines := []string{}
+	schemaTypeSpec := getSchemaType(d.Type, parent.GetFlexible(), newField.Nullable)
 
-	fullVarName := namRegistry.builder.generate()
-	namRegistry.register(fullVarName, &fieldWithDoc{
+	namRegistry.register(newField.ConstantFieldName, &fieldWithDoc{
 		name: d.Name,
 		doc:  d.About,
 	})
 
-	if typeSpec.RequiresCompactArrayWrap {
+	if schemaTypeSpec.RequiresCompactArrayWrap {
 
-		//namRegistry.register(fullVarName, d.Name)
-		line := fmt.Sprintf(`%s&schema.ArrayCompact{Name: %s, Ty: `, linePrefix, fullVarName)
-
-		if !typeSpec.IsSchema {
-			lines = append(lines, fmt.Sprintf("%s%s},", line, typeSpec.fullName()))
+		if !schemaTypeSpec.IsSchema {
+			newField.SchemaType = schemaTypeSpec.fullName()
 		} else {
-			lines = append(lines, fmt.Sprintf(`%sschema.NewSchema("%sV%d",`, line, d.Name, version))
-			// Get subfields:
-			fieldsForVersion := d.Fields.forVersion(version, flexible)
-			for _, field := range fieldsForVersion {
-				lines = append(lines, field.generateSchema(version, nest+1, flexible, namRegistry))
+			fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+			// if we have no fields, maybe we have a common struct
+			if len(fieldsForVersion) == 0 {
+				fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
 			}
-			lines = append(lines, fmt.Sprintf("%s)},", linePrefix))
+			for _, field := range fieldsForVersion {
+				field.generateSchema(commons, newField, nest+1, namRegistry)
+			}
 		}
 
-	} else if typeSpec.RequiresArrayWrap {
-
-		line := fmt.Sprintf(`%s&schema.Array{Name: %s, Ty: `, linePrefix, fullVarName)
-		if !typeSpec.IsSchema {
-			lines = append(lines, fmt.Sprintf("%s%s},", line, typeSpec.fullName()))
-		} else {
-			lines = append(lines, fmt.Sprintf(`%sschema.NewSchema("%sV%d",`, line, d.Name, version))
-			// Get subfields:
-			fieldsForVersion := d.Fields.forVersion(version, flexible)
-			for _, field := range fieldsForVersion {
-				lines = append(lines, field.generateSchema(version, nest+1, flexible, namRegistry))
-			}
-			lines = append(lines, fmt.Sprintf("%s)},", linePrefix))
+		parsedTemplate, err := template.New("arraycompact").Parse(fieldCompactArrayTemplate)
+		if err != nil {
+			panic(err)
 		}
+		var output bytes.Buffer
+		if err := parsedTemplate.Execute(&output, newField); err != nil {
+			panic(err)
+		}
+		newField.Rendered = output.String()
+		parent.Append(newField)
+
+	} else if schemaTypeSpec.RequiresArrayWrap {
+
+		if !schemaTypeSpec.IsSchema {
+			newField.SchemaType = schemaTypeSpec.fullName()
+		} else {
+			fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+			// if we have no fields, maybe we have a common struct
+			if len(fieldsForVersion) == 0 {
+				fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
+			}
+			for _, field := range fieldsForVersion {
+				field.generateSchema(commons, newField, nest+1, namRegistry)
+			}
+		}
+
+		parsedTemplate, err := template.New("array").Parse(fieldArrayTemplate)
+		if err != nil {
+			panic(err)
+		}
+		var output bytes.Buffer
+		if err := parsedTemplate.Execute(&output, newField); err != nil {
+			panic(err)
+		}
+		newField.Rendered = output.String()
+		parent.Append(newField)
 
 	} else {
 
 		if d.Type == "schemaTags" {
-			lines = append(lines, fmt.Sprintf(`%s&schema.SchemaTaggedFields{Name: %s},`, linePrefix, fullVarName))
-		} else {
-			line := fmt.Sprintf(`%s&schema.Mfield{Name: %s, Ty: `, linePrefix, fullVarName)
-			if !typeSpec.IsSchema {
-				lines = append(lines, fmt.Sprintf("%s%s},", line, typeSpec.fullName()))
-			} else {
-				lines = append(lines, fmt.Sprintf(`%sschema.NewSchema("%sV%d",`, line, d.Name, version))
-				// Get subfields:
-				fieldsForVersion := d.Fields.forVersion(version, flexible)
-				for _, field := range fieldsForVersion {
-					lines = append(lines, field.generateSchema(version, nest+1, flexible, namRegistry))
-				}
-				lines = append(lines, fmt.Sprintf("%s)},", linePrefix))
+
+			parsedTemplate, err := template.New("schematags").Parse(fieldSchemaTagsTemplate)
+			if err != nil {
+				panic(err)
 			}
+			var output bytes.Buffer
+			if err := parsedTemplate.Execute(&output, newField); err != nil {
+				panic(err)
+			}
+			newField.Rendered = output.String()
+			parent.Append(newField)
+
+		} else {
+
+			if !schemaTypeSpec.IsSchema {
+				newField.SchemaType = schemaTypeSpec.fullName()
+			} else {
+				fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+				// if we have no fields, maybe we have a common struct
+				if len(fieldsForVersion) == 0 {
+					fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
+				}
+				for _, field := range fieldsForVersion {
+					field.generateSchema(commons, newField, nest+1, namRegistry)
+				}
+			}
+
+			parsedTemplate, err := template.New("field").Parse(fieldSimpleTypeTemplate)
+			if err != nil {
+				panic(err)
+			}
+			var output bytes.Buffer
+			if err := parsedTemplate.Execute(&output, newField); err != nil {
+				panic(err)
+			}
+			newField.Rendered = output.String()
+			parent.Append(newField)
+
 		}
 
 	}
 
-	return strings.Join(lines, "\n")
 }

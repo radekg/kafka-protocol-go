@@ -5,12 +5,11 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init2ListOffsetsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListOffsetsResponse, API Key: 2, Version: 0
-		schema.NewSchema("ListOffsetsResponsev0",
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("ListOffsetsResponse:v0",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -18,10 +17,10 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 1
-		schema.NewSchema("ListOffsetsResponsev1",
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("ListOffsetsResponse:v1",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -31,11 +30,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 2
-		schema.NewSchema("ListOffsetsResponsev2",
+		schema.NewSchema("ListOffsetsResponse:v2",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -45,11 +44,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 3
-		schema.NewSchema("ListOffsetsResponsev3",
+		schema.NewSchema("ListOffsetsResponse:v3",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -59,11 +58,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 4
-		schema.NewSchema("ListOffsetsResponsev4",
+		schema.NewSchema("ListOffsetsResponse:v4",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v4",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v4",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -74,11 +73,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 5
-		schema.NewSchema("ListOffsetsResponsev5",
+		schema.NewSchema("ListOffsetsResponse:v5",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v5",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v5",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -89,11 +88,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 6
-		schema.NewSchema("ListOffsetsResponsev6",
+		schema.NewSchema("ListOffsetsResponse:v6",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.ArrayCompact{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.ArrayCompact{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v6",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -107,11 +106,11 @@ func init2ListOffsetsResponse() []schema.Schema {
 		),
 
 		// Message: ListOffsetsResponse, API Key: 2, Version: 7
-		schema.NewSchema("ListOffsetsResponsev7",
+		schema.NewSchema("ListOffsetsResponse:v7",
 			&schema.Mfield{Name: FieldListOffsetsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.ArrayCompact{Name: FieldListOffsetsResponseTopics, Ty: schema.NewSchema("Topics:v7",
 				&schema.Mfield{Name: FieldListOffsetsResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.ArrayCompact{Name: FieldListOffsetsResponseTopicsPartitions, Ty: schema.NewSchema("Partitions:v7",
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldListOffsetsResponseTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -124,31 +123,44 @@ func init2ListOffsetsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListOffsetsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListOffsetsResponseTags is: The tagged fields.
 	FieldListOffsetsResponseTags = "Tags"
+
 	// FieldListOffsetsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListOffsetsResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldListOffsetsResponseTopics is: Each topic in the response.
 	FieldListOffsetsResponseTopics = "Topics"
+
 	// FieldListOffsetsResponseTopicsName is: The topic name
 	FieldListOffsetsResponseTopicsName = "Name"
+
 	// FieldListOffsetsResponseTopicsPartitions is: Each partition in the response.
 	FieldListOffsetsResponseTopicsPartitions = "Partitions"
+
 	// FieldListOffsetsResponseTopicsPartitionsErrorCode is: The partition error code, or 0 if there was no error.
 	FieldListOffsetsResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldListOffsetsResponseTopicsPartitionsLeaderEpoch is:
 	FieldListOffsetsResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+
 	// FieldListOffsetsResponseTopicsPartitionsOffset is: The returned offset.
 	FieldListOffsetsResponseTopicsPartitionsOffset = "Offset"
+
 	// FieldListOffsetsResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldListOffsetsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldListOffsetsResponseTopicsPartitionsTags is: The tagged fields.
 	FieldListOffsetsResponseTopicsPartitionsTags = "Tags"
+
 	// FieldListOffsetsResponseTopicsPartitionsTimestamp is: The timestamp associated with the returned offset.
 	FieldListOffsetsResponseTopicsPartitionsTimestamp = "Timestamp"
+
 	// FieldListOffsetsResponseTopicsTags is: The tagged fields.
 	FieldListOffsetsResponseTopicsTags = "Tags"
 )

@@ -5,15 +5,14 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init1FetchRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: FetchRequest, API Key: 1, Version: 0
-		schema.NewSchema("FetchRequestv0",
+		schema.NewSchema("FetchRequest:v0",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v0",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
@@ -22,13 +21,13 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 1
-		schema.NewSchema("FetchRequestv1",
+		schema.NewSchema("FetchRequest:v1",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v1",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
@@ -37,13 +36,13 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 2
-		schema.NewSchema("FetchRequestv2",
+		schema.NewSchema("FetchRequest:v2",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v2",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
@@ -52,14 +51,14 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 3
-		schema.NewSchema("FetchRequestv3",
+		schema.NewSchema("FetchRequest:v3",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxBytes, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v3",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
@@ -68,15 +67,15 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 4
-		schema.NewSchema("FetchRequestv4",
+		schema.NewSchema("FetchRequest:v4",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v4",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v4",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
@@ -85,15 +84,15 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 5
-		schema.NewSchema("FetchRequestv5",
+		schema.NewSchema("FetchRequest:v5",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v5",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v5",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsLogStartOffset, Ty: schema.TypeInt64},
@@ -103,15 +102,15 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 6
-		schema.NewSchema("FetchRequestv6",
+		schema.NewSchema("FetchRequest:v6",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxBytes, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v6",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v6",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsLogStartOffset, Ty: schema.TypeInt64},
@@ -121,7 +120,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 7
-		schema.NewSchema("FetchRequestv7",
+		schema.NewSchema("FetchRequest:v7",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -129,23 +128,23 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v7",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v7",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsLogStartOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
 				)},
 			)},
-			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV7",
+			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v7",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 8
-		schema.NewSchema("FetchRequestv8",
+		schema.NewSchema("FetchRequest:v8",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -153,23 +152,23 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV8",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v8",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV8",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v8",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsLogStartOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
 				)},
 			)},
-			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV8",
+			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v8",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 9
-		schema.NewSchema("FetchRequestv9",
+		schema.NewSchema("FetchRequest:v9",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -177,9 +176,9 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV9",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v9",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV9",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v9",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
@@ -187,14 +186,14 @@ func init1FetchRequest() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
 				)},
 			)},
-			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV9",
+			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v9",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 10
-		schema.NewSchema("FetchRequestv10",
+		schema.NewSchema("FetchRequest:v10",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -202,9 +201,9 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV10",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v10",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV10",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v10",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
@@ -212,14 +211,14 @@ func init1FetchRequest() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
 				)},
 			)},
-			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV10",
+			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v10",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 11
-		schema.NewSchema("FetchRequestv11",
+		schema.NewSchema("FetchRequest:v11",
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -227,9 +226,9 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV11",
+			&schema.Array{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v11",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV11",
+				&schema.Array{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v11",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
@@ -237,7 +236,7 @@ func init1FetchRequest() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartitionMaxBytes, Ty: schema.TypeInt32},
 				)},
 			)},
-			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV11",
+			&schema.Array{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v11",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32Array},
 			)},
@@ -245,7 +244,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 12
-		schema.NewSchema("FetchRequestv12",
+		schema.NewSchema("FetchRequest:v12",
 			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
@@ -254,9 +253,9 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV12",
+			&schema.ArrayCompact{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v12",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopic, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV12",
+				&schema.ArrayCompact{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v12",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
@@ -267,7 +266,7 @@ func init1FetchRequest() []schema.Schema {
 				)},
 				&schema.SchemaTaggedFields{Name: FieldFetchRequestTopicsTags},
 			)},
-			&schema.ArrayCompact{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV12",
+			&schema.ArrayCompact{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v12",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopic, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldFetchRequestForgottenTopicsDataTags},
@@ -277,7 +276,7 @@ func init1FetchRequest() []schema.Schema {
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 13
-		schema.NewSchema("FetchRequestv13",
+		schema.NewSchema("FetchRequest:v13",
 			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
@@ -286,9 +285,9 @@ func init1FetchRequest() []schema.Schema {
 			&schema.Mfield{Name: FieldFetchRequestIsolationLevel, Ty: schema.TypeInt8},
 			&schema.Mfield{Name: FieldFetchRequestSessionId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestSessionEpoch, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("TopicsV13",
+			&schema.ArrayCompact{Name: FieldFetchRequestTopics, Ty: schema.NewSchema("Topics:v13",
 				&schema.Mfield{Name: FieldFetchRequestTopicsTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV13",
+				&schema.ArrayCompact{Name: FieldFetchRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v13",
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchRequestTopicsPartitionsFetchOffset, Ty: schema.TypeInt64},
@@ -299,7 +298,7 @@ func init1FetchRequest() []schema.Schema {
 				)},
 				&schema.SchemaTaggedFields{Name: FieldFetchRequestTopicsTags},
 			)},
-			&schema.ArrayCompact{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsDataV13",
+			&schema.ArrayCompact{Name: FieldFetchRequestForgottenTopicsData, Ty: schema.NewSchema("ForgottenTopicsData:v13",
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldFetchRequestForgottenTopicsDataPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldFetchRequestForgottenTopicsDataTags},
@@ -308,61 +307,89 @@ func init1FetchRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldFetchRequestClusterId is: The clusterId if known. This is used to validate metadata fetches prior to broker registration.
 	FieldFetchRequestClusterId = "ClusterId"
+
 	// FieldFetchRequestForgottenTopicsData is: In an incremental fetch request, the partitions to remove.
 	FieldFetchRequestForgottenTopicsData = "ForgottenTopicsData"
+
 	// FieldFetchRequestForgottenTopicsDataPartitions is: The partitions indexes to forget.
 	FieldFetchRequestForgottenTopicsDataPartitions = "Partitions"
+
 	// FieldFetchRequestForgottenTopicsDataTags is: The tagged fields.
 	FieldFetchRequestForgottenTopicsDataTags = "Tags"
+
 	// FieldFetchRequestForgottenTopicsDataTopic is: The partition name.
 	FieldFetchRequestForgottenTopicsDataTopic = "Topic"
+
 	// FieldFetchRequestForgottenTopicsDataTopicId is: The unique topic ID
 	FieldFetchRequestForgottenTopicsDataTopicId = "TopicId"
+
 	// FieldFetchRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
 	FieldFetchRequestIsolationLevel = "IsolationLevel"
+
 	// FieldFetchRequestMaxBytes is: The maximum bytes to fetch.  See KIP-74 for cases where this limit may not be honored.
 	FieldFetchRequestMaxBytes = "MaxBytes"
+
 	// FieldFetchRequestMaxWaitMs is: The maximum time in milliseconds to wait for the response.
 	FieldFetchRequestMaxWaitMs = "MaxWaitMs"
+
 	// FieldFetchRequestMinBytes is: The minimum bytes to accumulate in the response.
 	FieldFetchRequestMinBytes = "MinBytes"
+
 	// FieldFetchRequestRackId is: Rack ID of the consumer making this request
 	FieldFetchRequestRackId = "RackId"
+
 	// FieldFetchRequestReplicaId is: The broker ID of the follower, of -1 if this request is from a consumer.
 	FieldFetchRequestReplicaId = "ReplicaId"
+
 	// FieldFetchRequestSessionEpoch is: The fetch session epoch, which is used for ordering requests in a session.
 	FieldFetchRequestSessionEpoch = "SessionEpoch"
+
 	// FieldFetchRequestSessionId is: The fetch session ID.
 	FieldFetchRequestSessionId = "SessionId"
+
 	// FieldFetchRequestTags is: The tagged fields.
 	FieldFetchRequestTags = "Tags"
+
 	// FieldFetchRequestTopics is: The topics to fetch.
 	FieldFetchRequestTopics = "Topics"
+
 	// FieldFetchRequestTopicsPartitions is: The partitions to fetch.
 	FieldFetchRequestTopicsPartitions = "Partitions"
+
 	// FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch of the partition.
 	FieldFetchRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+
 	// FieldFetchRequestTopicsPartitionsFetchOffset is: The message offset.
 	FieldFetchRequestTopicsPartitionsFetchOffset = "FetchOffset"
+
 	// FieldFetchRequestTopicsPartitionsLastFetchedEpoch is: The epoch of the last fetched record or -1 if there is none
 	FieldFetchRequestTopicsPartitionsLastFetchedEpoch = "LastFetchedEpoch"
+
 	// FieldFetchRequestTopicsPartitionsLogStartOffset is: The earliest available offset of the follower replica.  The field is only used when the request is sent by the follower.
 	FieldFetchRequestTopicsPartitionsLogStartOffset = "LogStartOffset"
+
 	// FieldFetchRequestTopicsPartitionsPartition is: The partition index.
 	FieldFetchRequestTopicsPartitionsPartition = "Partition"
+
 	// FieldFetchRequestTopicsPartitionsPartitionMaxBytes is: The maximum bytes to fetch from this partition.  See KIP-74 for cases where this limit may not be honored.
 	FieldFetchRequestTopicsPartitionsPartitionMaxBytes = "PartitionMaxBytes"
+
 	// FieldFetchRequestTopicsPartitionsTags is: The tagged fields.
 	FieldFetchRequestTopicsPartitionsTags = "Tags"
+
 	// FieldFetchRequestTopicsTags is: The tagged fields.
 	FieldFetchRequestTopicsTags = "Tags"
+
 	// FieldFetchRequestTopicsTopic is: The name of the topic to fetch.
 	FieldFetchRequestTopicsTopic = "Topic"
+
 	// FieldFetchRequestTopicsTopicId is: The unique topic ID
 	FieldFetchRequestTopicsTopicId = "TopicId"
 )
