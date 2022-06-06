@@ -7,12 +7,12 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: AlterClientQuotasRequest, API Key: 49, Version: 0
 		schema.NewSchema("AlterClientQuotasRequest:v0",
-			&schema.Array{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("Entries:v0",
-				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("Entity:v0",
+			&schema.Array{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("[]EntryData:v0",
+				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("[]EntityData:v0",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityName, Ty: schema.TypeStrNullable},
 				)},
-				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("Ops:v0",
+				&schema.Array{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("[]OpData:v0",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsKey, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsValue, Ty: schema.TypeFloat64},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsRemove, Ty: schema.TypeBool},
@@ -23,13 +23,13 @@ func init49AlterClientQuotasRequest() []schema.Schema {
 
 		// Message: AlterClientQuotasRequest, API Key: 49, Version: 1
 		schema.NewSchema("AlterClientQuotasRequest:v1",
-			&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("Entries:v1",
-				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("Entity:v1",
+			&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntries, Ty: schema.NewSchema("[]EntryData:v1",
+				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesEntity, Ty: schema.NewSchema("[]EntityData:v1",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityType, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesEntityEntityName, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldAlterClientQuotasRequestEntriesEntityTags},
 				)},
-				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("Ops:v1",
+				&schema.ArrayCompact{Name: FieldAlterClientQuotasRequestEntriesOps, Ty: schema.NewSchema("[]OpData:v1",
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsKey, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsValue, Ty: schema.TypeFloat64},
 					&schema.Mfield{Name: FieldAlterClientQuotasRequestEntriesOpsRemove, Ty: schema.TypeBool},

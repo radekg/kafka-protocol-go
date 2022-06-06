@@ -70,9 +70,21 @@ func (d *messageDefinition) generateSchema() string {
 			Flexible:   isFlexible,
 		}
 
-		fieldsForVersion := d.Fields.forVersion(i, isFlexible)
+		collectedTags := collectTags(d.Fields, i, isFlexible, d.CommonStructs, nameRegistry, 4)
+
+		fieldsForVersion := d.Fields.fieldsForVersion(i, isFlexible)
+		// if we have no fields, maybe we have a common struct
+		if len(fieldsForVersion) == 0 {
+			fieldsForVersion = d.CommonStructs.forVersion(d.Type, generatorIrVersion.GetAPIVersion(), generatorIrVersion.GetFlexible())
+		}
 		for _, field := range fieldsForVersion {
-			field.generateSchema(d.CommonStructs, generatorIrVersion, 3, nameRegistry)
+			field.generateSchema(&schemaGeneratorMetadata{
+				Appender:      generatorIrVersion,
+				CommonStructs: d.CommonStructs,
+				NestLevel:     3,
+				NameRegistry:  nameRegistry,
+				Tags:          collectedTags,
+			})
 		}
 		generatorIr.Versions = append(generatorIr.Versions, generatorIrVersion)
 	}

@@ -7,7 +7,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 	return []schema.Schema{
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 0
 		schema.NewSchema("DeleteTopicsResponse:v0",
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v0",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v0",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -16,7 +16,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 1
 		schema.NewSchema("DeleteTopicsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v1",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v1",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -25,7 +25,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 2
 		schema.NewSchema("DeleteTopicsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v2",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v2",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -34,7 +34,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 3
 		schema.NewSchema("DeleteTopicsResponse:v3",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v3",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v3",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -43,7 +43,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 4
 		schema.NewSchema("DeleteTopicsResponse:v4",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v4",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v4",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldDeleteTopicsResponseResponsesTags},
@@ -54,7 +54,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 5
 		schema.NewSchema("DeleteTopicsResponse:v5",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v5",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v5",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -66,7 +66,7 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 6
 		schema.NewSchema("DeleteTopicsResponse:v6",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("Responses:v6",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v6",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},

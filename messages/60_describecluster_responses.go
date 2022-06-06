@@ -12,7 +12,7 @@ func init60DescribeClusterResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldDescribeClusterResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldDescribeClusterResponseClusterId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldDescribeClusterResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeClusterResponseBrokers, Ty: schema.NewSchema("Brokers:v0",
+			&schema.ArrayCompact{Name: FieldDescribeClusterResponseBrokers, Ty: schema.NewSchema("[]DescribeClusterBroker:v0",
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersPort, Ty: schema.TypeInt32},

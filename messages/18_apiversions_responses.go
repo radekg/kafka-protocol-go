@@ -8,7 +8,7 @@ func init18ApiVersionsResponse() []schema.Schema {
 		// Message: ApiVersionsResponse, API Key: 18, Version: 0
 		schema.NewSchema("ApiVersionsResponse:v0",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeys:v0",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v0",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -18,7 +18,7 @@ func init18ApiVersionsResponse() []schema.Schema {
 		// Message: ApiVersionsResponse, API Key: 18, Version: 1
 		schema.NewSchema("ApiVersionsResponse:v1",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeys:v1",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v1",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -29,7 +29,7 @@ func init18ApiVersionsResponse() []schema.Schema {
 		// Message: ApiVersionsResponse, API Key: 18, Version: 2
 		schema.NewSchema("ApiVersionsResponse:v2",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeys:v2",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v2",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -40,27 +40,39 @@ func init18ApiVersionsResponse() []schema.Schema {
 		// Message: ApiVersionsResponse, API Key: 18, Version: 3
 		schema.NewSchema("ApiVersionsResponse:v3",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeys:v3",
+			&schema.ArrayCompact{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v3",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseApiKeysTags},
 			)},
 			&schema.Mfield{Name: FieldApiVersionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseSupportedFeatures, Ty: schema.NewSchema("SupportedFeatures:v3",
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesName, Ty: schema.TypeStrCompact},
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMinVersion, Ty: schema.TypeInt16},
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMaxVersion, Ty: schema.TypeInt16},
-				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseSupportedFeaturesTags},
-			)},
-			&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseFinalizedFeatures, Ty: schema.NewSchema("FinalizedFeatures:v3",
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesName, Ty: schema.TypeStrCompact},
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel, Ty: schema.TypeInt16},
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel, Ty: schema.TypeInt16},
-				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseFinalizedFeaturesTags},
-			)},
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseTags},
+			/** Applicable tags:
+
+				0: SupportedFeatures (type: []SupportedFeatureKey) =
+				&schema.ArrayCompact{Name: FieldApiVersionsResponseSupportedFeatures, Ty: schema.NewSchema("[]SupportedFeatureKey:v3",
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesName, Ty: schema.TypeStrCompact},
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMinVersion, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMaxVersion, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseSupportedFeaturesTags},
+
+				)},
+
+				1: FinalizedFeaturesEpoch (type: int64) =
+				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesEpoch, Ty: schema.TypeInt64},
+
+				2: FinalizedFeatures (type: []FinalizedFeatureKey) =
+				&schema.ArrayCompact{Name: FieldApiVersionsResponseFinalizedFeatures, Ty: schema.NewSchema("[]FinalizedFeatureKey:v3",
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesName, Ty: schema.TypeStrCompact},
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseFinalizedFeaturesTags},
+
+				)},
+
+			**/
+
 		),
 	}
 

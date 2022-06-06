@@ -8,7 +8,7 @@ func init46ListPartitionReassignmentsRequest() []schema.Schema {
 		// Message: ListPartitionReassignmentsRequest, API Key: 46, Version: 0
 		schema.NewSchema("ListPartitionReassignmentsRequest:v0",
 			&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("[]ListPartitionReassignmentsTopics:v0",
 				&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldListPartitionReassignmentsRequestTopicsTags},

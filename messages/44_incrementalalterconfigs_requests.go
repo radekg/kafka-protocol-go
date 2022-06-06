@@ -7,10 +7,10 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: IncrementalAlterConfigsRequest, API Key: 44, Version: 0
 		schema.NewSchema("IncrementalAlterConfigsRequest:v0",
-			&schema.Array{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v0",
+			&schema.Array{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v0",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v0",
+				&schema.Array{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v0",
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
@@ -21,10 +21,10 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 
 		// Message: IncrementalAlterConfigsRequest, API Key: 44, Version: 1
 		schema.NewSchema("IncrementalAlterConfigsRequest:v1",
-			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v1",
+			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v1",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v1",
+				&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v1",
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrCompactNullable},

@@ -8,7 +8,7 @@ func init33AlterConfigsResponse() []schema.Schema {
 		// Message: AlterConfigsResponse, API Key: 33, Version: 0
 		schema.NewSchema("AlterConfigsResponse:v0",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v0",
+			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v0",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -19,7 +19,7 @@ func init33AlterConfigsResponse() []schema.Schema {
 		// Message: AlterConfigsResponse, API Key: 33, Version: 1
 		schema.NewSchema("AlterConfigsResponse:v1",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v1",
+			&schema.Array{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v1",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -30,7 +30,7 @@ func init33AlterConfigsResponse() []schema.Schema {
 		// Message: AlterConfigsResponse, API Key: 33, Version: 2
 		schema.NewSchema("AlterConfigsResponse:v2",
 			&schema.Mfield{Name: FieldAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v2",
+			&schema.ArrayCompact{Name: FieldAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v2",
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},

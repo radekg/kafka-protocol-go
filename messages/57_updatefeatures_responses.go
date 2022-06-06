@@ -10,7 +10,7 @@ func init57UpdateFeaturesResponse() []schema.Schema {
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldUpdateFeaturesResponseResults, Ty: schema.NewSchema("Results:v0",
+			&schema.ArrayCompact{Name: FieldUpdateFeaturesResponseResults, Ty: schema.NewSchema("[]UpdatableFeatureResult:v0",
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsFeature, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},

@@ -8,7 +8,7 @@ func init65DescribeTransactionsResponse() []schema.Schema {
 		// Message: DescribeTransactionsResponse, API Key: 65, Version: 0
 		schema.NewSchema("DescribeTransactionsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeTransactionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStates, Ty: schema.NewSchema("TransactionStates:v0",
+			&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStates, Ty: schema.NewSchema("[]TransactionState:v0",
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionalId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionState, Ty: schema.TypeStrCompact},
@@ -16,7 +16,7 @@ func init65DescribeTransactionsResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesProducerEpoch, Ty: schema.TypeInt16},
-				&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStatesTopics, Ty: schema.NewSchema("Topics:v0",
+				&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStatesTopics, Ty: schema.NewSchema("[]TopicData:v0",
 					&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsTopic, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsTags},

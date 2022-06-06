@@ -7,7 +7,7 @@ func init61DescribeProducersRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DescribeProducersRequest, API Key: 61, Version: 0
 		schema.NewSchema("DescribeProducersRequest:v0",
-			&schema.ArrayCompact{Name: FieldDescribeProducersRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.ArrayCompact{Name: FieldDescribeProducersRequestTopics, Ty: schema.NewSchema("[]TopicRequest:v0",
 				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldDescribeProducersRequestTopicsTags},

@@ -7,7 +7,7 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: CreateDelegationTokenRequest, API Key: 38, Version: 0
 		schema.NewSchema("CreateDelegationTokenRequest:v0",
-			&schema.Array{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("Renewers:v0",
+			&schema.Array{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("[]CreatableRenewers:v0",
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalName, Ty: schema.TypeStr},
 			)},
@@ -16,7 +16,7 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 
 		// Message: CreateDelegationTokenRequest, API Key: 38, Version: 1
 		schema.NewSchema("CreateDelegationTokenRequest:v1",
-			&schema.Array{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("Renewers:v1",
+			&schema.Array{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("[]CreatableRenewers:v1",
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalName, Ty: schema.TypeStr},
 			)},
@@ -25,7 +25,7 @@ func init38CreateDelegationTokenRequest() []schema.Schema {
 
 		// Message: CreateDelegationTokenRequest, API Key: 38, Version: 2
 		schema.NewSchema("CreateDelegationTokenRequest:v2",
-			&schema.ArrayCompact{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("Renewers:v2",
+			&schema.ArrayCompact{Name: FieldCreateDelegationTokenRequestRenewers, Ty: schema.NewSchema("[]CreatableRenewers:v2",
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateDelegationTokenRequestRenewersPrincipalName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldCreateDelegationTokenRequestRenewersTags},

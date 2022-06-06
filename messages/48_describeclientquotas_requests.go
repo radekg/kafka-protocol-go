@@ -7,7 +7,7 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DescribeClientQuotasRequest, API Key: 48, Version: 0
 		schema.NewSchema("DescribeClientQuotasRequest:v0",
-			&schema.Array{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("Components:v0",
+			&schema.Array{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("[]ComponentData:v0",
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsEntityType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatchType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatch, Ty: schema.TypeStrNullable},
@@ -17,7 +17,7 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 
 		// Message: DescribeClientQuotasRequest, API Key: 48, Version: 1
 		schema.NewSchema("DescribeClientQuotasRequest:v1",
-			&schema.ArrayCompact{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("Components:v1",
+			&schema.ArrayCompact{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("[]ComponentData:v1",
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsEntityType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatchType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatch, Ty: schema.TypeStrCompactNullable},

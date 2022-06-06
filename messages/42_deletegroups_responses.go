@@ -8,7 +8,7 @@ func init42DeleteGroupsResponse() []schema.Schema {
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 0
 		schema.NewSchema("DeleteGroupsResponse:v0",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("Results:v0",
+			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v0",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -17,7 +17,7 @@ func init42DeleteGroupsResponse() []schema.Schema {
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 1
 		schema.NewSchema("DeleteGroupsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("Results:v1",
+			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v1",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 			)},
@@ -26,7 +26,7 @@ func init42DeleteGroupsResponse() []schema.Schema {
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 2
 		schema.NewSchema("DeleteGroupsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("Results:v2",
+			&schema.ArrayCompact{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v2",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldDeleteGroupsResponseResultsTags},

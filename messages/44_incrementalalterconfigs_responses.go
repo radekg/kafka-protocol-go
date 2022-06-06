@@ -8,7 +8,7 @@ func init44IncrementalAlterConfigsResponse() []schema.Schema {
 		// Message: IncrementalAlterConfigsResponse, API Key: 44, Version: 0
 		schema.NewSchema("IncrementalAlterConfigsResponse:v0",
 			&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v0",
+			&schema.Array{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v0",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -19,7 +19,7 @@ func init44IncrementalAlterConfigsResponse() []schema.Schema {
 		// Message: IncrementalAlterConfigsResponse, API Key: 44, Version: 1
 		schema.NewSchema("IncrementalAlterConfigsResponse:v1",
 			&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("Responses:v1",
+			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v1",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},

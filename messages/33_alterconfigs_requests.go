@@ -7,10 +7,10 @@ func init33AlterConfigsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: AlterConfigsRequest, API Key: 33, Version: 0
 		schema.NewSchema("AlterConfigsRequest:v0",
-			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v0",
+			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v0",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v0",
+				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v0",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
 				)},
@@ -20,10 +20,10 @@ func init33AlterConfigsRequest() []schema.Schema {
 
 		// Message: AlterConfigsRequest, API Key: 33, Version: 1
 		schema.NewSchema("AlterConfigsRequest:v1",
-			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v1",
+			&schema.Array{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v1",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v1",
+				&schema.Array{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v1",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
 				)},
@@ -33,10 +33,10 @@ func init33AlterConfigsRequest() []schema.Schema {
 
 		// Message: AlterConfigsRequest, API Key: 33, Version: 2
 		schema.NewSchema("AlterConfigsRequest:v2",
-			&schema.ArrayCompact{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("Resources:v2",
+			&schema.ArrayCompact{Name: FieldAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v2",
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("Configs:v2",
+				&schema.ArrayCompact{Name: FieldAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v2",
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldAlterConfigsRequestResourcesConfigsTags},

@@ -8,7 +8,7 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 0
 		schema.NewSchema("LeaderAndIsrResponse:v0",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v0",
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v0",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -18,7 +18,7 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 1
 		schema.NewSchema("LeaderAndIsrResponse:v1",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v1",
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v1",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -28,7 +28,7 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 2
 		schema.NewSchema("LeaderAndIsrResponse:v2",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v2",
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v2",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -38,7 +38,7 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 3
 		schema.NewSchema("LeaderAndIsrResponse:v3",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v3",
+			&schema.Array{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v3",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -48,7 +48,7 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 4
 		schema.NewSchema("LeaderAndIsrResponse:v4",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("PartitionErrors:v4",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponsePartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v4",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrResponsePartitionErrorsErrorCode, Ty: schema.TypeInt16},
@@ -60,9 +60,9 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 5
 		schema.NewSchema("LeaderAndIsrResponse:v5",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("Topics:v5",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("[]LeaderAndIsrTopicError:v5",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrors:v5",
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v5",
 					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode, Ty: schema.TypeInt16},
 					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsTags},
@@ -75,9 +75,9 @@ func init4LeaderAndIsrResponse() []schema.Schema {
 		// Message: LeaderAndIsrResponse, API Key: 4, Version: 6
 		schema.NewSchema("LeaderAndIsrResponse:v6",
 			&schema.Mfield{Name: FieldLeaderAndIsrResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("Topics:v6",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopics, Ty: schema.NewSchema("[]LeaderAndIsrTopicError:v6",
 				&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("PartitionErrors:v6",
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrResponseTopicsPartitionErrors, Ty: schema.NewSchema("[]LeaderAndIsrPartitionError:v6",
 					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsErrorCode, Ty: schema.TypeInt16},
 					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrResponseTopicsPartitionErrorsTags},

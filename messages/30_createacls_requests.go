@@ -7,7 +7,7 @@ func init30CreateAclsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: CreateAclsRequest, API Key: 30, Version: 0
 		schema.NewSchema("CreateAclsRequest:v0",
-			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v0",
+			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("[]AclCreation:v0",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsPrincipal, Ty: schema.TypeStr},
@@ -19,7 +19,7 @@ func init30CreateAclsRequest() []schema.Schema {
 
 		// Message: CreateAclsRequest, API Key: 30, Version: 1
 		schema.NewSchema("CreateAclsRequest:v1",
-			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v1",
+			&schema.Array{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("[]AclCreation:v1",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourcePatternType, Ty: schema.TypeInt8},
@@ -32,7 +32,7 @@ func init30CreateAclsRequest() []schema.Schema {
 
 		// Message: CreateAclsRequest, API Key: 30, Version: 2
 		schema.NewSchema("CreateAclsRequest:v2",
-			&schema.ArrayCompact{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("Creations:v2",
+			&schema.ArrayCompact{Name: FieldCreateAclsRequestCreations, Ty: schema.NewSchema("[]AclCreation:v2",
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourceName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateAclsRequestCreationsResourcePatternType, Ty: schema.TypeInt8},

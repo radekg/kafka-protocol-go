@@ -7,9 +7,9 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 0
 		schema.NewSchema("OffsetForLeaderEpochRequest:v0",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v0",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v0",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
 				)},
@@ -18,9 +18,9 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 1
 		schema.NewSchema("OffsetForLeaderEpochRequest:v1",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v1",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v1",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
 				)},
@@ -29,9 +29,9 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 2
 		schema.NewSchema("OffsetForLeaderEpochRequest:v2",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v2",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v2",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -42,9 +42,9 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 3
 		schema.NewSchema("OffsetForLeaderEpochRequest:v3",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("Topics:v3",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v3",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v3",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v3",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -55,9 +55,9 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 4
 		schema.NewSchema("OffsetForLeaderEpochRequest:v4",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("Topics:v4",
+			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v4",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v4",
+				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v4",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},

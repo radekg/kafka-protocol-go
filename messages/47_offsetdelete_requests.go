@@ -8,9 +8,9 @@ func init47OffsetDeleteRequest() []schema.Schema {
 		// Message: OffsetDeleteRequest, API Key: 47, Version: 0
 		schema.NewSchema("OffsetDeleteRequest:v0",
 			&schema.Mfield{Name: FieldOffsetDeleteRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldOffsetDeleteRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldOffsetDeleteRequestTopics, Ty: schema.NewSchema("[]OffsetDeleteRequestTopic:v0",
 				&schema.Mfield{Name: FieldOffsetDeleteRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetDeleteRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+				&schema.Array{Name: FieldOffsetDeleteRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetDeleteRequestPartition:v0",
 					&schema.Mfield{Name: FieldOffsetDeleteRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 				)},
 			)},

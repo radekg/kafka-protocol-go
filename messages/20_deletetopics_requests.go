@@ -45,7 +45,7 @@ func init20DeleteTopicsRequest() []schema.Schema {
 
 		// Message: DeleteTopicsRequest, API Key: 20, Version: 6
 		schema.NewSchema("DeleteTopicsRequest:v6",
-			&schema.ArrayCompact{Name: FieldDeleteTopicsRequestTopics, Ty: schema.NewSchema("Topics:v6",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsRequestTopics, Ty: schema.NewSchema("[]DeleteTopicState:v6",
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteTopicsRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.SchemaTaggedFields{Name: FieldDeleteTopicsRequestTopicsTags},

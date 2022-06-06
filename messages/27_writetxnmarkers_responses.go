@@ -7,11 +7,11 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 	return []schema.Schema{
 		// Message: WriteTxnMarkersResponse, API Key: 27, Version: 0
 		schema.NewSchema("WriteTxnMarkersResponse:v0",
-			&schema.Array{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("Markers:v0",
+			&schema.Array{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("[]WritableTxnMarkerResult:v0",
 				&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersProducerId, Ty: schema.TypeInt64},
-				&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("Topics:v0",
+				&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopicResult:v0",
 					&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsName, Ty: schema.TypeStr},
-					&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+					&schema.Array{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("[]WritableTxnMarkerPartitionResult:v0",
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					)},
@@ -21,11 +21,11 @@ func init27WriteTxnMarkersResponse() []schema.Schema {
 
 		// Message: WriteTxnMarkersResponse, API Key: 27, Version: 1
 		schema.NewSchema("WriteTxnMarkersResponse:v1",
-			&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("Markers:v1",
+			&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkers, Ty: schema.NewSchema("[]WritableTxnMarkerResult:v1",
 				&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersProducerId, Ty: schema.TypeInt64},
-				&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("Topics:v1",
+				&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopicResult:v1",
 					&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsName, Ty: schema.TypeStrCompact},
-					&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
+					&schema.ArrayCompact{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitions, Ty: schema.NewSchema("[]WritableTxnMarkerPartitionResult:v1",
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 						&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersResponseMarkersTopicsPartitionsTags},

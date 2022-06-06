@@ -7,9 +7,9 @@ func init21DeleteRecordsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 0
 		schema.NewSchema("DeleteRecordsRequest:v0",
-			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v0",
+			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("[]DeleteRecordsTopic:v0",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v0",
+				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("[]DeleteRecordsPartition:v0",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 				)},
@@ -19,9 +19,9 @@ func init21DeleteRecordsRequest() []schema.Schema {
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 1
 		schema.NewSchema("DeleteRecordsRequest:v1",
-			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v1",
+			&schema.Array{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("[]DeleteRecordsTopic:v1",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v1",
+				&schema.Array{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("[]DeleteRecordsPartition:v1",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 				)},
@@ -31,9 +31,9 @@ func init21DeleteRecordsRequest() []schema.Schema {
 
 		// Message: DeleteRecordsRequest, API Key: 21, Version: 2
 		schema.NewSchema("DeleteRecordsRequest:v2",
-			&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("Topics:v2",
+			&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopics, Ty: schema.NewSchema("[]DeleteRecordsTopic:v2",
 				&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("Partitions:v2",
+				&schema.ArrayCompact{Name: FieldDeleteRecordsRequestTopicsPartitions, Ty: schema.NewSchema("[]DeleteRecordsPartition:v2",
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldDeleteRecordsRequestTopicsPartitionsOffset, Ty: schema.TypeInt64},
 					&schema.SchemaTaggedFields{Name: FieldDeleteRecordsRequestTopicsPartitionsTags},

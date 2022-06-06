@@ -7,12 +7,12 @@ func init51AlterUserScramCredentialsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: AlterUserScramCredentialsRequest, API Key: 51, Version: 0
 		schema.NewSchema("AlterUserScramCredentialsRequest:v0",
-			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestDeletions, Ty: schema.NewSchema("Deletions:v0",
+			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestDeletions, Ty: schema.NewSchema("[]ScramCredentialDeletion:v0",
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestDeletionsMechanism, Ty: schema.TypeInt8},
 				&schema.SchemaTaggedFields{Name: FieldAlterUserScramCredentialsRequestDeletionsTags},
 			)},
-			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestUpsertions, Ty: schema.NewSchema("Upsertions:v0",
+			&schema.ArrayCompact{Name: FieldAlterUserScramCredentialsRequestUpsertions, Ty: schema.NewSchema("[]ScramCredentialUpsertion:v0",
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsMechanism, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldAlterUserScramCredentialsRequestUpsertionsIterations, Ty: schema.TypeInt32},

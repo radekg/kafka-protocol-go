@@ -7,7 +7,7 @@ func init32DescribeConfigsRequest() []schema.Schema {
 	return []schema.Schema{
 		// Message: DescribeConfigsRequest, API Key: 32, Version: 0
 		schema.NewSchema("DescribeConfigsRequest:v0",
-			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("Resources:v0",
+			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("[]DescribeConfigsResource:v0",
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesConfigurationKeys, Ty: schema.TypeStrArray},
@@ -16,7 +16,7 @@ func init32DescribeConfigsRequest() []schema.Schema {
 
 		// Message: DescribeConfigsRequest, API Key: 32, Version: 1
 		schema.NewSchema("DescribeConfigsRequest:v1",
-			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("Resources:v1",
+			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("[]DescribeConfigsResource:v1",
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesConfigurationKeys, Ty: schema.TypeStrArray},
@@ -26,7 +26,7 @@ func init32DescribeConfigsRequest() []schema.Schema {
 
 		// Message: DescribeConfigsRequest, API Key: 32, Version: 2
 		schema.NewSchema("DescribeConfigsRequest:v2",
-			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("Resources:v2",
+			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("[]DescribeConfigsResource:v2",
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesConfigurationKeys, Ty: schema.TypeStrArray},
@@ -36,7 +36,7 @@ func init32DescribeConfigsRequest() []schema.Schema {
 
 		// Message: DescribeConfigsRequest, API Key: 32, Version: 3
 		schema.NewSchema("DescribeConfigsRequest:v3",
-			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("Resources:v3",
+			&schema.Array{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("[]DescribeConfigsResource:v3",
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesConfigurationKeys, Ty: schema.TypeStrArray},
@@ -47,7 +47,7 @@ func init32DescribeConfigsRequest() []schema.Schema {
 
 		// Message: DescribeConfigsRequest, API Key: 32, Version: 4
 		schema.NewSchema("DescribeConfigsRequest:v4",
-			&schema.ArrayCompact{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("Resources:v4",
+			&schema.ArrayCompact{Name: FieldDescribeConfigsRequestResources, Ty: schema.NewSchema("[]DescribeConfigsResource:v4",
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesResourceName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeConfigsRequestResourcesConfigurationKeys, Ty: schema.TypeStrCompactArray},
