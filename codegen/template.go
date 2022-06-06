@@ -33,7 +33,7 @@ const fieldSchemaTagsTemplate = `
 
 const fieldTagTemplate = `{{- $root := . }}
 {{- range $index, $field := .Fields }}
-{{ $root.Whitespace }}{{ $root.Tag }}: {{ $root.APIName }} = {{ $field.Rendered }}
+{{ $root.Whitespace }}{{ $root.Tag }}: {{ $root.APIName }} (type: {{ $root.APIType }}) = {{ $field.Rendered }}
 {{- end }}
 `
 

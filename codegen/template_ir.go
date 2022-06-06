@@ -14,6 +14,7 @@ type irConstant struct {
 type irField struct {
 	APIName           string
 	APIVersion        int64
+	APIType           string
 	ConstantFieldName string
 	Fields            []fieldAppender
 	Flexible          bool
@@ -39,6 +40,7 @@ func (d *irField) GetFlexible() bool {
 type irTag struct {
 	APIName           string
 	APIVersion        int64
+	APIType           string
 	ConstantFieldName string
 	Fields            []fieldAppender
 	Flexible          bool

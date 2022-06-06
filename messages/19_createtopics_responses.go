@@ -72,7 +72,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
 				/** Applicable tags:
 
-					0: TopicConfigErrorCode =
+					0: TopicConfigErrorCode (type: int16) =
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 
 				**/
@@ -101,7 +101,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
 				/** Applicable tags:
 
-					0: TopicConfigErrorCode =
+					0: TopicConfigErrorCode (type: int16) =
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 
 				**/
@@ -131,7 +131,7 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
 				/** Applicable tags:
 
-					0: TopicConfigErrorCode =
+					0: TopicConfigErrorCode (type: int16) =
 					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 
 				**/

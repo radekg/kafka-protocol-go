@@ -15,6 +15,7 @@ func collectTags(f fields, version int64, flexible bool,
 		newTag := &irTag{
 			APIName:           tag.Name,
 			APIVersion:        version,
+			APIType:           tag.Type,
 			Fields:            []fieldAppender{},
 			Flexible:          flexible,
 			ConstantFieldName: nameRegistry.builder.generate(),

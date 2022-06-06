@@ -75,6 +75,7 @@ func (d *field) generateSchema(params *schemaGeneratorMetadata) {
 	newField := &irField{
 		APIName:           d.Name,
 		APIVersion:        params.Appender.GetAPIVersion(),
+		APIType:           d.Type,
 		Fields:            []fieldAppender{},
 		Flexible:          params.Appender.GetFlexible(),
 		ConstantFieldName: params.NameRegistry.builder.generate(),

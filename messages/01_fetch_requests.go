@@ -274,7 +274,7 @@ func init1FetchRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
 			/** Applicable tags:
 
-				0: ClusterId =
+				0: ClusterId@string =
 				&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 
 			**/
@@ -312,7 +312,7 @@ func init1FetchRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
 			/** Applicable tags:
 
-				0: ClusterId =
+				0: ClusterId@string =
 				&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 
 			**/

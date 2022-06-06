@@ -50,7 +50,7 @@ func init18ApiVersionsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseTags},
 			/** Applicable tags:
 
-				0: SupportedFeatures =
+				0: SupportedFeatures (type: []SupportedFeatureKey) =
 				&schema.ArrayCompact{Name: FieldApiVersionsResponseSupportedFeatures, Ty: schema.NewSchema("SupportedFeatures:v3",
 					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMinVersion, Ty: schema.TypeInt16},
@@ -59,10 +59,10 @@ func init18ApiVersionsResponse() []schema.Schema {
 
 				)},
 
-				1: FinalizedFeaturesEpoch =
+				1: FinalizedFeaturesEpoch (type: int64) =
 				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesEpoch, Ty: schema.TypeInt64},
 
-				2: FinalizedFeatures =
+				2: FinalizedFeatures (type: []FinalizedFeatureKey) =
 				&schema.ArrayCompact{Name: FieldApiVersionsResponseFinalizedFeatures, Ty: schema.NewSchema("FinalizedFeatures:v3",
 					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel, Ty: schema.TypeInt16},
