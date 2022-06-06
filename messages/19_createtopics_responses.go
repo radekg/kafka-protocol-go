@@ -59,7 +59,6 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
 				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v5",
@@ -71,6 +70,13 @@ func init19CreateTopicsResponse() []schema.Schema {
 					&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsConfigsTags},
 				)},
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
+				/** Applicable tags:
+
+					0: TopicConfigErrorCode =
+					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
+
+				**/
+
 			)},
 			&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTags},
 		),
@@ -82,7 +88,6 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
 				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v6",
@@ -94,6 +99,13 @@ func init19CreateTopicsResponse() []schema.Schema {
 					&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsConfigsTags},
 				)},
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
+				/** Applicable tags:
+
+					0: TopicConfigErrorCode =
+					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
+
+				**/
+
 			)},
 			&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTags},
 		),
@@ -106,7 +118,6 @@ func init19CreateTopicsResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsNumPartitions, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldCreateTopicsResponseTopicsReplicationFactor, Ty: schema.TypeInt16},
 				&schema.ArrayCompact{Name: FieldCreateTopicsResponseTopicsConfigs, Ty: schema.NewSchema("Configs:v7",
@@ -118,6 +129,13 @@ func init19CreateTopicsResponse() []schema.Schema {
 					&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsConfigsTags},
 				)},
 				&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTopicsTags},
+				/** Applicable tags:
+
+					0: TopicConfigErrorCode =
+					&schema.Mfield{Name: FieldCreateTopicsResponseTopicsTopicConfigErrorCode, Ty: schema.TypeInt16},
+
+				**/
+
 			)},
 			&schema.SchemaTaggedFields{Name: FieldCreateTopicsResponseTags},
 		),

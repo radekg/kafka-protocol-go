@@ -22,7 +22,20 @@ const fieldSimpleTypeTemplate = `{{- $fieldsLen := len .Fields }}
 {{ .Whitespace }})},{{ end }}`
 
 const fieldSchemaTagsTemplate = `
-{{ .Whitespace }}&schema.SchemaTaggedFields{Name: {{ .ConstantFieldName }}},`
+{{ .Whitespace }}&schema.SchemaTaggedFields{Name: {{ .ConstantFieldName }}},
+{{- $tagsLen := len .Tags }}
+{{- if gt $tagsLen 0 }}
+{{ .Whitespace }}/** Applicable tags:
+{{ range $index, $tag := .Tags }}{{ .Whitespace }}{{ $tag.Rendered }}{{ end }}
+{{ .Whitespace }}**/
+{{- end }}
+`
+
+const fieldTagTemplate = `{{- $root := . }}
+{{- range $index, $field := .Fields }}
+{{ $root.Whitespace }}{{ $root.Tag }}: {{ $root.APIName }} = {{ $field.Rendered }}
+{{- end }}
+`
 
 const outputTemplate = `package messages
 

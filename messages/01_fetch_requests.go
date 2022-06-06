@@ -245,7 +245,6 @@ func init1FetchRequest() []schema.Schema {
 
 		// Message: FetchRequest, API Key: 1, Version: 12
 		schema.NewSchema("FetchRequest:v12",
-			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -273,11 +272,17 @@ func init1FetchRequest() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldFetchRequestRackId, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
+			/** Applicable tags:
+
+				0: ClusterId =
+				&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
+
+			**/
+
 		),
 
 		// Message: FetchRequest, API Key: 1, Version: 13
 		schema.NewSchema("FetchRequest:v13",
-			&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldFetchRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMaxWaitMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldFetchRequestMinBytes, Ty: schema.TypeInt32},
@@ -305,6 +310,13 @@ func init1FetchRequest() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldFetchRequestRackId, Ty: schema.TypeStrCompact},
 			&schema.SchemaTaggedFields{Name: FieldFetchRequestTags},
+			/** Applicable tags:
+
+				0: ClusterId =
+				&schema.Mfield{Name: FieldFetchRequestClusterId, Ty: schema.TypeStrCompactNullable},
+
+			**/
+
 		),
 	}
 

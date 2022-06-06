@@ -12,10 +12,10 @@ import (
 
 type fields []field
 
-func (d fields) forVersion(v int64, flexible bool) fields {
+func (d fields) fieldsForVersion(v int64, flexible bool) fields {
 	resp := fields{}
 	for _, f := range d {
-		if f.appliesToVersion(v) {
+		if f.Tag == nil && appliesToVersion(f.Name, f.Versions, v) {
 			resp = append(resp, f)
 		}
 	}
@@ -32,6 +32,16 @@ func (d fields) forVersion(v int64, flexible bool) fields {
 	return resp
 }
 
+func (d fields) tagsForVersion(v int64, flexible bool) fields {
+	resp := fields{}
+	for _, f := range d {
+		if f.Tag != nil && appliesToVersion(f.Name, *f.TaggedVersions, v) {
+			resp = append(resp, f)
+		}
+	}
+	return resp
+}
+
 type field struct {
 	Name             string  `json:"name"`
 	Type             string  `json:"type"`
@@ -41,39 +51,6 @@ type field struct {
 	TaggedVersions   *string `json:"taggedVersions,omitempty"`
 	About            string  `json:"About"`
 	Fields           fields  `json:"fields"`
-}
-
-func (d *field) appliesToVersion(v int64) bool {
-
-	// a tag is not a field
-	if d.Tag != nil {
-		return false
-	}
-
-	if strings.HasSuffix(d.Versions, "+") {
-		minVersion, err := strconv.ParseInt(strings.TrimSuffix(d.Versions, "+"), 10, 64)
-		if err != nil {
-			errors.Wrap(err, fmt.Sprintf("failed parsing versions with + suffix: %s", d.Name))
-		}
-		if v >= minVersion {
-			return true
-		}
-	}
-	if strings.Contains(d.Versions, "-") {
-		parts := strings.Split(d.Versions, "-")
-		minVersion, err := strconv.ParseInt(parts[0], 10, 64)
-		if err != nil {
-			errors.Wrap(err, fmt.Sprintf("failed parsing versions - delimited: %s", d.Name))
-		}
-		maxVersion, err := strconv.ParseInt(parts[1], 10, 64)
-		if err != nil {
-			errors.Wrap(err, fmt.Sprintf("failed parsing versions - delimited: %s", d.Name))
-		}
-		if v >= minVersion && v <= maxVersion {
-			return true
-		}
-	}
-	return false
 }
 
 func (d *field) nullable(v int64) bool {
@@ -90,24 +67,24 @@ func (d *field) nullable(v int64) bool {
 	return false
 }
 
-func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest int, namRegistry *fieldNameRegistry) {
+func (d *field) generateSchema(params *schemaGeneratorMetadata) {
 
-	namRegistry.builder.add(d.Name)
-	defer namRegistry.builder.pop()
+	params.NameRegistry.builder.add(d.Name)
+	defer params.NameRegistry.builder.pop()
 
 	newField := &irField{
 		APIName:           d.Name,
-		APIVersion:        parent.GetAPIVersion(),
-		Fields:            []*irField{},
-		Flexible:          parent.GetFlexible(),
-		ConstantFieldName: namRegistry.builder.generate(),
-		Nullable:          d.nullable(parent.GetAPIVersion()),
-		Whitespace: strings.Repeat("	", nest),
+		APIVersion:        params.Appender.GetAPIVersion(),
+		Fields:            []fieldAppender{},
+		Flexible:          params.Appender.GetFlexible(),
+		ConstantFieldName: params.NameRegistry.builder.generate(),
+		Nullable:          d.nullable(params.Appender.GetAPIVersion()),
+		Whitespace: strings.Repeat("	", params.NestLevel),
 	}
 
-	schemaTypeSpec := getSchemaType(d.Type, parent.GetFlexible(), newField.Nullable)
+	schemaTypeSpec := getSchemaType(d.Type, params.Appender.GetFlexible(), newField.Nullable)
 
-	namRegistry.register(newField.ConstantFieldName, &fieldWithDoc{
+	params.NameRegistry.register(newField.ConstantFieldName, &fieldWithDoc{
 		name: d.Name,
 		doc:  d.About,
 	})
@@ -117,13 +94,21 @@ func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest
 		if !schemaTypeSpec.IsSchema {
 			newField.SchemaType = schemaTypeSpec.fullName()
 		} else {
-			fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+			// Caution: for printing in comments the nest level is 1 higher than actual code:
+			collectedTags := collectTags(d.Fields, params.Appender.GetAPIVersion(), params.Appender.GetFlexible(), params.CommonStructs, params.NameRegistry, params.NestLevel+2)
+			fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 			// if we have no fields, maybe we have a common struct
 			if len(fieldsForVersion) == 0 {
-				fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
+				fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 			}
 			for _, field := range fieldsForVersion {
-				field.generateSchema(commons, newField, nest+1, namRegistry)
+				field.generateSchema(&schemaGeneratorMetadata{
+					Appender:      newField,
+					CommonStructs: params.CommonStructs,
+					NestLevel:     params.NestLevel + 1,
+					NameRegistry:  params.NameRegistry,
+					Tags:          collectedTags,
+				})
 			}
 		}
 
@@ -136,20 +121,28 @@ func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest
 			panic(err)
 		}
 		newField.Rendered = output.String()
-		parent.Append(newField)
+		params.Appender.Append(newField)
 
 	} else if schemaTypeSpec.RequiresArrayWrap {
 
 		if !schemaTypeSpec.IsSchema {
 			newField.SchemaType = schemaTypeSpec.fullName()
 		} else {
-			fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+			// Caution: for printing in comments the nest level is 1 higher than actual code:
+			collectedTags := collectTags(d.Fields, params.Appender.GetAPIVersion(), params.Appender.GetFlexible(), params.CommonStructs, params.NameRegistry, params.NestLevel+2)
+			fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 			// if we have no fields, maybe we have a common struct
 			if len(fieldsForVersion) == 0 {
-				fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
+				fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 			}
 			for _, field := range fieldsForVersion {
-				field.generateSchema(commons, newField, nest+1, namRegistry)
+				field.generateSchema(&schemaGeneratorMetadata{
+					Appender:      newField,
+					CommonStructs: params.CommonStructs,
+					NestLevel:     params.NestLevel + 1,
+					NameRegistry:  params.NameRegistry,
+					Tags:          collectedTags,
+				})
 			}
 		}
 
@@ -162,11 +155,13 @@ func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest
 			panic(err)
 		}
 		newField.Rendered = output.String()
-		parent.Append(newField)
+		params.Appender.Append(newField)
 
 	} else {
 
 		if d.Type == "schemaTags" {
+
+			newField.Tags = params.Tags
 
 			parsedTemplate, err := template.New("schematags").Parse(fieldSchemaTagsTemplate)
 			if err != nil {
@@ -177,20 +172,28 @@ func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest
 				panic(err)
 			}
 			newField.Rendered = output.String()
-			parent.Append(newField)
+			params.Appender.Append(newField)
 
 		} else {
 
 			if !schemaTypeSpec.IsSchema {
 				newField.SchemaType = schemaTypeSpec.fullName()
 			} else {
-				fieldsForVersion := d.Fields.forVersion(parent.GetAPIVersion(), parent.GetFlexible())
+				// Caution: for printing in comments the nest level is 1 higher than actual code:
+				collectedTags := collectTags(d.Fields, params.Appender.GetAPIVersion(), params.Appender.GetFlexible(), params.CommonStructs, params.NameRegistry, params.NestLevel+2)
+				fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 				// if we have no fields, maybe we have a common struct
 				if len(fieldsForVersion) == 0 {
-					fieldsForVersion = commons.forVersion(d.Type, parent.GetAPIVersion(), parent.GetFlexible())
+					fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
 				}
 				for _, field := range fieldsForVersion {
-					field.generateSchema(commons, newField, nest+1, namRegistry)
+					field.generateSchema(&schemaGeneratorMetadata{
+						Appender:      newField,
+						CommonStructs: params.CommonStructs,
+						NestLevel:     params.NestLevel + 1,
+						NameRegistry:  params.NameRegistry,
+						Tags:          collectedTags,
+					})
 				}
 			}
 
@@ -203,7 +206,142 @@ func (d *field) generateSchema(commons commonStructs, parent fieldAppender, nest
 				panic(err)
 			}
 			newField.Rendered = output.String()
-			parent.Append(newField)
+			params.Appender.Append(newField)
+
+		}
+
+	}
+
+}
+
+func (d *field) generateTags(params *schemaGeneratorMetadata) {
+
+	params.NameRegistry.builder.add(d.Name)
+	defer params.NameRegistry.builder.pop()
+
+	newField := &irTag{
+		APIName:           d.Name,
+		APIVersion:        params.Appender.GetAPIVersion(),
+		Fields:            []fieldAppender{},
+		Flexible:          params.Appender.GetFlexible(),
+		ConstantFieldName: params.NameRegistry.builder.generate(),
+		Nullable:          d.nullable(params.Appender.GetAPIVersion()),
+		Whitespace: strings.Repeat("	", params.NestLevel),
+	}
+
+	schemaTypeSpec := getSchemaType(d.Type, params.Appender.GetFlexible(), newField.Nullable)
+
+	params.NameRegistry.register(newField.ConstantFieldName, &fieldWithDoc{
+		name: d.Name,
+		doc:  d.About,
+	})
+
+	if schemaTypeSpec.RequiresCompactArrayWrap {
+
+		if !schemaTypeSpec.IsSchema {
+			newField.SchemaType = schemaTypeSpec.fullName()
+		} else {
+			fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+			// if we have no fields, maybe we have a common struct
+			if len(fieldsForVersion) == 0 {
+				fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+			}
+			for _, field := range fieldsForVersion {
+				field.generateSchema(&schemaGeneratorMetadata{
+					Appender:      newField,
+					CommonStructs: params.CommonStructs,
+					NestLevel:     params.NestLevel + 1,
+					NameRegistry:  params.NameRegistry,
+				})
+			}
+		}
+
+		parsedTemplate, err := template.New("arraycompact").Parse(fieldCompactArrayTemplate)
+		if err != nil {
+			panic(err)
+		}
+		var output bytes.Buffer
+		if err := parsedTemplate.Execute(&output, newField); err != nil {
+			panic(err)
+		}
+		newField.Rendered = output.String()
+		params.Appender.Append(newField)
+
+	} else if schemaTypeSpec.RequiresArrayWrap {
+
+		if !schemaTypeSpec.IsSchema {
+			newField.SchemaType = schemaTypeSpec.fullName()
+		} else {
+			fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+			// if we have no fields, maybe we have a common struct
+			if len(fieldsForVersion) == 0 {
+				fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+			}
+			for _, field := range fieldsForVersion {
+				field.generateSchema(&schemaGeneratorMetadata{
+					Appender:      newField,
+					CommonStructs: params.CommonStructs,
+					NestLevel:     params.NestLevel + 1,
+					NameRegistry:  params.NameRegistry,
+				})
+			}
+		}
+
+		parsedTemplate, err := template.New("array").Parse(fieldArrayTemplate)
+		if err != nil {
+			panic(err)
+		}
+		var output bytes.Buffer
+		if err := parsedTemplate.Execute(&output, newField); err != nil {
+			panic(err)
+		}
+		newField.Rendered = output.String()
+		params.Appender.Append(newField)
+
+	} else {
+
+		if d.Type == "schemaTags" {
+			parsedTemplate, err := template.New("schematags").Parse(fieldSchemaTagsTemplate)
+			if err != nil {
+				panic(err)
+			}
+			var output bytes.Buffer
+			if err := parsedTemplate.Execute(&output, newField); err != nil {
+				panic(err)
+			}
+			newField.Rendered = output.String()
+			params.Appender.Append(newField)
+
+		} else {
+
+			if !schemaTypeSpec.IsSchema {
+				newField.SchemaType = schemaTypeSpec.fullName()
+			} else {
+				fieldsForVersion := d.Fields.fieldsForVersion(params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+				// if we have no fields, maybe we have a common struct
+				if len(fieldsForVersion) == 0 {
+					fieldsForVersion = params.CommonStructs.forVersion(d.Type, params.Appender.GetAPIVersion(), params.Appender.GetFlexible())
+				}
+				for _, field := range fieldsForVersion {
+					field.generateSchema(&schemaGeneratorMetadata{
+						Appender:      newField,
+						CommonStructs: params.CommonStructs,
+						NestLevel:     params.NestLevel + 1,
+						NameRegistry:  params.NameRegistry,
+					})
+				}
+			}
+
+			parsedTemplate, err := template.New("field").Parse(fieldSimpleTypeTemplate)
+			if err != nil {
+				panic(err)
+			}
+			var output bytes.Buffer
+			if err := parsedTemplate.Execute(&output, newField); err != nil {
+				panic(err)
+			}
+			newField.Rendered = output.String()
+			params.Appender.Append(newField)
 
 		}
 

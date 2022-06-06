@@ -243,21 +243,6 @@ func init1FetchResponse() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpoch:v12",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
-					)},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeader:v12",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
-					)},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotId:v12",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
-					)},
 					&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactions:v12",
 						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
@@ -266,6 +251,34 @@ func init1FetchResponse() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPreferredReadReplica, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsTags},
+					/** Applicable tags:
+
+						0: DivergingEpoch =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpoch:v12",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
+
+						)},
+
+						1: CurrentLeader =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeader:v12",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
+
+						)},
+
+						2: SnapshotId =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotId:v12",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
+
+						)},
+
+					**/
+
 				)},
 				&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesTags},
 			)},
@@ -285,21 +298,6 @@ func init1FetchResponse() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsHighWatermark, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLastStableOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsLogStartOffset, Ty: schema.TypeInt64},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpoch:v13",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
-					)},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeader:v13",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
-					)},
-					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotId:v13",
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
-						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
-						&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
-					)},
 					&schema.ArrayCompact{Name: FieldFetchResponseResponsesPartitionsAbortedTransactions, Ty: schema.NewSchema("AbortedTransactions:v13",
 						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsProducerId, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsAbortedTransactionsFirstOffset, Ty: schema.TypeInt64},
@@ -308,6 +306,34 @@ func init1FetchResponse() []schema.Schema {
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsPreferredReadReplica, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsRecords, Ty: schema.TypeBytesCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsTags},
+					/** Applicable tags:
+
+						0: DivergingEpoch =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpoch, Ty: schema.NewSchema("DivergingEpoch:v13",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEpoch, Ty: schema.TypeInt32},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsDivergingEpochEndOffset, Ty: schema.TypeInt64},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsDivergingEpochTags},
+
+						)},
+
+						1: CurrentLeader =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeader, Ty: schema.NewSchema("CurrentLeader:v13",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderId, Ty: schema.TypeInt32},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderLeaderEpoch, Ty: schema.TypeInt32},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsCurrentLeaderTags},
+
+						)},
+
+						2: SnapshotId =
+						&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotId, Ty: schema.NewSchema("SnapshotId:v13",
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEndOffset, Ty: schema.TypeInt64},
+							&schema.Mfield{Name: FieldFetchResponseResponsesPartitionsSnapshotIdEpoch, Ty: schema.TypeInt32},
+							&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesPartitionsSnapshotIdTags},
+
+						)},
+
+					**/
+
 				)},
 				&schema.SchemaTaggedFields{Name: FieldFetchResponseResponsesTags},
 			)},
