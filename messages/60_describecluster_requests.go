@@ -5,18 +5,20 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init60DescribeClusterRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeClusterRequest, API Key: 60, Version: 0
-		schema.NewSchema("DescribeClusterRequestv0",
+		schema.NewSchema("DescribeClusterRequest:v0",
 			&schema.Mfield{Name: FieldDescribeClusterRequestIncludeClusterAuthorizedOperations, Ty: schema.TypeBool},
 			&schema.SchemaTaggedFields{Name: FieldDescribeClusterRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeClusterRequestIncludeClusterAuthorizedOperations is: Whether to include cluster authorized operations.
 	FieldDescribeClusterRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
+
 	// FieldDescribeClusterRequestTags is: The tagged fields.
 	FieldDescribeClusterRequestTags = "Tags"
 )

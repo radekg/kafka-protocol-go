@@ -5,54 +5,56 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init6UpdateMetadataResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 0
-		schema.NewSchema("UpdateMetadataResponsev0",
+		schema.NewSchema("UpdateMetadataResponse:v0",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 1
-		schema.NewSchema("UpdateMetadataResponsev1",
+		schema.NewSchema("UpdateMetadataResponse:v1",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 2
-		schema.NewSchema("UpdateMetadataResponsev2",
+		schema.NewSchema("UpdateMetadataResponse:v2",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 3
-		schema.NewSchema("UpdateMetadataResponsev3",
+		schema.NewSchema("UpdateMetadataResponse:v3",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 4
-		schema.NewSchema("UpdateMetadataResponsev4",
+		schema.NewSchema("UpdateMetadataResponse:v4",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 5
-		schema.NewSchema("UpdateMetadataResponsev5",
+		schema.NewSchema("UpdateMetadataResponse:v5",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 6
-		schema.NewSchema("UpdateMetadataResponsev6",
+		schema.NewSchema("UpdateMetadataResponse:v6",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldUpdateMetadataResponseTags},
 		),
 
 		// Message: UpdateMetadataResponse, API Key: 6, Version: 7
-		schema.NewSchema("UpdateMetadataResponsev7",
+		schema.NewSchema("UpdateMetadataResponse:v7",
 			&schema.Mfield{Name: FieldUpdateMetadataResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldUpdateMetadataResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldUpdateMetadataResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldUpdateMetadataResponseErrorCode = "ErrorCode"
+
 	// FieldUpdateMetadataResponseTags is: The tagged fields.
 	FieldUpdateMetadataResponseTags = "Tags"
 )

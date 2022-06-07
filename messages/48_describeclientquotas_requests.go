@@ -5,10 +5,9 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init48DescribeClientQuotasRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeClientQuotasRequest, API Key: 48, Version: 0
-		schema.NewSchema("DescribeClientQuotasRequestv0",
-			&schema.Array{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("ComponentsV0",
+		schema.NewSchema("DescribeClientQuotasRequest:v0",
+			&schema.Array{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("[]ComponentData:v0",
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsEntityType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatchType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatch, Ty: schema.TypeStrNullable},
@@ -17,8 +16,8 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 		),
 
 		// Message: DescribeClientQuotasRequest, API Key: 48, Version: 1
-		schema.NewSchema("DescribeClientQuotasRequestv1",
-			&schema.ArrayCompact{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("ComponentsV1",
+		schema.NewSchema("DescribeClientQuotasRequest:v1",
+			&schema.ArrayCompact{Name: FieldDescribeClientQuotasRequestComponents, Ty: schema.NewSchema("[]ComponentData:v1",
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsEntityType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatchType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeClientQuotasRequestComponentsMatch, Ty: schema.TypeStrCompactNullable},
@@ -28,21 +27,29 @@ func init48DescribeClientQuotasRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeClientQuotasRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeClientQuotasRequestComponents is: Filter components to apply to quota entities.
 	FieldDescribeClientQuotasRequestComponents = "Components"
+
 	// FieldDescribeClientQuotasRequestComponentsEntityType is: The entity type that the filter component applies to.
 	FieldDescribeClientQuotasRequestComponentsEntityType = "EntityType"
+
 	// FieldDescribeClientQuotasRequestComponentsMatch is: The string to match against, or null if unused for the match type.
 	FieldDescribeClientQuotasRequestComponentsMatch = "Match"
+
 	// FieldDescribeClientQuotasRequestComponentsMatchType is: How to match the entity {0 = exact name, 1 = default name, 2 = any specified name}.
 	FieldDescribeClientQuotasRequestComponentsMatchType = "MatchType"
+
 	// FieldDescribeClientQuotasRequestComponentsTags is: The tagged fields.
 	FieldDescribeClientQuotasRequestComponentsTags = "Tags"
+
 	// FieldDescribeClientQuotasRequestStrict is: Whether the match is strict, i.e. should exclude entities with unspecified entity types.
 	FieldDescribeClientQuotasRequestStrict = "Strict"
+
 	// FieldDescribeClientQuotasRequestTags is: The tagged fields.
 	FieldDescribeClientQuotasRequestTags = "Tags"
 )

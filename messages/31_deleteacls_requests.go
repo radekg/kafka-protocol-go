@@ -5,10 +5,9 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init31DeleteAclsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteAclsRequest, API Key: 31, Version: 0
-		schema.NewSchema("DeleteAclsRequestv0",
-			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("FiltersV0",
+		schema.NewSchema("DeleteAclsRequest:v0",
+			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v0",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPrincipalFilter, Ty: schema.TypeStrNullable},
@@ -19,8 +18,8 @@ func init31DeleteAclsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteAclsRequest, API Key: 31, Version: 1
-		schema.NewSchema("DeleteAclsRequestv1",
-			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("FiltersV1",
+		schema.NewSchema("DeleteAclsRequest:v1",
+			&schema.Array{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v1",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPatternTypeFilter, Ty: schema.TypeInt8},
@@ -32,8 +31,8 @@ func init31DeleteAclsRequest() []schema.Schema {
 		),
 
 		// Message: DeleteAclsRequest, API Key: 31, Version: 2
-		schema.NewSchema("DeleteAclsRequestv2",
-			&schema.ArrayCompact{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("FiltersV2",
+		schema.NewSchema("DeleteAclsRequest:v2",
+			&schema.ArrayCompact{Name: FieldDeleteAclsRequestFilters, Ty: schema.NewSchema("[]DeleteAclsFilter:v2",
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceTypeFilter, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersResourceNameFilter, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteAclsRequestFiltersPatternTypeFilter, Ty: schema.TypeInt8},
@@ -46,27 +45,38 @@ func init31DeleteAclsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteAclsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteAclsRequestFilters is: The filters to use when deleting ACLs.
 	FieldDeleteAclsRequestFilters = "Filters"
+
 	// FieldDeleteAclsRequestFiltersHostFilter is: The host filter, or null to accept all hosts.
 	FieldDeleteAclsRequestFiltersHostFilter = "HostFilter"
+
 	// FieldDeleteAclsRequestFiltersOperation is: The ACL operation.
 	FieldDeleteAclsRequestFiltersOperation = "Operation"
+
 	// FieldDeleteAclsRequestFiltersPatternTypeFilter is: The pattern type.
 	FieldDeleteAclsRequestFiltersPatternTypeFilter = "PatternTypeFilter"
+
 	// FieldDeleteAclsRequestFiltersPermissionType is: The permission type.
 	FieldDeleteAclsRequestFiltersPermissionType = "PermissionType"
+
 	// FieldDeleteAclsRequestFiltersPrincipalFilter is: The principal filter, or null to accept all principals.
 	FieldDeleteAclsRequestFiltersPrincipalFilter = "PrincipalFilter"
+
 	// FieldDeleteAclsRequestFiltersResourceNameFilter is: The resource name.
 	FieldDeleteAclsRequestFiltersResourceNameFilter = "ResourceNameFilter"
+
 	// FieldDeleteAclsRequestFiltersResourceTypeFilter is: The resource type.
 	FieldDeleteAclsRequestFiltersResourceTypeFilter = "ResourceTypeFilter"
+
 	// FieldDeleteAclsRequestFiltersTags is: The tagged fields.
 	FieldDeleteAclsRequestFiltersTags = "Tags"
+
 	// FieldDeleteAclsRequestTags is: The tagged fields.
 	FieldDeleteAclsRequestTags = "Tags"
 )

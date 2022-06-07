@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init67AllocateProducerIdsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AllocateProducerIdsResponse, API Key: 67, Version: 0
-		schema.NewSchema("AllocateProducerIdsResponsev0",
+		schema.NewSchema("AllocateProducerIdsResponse:v0",
 			&schema.Mfield{Name: FieldAllocateProducerIdsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAllocateProducerIdsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldAllocateProducerIdsResponseProducerIdStart, Ty: schema.TypeInt64},
@@ -15,17 +14,23 @@ func init67AllocateProducerIdsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAllocateProducerIdsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAllocateProducerIdsResponseErrorCode is: The top level response error code
 	FieldAllocateProducerIdsResponseErrorCode = "ErrorCode"
+
 	// FieldAllocateProducerIdsResponseProducerIdLen is: The number of producer IDs in this range
 	FieldAllocateProducerIdsResponseProducerIdLen = "ProducerIdLen"
+
 	// FieldAllocateProducerIdsResponseProducerIdStart is: The first producer ID in this range, inclusive
 	FieldAllocateProducerIdsResponseProducerIdStart = "ProducerIdStart"
+
 	// FieldAllocateProducerIdsResponseTags is: The tagged fields.
 	FieldAllocateProducerIdsResponseTags = "Tags"
+
 	// FieldAllocateProducerIdsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAllocateProducerIdsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

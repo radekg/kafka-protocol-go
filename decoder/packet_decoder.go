@@ -46,6 +46,7 @@ type DDef interface {
 	GetUUID() (uuid.UUID, error)
 
 	// Other utility
+	CopyNew() DDef
 	Offset() int
 	Remaining() int
 }

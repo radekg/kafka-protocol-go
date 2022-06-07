@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init65DescribeTransactionsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeTransactionsResponse, API Key: 65, Version: 0
-		schema.NewSchema("DescribeTransactionsResponsev0",
+		schema.NewSchema("DescribeTransactionsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeTransactionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStates, Ty: schema.NewSchema("TransactionStatesV0",
+			&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStates, Ty: schema.NewSchema("[]TransactionState:v0",
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionalId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionState, Ty: schema.TypeStrCompact},
@@ -17,7 +16,7 @@ func init65DescribeTransactionsResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesProducerEpoch, Ty: schema.TypeInt16},
-				&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStatesTopics, Ty: schema.NewSchema("TopicsV0",
+				&schema.ArrayCompact{Name: FieldDescribeTransactionsResponseTransactionStatesTopics, Ty: schema.NewSchema("[]TopicData:v0",
 					&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsTopic, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldDescribeTransactionsResponseTransactionStatesTopicsTags},
@@ -27,37 +26,53 @@ func init65DescribeTransactionsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeTransactionsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeTransactionsResponseTags is: The tagged fields.
 	FieldDescribeTransactionsResponseTags = "Tags"
+
 	// FieldDescribeTransactionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeTransactionsResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldDescribeTransactionsResponseTransactionStates is:
 	FieldDescribeTransactionsResponseTransactionStates = "TransactionStates"
+
 	// FieldDescribeTransactionsResponseTransactionStatesErrorCode is:
 	FieldDescribeTransactionsResponseTransactionStatesErrorCode = "ErrorCode"
+
 	// FieldDescribeTransactionsResponseTransactionStatesProducerEpoch is:
 	FieldDescribeTransactionsResponseTransactionStatesProducerEpoch = "ProducerEpoch"
+
 	// FieldDescribeTransactionsResponseTransactionStatesProducerId is:
 	FieldDescribeTransactionsResponseTransactionStatesProducerId = "ProducerId"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTags is: The tagged fields.
 	FieldDescribeTransactionsResponseTransactionStatesTags = "Tags"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTopics is: The set of partitions included in the current transaction (if active). When a transaction is preparing to commit or abort, this will include only partitions which do not have markers.
 	FieldDescribeTransactionsResponseTransactionStatesTopics = "Topics"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions is:
 	FieldDescribeTransactionsResponseTransactionStatesTopicsPartitions = "Partitions"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTopicsTags is: The tagged fields.
 	FieldDescribeTransactionsResponseTransactionStatesTopicsTags = "Tags"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTopicsTopic is:
 	FieldDescribeTransactionsResponseTransactionStatesTopicsTopic = "Topic"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionStartTimeMs = "TransactionStartTimeMs"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionState is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionState = "TransactionState"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionTimeoutMs is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionTimeoutMs = "TransactionTimeoutMs"
+
 	// FieldDescribeTransactionsResponseTransactionStatesTransactionalId is:
 	FieldDescribeTransactionsResponseTransactionStatesTransactionalId = "TransactionalId"
 )

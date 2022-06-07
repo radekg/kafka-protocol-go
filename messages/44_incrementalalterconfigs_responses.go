@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init44IncrementalAlterConfigsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: IncrementalAlterConfigsResponse, API Key: 44, Version: 0
-		schema.NewSchema("IncrementalAlterConfigsResponsev0",
+		schema.NewSchema("IncrementalAlterConfigsResponse:v0",
 			&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+			&schema.Array{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v0",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -18,9 +17,9 @@ func init44IncrementalAlterConfigsResponse() []schema.Schema {
 		),
 
 		// Message: IncrementalAlterConfigsResponse, API Key: 44, Version: 1
-		schema.NewSchema("IncrementalAlterConfigsResponsev1",
+		schema.NewSchema("IncrementalAlterConfigsResponse:v1",
 			&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("ResponsesV1",
+			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsResponseResponses, Ty: schema.NewSchema("[]AlterConfigsResourceResponse:v1",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsResponseResponsesResourceType, Ty: schema.TypeInt8},
@@ -30,23 +29,32 @@ func init44IncrementalAlterConfigsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldIncrementalAlterConfigsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldIncrementalAlterConfigsResponseResponses is: The responses for each resource.
 	FieldIncrementalAlterConfigsResponseResponses = "Responses"
+
 	// FieldIncrementalAlterConfigsResponseResponsesErrorCode is: The resource error code.
 	FieldIncrementalAlterConfigsResponseResponsesErrorCode = "ErrorCode"
+
 	// FieldIncrementalAlterConfigsResponseResponsesErrorMessage is: The resource error message, or null if there was no error.
 	FieldIncrementalAlterConfigsResponseResponsesErrorMessage = "ErrorMessage"
+
 	// FieldIncrementalAlterConfigsResponseResponsesResourceName is: The resource name.
 	FieldIncrementalAlterConfigsResponseResponsesResourceName = "ResourceName"
+
 	// FieldIncrementalAlterConfigsResponseResponsesResourceType is: The resource type.
 	FieldIncrementalAlterConfigsResponseResponsesResourceType = "ResourceType"
+
 	// FieldIncrementalAlterConfigsResponseResponsesTags is: The tagged fields.
 	FieldIncrementalAlterConfigsResponseResponsesTags = "Tags"
+
 	// FieldIncrementalAlterConfigsResponseTags is: The tagged fields.
 	FieldIncrementalAlterConfigsResponseTags = "Tags"
+
 	// FieldIncrementalAlterConfigsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldIncrementalAlterConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

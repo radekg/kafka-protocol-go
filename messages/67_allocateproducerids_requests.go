@@ -5,21 +5,24 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init67AllocateProducerIdsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AllocateProducerIdsRequest, API Key: 67, Version: 0
-		schema.NewSchema("AllocateProducerIdsRequestv0",
+		schema.NewSchema("AllocateProducerIdsRequest:v0",
 			&schema.Mfield{Name: FieldAllocateProducerIdsRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAllocateProducerIdsRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldAllocateProducerIdsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAllocateProducerIdsRequestBrokerEpoch is: The epoch of the requesting broker
 	FieldAllocateProducerIdsRequestBrokerEpoch = "BrokerEpoch"
+
 	// FieldAllocateProducerIdsRequestBrokerId is: The ID of the requesting broker
 	FieldAllocateProducerIdsRequestBrokerId = "BrokerId"
+
 	// FieldAllocateProducerIdsRequestTags is: The tagged fields.
 	FieldAllocateProducerIdsRequestTags = "Tags"
 )

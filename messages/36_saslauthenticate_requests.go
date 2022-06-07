@@ -5,28 +5,30 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init36SaslAuthenticateRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: SaslAuthenticateRequest, API Key: 36, Version: 0
-		schema.NewSchema("SaslAuthenticateRequestv0",
+		schema.NewSchema("SaslAuthenticateRequest:v0",
 			&schema.Mfield{Name: FieldSaslAuthenticateRequestAuthBytes, Ty: schema.TypeBytes},
 		),
 
 		// Message: SaslAuthenticateRequest, API Key: 36, Version: 1
-		schema.NewSchema("SaslAuthenticateRequestv1",
+		schema.NewSchema("SaslAuthenticateRequest:v1",
 			&schema.Mfield{Name: FieldSaslAuthenticateRequestAuthBytes, Ty: schema.TypeBytes},
 		),
 
 		// Message: SaslAuthenticateRequest, API Key: 36, Version: 2
-		schema.NewSchema("SaslAuthenticateRequestv2",
+		schema.NewSchema("SaslAuthenticateRequest:v2",
 			&schema.Mfield{Name: FieldSaslAuthenticateRequestAuthBytes, Ty: schema.TypeBytesCompact},
 			&schema.SchemaTaggedFields{Name: FieldSaslAuthenticateRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldSaslAuthenticateRequestAuthBytes is: The SASL authentication bytes from the client, as defined by the SASL mechanism.
 	FieldSaslAuthenticateRequestAuthBytes = "AuthBytes"
+
 	// FieldSaslAuthenticateRequestTags is: The tagged fields.
 	FieldSaslAuthenticateRequestTags = "Tags"
 )

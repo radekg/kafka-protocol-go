@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init34AlterReplicaLogDirsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterReplicaLogDirsResponse, API Key: 34, Version: 0
-		schema.NewSchema("AlterReplicaLogDirsResponsev0",
+		schema.NewSchema("AlterReplicaLogDirsResponse:v0",
 			&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("[]AlterReplicaLogDirTopicResult:v0",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("[]AlterReplicaLogDirPartitionResult:v0",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -19,11 +18,11 @@ func init34AlterReplicaLogDirsResponse() []schema.Schema {
 		),
 
 		// Message: AlterReplicaLogDirsResponse, API Key: 34, Version: 1
-		schema.NewSchema("AlterReplicaLogDirsResponsev1",
+		schema.NewSchema("AlterReplicaLogDirsResponse:v1",
 			&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("[]AlterReplicaLogDirTopicResult:v1",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("[]AlterReplicaLogDirPartitionResult:v1",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
@@ -31,11 +30,11 @@ func init34AlterReplicaLogDirsResponse() []schema.Schema {
 		),
 
 		// Message: AlterReplicaLogDirsResponse, API Key: 34, Version: 2
-		schema.NewSchema("AlterReplicaLogDirsResponsev2",
+		schema.NewSchema("AlterReplicaLogDirsResponse:v2",
 			&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsResponseResults, Ty: schema.NewSchema("[]AlterReplicaLogDirTopicResult:v2",
 				&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.ArrayCompact{Name: FieldAlterReplicaLogDirsResponseResultsPartitions, Ty: schema.NewSchema("[]AlterReplicaLogDirPartitionResult:v2",
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.SchemaTaggedFields{Name: FieldAlterReplicaLogDirsResponseResultsPartitionsTags},
@@ -45,25 +44,35 @@ func init34AlterReplicaLogDirsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterReplicaLogDirsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterReplicaLogDirsResponseResults is: The results for each topic.
 	FieldAlterReplicaLogDirsResponseResults = "Results"
+
 	// FieldAlterReplicaLogDirsResponseResultsPartitions is: The results for each partition.
 	FieldAlterReplicaLogDirsResponseResultsPartitions = "Partitions"
+
 	// FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldAlterReplicaLogDirsResponseResultsPartitionsErrorCode = "ErrorCode"
+
 	// FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex is: The partition index.
 	FieldAlterReplicaLogDirsResponseResultsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldAlterReplicaLogDirsResponseResultsPartitionsTags is: The tagged fields.
 	FieldAlterReplicaLogDirsResponseResultsPartitionsTags = "Tags"
+
 	// FieldAlterReplicaLogDirsResponseResultsTags is: The tagged fields.
 	FieldAlterReplicaLogDirsResponseResultsTags = "Tags"
+
 	// FieldAlterReplicaLogDirsResponseResultsTopicName is: The name of the topic.
 	FieldAlterReplicaLogDirsResponseResultsTopicName = "TopicName"
+
 	// FieldAlterReplicaLogDirsResponseTags is: The tagged fields.
 	FieldAlterReplicaLogDirsResponseTags = "Tags"
+
 	// FieldAlterReplicaLogDirsResponseThrottleTimeMs is: Duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterReplicaLogDirsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init38CreateDelegationTokenResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: CreateDelegationTokenResponse, API Key: 38, Version: 0
-		schema.NewSchema("CreateDelegationTokenResponsev0",
+		schema.NewSchema("CreateDelegationTokenResponse:v0",
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalType, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalName, Ty: schema.TypeStr},
@@ -20,7 +19,7 @@ func init38CreateDelegationTokenResponse() []schema.Schema {
 		),
 
 		// Message: CreateDelegationTokenResponse, API Key: 38, Version: 1
-		schema.NewSchema("CreateDelegationTokenResponsev1",
+		schema.NewSchema("CreateDelegationTokenResponse:v1",
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalType, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalName, Ty: schema.TypeStr},
@@ -33,7 +32,7 @@ func init38CreateDelegationTokenResponse() []schema.Schema {
 		),
 
 		// Message: CreateDelegationTokenResponse, API Key: 38, Version: 2
-		schema.NewSchema("CreateDelegationTokenResponsev2",
+		schema.NewSchema("CreateDelegationTokenResponse:v2",
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalType, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldCreateDelegationTokenResponsePrincipalName, Ty: schema.TypeStrCompact},
@@ -46,27 +45,38 @@ func init38CreateDelegationTokenResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldCreateDelegationTokenResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldCreateDelegationTokenResponseErrorCode is: The top-level error, or zero if there was no error.
 	FieldCreateDelegationTokenResponseErrorCode = "ErrorCode"
+
 	// FieldCreateDelegationTokenResponseExpiryTimestampMs is: When this token expires.
 	FieldCreateDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
+
 	// FieldCreateDelegationTokenResponseHmac is: HMAC of the delegation token.
 	FieldCreateDelegationTokenResponseHmac = "Hmac"
+
 	// FieldCreateDelegationTokenResponseIssueTimestampMs is: When this token was generated.
 	FieldCreateDelegationTokenResponseIssueTimestampMs = "IssueTimestampMs"
+
 	// FieldCreateDelegationTokenResponseMaxTimestampMs is: The maximum lifetime of this token.
 	FieldCreateDelegationTokenResponseMaxTimestampMs = "MaxTimestampMs"
+
 	// FieldCreateDelegationTokenResponsePrincipalName is: The name of the token owner.
 	FieldCreateDelegationTokenResponsePrincipalName = "PrincipalName"
+
 	// FieldCreateDelegationTokenResponsePrincipalType is: The principal type of the token owner.
 	FieldCreateDelegationTokenResponsePrincipalType = "PrincipalType"
+
 	// FieldCreateDelegationTokenResponseTags is: The tagged fields.
 	FieldCreateDelegationTokenResponseTags = "Tags"
+
 	// FieldCreateDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldCreateDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldCreateDelegationTokenResponseTokenId is: The token UUID.
 	FieldCreateDelegationTokenResponseTokenId = "TokenId"
 )

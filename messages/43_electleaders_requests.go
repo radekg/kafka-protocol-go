@@ -5,10 +5,9 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init43ElectLeadersRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ElectLeadersRequest, API Key: 43, Version: 0
-		schema.NewSchema("ElectLeadersRequestv0",
-			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitionsV0",
+		schema.NewSchema("ElectLeadersRequest:v0",
+			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v0",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32Array},
 			)},
@@ -16,9 +15,9 @@ func init43ElectLeadersRequest() []schema.Schema {
 		),
 
 		// Message: ElectLeadersRequest, API Key: 43, Version: 1
-		schema.NewSchema("ElectLeadersRequestv1",
+		schema.NewSchema("ElectLeadersRequest:v1",
 			&schema.Mfield{Name: FieldElectLeadersRequestElectionType, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitionsV1",
+			&schema.Array{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v1",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32Array},
 			)},
@@ -26,9 +25,9 @@ func init43ElectLeadersRequest() []schema.Schema {
 		),
 
 		// Message: ElectLeadersRequest, API Key: 43, Version: 2
-		schema.NewSchema("ElectLeadersRequestv2",
+		schema.NewSchema("ElectLeadersRequest:v2",
 			&schema.Mfield{Name: FieldElectLeadersRequestElectionType, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("TopicPartitionsV2",
+			&schema.ArrayCompact{Name: FieldElectLeadersRequestTopicPartitions, Ty: schema.NewSchema("[]TopicPartitions:v2",
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsTopic, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldElectLeadersRequestTopicPartitionsPartitions, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldElectLeadersRequestTopicPartitionsTags},
@@ -37,21 +36,29 @@ func init43ElectLeadersRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldElectLeadersRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldElectLeadersRequestElectionType is: Type of elections to conduct for the partition. A value of '0' elects the preferred replica. A value of '1' elects the first live replica if there are no in-sync replica.
 	FieldElectLeadersRequestElectionType = "ElectionType"
+
 	// FieldElectLeadersRequestTags is: The tagged fields.
 	FieldElectLeadersRequestTags = "Tags"
+
 	// FieldElectLeadersRequestTimeoutMs is: The time in ms to wait for the election to complete.
 	FieldElectLeadersRequestTimeoutMs = "TimeoutMs"
+
 	// FieldElectLeadersRequestTopicPartitions is: The topic partitions to elect leaders.
 	FieldElectLeadersRequestTopicPartitions = "TopicPartitions"
+
 	// FieldElectLeadersRequestTopicPartitionsPartitions is: The partitions of this topic whose leader should be elected.
 	FieldElectLeadersRequestTopicPartitionsPartitions = "Partitions"
+
 	// FieldElectLeadersRequestTopicPartitionsTags is: The tagged fields.
 	FieldElectLeadersRequestTopicPartitionsTags = "Tags"
+
 	// FieldElectLeadersRequestTopicPartitionsTopic is: The name of a topic.
 	FieldElectLeadersRequestTopicPartitionsTopic = "Topic"
 )

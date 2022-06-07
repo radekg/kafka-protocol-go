@@ -5,15 +5,14 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init60DescribeClusterResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeClusterResponse, API Key: 60, Version: 0
-		schema.NewSchema("DescribeClusterResponsev0",
+		schema.NewSchema("DescribeClusterResponse:v0",
 			&schema.Mfield{Name: FieldDescribeClusterResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeClusterResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeClusterResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldDescribeClusterResponseClusterId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldDescribeClusterResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeClusterResponseBrokers, Ty: schema.NewSchema("BrokersV0",
+			&schema.ArrayCompact{Name: FieldDescribeClusterResponseBrokers, Ty: schema.NewSchema("[]DescribeClusterBroker:v0",
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeClusterResponseBrokersPort, Ty: schema.TypeInt32},
@@ -24,33 +23,47 @@ func init60DescribeClusterResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeClusterResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeClusterResponseBrokers is: Each broker in the response.
 	FieldDescribeClusterResponseBrokers = "Brokers"
+
 	// FieldDescribeClusterResponseBrokersBrokerId is: The broker ID.
 	FieldDescribeClusterResponseBrokersBrokerId = "BrokerId"
+
 	// FieldDescribeClusterResponseBrokersHost is: The broker hostname.
 	FieldDescribeClusterResponseBrokersHost = "Host"
+
 	// FieldDescribeClusterResponseBrokersPort is: The broker port.
 	FieldDescribeClusterResponseBrokersPort = "Port"
+
 	// FieldDescribeClusterResponseBrokersRack is: The rack of the broker, or null if it has not been assigned to a rack.
 	FieldDescribeClusterResponseBrokersRack = "Rack"
+
 	// FieldDescribeClusterResponseBrokersTags is: The tagged fields.
 	FieldDescribeClusterResponseBrokersTags = "Tags"
+
 	// FieldDescribeClusterResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
 	FieldDescribeClusterResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
+
 	// FieldDescribeClusterResponseClusterId is: The cluster ID that responding broker belongs to.
 	FieldDescribeClusterResponseClusterId = "ClusterId"
+
 	// FieldDescribeClusterResponseControllerId is: The ID of the controller broker.
 	FieldDescribeClusterResponseControllerId = "ControllerId"
+
 	// FieldDescribeClusterResponseErrorCode is: The top-level error code, or 0 if there was no error
 	FieldDescribeClusterResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeClusterResponseErrorMessage is: The top-level error message, or null if there was no error.
 	FieldDescribeClusterResponseErrorMessage = "ErrorMessage"
+
 	// FieldDescribeClusterResponseTags is: The tagged fields.
 	FieldDescribeClusterResponseTags = "Tags"
+
 	// FieldDescribeClusterResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeClusterResponseThrottleTimeMs = "ThrottleTimeMs"
 )

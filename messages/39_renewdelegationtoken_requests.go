@@ -5,33 +5,36 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init39RenewDelegationTokenRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: RenewDelegationTokenRequest, API Key: 39, Version: 0
-		schema.NewSchema("RenewDelegationTokenRequestv0",
+		schema.NewSchema("RenewDelegationTokenRequest:v0",
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestHmac, Ty: schema.TypeBytes},
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestRenewPeriodMs, Ty: schema.TypeInt64},
 		),
 
 		// Message: RenewDelegationTokenRequest, API Key: 39, Version: 1
-		schema.NewSchema("RenewDelegationTokenRequestv1",
+		schema.NewSchema("RenewDelegationTokenRequest:v1",
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestHmac, Ty: schema.TypeBytes},
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestRenewPeriodMs, Ty: schema.TypeInt64},
 		),
 
 		// Message: RenewDelegationTokenRequest, API Key: 39, Version: 2
-		schema.NewSchema("RenewDelegationTokenRequestv2",
+		schema.NewSchema("RenewDelegationTokenRequest:v2",
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestHmac, Ty: schema.TypeBytesCompact},
 			&schema.Mfield{Name: FieldRenewDelegationTokenRequestRenewPeriodMs, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldRenewDelegationTokenRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldRenewDelegationTokenRequestHmac is: The HMAC of the delegation token to be renewed.
 	FieldRenewDelegationTokenRequestHmac = "Hmac"
+
 	// FieldRenewDelegationTokenRequestRenewPeriodMs is: The renewal time period in milliseconds.
 	FieldRenewDelegationTokenRequestRenewPeriodMs = "RenewPeriodMs"
+
 	// FieldRenewDelegationTokenRequestTags is: The tagged fields.
 	FieldRenewDelegationTokenRequestTags = "Tags"
 )

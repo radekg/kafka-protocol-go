@@ -5,29 +5,28 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init30CreateAclsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: CreateAclsResponse, API Key: 30, Version: 0
-		schema.NewSchema("CreateAclsResponsev0",
+		schema.NewSchema("CreateAclsResponse:v0",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v0",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 			)},
 		),
 
 		// Message: CreateAclsResponse, API Key: 30, Version: 1
-		schema.NewSchema("CreateAclsResponsev1",
+		schema.NewSchema("CreateAclsResponse:v1",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v1",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 			)},
 		),
 
 		// Message: CreateAclsResponse, API Key: 30, Version: 2
-		schema.NewSchema("CreateAclsResponsev2",
+		schema.NewSchema("CreateAclsResponse:v2",
 			&schema.Mfield{Name: FieldCreateAclsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.ArrayCompact{Name: FieldCreateAclsResponseResults, Ty: schema.NewSchema("[]AclCreationResult:v2",
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreateAclsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldCreateAclsResponseResultsTags},
@@ -35,19 +34,26 @@ func init30CreateAclsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldCreateAclsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldCreateAclsResponseResults is: The results for each ACL creation.
 	FieldCreateAclsResponseResults = "Results"
+
 	// FieldCreateAclsResponseResultsErrorCode is: The result error, or zero if there was no error.
 	FieldCreateAclsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldCreateAclsResponseResultsErrorMessage is: The result message, or null if there was no error.
 	FieldCreateAclsResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldCreateAclsResponseResultsTags is: The tagged fields.
 	FieldCreateAclsResponseResultsTags = "Tags"
+
 	// FieldCreateAclsResponseTags is: The tagged fields.
 	FieldCreateAclsResponseTags = "Tags"
+
 	// FieldCreateAclsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldCreateAclsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

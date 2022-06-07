@@ -125,3 +125,7 @@ generate-response-types:
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=ListTransactionsResponse > $(CURRENT_DIR)messages/66_listtransactions_responses.go
 	go run ./codegen/... --kafka-source-root="${KAFKA_SOURCE_ROOT}" --gen-type=AllocateProducerIdsResponse > $(CURRENT_DIR)messages/67_allocateproducerids_responses.go
 	go fmt $(CURRENT_DIR)/messages/...
+
+.PHONY: test-verbose
+test-verbose:
+	go test -count=1 -v ./...

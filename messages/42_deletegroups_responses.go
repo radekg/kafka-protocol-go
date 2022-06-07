@@ -5,29 +5,28 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init42DeleteGroupsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 0
-		schema.NewSchema("DeleteGroupsResponsev0",
+		schema.NewSchema("DeleteGroupsResponse:v0",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v0",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 1
-		schema.NewSchema("DeleteGroupsResponsev1",
+		schema.NewSchema("DeleteGroupsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v1",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteGroupsResponse, API Key: 42, Version: 2
-		schema.NewSchema("DeleteGroupsResponsev2",
+		schema.NewSchema("DeleteGroupsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.ArrayCompact{Name: FieldDeleteGroupsResponseResults, Ty: schema.NewSchema("[]DeletableGroupResult:v2",
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsGroupId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteGroupsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldDeleteGroupsResponseResultsTags},
@@ -35,19 +34,26 @@ func init42DeleteGroupsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteGroupsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteGroupsResponseResults is: The deletion results
 	FieldDeleteGroupsResponseResults = "Results"
+
 	// FieldDeleteGroupsResponseResultsErrorCode is: The deletion error, or 0 if the deletion succeeded.
 	FieldDeleteGroupsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldDeleteGroupsResponseResultsGroupId is: The group id
 	FieldDeleteGroupsResponseResultsGroupId = "GroupId"
+
 	// FieldDeleteGroupsResponseResultsTags is: The tagged fields.
 	FieldDeleteGroupsResponseResultsTags = "Tags"
+
 	// FieldDeleteGroupsResponseTags is: The tagged fields.
 	FieldDeleteGroupsResponseTags = "Tags"
+
 	// FieldDeleteGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDeleteGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

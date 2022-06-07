@@ -5,33 +5,36 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init40ExpireDelegationTokenRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ExpireDelegationTokenRequest, API Key: 40, Version: 0
-		schema.NewSchema("ExpireDelegationTokenRequestv0",
+		schema.NewSchema("ExpireDelegationTokenRequest:v0",
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestHmac, Ty: schema.TypeBytes},
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestExpiryTimePeriodMs, Ty: schema.TypeInt64},
 		),
 
 		// Message: ExpireDelegationTokenRequest, API Key: 40, Version: 1
-		schema.NewSchema("ExpireDelegationTokenRequestv1",
+		schema.NewSchema("ExpireDelegationTokenRequest:v1",
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestHmac, Ty: schema.TypeBytes},
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestExpiryTimePeriodMs, Ty: schema.TypeInt64},
 		),
 
 		// Message: ExpireDelegationTokenRequest, API Key: 40, Version: 2
-		schema.NewSchema("ExpireDelegationTokenRequestv2",
+		schema.NewSchema("ExpireDelegationTokenRequest:v2",
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestHmac, Ty: schema.TypeBytesCompact},
 			&schema.Mfield{Name: FieldExpireDelegationTokenRequestExpiryTimePeriodMs, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldExpireDelegationTokenRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldExpireDelegationTokenRequestExpiryTimePeriodMs is: The expiry time period in milliseconds.
 	FieldExpireDelegationTokenRequestExpiryTimePeriodMs = "ExpiryTimePeriodMs"
+
 	// FieldExpireDelegationTokenRequestHmac is: The HMAC of the delegation token to be expired.
 	FieldExpireDelegationTokenRequestHmac = "Hmac"
+
 	// FieldExpireDelegationTokenRequestTags is: The tagged fields.
 	FieldExpireDelegationTokenRequestTags = "Tags"
 )

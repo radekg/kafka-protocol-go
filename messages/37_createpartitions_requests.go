@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init37CreatePartitionsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: CreatePartitionsRequest, API Key: 37, Version: 0
-		schema.NewSchema("CreatePartitionsRequestv0",
-			&schema.Array{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("CreatePartitionsRequest:v0",
+			&schema.Array{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("[]CreatePartitionsTopic:v0",
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsCount, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("AssignmentsV0",
+				&schema.Array{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("[]CreatePartitionsAssignment:v0",
 					&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds, Ty: schema.TypeInt32Array},
 				)},
 			)},
@@ -20,11 +19,11 @@ func init37CreatePartitionsRequest() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsRequest, API Key: 37, Version: 1
-		schema.NewSchema("CreatePartitionsRequestv1",
-			&schema.Array{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("CreatePartitionsRequest:v1",
+			&schema.Array{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("[]CreatePartitionsTopic:v1",
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsCount, Ty: schema.TypeInt32},
-				&schema.Array{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("AssignmentsV1",
+				&schema.Array{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("[]CreatePartitionsAssignment:v1",
 					&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds, Ty: schema.TypeInt32Array},
 				)},
 			)},
@@ -33,11 +32,11 @@ func init37CreatePartitionsRequest() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsRequest, API Key: 37, Version: 2
-		schema.NewSchema("CreatePartitionsRequestv2",
-			&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("CreatePartitionsRequest:v2",
+			&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("[]CreatePartitionsTopic:v2",
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsCount, Ty: schema.TypeInt32},
-				&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("AssignmentsV2",
+				&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("[]CreatePartitionsAssignment:v2",
 					&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldCreatePartitionsRequestTopicsAssignmentsTags},
 				)},
@@ -49,11 +48,11 @@ func init37CreatePartitionsRequest() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsRequest, API Key: 37, Version: 3
-		schema.NewSchema("CreatePartitionsRequestv3",
-			&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("TopicsV3",
+		schema.NewSchema("CreatePartitionsRequest:v3",
+			&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopics, Ty: schema.NewSchema("[]CreatePartitionsTopic:v3",
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsCount, Ty: schema.TypeInt32},
-				&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("AssignmentsV3",
+				&schema.ArrayCompact{Name: FieldCreatePartitionsRequestTopicsAssignments, Ty: schema.NewSchema("[]CreatePartitionsAssignment:v3",
 					&schema.Mfield{Name: FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldCreatePartitionsRequestTopicsAssignmentsTags},
 				)},
@@ -64,27 +63,38 @@ func init37CreatePartitionsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldCreatePartitionsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldCreatePartitionsRequestTags is: The tagged fields.
 	FieldCreatePartitionsRequestTags = "Tags"
+
 	// FieldCreatePartitionsRequestTimeoutMs is: The time in ms to wait for the partitions to be created.
 	FieldCreatePartitionsRequestTimeoutMs = "TimeoutMs"
+
 	// FieldCreatePartitionsRequestTopics is: Each topic that we want to create new partitions inside.
 	FieldCreatePartitionsRequestTopics = "Topics"
+
 	// FieldCreatePartitionsRequestTopicsAssignments is: The new partition assignments.
 	FieldCreatePartitionsRequestTopicsAssignments = "Assignments"
+
 	// FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds is: The assigned broker IDs.
 	FieldCreatePartitionsRequestTopicsAssignmentsBrokerIds = "BrokerIds"
+
 	// FieldCreatePartitionsRequestTopicsAssignmentsTags is: The tagged fields.
 	FieldCreatePartitionsRequestTopicsAssignmentsTags = "Tags"
+
 	// FieldCreatePartitionsRequestTopicsCount is: The new partition count.
 	FieldCreatePartitionsRequestTopicsCount = "Count"
+
 	// FieldCreatePartitionsRequestTopicsName is: The topic name.
 	FieldCreatePartitionsRequestTopicsName = "Name"
+
 	// FieldCreatePartitionsRequestTopicsTags is: The tagged fields.
 	FieldCreatePartitionsRequestTopicsTags = "Tags"
+
 	// FieldCreatePartitionsRequestValidateOnly is: If true, then validate the request, but don't actually increase the number of partitions.
 	FieldCreatePartitionsRequestValidateOnly = "ValidateOnly"
 )

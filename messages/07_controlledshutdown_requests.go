@@ -5,37 +5,40 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init7ControlledShutdownRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 0
-		schema.NewSchema("ControlledShutdownRequestv0",
+		schema.NewSchema("ControlledShutdownRequest:v0",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 1
-		schema.NewSchema("ControlledShutdownRequestv1",
+		schema.NewSchema("ControlledShutdownRequest:v1",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 2
-		schema.NewSchema("ControlledShutdownRequestv2",
+		schema.NewSchema("ControlledShutdownRequest:v2",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerEpoch, Ty: schema.TypeInt64},
 		),
 
 		// Message: ControlledShutdownRequest, API Key: 7, Version: 3
-		schema.NewSchema("ControlledShutdownRequestv3",
+		schema.NewSchema("ControlledShutdownRequest:v3",
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldControlledShutdownRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.SchemaTaggedFields{Name: FieldControlledShutdownRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldControlledShutdownRequestBrokerEpoch is: The broker epoch.
 	FieldControlledShutdownRequestBrokerEpoch = "BrokerEpoch"
+
 	// FieldControlledShutdownRequestBrokerId is: The id of the broker for which controlled shutdown has been requested.
 	FieldControlledShutdownRequestBrokerId = "BrokerId"
+
 	// FieldControlledShutdownRequestTags is: The tagged fields.
 	FieldControlledShutdownRequestTags = "Tags"
 )

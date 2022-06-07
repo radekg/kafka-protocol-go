@@ -5,17 +5,16 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init50DescribeUserScramCredentialsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeUserScramCredentialsResponse, API Key: 50, Version: 0
-		schema.NewSchema("DescribeUserScramCredentialsResponsev0",
+		schema.NewSchema("DescribeUserScramCredentialsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsResponseResults, Ty: schema.NewSchema("[]DescribeUserScramCredentialsResult:v0",
 				&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseResultsUser, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
-				&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsResponseResultsCredentialInfos, Ty: schema.NewSchema("CredentialInfosV0",
+				&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsResponseResultsCredentialInfos, Ty: schema.NewSchema("[]CredentialInfo:v0",
 					&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations, Ty: schema.TypeInt32},
 					&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags},
@@ -25,33 +24,47 @@ func init50DescribeUserScramCredentialsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeUserScramCredentialsResponseErrorCode is: The message-level error code, 0 except for user authorization or infrastructure issues.
 	FieldDescribeUserScramCredentialsResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeUserScramCredentialsResponseErrorMessage is: The message-level error message, if any.
 	FieldDescribeUserScramCredentialsResponseErrorMessage = "ErrorMessage"
+
 	// FieldDescribeUserScramCredentialsResponseResults is: The results for descriptions, one per user.
 	FieldDescribeUserScramCredentialsResponseResults = "Results"
+
 	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfos is: The mechanism and related information associated with the user's SCRAM credentials.
 	FieldDescribeUserScramCredentialsResponseResultsCredentialInfos = "CredentialInfos"
+
 	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations is: The number of iterations used in the SCRAM credential.
 	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosIterations = "Iterations"
+
 	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism is: The SCRAM mechanism.
 	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosMechanism = "Mechanism"
+
 	// FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsResponseResultsCredentialInfosTags = "Tags"
+
 	// FieldDescribeUserScramCredentialsResponseResultsErrorCode is: The user-level error code.
 	FieldDescribeUserScramCredentialsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldDescribeUserScramCredentialsResponseResultsErrorMessage is: The user-level error message, if any.
 	FieldDescribeUserScramCredentialsResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldDescribeUserScramCredentialsResponseResultsTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsResponseResultsTags = "Tags"
+
 	// FieldDescribeUserScramCredentialsResponseResultsUser is: The user name.
 	FieldDescribeUserScramCredentialsResponseResultsUser = "User"
+
 	// FieldDescribeUserScramCredentialsResponseTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsResponseTags = "Tags"
+
 	// FieldDescribeUserScramCredentialsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeUserScramCredentialsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

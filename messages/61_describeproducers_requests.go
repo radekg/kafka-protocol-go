@@ -5,10 +5,9 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init61DescribeProducersRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeProducersRequest, API Key: 61, Version: 0
-		schema.NewSchema("DescribeProducersRequestv0",
-			&schema.ArrayCompact{Name: FieldDescribeProducersRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("DescribeProducersRequest:v0",
+			&schema.ArrayCompact{Name: FieldDescribeProducersRequestTopics, Ty: schema.NewSchema("[]TopicRequest:v0",
 				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeProducersRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldDescribeProducersRequestTopicsTags},
@@ -16,17 +15,23 @@ func init61DescribeProducersRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeProducersRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeProducersRequestTags is: The tagged fields.
 	FieldDescribeProducersRequestTags = "Tags"
+
 	// FieldDescribeProducersRequestTopics is:
 	FieldDescribeProducersRequestTopics = "Topics"
+
 	// FieldDescribeProducersRequestTopicsName is: The topic name.
 	FieldDescribeProducersRequestTopicsName = "Name"
+
 	// FieldDescribeProducersRequestTopicsPartitionIndexes is: The indexes of the partitions to list producers for.
 	FieldDescribeProducersRequestTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldDescribeProducersRequestTopicsTags is: The tagged fields.
 	FieldDescribeProducersRequestTopicsTags = "Tags"
 )

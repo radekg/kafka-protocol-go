@@ -5,94 +5,93 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init11JoinGroupRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: JoinGroupRequest, API Key: 11, Version: 0
-		schema.NewSchema("JoinGroupRequestv0",
+		schema.NewSchema("JoinGroupRequest:v0",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV0",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v0",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 1
-		schema.NewSchema("JoinGroupRequestv1",
+		schema.NewSchema("JoinGroupRequest:v1",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV1",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v1",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 2
-		schema.NewSchema("JoinGroupRequestv2",
+		schema.NewSchema("JoinGroupRequest:v2",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV2",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v2",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 3
-		schema.NewSchema("JoinGroupRequestv3",
+		schema.NewSchema("JoinGroupRequest:v3",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV3",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v3",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 4
-		schema.NewSchema("JoinGroupRequestv4",
+		schema.NewSchema("JoinGroupRequest:v4",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV4",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v4",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 5
-		schema.NewSchema("JoinGroupRequestv5",
+		schema.NewSchema("JoinGroupRequest:v5",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupInstanceId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV5",
+			&schema.Array{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v5",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytes},
 			)},
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 6
-		schema.NewSchema("JoinGroupRequestv6",
+		schema.NewSchema("JoinGroupRequest:v6",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV6",
+			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v6",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestProtocolsTags},
@@ -101,14 +100,14 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 7
-		schema.NewSchema("JoinGroupRequestv7",
+		schema.NewSchema("JoinGroupRequest:v7",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV7",
+			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v7",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestProtocolsTags},
@@ -117,14 +116,14 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 8
-		schema.NewSchema("JoinGroupRequestv8",
+		schema.NewSchema("JoinGroupRequest:v8",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV8",
+			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v8",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestProtocolsTags},
@@ -134,14 +133,14 @@ func init11JoinGroupRequest() []schema.Schema {
 		),
 
 		// Message: JoinGroupRequest, API Key: 11, Version: 9
-		schema.NewSchema("JoinGroupRequestv9",
+		schema.NewSchema("JoinGroupRequest:v9",
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestSessionTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestRebalanceTimeoutMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldJoinGroupRequestMemberId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldJoinGroupRequestGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldJoinGroupRequestProtocolType, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("ProtocolsV9",
+			&schema.ArrayCompact{Name: FieldJoinGroupRequestProtocols, Ty: schema.NewSchema("[]JoinGroupRequestProtocol:v9",
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldJoinGroupRequestProtocolsMetadata, Ty: schema.TypeBytesCompact},
 				&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestProtocolsTags},
@@ -150,31 +149,44 @@ func init11JoinGroupRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldJoinGroupRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldJoinGroupRequestGroupId is: The group identifier.
 	FieldJoinGroupRequestGroupId = "GroupId"
+
 	// FieldJoinGroupRequestGroupInstanceId is: The unique identifier of the consumer instance provided by end user.
 	FieldJoinGroupRequestGroupInstanceId = "GroupInstanceId"
+
 	// FieldJoinGroupRequestMemberId is: The member id assigned by the group coordinator.
 	FieldJoinGroupRequestMemberId = "MemberId"
+
 	// FieldJoinGroupRequestProtocolType is: The unique name the for class of protocols implemented by the group we want to join.
 	FieldJoinGroupRequestProtocolType = "ProtocolType"
+
 	// FieldJoinGroupRequestProtocols is: The list of protocols that the member supports.
 	FieldJoinGroupRequestProtocols = "Protocols"
+
 	// FieldJoinGroupRequestProtocolsMetadata is: The protocol metadata.
 	FieldJoinGroupRequestProtocolsMetadata = "Metadata"
+
 	// FieldJoinGroupRequestProtocolsName is: The protocol name.
 	FieldJoinGroupRequestProtocolsName = "Name"
+
 	// FieldJoinGroupRequestProtocolsTags is: The tagged fields.
 	FieldJoinGroupRequestProtocolsTags = "Tags"
+
 	// FieldJoinGroupRequestReason is: The reason why the member (re-)joins the group.
 	FieldJoinGroupRequestReason = "Reason"
+
 	// FieldJoinGroupRequestRebalanceTimeoutMs is: The maximum time in milliseconds that the coordinator will wait for each member to rejoin when rebalancing the group.
 	FieldJoinGroupRequestRebalanceTimeoutMs = "RebalanceTimeoutMs"
+
 	// FieldJoinGroupRequestSessionTimeoutMs is: The coordinator considers the consumer dead if it receives no heartbeat after this timeout in milliseconds.
 	FieldJoinGroupRequestSessionTimeoutMs = "SessionTimeoutMs"
+
 	// FieldJoinGroupRequestTags is: The tagged fields.
 	FieldJoinGroupRequestTags = "Tags"
 )

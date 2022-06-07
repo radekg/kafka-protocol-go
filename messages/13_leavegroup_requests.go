@@ -5,38 +5,37 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init13LeaveGroupRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: LeaveGroupRequest, API Key: 13, Version: 0
-		schema.NewSchema("LeaveGroupRequestv0",
+		schema.NewSchema("LeaveGroupRequest:v0",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 1
-		schema.NewSchema("LeaveGroupRequestv1",
+		schema.NewSchema("LeaveGroupRequest:v1",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 2
-		schema.NewSchema("LeaveGroupRequestv2",
+		schema.NewSchema("LeaveGroupRequest:v2",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldLeaveGroupRequestMemberId, Ty: schema.TypeStr},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 3
-		schema.NewSchema("LeaveGroupRequestv3",
+		schema.NewSchema("LeaveGroupRequest:v3",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStr},
-			&schema.Array{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV3",
+			&schema.Array{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v3",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrNullable},
 			)},
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 4
-		schema.NewSchema("LeaveGroupRequestv4",
+		schema.NewSchema("LeaveGroupRequest:v4",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV4",
+			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v4",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldLeaveGroupRequestMembersTags},
@@ -45,9 +44,9 @@ func init13LeaveGroupRequest() []schema.Schema {
 		),
 
 		// Message: LeaveGroupRequest, API Key: 13, Version: 5
-		schema.NewSchema("LeaveGroupRequestv5",
+		schema.NewSchema("LeaveGroupRequest:v5",
 			&schema.Mfield{Name: FieldLeaveGroupRequestGroupId, Ty: schema.TypeStrCompact},
-			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("MembersV5",
+			&schema.ArrayCompact{Name: FieldLeaveGroupRequestMembers, Ty: schema.NewSchema("[]MemberIdentity:v5",
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldLeaveGroupRequestMembersReason, Ty: schema.TypeStrCompactNullable},
@@ -56,23 +55,32 @@ func init13LeaveGroupRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldLeaveGroupRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldLeaveGroupRequestGroupId is: The ID of the group to leave.
 	FieldLeaveGroupRequestGroupId = "GroupId"
+
 	// FieldLeaveGroupRequestMemberId is: The member ID to remove from the group.
 	FieldLeaveGroupRequestMemberId = "MemberId"
+
 	// FieldLeaveGroupRequestMembers is: List of leaving member identities.
 	FieldLeaveGroupRequestMembers = "Members"
+
 	// FieldLeaveGroupRequestMembersGroupInstanceId is: The group instance ID to remove from the group.
 	FieldLeaveGroupRequestMembersGroupInstanceId = "GroupInstanceId"
+
 	// FieldLeaveGroupRequestMembersMemberId is: The member ID to remove from the group.
 	FieldLeaveGroupRequestMembersMemberId = "MemberId"
+
 	// FieldLeaveGroupRequestMembersReason is: The reason why the member left the group.
 	FieldLeaveGroupRequestMembersReason = "Reason"
+
 	// FieldLeaveGroupRequestMembersTags is: The tagged fields.
 	FieldLeaveGroupRequestMembersTags = "Tags"
+
 	// FieldLeaveGroupRequestTags is: The tagged fields.
 	FieldLeaveGroupRequestTags = "Tags"
 )

@@ -5,6 +5,14 @@ import (
 	"strings"
 )
 
+type schemaGeneratorMetadata struct {
+	CommonStructs commonStructs
+	Appender      fieldAppender
+	NestLevel     int
+	NameRegistry  *fieldNameRegistry
+	Tags          []*irTag
+}
+
 type schemaGenerator struct {
 	originalInput string
 	sourcePath    string

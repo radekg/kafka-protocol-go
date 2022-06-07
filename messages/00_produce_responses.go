@@ -5,12 +5,11 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init0ProduceResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ProduceResponse, API Key: 0, Version: 0
-		schema.NewSchema("ProduceResponsev0",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+		schema.NewSchema("ProduceResponse:v0",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v0",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV0",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v0",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -19,10 +18,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 1
-		schema.NewSchema("ProduceResponsev1",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV1",
+		schema.NewSchema("ProduceResponse:v1",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v1",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV1",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v1",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -32,10 +31,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 2
-		schema.NewSchema("ProduceResponsev2",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV2",
+		schema.NewSchema("ProduceResponse:v2",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v2",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV2",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v2",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -46,10 +45,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 3
-		schema.NewSchema("ProduceResponsev3",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV3",
+		schema.NewSchema("ProduceResponse:v3",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v3",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV3",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v3",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -60,10 +59,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 4
-		schema.NewSchema("ProduceResponsev4",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV4",
+		schema.NewSchema("ProduceResponse:v4",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v4",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV4",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v4",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -74,10 +73,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 5
-		schema.NewSchema("ProduceResponsev5",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV5",
+		schema.NewSchema("ProduceResponse:v5",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v5",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV5",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v5",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -89,10 +88,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 6
-		schema.NewSchema("ProduceResponsev6",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV6",
+		schema.NewSchema("ProduceResponse:v6",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v6",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV6",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v6",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -104,10 +103,10 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 7
-		schema.NewSchema("ProduceResponsev7",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV7",
+		schema.NewSchema("ProduceResponse:v7",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v7",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV7",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v7",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
@@ -119,16 +118,16 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 8
-		schema.NewSchema("ProduceResponsev8",
-			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV8",
+		schema.NewSchema("ProduceResponse:v8",
+			&schema.Array{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v8",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV8",
+				&schema.Array{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v8",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesLogStartOffset, Ty: schema.TypeInt64},
-					&schema.Array{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrors, Ty: schema.NewSchema("RecordErrorsV8",
+					&schema.Array{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrors, Ty: schema.NewSchema("[]BatchIndexAndErrorMessage:v8",
 						&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage, Ty: schema.TypeStrNullable},
 					)},
@@ -139,16 +138,16 @@ func init0ProduceResponse() []schema.Schema {
 		),
 
 		// Message: ProduceResponse, API Key: 0, Version: 9
-		schema.NewSchema("ProduceResponsev9",
-			&schema.ArrayCompact{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("ResponsesV9",
+		schema.NewSchema("ProduceResponse:v9",
+			&schema.ArrayCompact{Name: FieldProduceResponseResponses, Ty: schema.NewSchema("[]TopicProduceResponse:v9",
 				&schema.Mfield{Name: FieldProduceResponseResponsesName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("PartitionResponsesV9",
+				&schema.ArrayCompact{Name: FieldProduceResponseResponsesPartitionResponses, Ty: schema.NewSchema("[]PartitionProduceResponse:v9",
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesBaseOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesLogStartOffset, Ty: schema.TypeInt64},
-					&schema.ArrayCompact{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrors, Ty: schema.NewSchema("RecordErrorsV9",
+					&schema.ArrayCompact{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrors, Ty: schema.NewSchema("[]BatchIndexAndErrorMessage:v9",
 						&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage, Ty: schema.TypeStrCompactNullable},
 						&schema.SchemaTaggedFields{Name: FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags},
@@ -162,41 +161,59 @@ func init0ProduceResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldProduceResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldProduceResponseResponses is: Each produce response
 	FieldProduceResponseResponses = "Responses"
+
 	// FieldProduceResponseResponsesName is: The topic name
 	FieldProduceResponseResponsesName = "Name"
+
 	// FieldProduceResponseResponsesPartitionResponses is: Each partition that we produced to within the topic.
 	FieldProduceResponseResponsesPartitionResponses = "PartitionResponses"
+
 	// FieldProduceResponseResponsesPartitionResponsesBaseOffset is: The base offset.
 	FieldProduceResponseResponsesPartitionResponsesBaseOffset = "BaseOffset"
+
 	// FieldProduceResponseResponsesPartitionResponsesErrorCode is: The error code, or 0 if there was no error.
 	FieldProduceResponseResponsesPartitionResponsesErrorCode = "ErrorCode"
+
 	// FieldProduceResponseResponsesPartitionResponsesErrorMessage is: The global error message summarizing the common root cause of the records that caused the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesErrorMessage = "ErrorMessage"
+
 	// FieldProduceResponseResponsesPartitionResponsesIndex is: The partition index.
 	FieldProduceResponseResponsesPartitionResponsesIndex = "Index"
+
 	// FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs is: The timestamp returned by broker after appending the messages. If CreateTime is used for the topic, the timestamp will be -1.  If LogAppendTime is used for the topic, the timestamp will be the broker local time when the messages are appended.
 	FieldProduceResponseResponsesPartitionResponsesLogAppendTimeMs = "LogAppendTimeMs"
+
 	// FieldProduceResponseResponsesPartitionResponsesLogStartOffset is: The log start offset.
 	FieldProduceResponseResponsesPartitionResponsesLogStartOffset = "LogStartOffset"
+
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrors is: The batch indices of records that caused the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrors = "RecordErrors"
+
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex is: The batch index of the record that cause the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndex = "BatchIndex"
+
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage is: The error message of the record that caused the batch to be dropped
 	FieldProduceResponseResponsesPartitionResponsesRecordErrorsBatchIndexErrorMessage = "BatchIndexErrorMessage"
+
 	// FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags is: The tagged fields.
 	FieldProduceResponseResponsesPartitionResponsesRecordErrorsTags = "Tags"
+
 	// FieldProduceResponseResponsesPartitionResponsesTags is: The tagged fields.
 	FieldProduceResponseResponsesPartitionResponsesTags = "Tags"
+
 	// FieldProduceResponseResponsesTags is: The tagged fields.
 	FieldProduceResponseResponsesTags = "Tags"
+
 	// FieldProduceResponseTags is: The tagged fields.
 	FieldProduceResponseTags = "Tags"
+
 	// FieldProduceResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldProduceResponseThrottleTimeMs = "ThrottleTimeMs"
 )

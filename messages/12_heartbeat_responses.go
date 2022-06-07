@@ -5,44 +5,47 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init12HeartbeatResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: HeartbeatResponse, API Key: 12, Version: 0
-		schema.NewSchema("HeartbeatResponsev0",
+		schema.NewSchema("HeartbeatResponse:v0",
 			&schema.Mfield{Name: FieldHeartbeatResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: HeartbeatResponse, API Key: 12, Version: 1
-		schema.NewSchema("HeartbeatResponsev1",
+		schema.NewSchema("HeartbeatResponse:v1",
 			&schema.Mfield{Name: FieldHeartbeatResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: HeartbeatResponse, API Key: 12, Version: 2
-		schema.NewSchema("HeartbeatResponsev2",
+		schema.NewSchema("HeartbeatResponse:v2",
 			&schema.Mfield{Name: FieldHeartbeatResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: HeartbeatResponse, API Key: 12, Version: 3
-		schema.NewSchema("HeartbeatResponsev3",
+		schema.NewSchema("HeartbeatResponse:v3",
 			&schema.Mfield{Name: FieldHeartbeatResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: HeartbeatResponse, API Key: 12, Version: 4
-		schema.NewSchema("HeartbeatResponsev4",
+		schema.NewSchema("HeartbeatResponse:v4",
 			&schema.Mfield{Name: FieldHeartbeatResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldHeartbeatResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.SchemaTaggedFields{Name: FieldHeartbeatResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldHeartbeatResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldHeartbeatResponseErrorCode = "ErrorCode"
+
 	// FieldHeartbeatResponseTags is: The tagged fields.
 	FieldHeartbeatResponseTags = "Tags"
+
 	// FieldHeartbeatResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldHeartbeatResponseThrottleTimeMs = "ThrottleTimeMs"
 )

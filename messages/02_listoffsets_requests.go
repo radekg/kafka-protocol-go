@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init2ListOffsetsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListOffsetsRequest, API Key: 2, Version: 0
-		schema.NewSchema("ListOffsetsRequestv0",
+		schema.NewSchema("ListOffsetsRequest:v0",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v0",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v0",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
 				)},
@@ -19,11 +18,11 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 1
-		schema.NewSchema("ListOffsetsRequestv1",
+		schema.NewSchema("ListOffsetsRequest:v1",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v1",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v1",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
 				)},
@@ -31,12 +30,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 2
-		schema.NewSchema("ListOffsetsRequestv2",
+		schema.NewSchema("ListOffsetsRequest:v2",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v2",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v2",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
 				)},
@@ -44,12 +43,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 3
-		schema.NewSchema("ListOffsetsRequestv3",
+		schema.NewSchema("ListOffsetsRequest:v3",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v3",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v3",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
 				)},
@@ -57,12 +56,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 4
-		schema.NewSchema("ListOffsetsRequestv4",
+		schema.NewSchema("ListOffsetsRequest:v4",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v4",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v4",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -71,12 +70,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 5
-		schema.NewSchema("ListOffsetsRequestv5",
+		schema.NewSchema("ListOffsetsRequest:v5",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v5",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v5",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -85,12 +84,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 6
-		schema.NewSchema("ListOffsetsRequestv6",
+		schema.NewSchema("ListOffsetsRequest:v6",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v6",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.ArrayCompact{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v6",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -102,12 +101,12 @@ func init2ListOffsetsRequest() []schema.Schema {
 		),
 
 		// Message: ListOffsetsRequest, API Key: 2, Version: 7
-		schema.NewSchema("ListOffsetsRequestv7",
+		schema.NewSchema("ListOffsetsRequest:v7",
 			&schema.Mfield{Name: FieldListOffsetsRequestReplicaId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListOffsetsRequestIsolationLevel, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.ArrayCompact{Name: FieldListOffsetsRequestTopics, Ty: schema.NewSchema("[]ListOffsetsTopic:v7",
 				&schema.Mfield{Name: FieldListOffsetsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.ArrayCompact{Name: FieldListOffsetsRequestTopicsPartitions, Ty: schema.NewSchema("[]ListOffsetsPartition:v7",
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListOffsetsRequestTopicsPartitionsTimestamp, Ty: schema.TypeInt64},
@@ -118,29 +117,41 @@ func init2ListOffsetsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListOffsetsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListOffsetsRequestIsolationLevel is: This setting controls the visibility of transactional records. Using READ_UNCOMMITTED (isolation_level = 0) makes all records visible. With READ_COMMITTED (isolation_level = 1), non-transactional and COMMITTED transactional records are visible. To be more concrete, READ_COMMITTED returns all data from offsets smaller than the current LSO (last stable offset), and enables the inclusion of the list of aborted transactions in the result, which allows consumers to discard ABORTED transactional records
 	FieldListOffsetsRequestIsolationLevel = "IsolationLevel"
+
 	// FieldListOffsetsRequestReplicaId is: The broker ID of the requestor, or -1 if this request is being made by a normal consumer.
 	FieldListOffsetsRequestReplicaId = "ReplicaId"
+
 	// FieldListOffsetsRequestTags is: The tagged fields.
 	FieldListOffsetsRequestTags = "Tags"
+
 	// FieldListOffsetsRequestTopics is: Each topic in the request.
 	FieldListOffsetsRequestTopics = "Topics"
+
 	// FieldListOffsetsRequestTopicsName is: The topic name.
 	FieldListOffsetsRequestTopicsName = "Name"
+
 	// FieldListOffsetsRequestTopicsPartitions is: Each partition in the request.
 	FieldListOffsetsRequestTopicsPartitions = "Partitions"
+
 	// FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch is: The current leader epoch.
 	FieldListOffsetsRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+
 	// FieldListOffsetsRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldListOffsetsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldListOffsetsRequestTopicsPartitionsTags is: The tagged fields.
 	FieldListOffsetsRequestTopicsPartitionsTags = "Tags"
+
 	// FieldListOffsetsRequestTopicsPartitionsTimestamp is: The current timestamp.
 	FieldListOffsetsRequestTopicsPartitionsTimestamp = "Timestamp"
+
 	// FieldListOffsetsRequestTopicsTags is: The tagged fields.
 	FieldListOffsetsRequestTopicsTags = "Tags"
 )

@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init41DescribeDelegationTokenResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeDelegationTokenResponse, API Key: 41, Version: 0
-		schema.NewSchema("DescribeDelegationTokenResponsev0",
+		schema.NewSchema("DescribeDelegationTokenResponse:v0",
 			&schema.Mfield{Name: FieldDescribeDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("TokensV0",
+			&schema.Array{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("[]DescribedDelegationToken:v0",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensIssueTimestamp, Ty: schema.TypeInt64},
@@ -17,7 +16,7 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensMaxTimestamp, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensTokenId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensHmac, Ty: schema.TypeBytes},
-				&schema.Array{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("RenewersV0",
+				&schema.Array{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("[]DescribedDelegationTokenRenewer:v0",
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName, Ty: schema.TypeStr},
 				)},
@@ -26,9 +25,9 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 		),
 
 		// Message: DescribeDelegationTokenResponse, API Key: 41, Version: 1
-		schema.NewSchema("DescribeDelegationTokenResponsev1",
+		schema.NewSchema("DescribeDelegationTokenResponse:v1",
 			&schema.Mfield{Name: FieldDescribeDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("TokensV1",
+			&schema.Array{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("[]DescribedDelegationToken:v1",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalType, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensIssueTimestamp, Ty: schema.TypeInt64},
@@ -36,7 +35,7 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensMaxTimestamp, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensTokenId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensHmac, Ty: schema.TypeBytes},
-				&schema.Array{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("RenewersV1",
+				&schema.Array{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("[]DescribedDelegationTokenRenewer:v1",
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName, Ty: schema.TypeStr},
 				)},
@@ -45,9 +44,9 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 		),
 
 		// Message: DescribeDelegationTokenResponse, API Key: 41, Version: 2
-		schema.NewSchema("DescribeDelegationTokenResponsev2",
+		schema.NewSchema("DescribeDelegationTokenResponse:v2",
 			&schema.Mfield{Name: FieldDescribeDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("TokensV2",
+			&schema.ArrayCompact{Name: FieldDescribeDelegationTokenResponseTokens, Ty: schema.NewSchema("[]DescribedDelegationToken:v2",
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensPrincipalName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensIssueTimestamp, Ty: schema.TypeInt64},
@@ -55,7 +54,7 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensMaxTimestamp, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensTokenId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensHmac, Ty: schema.TypeBytesCompact},
-				&schema.ArrayCompact{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("RenewersV2",
+				&schema.ArrayCompact{Name: FieldDescribeDelegationTokenResponseTokensRenewers, Ty: schema.NewSchema("[]DescribedDelegationTokenRenewer:v2",
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName, Ty: schema.TypeStrCompact},
 					&schema.SchemaTaggedFields{Name: FieldDescribeDelegationTokenResponseTokensRenewersTags},
@@ -66,39 +65,56 @@ func init41DescribeDelegationTokenResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeDelegationTokenResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeDelegationTokenResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldDescribeDelegationTokenResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeDelegationTokenResponseTags is: The tagged fields.
 	FieldDescribeDelegationTokenResponseTags = "Tags"
+
 	// FieldDescribeDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldDescribeDelegationTokenResponseTokens is: The tokens.
 	FieldDescribeDelegationTokenResponseTokens = "Tokens"
+
 	// FieldDescribeDelegationTokenResponseTokensExpiryTimestamp is: The token expiry timestamp in milliseconds.
 	FieldDescribeDelegationTokenResponseTokensExpiryTimestamp = "ExpiryTimestamp"
+
 	// FieldDescribeDelegationTokenResponseTokensHmac is: The token HMAC.
 	FieldDescribeDelegationTokenResponseTokensHmac = "Hmac"
+
 	// FieldDescribeDelegationTokenResponseTokensIssueTimestamp is: The token issue timestamp in milliseconds.
 	FieldDescribeDelegationTokenResponseTokensIssueTimestamp = "IssueTimestamp"
+
 	// FieldDescribeDelegationTokenResponseTokensMaxTimestamp is: The token maximum timestamp length in milliseconds.
 	FieldDescribeDelegationTokenResponseTokensMaxTimestamp = "MaxTimestamp"
+
 	// FieldDescribeDelegationTokenResponseTokensPrincipalName is: The token principal name.
 	FieldDescribeDelegationTokenResponseTokensPrincipalName = "PrincipalName"
+
 	// FieldDescribeDelegationTokenResponseTokensPrincipalType is: The token principal type.
 	FieldDescribeDelegationTokenResponseTokensPrincipalType = "PrincipalType"
+
 	// FieldDescribeDelegationTokenResponseTokensRenewers is: Those who are able to renew this token before it expires.
 	FieldDescribeDelegationTokenResponseTokensRenewers = "Renewers"
+
 	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName is: The renewer principal name
 	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalName = "PrincipalName"
+
 	// FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType is: The renewer principal type
 	FieldDescribeDelegationTokenResponseTokensRenewersPrincipalType = "PrincipalType"
+
 	// FieldDescribeDelegationTokenResponseTokensRenewersTags is: The tagged fields.
 	FieldDescribeDelegationTokenResponseTokensRenewersTags = "Tags"
+
 	// FieldDescribeDelegationTokenResponseTokensTags is: The tagged fields.
 	FieldDescribeDelegationTokenResponseTokensTags = "Tags"
+
 	// FieldDescribeDelegationTokenResponseTokensTokenId is: The token ID.
 	FieldDescribeDelegationTokenResponseTokensTokenId = "TokenId"
 )

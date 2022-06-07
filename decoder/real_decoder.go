@@ -407,11 +407,6 @@ func (rd *realDecoder) GetStringCompactArray() ([]string, error) {
 	return ret, nil
 }
 
-// subsets
-func (rd *realDecoder) Remaining() int {
-	return len(rd.raw) - rd.off
-}
-
 func (rd *realDecoder) GetCompactLength() (int, error) {
 	length, err := rd.GetVarint()
 	if err != nil {
@@ -476,6 +471,16 @@ func (rd *realDecoder) GetArrayCompactNullableLength() (int, error) {
 	return rd.GetCompactNullableLength()
 }
 
+// Other utilities:
+
+func (rd *realDecoder) CopyNew() DDef {
+	return &realDecoder{raw: rd.raw, off: 0}
+}
+
 func (rd *realDecoder) Offset() int {
 	return rd.off
+}
+
+func (rd *realDecoder) Remaining() int {
+	return len(rd.raw) - rd.off
 }

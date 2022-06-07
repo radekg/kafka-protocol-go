@@ -5,15 +5,14 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init46ListPartitionReassignmentsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListPartitionReassignmentsResponse, API Key: 46, Version: 0
-		schema.NewSchema("ListPartitionReassignmentsResponsev0",
+		schema.NewSchema("ListPartitionReassignmentsResponse:v0",
 			&schema.Mfield{Name: FieldListPartitionReassignmentsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListPartitionReassignmentsResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldListPartitionReassignmentsResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsResponseTopics, Ty: schema.NewSchema("[]OngoingTopicReassignment:v0",
 				&schema.Mfield{Name: FieldListPartitionReassignmentsResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldListPartitionReassignmentsResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.ArrayCompact{Name: FieldListPartitionReassignmentsResponseTopicsPartitions, Ty: schema.NewSchema("[]OngoingPartitionReassignment:v0",
 					&schema.Mfield{Name: FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas, Ty: schema.TypeInt32CompactArray},
 					&schema.Mfield{Name: FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas, Ty: schema.TypeInt32CompactArray},
@@ -25,33 +24,47 @@ func init46ListPartitionReassignmentsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListPartitionReassignmentsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListPartitionReassignmentsResponseErrorCode is: The top-level error code, or 0 if there was no error
 	FieldListPartitionReassignmentsResponseErrorCode = "ErrorCode"
+
 	// FieldListPartitionReassignmentsResponseErrorMessage is: The top-level error message, or null if there was no error.
 	FieldListPartitionReassignmentsResponseErrorMessage = "ErrorMessage"
+
 	// FieldListPartitionReassignmentsResponseTags is: The tagged fields.
 	FieldListPartitionReassignmentsResponseTags = "Tags"
+
 	// FieldListPartitionReassignmentsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListPartitionReassignmentsResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldListPartitionReassignmentsResponseTopics is: The ongoing reassignments for each topic.
 	FieldListPartitionReassignmentsResponseTopics = "Topics"
+
 	// FieldListPartitionReassignmentsResponseTopicsName is: The topic name.
 	FieldListPartitionReassignmentsResponseTopicsName = "Name"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitions is: The ongoing reassignments for each partition.
 	FieldListPartitionReassignmentsResponseTopicsPartitions = "Partitions"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas is: The set of replicas we are currently adding.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsAddingReplicas = "AddingReplicas"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex is: The index of the partition.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsRemovingReplicas is: The set of replicas we are currently removing.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsRemovingReplicas = "RemovingReplicas"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas is: The current replica set.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsReplicas = "Replicas"
+
 	// FieldListPartitionReassignmentsResponseTopicsPartitionsTags is: The tagged fields.
 	FieldListPartitionReassignmentsResponseTopicsPartitionsTags = "Tags"
+
 	// FieldListPartitionReassignmentsResponseTopicsTags is: The tagged fields.
 	FieldListPartitionReassignmentsResponseTopicsTags = "Tags"
 )

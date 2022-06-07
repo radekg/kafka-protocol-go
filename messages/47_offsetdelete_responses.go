@@ -5,35 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init47OffsetDeleteResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetDeleteResponse, API Key: 47, Version: 0
-		schema.NewSchema("OffsetDeleteResponsev0",
+		schema.NewSchema("OffsetDeleteResponse:v0",
 			&schema.Mfield{Name: FieldOffsetDeleteResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldOffsetDeleteResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetDeleteResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldOffsetDeleteResponseTopics, Ty: schema.NewSchema("[]OffsetDeleteResponseTopic:v0",
 				&schema.Mfield{Name: FieldOffsetDeleteResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetDeleteResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldOffsetDeleteResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetDeleteResponsePartition:v0",
 					&schema.Mfield{Name: FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetDeleteResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 				)},
 			)},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetDeleteResponseErrorCode is: The top-level error code, or 0 if there was no error.
 	FieldOffsetDeleteResponseErrorCode = "ErrorCode"
+
 	// FieldOffsetDeleteResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldOffsetDeleteResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldOffsetDeleteResponseTopics is: The responses for each topic.
 	FieldOffsetDeleteResponseTopics = "Topics"
+
 	// FieldOffsetDeleteResponseTopicsName is: The topic name.
 	FieldOffsetDeleteResponseTopicsName = "Name"
+
 	// FieldOffsetDeleteResponseTopicsPartitions is: The responses for each partition in the topic.
 	FieldOffsetDeleteResponseTopicsPartitions = "Partitions"
+
 	// FieldOffsetDeleteResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldOffsetDeleteResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetDeleteResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
 )

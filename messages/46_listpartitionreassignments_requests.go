@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init46ListPartitionReassignmentsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListPartitionReassignmentsRequest, API Key: 46, Version: 0
-		schema.NewSchema("ListPartitionReassignmentsRequestv0",
+		schema.NewSchema("ListPartitionReassignmentsRequest:v0",
 			&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.ArrayCompact{Name: FieldListPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("[]ListPartitionReassignmentsTopics:v0",
 				&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListPartitionReassignmentsRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldListPartitionReassignmentsRequestTopicsTags},
@@ -17,19 +16,26 @@ func init46ListPartitionReassignmentsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListPartitionReassignmentsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListPartitionReassignmentsRequestTags is: The tagged fields.
 	FieldListPartitionReassignmentsRequestTags = "Tags"
+
 	// FieldListPartitionReassignmentsRequestTimeoutMs is: The time in ms to wait for the request to complete.
 	FieldListPartitionReassignmentsRequestTimeoutMs = "TimeoutMs"
+
 	// FieldListPartitionReassignmentsRequestTopics is: The topics to list partition reassignments for, or null to list everything.
 	FieldListPartitionReassignmentsRequestTopics = "Topics"
+
 	// FieldListPartitionReassignmentsRequestTopicsName is: The topic name
 	FieldListPartitionReassignmentsRequestTopicsName = "Name"
+
 	// FieldListPartitionReassignmentsRequestTopicsPartitionIndexes is: The partitions to list partition reassignments for.
 	FieldListPartitionReassignmentsRequestTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldListPartitionReassignmentsRequestTopicsTags is: The tagged fields.
 	FieldListPartitionReassignmentsRequestTopicsTags = "Tags"
 )

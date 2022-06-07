@@ -1,19 +1,22 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"math"
 	"strconv"
 	"strings"
+	"text/template"
 )
 
 type messageDefinition struct {
-	APIKey           int    `json:"apiKey"`
-	Type             string `json:"type"`
-	Name             string `json:"name"`
-	ValidVersions    string `json:"validVersions"`
-	FlexibleVersions string `json:"flexibleVersions"`
-	Fields           fields `json:"fields"`
+	APIKey           int           `json:"apiKey"`
+	Type             string        `json:"type"`
+	Name             string        `json:"name"`
+	ValidVersions    string        `json:"validVersions"`
+	FlexibleVersions string        `json:"flexibleVersions"`
+	Fields           fields        `json:"fields"`
+	CommonStructs    commonStructs `json:"commonStructs"`
 }
 
 func (d *messageDefinition) maxVersion() (int64, error) {
@@ -50,55 +53,59 @@ func (d *messageDefinition) generateSchema() string {
 		fieldNames: map[string]*fieldWithDoc{},
 	}
 
-	lines := []string{
-		"package messages",
-		"",
-		`import "github.com/radekg/kafka-protocol-go/schema"`,
-		"",
-		fmt.Sprintf("func init%d%s() []schema.Schema {", d.APIKey, d.Name),
-		"",
-		fmt.Sprintf("	return []schema.Schema{"),
-		"",
+	generatorIr := &ir{
+		APIKey:    d.APIKey,
+		APIName:   d.Name,
+		Versions:  []*irVersion{},
+		Constants: map[string]*irConstant{},
 	}
 
 	for i := int64(0); i <= max; i = i + 1 {
-
-		lines = append(lines, fmt.Sprintf(`		// Message: %s, API Key: %d, Version: %d`, d.Name, d.APIKey, i))
-
-		line := fmt.Sprintf(`		schema.NewSchema("%sv%d"`, d.Name, i)
 		isFlexible := i >= minFlexible
-		fieldsForVersion := d.Fields.forVersion(i, isFlexible)
-		if len(fieldsForVersion) == 0 {
-			line = fmt.Sprintf("%s),", line)
-			lines = append(lines, line)
-		} else {
 
-			line = fmt.Sprintf("%s, ", line)
-			lines = append(lines, line)
-
-			for _, field := range fieldsForVersion {
-				lines = append(lines, field.generateSchema(i, 3, isFlexible, nameRegistry))
-			}
-
-			lines = append(lines, "		),") // end top level schema
-			lines = append(lines, "")
+		generatorIrVersion := &irVersion{
+			APIKey:     d.APIKey,
+			APIName:    d.Name,
+			APIVersion: i,
+			Flexible:   isFlexible,
 		}
 
+		collectedTags := collectTags(d.Fields, i, isFlexible, d.CommonStructs, nameRegistry, 4)
+
+		fieldsForVersion := d.Fields.fieldsForVersion(i, isFlexible)
+		// if we have no fields, maybe we have a common struct
+		if len(fieldsForVersion) == 0 {
+			fieldsForVersion = d.CommonStructs.forVersion(d.Type, generatorIrVersion.GetAPIVersion(), generatorIrVersion.GetFlexible())
+		}
+		for _, field := range fieldsForVersion {
+			field.generateSchema(&schemaGeneratorMetadata{
+				Appender:      generatorIrVersion,
+				CommonStructs: d.CommonStructs,
+				NestLevel:     3,
+				NameRegistry:  nameRegistry,
+				Tags:          collectedTags,
+			})
+		}
+		generatorIr.Versions = append(generatorIr.Versions, generatorIrVersion)
 	}
 
-	// end wrapping function:
-	lines = append(lines, "	}")
-	lines = append(lines, "}")
-	lines = append(lines, "")
-	lines = append(lines, "const (")
-	sortedKeys := nameRegistry.sortedKeys()
-	for _, key := range sortedKeys {
-		lines = append(lines, fmt.Sprintf(`	// %s is: %s`, key, nameRegistry.fieldNames[key].doc))
-		lines = append(lines, fmt.Sprintf(`	%s = "%s"`, key, nameRegistry.fieldNames[key].name))
+	generatorIr.ConstantNames = nameRegistry.sortedKeys()
+	for _, key := range generatorIr.ConstantNames {
+		generatorIr.Constants[key] = &irConstant{
+			Doc:  nameRegistry.fieldNames[key].doc,
+			Name: nameRegistry.fieldNames[key].name,
+		}
 	}
-	lines = append(lines, ")")
-	lines = append(lines, "")
 
-	return strings.Join(lines, "\n")
+	parsedTemplate, err := template.New("output").Parse(outputTemplate)
+	if err != nil {
+		panic(err)
+	}
+	var output bytes.Buffer
+	if err := parsedTemplate.Execute(&output, generatorIr); err != nil {
+		panic(err)
+	}
+
+	return output.String()
 
 }

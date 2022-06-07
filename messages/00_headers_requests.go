@@ -3,7 +3,6 @@ package messages
 import "github.com/radekg/kafka-protocol-go/schema"
 
 const (
-	FieldNameHeaderAcks          = "acks"
 	FieldNameHeaderApiKey        = "api_key"
 	FieldNameHeaderApiVersion    = "api_version"
 	FieldNameHeaderClientId      = "client_id"

@@ -5,9 +5,8 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init26EndTxnRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: EndTxnRequest, API Key: 26, Version: 0
-		schema.NewSchema("EndTxnRequestv0",
+		schema.NewSchema("EndTxnRequest:v0",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -15,7 +14,7 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 1
-		schema.NewSchema("EndTxnRequestv1",
+		schema.NewSchema("EndTxnRequest:v1",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -23,7 +22,7 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 2
-		schema.NewSchema("EndTxnRequestv2",
+		schema.NewSchema("EndTxnRequest:v2",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStr},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -31,7 +30,7 @@ func init26EndTxnRequest() []schema.Schema {
 		),
 
 		// Message: EndTxnRequest, API Key: 26, Version: 3
-		schema.NewSchema("EndTxnRequestv3",
+		schema.NewSchema("EndTxnRequest:v3",
 			&schema.Mfield{Name: FieldEndTxnRequestTransactionalId, Ty: schema.TypeStrCompact},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerId, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldEndTxnRequestProducerEpoch, Ty: schema.TypeInt16},
@@ -39,17 +38,23 @@ func init26EndTxnRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldEndTxnRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldEndTxnRequestCommitted is: True if the transaction was committed, false if it was aborted.
 	FieldEndTxnRequestCommitted = "Committed"
+
 	// FieldEndTxnRequestProducerEpoch is: The current epoch associated with the producer.
 	FieldEndTxnRequestProducerEpoch = "ProducerEpoch"
+
 	// FieldEndTxnRequestProducerId is: The producer ID.
 	FieldEndTxnRequestProducerId = "ProducerId"
+
 	// FieldEndTxnRequestTags is: The tagged fields.
 	FieldEndTxnRequestTags = "Tags"
+
 	// FieldEndTxnRequestTransactionalId is: The ID of the transaction to end.
 	FieldEndTxnRequestTransactionalId = "TransactionalId"
 )

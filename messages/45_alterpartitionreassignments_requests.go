@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init45AlterPartitionReassignmentsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterPartitionReassignmentsRequest, API Key: 45, Version: 0
-		schema.NewSchema("AlterPartitionReassignmentsRequestv0",
+		schema.NewSchema("AlterPartitionReassignmentsRequest:v0",
 			&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTimeoutMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopics, Ty: schema.NewSchema("[]ReassignableTopic:v0",
 				&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.ArrayCompact{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitions, Ty: schema.NewSchema("[]ReassignablePartition:v0",
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags},
@@ -21,25 +20,35 @@ func init45AlterPartitionReassignmentsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterPartitionReassignmentsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterPartitionReassignmentsRequestTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsRequestTags = "Tags"
+
 	// FieldAlterPartitionReassignmentsRequestTimeoutMs is: The time in ms to wait for the request to complete.
 	FieldAlterPartitionReassignmentsRequestTimeoutMs = "TimeoutMs"
+
 	// FieldAlterPartitionReassignmentsRequestTopics is: The topics to reassign.
 	FieldAlterPartitionReassignmentsRequestTopics = "Topics"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsName is: The topic name.
 	FieldAlterPartitionReassignmentsRequestTopicsName = "Name"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitions is: The partitions to reassign.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitions = "Partitions"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex is: The partition index.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas is: The replicas to place the partitions on, or null to cancel a pending reassignment for this partition.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitionsReplicas = "Replicas"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsRequestTopicsPartitionsTags = "Tags"
+
 	// FieldAlterPartitionReassignmentsRequestTopicsTags is: The tagged fields.
 	FieldAlterPartitionReassignmentsRequestTopicsTags = "Tags"
 )

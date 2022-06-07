@@ -5,38 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init39RenewDelegationTokenResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: RenewDelegationTokenResponse, API Key: 39, Version: 0
-		schema.NewSchema("RenewDelegationTokenResponsev0",
+		schema.NewSchema("RenewDelegationTokenResponse:v0",
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: RenewDelegationTokenResponse, API Key: 39, Version: 1
-		schema.NewSchema("RenewDelegationTokenResponsev1",
+		schema.NewSchema("RenewDelegationTokenResponse:v1",
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: RenewDelegationTokenResponse, API Key: 39, Version: 2
-		schema.NewSchema("RenewDelegationTokenResponsev2",
+		schema.NewSchema("RenewDelegationTokenResponse:v2",
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldRenewDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldRenewDelegationTokenResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldRenewDelegationTokenResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldRenewDelegationTokenResponseErrorCode = "ErrorCode"
+
 	// FieldRenewDelegationTokenResponseExpiryTimestampMs is: The timestamp in milliseconds at which this token expires.
 	FieldRenewDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
+
 	// FieldRenewDelegationTokenResponseTags is: The tagged fields.
 	FieldRenewDelegationTokenResponseTags = "Tags"
+
 	// FieldRenewDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldRenewDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 )

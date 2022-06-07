@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init57UpdateFeaturesResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: UpdateFeaturesResponse, API Key: 57, Version: 0
-		schema.NewSchema("UpdateFeaturesResponsev0",
+		schema.NewSchema("UpdateFeaturesResponse:v0",
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldUpdateFeaturesResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldUpdateFeaturesResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.ArrayCompact{Name: FieldUpdateFeaturesResponseResults, Ty: schema.NewSchema("[]UpdatableFeatureResult:v0",
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsFeature, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldUpdateFeaturesResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -20,25 +19,35 @@ func init57UpdateFeaturesResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldUpdateFeaturesResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldUpdateFeaturesResponseErrorCode is: The top-level error code, or `0` if there was no top-level error.
 	FieldUpdateFeaturesResponseErrorCode = "ErrorCode"
+
 	// FieldUpdateFeaturesResponseErrorMessage is: The top-level error message, or `null` if there was no top-level error.
 	FieldUpdateFeaturesResponseErrorMessage = "ErrorMessage"
+
 	// FieldUpdateFeaturesResponseResults is: Results for each feature update.
 	FieldUpdateFeaturesResponseResults = "Results"
+
 	// FieldUpdateFeaturesResponseResultsErrorCode is: The feature update error code or `0` if the feature update succeeded.
 	FieldUpdateFeaturesResponseResultsErrorCode = "ErrorCode"
+
 	// FieldUpdateFeaturesResponseResultsErrorMessage is: The feature update error, or `null` if the feature update succeeded.
 	FieldUpdateFeaturesResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldUpdateFeaturesResponseResultsFeature is: The name of the finalized feature.
 	FieldUpdateFeaturesResponseResultsFeature = "Feature"
+
 	// FieldUpdateFeaturesResponseResultsTags is: The tagged fields.
 	FieldUpdateFeaturesResponseResultsTags = "Tags"
+
 	// FieldUpdateFeaturesResponseTags is: The tagged fields.
 	FieldUpdateFeaturesResponseTags = "Tags"
+
 	// FieldUpdateFeaturesResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldUpdateFeaturesResponseThrottleTimeMs = "ThrottleTimeMs"
 )

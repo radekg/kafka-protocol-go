@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init56AlterPartitionResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: AlterPartitionResponse, API Key: 56, Version: 0
-		schema.NewSchema("AlterPartitionResponsev0",
+		schema.NewSchema("AlterPartitionResponse:v0",
 			&schema.Mfield{Name: FieldAlterPartitionResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAlterPartitionResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopics, Ty: schema.NewSchema("[]TopicData:v0",
 				&schema.Mfield{Name: FieldAlterPartitionResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopicsPartitions, Ty: schema.NewSchema("[]PartitionData:v0",
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -27,12 +26,12 @@ func init56AlterPartitionResponse() []schema.Schema {
 		),
 
 		// Message: AlterPartitionResponse, API Key: 56, Version: 1
-		schema.NewSchema("AlterPartitionResponsev1",
+		schema.NewSchema("AlterPartitionResponse:v1",
 			&schema.Mfield{Name: FieldAlterPartitionResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldAlterPartitionResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopics, Ty: schema.NewSchema("[]TopicData:v1",
 				&schema.Mfield{Name: FieldAlterPartitionResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.ArrayCompact{Name: FieldAlterPartitionResponseTopicsPartitions, Ty: schema.NewSchema("[]PartitionData:v1",
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldAlterPartitionResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -47,37 +46,53 @@ func init56AlterPartitionResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldAlterPartitionResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldAlterPartitionResponseErrorCode is: The top level response error code
 	FieldAlterPartitionResponseErrorCode = "ErrorCode"
+
 	// FieldAlterPartitionResponseTags is: The tagged fields.
 	FieldAlterPartitionResponseTags = "Tags"
+
 	// FieldAlterPartitionResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldAlterPartitionResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldAlterPartitionResponseTopics is:
 	FieldAlterPartitionResponseTopics = "Topics"
+
 	// FieldAlterPartitionResponseTopicsName is: The name of the topic
 	FieldAlterPartitionResponseTopicsName = "Name"
+
 	// FieldAlterPartitionResponseTopicsPartitions is:
 	FieldAlterPartitionResponseTopicsPartitions = "Partitions"
+
 	// FieldAlterPartitionResponseTopicsPartitionsErrorCode is: The partition level error code
 	FieldAlterPartitionResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldAlterPartitionResponseTopicsPartitionsIsr is: The in-sync replica IDs.
 	FieldAlterPartitionResponseTopicsPartitionsIsr = "Isr"
+
 	// FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch is: The leader epoch.
 	FieldAlterPartitionResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+
 	// FieldAlterPartitionResponseTopicsPartitionsLeaderId is: The broker ID of the leader.
 	FieldAlterPartitionResponseTopicsPartitionsLeaderId = "LeaderId"
+
 	// FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
 	FieldAlterPartitionResponseTopicsPartitionsLeaderRecoveryState = "LeaderRecoveryState"
+
 	// FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch is: The current epoch for the partition for KRaft controllers. The current ZK version for the legacy controllers.
 	FieldAlterPartitionResponseTopicsPartitionsPartitionEpoch = "PartitionEpoch"
+
 	// FieldAlterPartitionResponseTopicsPartitionsPartitionIndex is: The partition index
 	FieldAlterPartitionResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldAlterPartitionResponseTopicsPartitionsTags is: The tagged fields.
 	FieldAlterPartitionResponseTopicsPartitionsTags = "Tags"
+
 	// FieldAlterPartitionResponseTopicsTags is: The tagged fields.
 	FieldAlterPartitionResponseTopicsTags = "Tags"
 )

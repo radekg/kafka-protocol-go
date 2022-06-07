@@ -5,12 +5,11 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init23OffsetForLeaderEpochRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 0
-		schema.NewSchema("OffsetForLeaderEpochRequestv0",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("OffsetForLeaderEpochRequest:v0",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v0",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v0",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
 				)},
@@ -18,10 +17,10 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 1
-		schema.NewSchema("OffsetForLeaderEpochRequestv1",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("OffsetForLeaderEpochRequest:v1",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v1",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v1",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
 				)},
@@ -29,10 +28,10 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 2
-		schema.NewSchema("OffsetForLeaderEpochRequestv2",
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("OffsetForLeaderEpochRequest:v2",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v2",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v2",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -41,11 +40,11 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 3
-		schema.NewSchema("OffsetForLeaderEpochRequestv3",
+		schema.NewSchema("OffsetForLeaderEpochRequest:v3",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v3",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v3",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -54,11 +53,11 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 		),
 
 		// Message: OffsetForLeaderEpochRequest, API Key: 23, Version: 4
-		schema.NewSchema("OffsetForLeaderEpochRequestv4",
+		schema.NewSchema("OffsetForLeaderEpochRequest:v4",
 			&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestReplicaId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopics, Ty: schema.NewSchema("[]OffsetForLeaderTopic:v4",
 				&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsTopic, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.ArrayCompact{Name: FieldOffsetForLeaderEpochRequestTopicsPartitions, Ty: schema.NewSchema("[]OffsetForLeaderPartition:v4",
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch, Ty: schema.TypeInt32},
@@ -69,27 +68,38 @@ func init23OffsetForLeaderEpochRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldOffsetForLeaderEpochRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetForLeaderEpochRequestReplicaId is: The broker ID of the follower, of -1 if this request is from a consumer.
 	FieldOffsetForLeaderEpochRequestReplicaId = "ReplicaId"
+
 	// FieldOffsetForLeaderEpochRequestTags is: The tagged fields.
 	FieldOffsetForLeaderEpochRequestTags = "Tags"
+
 	// FieldOffsetForLeaderEpochRequestTopics is: Each topic to get offsets for.
 	FieldOffsetForLeaderEpochRequestTopics = "Topics"
+
 	// FieldOffsetForLeaderEpochRequestTopicsPartitions is: Each partition to get offsets for.
 	FieldOffsetForLeaderEpochRequestTopicsPartitions = "Partitions"
+
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch is: An epoch used to fence consumers/replicas with old metadata. If the epoch provided by the client is larger than the current epoch known to the broker, then the UNKNOWN_LEADER_EPOCH error code will be returned. If the provided epoch is smaller, then the FENCED_LEADER_EPOCH error code will be returned.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsCurrentLeaderEpoch = "CurrentLeaderEpoch"
+
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch is: The epoch to look up an offset for.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition is: The partition index.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsPartition = "Partition"
+
 	// FieldOffsetForLeaderEpochRequestTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetForLeaderEpochRequestTopicsPartitionsTags = "Tags"
+
 	// FieldOffsetForLeaderEpochRequestTopicsTags is: The tagged fields.
 	FieldOffsetForLeaderEpochRequestTopicsTags = "Tags"
+
 	// FieldOffsetForLeaderEpochRequestTopicsTopic is: The topic name.
 	FieldOffsetForLeaderEpochRequestTopicsTopic = "Topic"
 )

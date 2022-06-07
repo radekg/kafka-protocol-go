@@ -13,8 +13,24 @@ type RawTaggedField struct {
 	data []byte
 }
 
+func NewRawTaggedField(tag int64, data []byte) RawTaggedField {
+	return RawTaggedField{tag: tag, data: data}
+}
+
+func (rt *RawTaggedField) Tag() int64 {
+	return rt.tag
+}
+
+func (rt *RawTaggedField) Data() []byte {
+	return rt.data
+}
+
 type TaggedFields struct {
 	values []RawTaggedField
+}
+
+func NewTaggedFields(values []RawTaggedField) *TaggedFields {
+	return &TaggedFields{values: values}
 }
 
 func (r *TaggedFields) Decode(pd decoder.DDef) (err error) {
@@ -38,4 +54,8 @@ func (r *TaggedFields) Encode(pe encoder.EDef) (err error) {
 		return err
 	}
 	return nil
+}
+
+func (r *TaggedFields) Values() []RawTaggedField {
+	return r.values
 }

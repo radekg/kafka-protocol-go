@@ -5,13 +5,12 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init44IncrementalAlterConfigsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: IncrementalAlterConfigsRequest, API Key: 44, Version: 0
-		schema.NewSchema("IncrementalAlterConfigsRequestv0",
-			&schema.Array{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("ResourcesV0",
+		schema.NewSchema("IncrementalAlterConfigsRequest:v0",
+			&schema.Array{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v0",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("ConfigsV0",
+				&schema.Array{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v0",
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrNullable},
@@ -21,11 +20,11 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 		),
 
 		// Message: IncrementalAlterConfigsRequest, API Key: 44, Version: 1
-		schema.NewSchema("IncrementalAlterConfigsRequestv1",
-			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("ResourcesV1",
+		schema.NewSchema("IncrementalAlterConfigsRequest:v1",
+			&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResources, Ty: schema.NewSchema("[]AlterConfigsResource:v1",
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesResourceName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("ConfigsV1",
+				&schema.ArrayCompact{Name: FieldIncrementalAlterConfigsRequestResourcesConfigs, Ty: schema.NewSchema("[]AlterableConfig:v1",
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldIncrementalAlterConfigsRequestResourcesConfigsValue, Ty: schema.TypeStrCompactNullable},
@@ -37,29 +36,41 @@ func init44IncrementalAlterConfigsRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldIncrementalAlterConfigsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldIncrementalAlterConfigsRequestResources is: The incremental updates for each resource.
 	FieldIncrementalAlterConfigsRequestResources = "Resources"
+
 	// FieldIncrementalAlterConfigsRequestResourcesConfigs is: The configurations.
 	FieldIncrementalAlterConfigsRequestResourcesConfigs = "Configs"
+
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation is: The type (Set, Delete, Append, Subtract) of operation.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsConfigOperation = "ConfigOperation"
+
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsName is: The configuration key name.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsName = "Name"
+
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsTags is: The tagged fields.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsTags = "Tags"
+
 	// FieldIncrementalAlterConfigsRequestResourcesConfigsValue is: The value to set for the configuration key.
 	FieldIncrementalAlterConfigsRequestResourcesConfigsValue = "Value"
+
 	// FieldIncrementalAlterConfigsRequestResourcesResourceName is: The resource name.
 	FieldIncrementalAlterConfigsRequestResourcesResourceName = "ResourceName"
+
 	// FieldIncrementalAlterConfigsRequestResourcesResourceType is: The resource type.
 	FieldIncrementalAlterConfigsRequestResourcesResourceType = "ResourceType"
+
 	// FieldIncrementalAlterConfigsRequestResourcesTags is: The tagged fields.
 	FieldIncrementalAlterConfigsRequestResourcesTags = "Tags"
+
 	// FieldIncrementalAlterConfigsRequestTags is: The tagged fields.
 	FieldIncrementalAlterConfigsRequestTags = "Tags"
+
 	// FieldIncrementalAlterConfigsRequestValidateOnly is: True if we should validate the request, but not change the configurations.
 	FieldIncrementalAlterConfigsRequestValidateOnly = "ValidateOnly"
 )

@@ -5,29 +5,28 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init13LeaveGroupResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: LeaveGroupResponse, API Key: 13, Version: 0
-		schema.NewSchema("LeaveGroupResponsev0",
+		schema.NewSchema("LeaveGroupResponse:v0",
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: LeaveGroupResponse, API Key: 13, Version: 1
-		schema.NewSchema("LeaveGroupResponsev1",
+		schema.NewSchema("LeaveGroupResponse:v1",
 			&schema.Mfield{Name: FieldLeaveGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: LeaveGroupResponse, API Key: 13, Version: 2
-		schema.NewSchema("LeaveGroupResponsev2",
+		schema.NewSchema("LeaveGroupResponse:v2",
 			&schema.Mfield{Name: FieldLeaveGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
 		),
 
 		// Message: LeaveGroupResponse, API Key: 13, Version: 3
-		schema.NewSchema("LeaveGroupResponsev3",
+		schema.NewSchema("LeaveGroupResponse:v3",
 			&schema.Mfield{Name: FieldLeaveGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("MembersV3",
+			&schema.Array{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("[]MemberResponse:v3",
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersMemberId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersErrorCode, Ty: schema.TypeInt16},
@@ -35,10 +34,10 @@ func init13LeaveGroupResponse() []schema.Schema {
 		),
 
 		// Message: LeaveGroupResponse, API Key: 13, Version: 4
-		schema.NewSchema("LeaveGroupResponsev4",
+		schema.NewSchema("LeaveGroupResponse:v4",
 			&schema.Mfield{Name: FieldLeaveGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("MembersV4",
+			&schema.ArrayCompact{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("[]MemberResponse:v4",
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersErrorCode, Ty: schema.TypeInt16},
@@ -48,10 +47,10 @@ func init13LeaveGroupResponse() []schema.Schema {
 		),
 
 		// Message: LeaveGroupResponse, API Key: 13, Version: 5
-		schema.NewSchema("LeaveGroupResponsev5",
+		schema.NewSchema("LeaveGroupResponse:v5",
 			&schema.Mfield{Name: FieldLeaveGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaveGroupResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("MembersV5",
+			&schema.ArrayCompact{Name: FieldLeaveGroupResponseMembers, Ty: schema.NewSchema("[]MemberResponse:v5",
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersMemberId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersGroupInstanceId, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldLeaveGroupResponseMembersErrorCode, Ty: schema.TypeInt16},
@@ -60,23 +59,32 @@ func init13LeaveGroupResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldLeaveGroupResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldLeaveGroupResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldLeaveGroupResponseErrorCode = "ErrorCode"
+
 	// FieldLeaveGroupResponseMembers is: List of leaving member responses.
 	FieldLeaveGroupResponseMembers = "Members"
+
 	// FieldLeaveGroupResponseMembersErrorCode is: The error code, or 0 if there was no error.
 	FieldLeaveGroupResponseMembersErrorCode = "ErrorCode"
+
 	// FieldLeaveGroupResponseMembersGroupInstanceId is: The group instance ID to remove from the group.
 	FieldLeaveGroupResponseMembersGroupInstanceId = "GroupInstanceId"
+
 	// FieldLeaveGroupResponseMembersMemberId is: The member ID to remove from the group.
 	FieldLeaveGroupResponseMembersMemberId = "MemberId"
+
 	// FieldLeaveGroupResponseMembersTags is: The tagged fields.
 	FieldLeaveGroupResponseMembersTags = "Tags"
+
 	// FieldLeaveGroupResponseTags is: The tagged fields.
 	FieldLeaveGroupResponseTags = "Tags"
+
 	// FieldLeaveGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldLeaveGroupResponseThrottleTimeMs = "ThrottleTimeMs"
 )

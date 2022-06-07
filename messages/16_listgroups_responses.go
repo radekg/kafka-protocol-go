@@ -5,41 +5,40 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init16ListGroupsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ListGroupsResponse, API Key: 16, Version: 0
-		schema.NewSchema("ListGroupsResponsev0",
+		schema.NewSchema("ListGroupsResponse:v0",
 			&schema.Mfield{Name: FieldListGroupsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("GroupsV0",
+			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("[]ListedGroup:v0",
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: ListGroupsResponse, API Key: 16, Version: 1
-		schema.NewSchema("ListGroupsResponsev1",
+		schema.NewSchema("ListGroupsResponse:v1",
 			&schema.Mfield{Name: FieldListGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListGroupsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("GroupsV1",
+			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("[]ListedGroup:v1",
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: ListGroupsResponse, API Key: 16, Version: 2
-		schema.NewSchema("ListGroupsResponsev2",
+		schema.NewSchema("ListGroupsResponse:v2",
 			&schema.Mfield{Name: FieldListGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListGroupsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("GroupsV2",
+			&schema.Array{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("[]ListedGroup:v2",
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupId, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsProtocolType, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: ListGroupsResponse, API Key: 16, Version: 3
-		schema.NewSchema("ListGroupsResponsev3",
+		schema.NewSchema("ListGroupsResponse:v3",
 			&schema.Mfield{Name: FieldListGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListGroupsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("GroupsV3",
+			&schema.ArrayCompact{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("[]ListedGroup:v3",
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsProtocolType, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldListGroupsResponseGroupsTags},
@@ -48,10 +47,10 @@ func init16ListGroupsResponse() []schema.Schema {
 		),
 
 		// Message: ListGroupsResponse, API Key: 16, Version: 4
-		schema.NewSchema("ListGroupsResponsev4",
+		schema.NewSchema("ListGroupsResponse:v4",
 			&schema.Mfield{Name: FieldListGroupsResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldListGroupsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("GroupsV4",
+			&schema.ArrayCompact{Name: FieldListGroupsResponseGroups, Ty: schema.NewSchema("[]ListedGroup:v4",
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupId, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsProtocolType, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldListGroupsResponseGroupsGroupState, Ty: schema.TypeStrCompact},
@@ -60,23 +59,32 @@ func init16ListGroupsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldListGroupsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldListGroupsResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldListGroupsResponseErrorCode = "ErrorCode"
+
 	// FieldListGroupsResponseGroups is: Each group in the response.
 	FieldListGroupsResponseGroups = "Groups"
+
 	// FieldListGroupsResponseGroupsGroupId is: The group ID.
 	FieldListGroupsResponseGroupsGroupId = "GroupId"
+
 	// FieldListGroupsResponseGroupsGroupState is: The group state name.
 	FieldListGroupsResponseGroupsGroupState = "GroupState"
+
 	// FieldListGroupsResponseGroupsProtocolType is: The group protocol type.
 	FieldListGroupsResponseGroupsProtocolType = "ProtocolType"
+
 	// FieldListGroupsResponseGroupsTags is: The tagged fields.
 	FieldListGroupsResponseGroupsTags = "Tags"
+
 	// FieldListGroupsResponseTags is: The tagged fields.
 	FieldListGroupsResponseTags = "Tags"
+
 	// FieldListGroupsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldListGroupsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

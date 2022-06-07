@@ -5,46 +5,45 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init20DeleteTopicsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 0
-		schema.NewSchema("DeleteTopicsResponsev0",
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV0",
+		schema.NewSchema("DeleteTopicsResponse:v0",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v0",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 1
-		schema.NewSchema("DeleteTopicsResponsev1",
+		schema.NewSchema("DeleteTopicsResponse:v1",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV1",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v1",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 2
-		schema.NewSchema("DeleteTopicsResponsev2",
+		schema.NewSchema("DeleteTopicsResponse:v2",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV2",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v2",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 3
-		schema.NewSchema("DeleteTopicsResponsev3",
+		schema.NewSchema("DeleteTopicsResponse:v3",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV3",
+			&schema.Array{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v3",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 			)},
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 4
-		schema.NewSchema("DeleteTopicsResponsev4",
+		schema.NewSchema("DeleteTopicsResponse:v4",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV4",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v4",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldDeleteTopicsResponseResponsesTags},
@@ -53,9 +52,9 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 5
-		schema.NewSchema("DeleteTopicsResponsev5",
+		schema.NewSchema("DeleteTopicsResponse:v5",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV5",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v5",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -65,9 +64,9 @@ func init20DeleteTopicsResponse() []schema.Schema {
 		),
 
 		// Message: DeleteTopicsResponse, API Key: 20, Version: 6
-		schema.NewSchema("DeleteTopicsResponsev6",
+		schema.NewSchema("DeleteTopicsResponse:v6",
 			&schema.Mfield{Name: FieldDeleteTopicsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("ResponsesV6",
+			&schema.ArrayCompact{Name: FieldDeleteTopicsResponseResponses, Ty: schema.NewSchema("[]DeletableTopicResult:v6",
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldDeleteTopicsResponseResponsesErrorCode, Ty: schema.TypeInt16},
@@ -77,23 +76,32 @@ func init20DeleteTopicsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDeleteTopicsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDeleteTopicsResponseResponses is: The results for each topic we tried to delete.
 	FieldDeleteTopicsResponseResponses = "Responses"
+
 	// FieldDeleteTopicsResponseResponsesErrorCode is: The deletion error, or 0 if the deletion succeeded.
 	FieldDeleteTopicsResponseResponsesErrorCode = "ErrorCode"
+
 	// FieldDeleteTopicsResponseResponsesErrorMessage is: The error message, or null if there was no error.
 	FieldDeleteTopicsResponseResponsesErrorMessage = "ErrorMessage"
+
 	// FieldDeleteTopicsResponseResponsesName is: The topic name
 	FieldDeleteTopicsResponseResponsesName = "Name"
+
 	// FieldDeleteTopicsResponseResponsesTags is: The tagged fields.
 	FieldDeleteTopicsResponseResponsesTags = "Tags"
+
 	// FieldDeleteTopicsResponseResponsesTopicId is: the unique topic ID
 	FieldDeleteTopicsResponseResponsesTopicId = "TopicId"
+
 	// FieldDeleteTopicsResponseTags is: The tagged fields.
 	FieldDeleteTopicsResponseTags = "Tags"
+
 	// FieldDeleteTopicsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDeleteTopicsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

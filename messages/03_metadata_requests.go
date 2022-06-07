@@ -5,70 +5,69 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init3MetadataRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: MetadataRequest, API Key: 3, Version: 0
-		schema.NewSchema("MetadataRequestv0",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("MetadataRequest:v0",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v0",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 1
-		schema.NewSchema("MetadataRequestv1",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("MetadataRequest:v1",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v1",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 2
-		schema.NewSchema("MetadataRequestv2",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("MetadataRequest:v2",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v2",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 3
-		schema.NewSchema("MetadataRequestv3",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV3",
+		schema.NewSchema("MetadataRequest:v3",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v3",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 4
-		schema.NewSchema("MetadataRequestv4",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV4",
+		schema.NewSchema("MetadataRequest:v4",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v4",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 5
-		schema.NewSchema("MetadataRequestv5",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV5",
+		schema.NewSchema("MetadataRequest:v5",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v5",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 6
-		schema.NewSchema("MetadataRequestv6",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV6",
+		schema.NewSchema("MetadataRequest:v6",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v6",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 7
-		schema.NewSchema("MetadataRequestv7",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV7",
+		schema.NewSchema("MetadataRequest:v7",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v7",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 8
-		schema.NewSchema("MetadataRequestv8",
-			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV8",
+		schema.NewSchema("MetadataRequest:v8",
+			&schema.Array{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v8",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStr},
 			)},
 			&schema.Mfield{Name: FieldMetadataRequestAllowAutoTopicCreation, Ty: schema.TypeBool},
@@ -77,8 +76,8 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 9
-		schema.NewSchema("MetadataRequestv9",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV9",
+		schema.NewSchema("MetadataRequest:v9",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v9",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
 			)},
@@ -89,8 +88,8 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 10
-		schema.NewSchema("MetadataRequestv10",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV10",
+		schema.NewSchema("MetadataRequest:v10",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v10",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -102,8 +101,8 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 11
-		schema.NewSchema("MetadataRequestv11",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV11",
+		schema.NewSchema("MetadataRequest:v11",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v11",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -114,8 +113,8 @@ func init3MetadataRequest() []schema.Schema {
 		),
 
 		// Message: MetadataRequest, API Key: 3, Version: 12
-		schema.NewSchema("MetadataRequestv12",
-			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("TopicsV12",
+		schema.NewSchema("MetadataRequest:v12",
+			&schema.ArrayCompact{Name: FieldMetadataRequestTopics, Ty: schema.NewSchema("[]MetadataRequestTopic:v12",
 				&schema.Mfield{Name: FieldMetadataRequestTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataRequestTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.SchemaTaggedFields{Name: FieldMetadataRequestTopicsTags},
@@ -125,23 +124,32 @@ func init3MetadataRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldMetadataRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldMetadataRequestAllowAutoTopicCreation is: If this is true, the broker may auto-create topics that we requested which do not already exist, if it is configured to do so.
 	FieldMetadataRequestAllowAutoTopicCreation = "AllowAutoTopicCreation"
+
 	// FieldMetadataRequestIncludeClusterAuthorizedOperations is: Whether to include cluster authorized operations.
 	FieldMetadataRequestIncludeClusterAuthorizedOperations = "IncludeClusterAuthorizedOperations"
+
 	// FieldMetadataRequestIncludeTopicAuthorizedOperations is: Whether to include topic authorized operations.
 	FieldMetadataRequestIncludeTopicAuthorizedOperations = "IncludeTopicAuthorizedOperations"
+
 	// FieldMetadataRequestTags is: The tagged fields.
 	FieldMetadataRequestTags = "Tags"
+
 	// FieldMetadataRequestTopics is: The topics to fetch metadata for.
 	FieldMetadataRequestTopics = "Topics"
+
 	// FieldMetadataRequestTopicsName is: The topic name.
 	FieldMetadataRequestTopicsName = "Name"
+
 	// FieldMetadataRequestTopicsTags is: The tagged fields.
 	FieldMetadataRequestTopicsTags = "Tags"
+
 	// FieldMetadataRequestTopicsTopicId is: The topic id.
 	FieldMetadataRequestTopicsTopicId = "TopicId"
 )

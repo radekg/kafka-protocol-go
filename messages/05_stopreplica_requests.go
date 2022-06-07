@@ -5,33 +5,32 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init5StopReplicaRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: StopReplicaRequest, API Key: 5, Version: 0
-		schema.NewSchema("StopReplicaRequestv0",
+		schema.NewSchema("StopReplicaRequest:v0",
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestDeletePartitions, Ty: schema.TypeBool},
 		),
 
 		// Message: StopReplicaRequest, API Key: 5, Version: 1
-		schema.NewSchema("StopReplicaRequestv1",
+		schema.NewSchema("StopReplicaRequest:v1",
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldStopReplicaRequestDeletePartitions, Ty: schema.TypeBool},
-			&schema.Array{Name: FieldStopReplicaRequestTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldStopReplicaRequestTopics, Ty: schema.NewSchema("[]StopReplicaTopicV1:v1",
 				&schema.Mfield{Name: FieldStopReplicaRequestTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldStopReplicaRequestTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 			)},
 		),
 
 		// Message: StopReplicaRequest, API Key: 5, Version: 2
-		schema.NewSchema("StopReplicaRequestv2",
+		schema.NewSchema("StopReplicaRequest:v2",
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldStopReplicaRequestDeletePartitions, Ty: schema.TypeBool},
-			&schema.ArrayCompact{Name: FieldStopReplicaRequestTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.ArrayCompact{Name: FieldStopReplicaRequestTopics, Ty: schema.NewSchema("[]StopReplicaTopicV1:v2",
 				&schema.Mfield{Name: FieldStopReplicaRequestTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldStopReplicaRequestTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 				&schema.SchemaTaggedFields{Name: FieldStopReplicaRequestTopicsTags},
@@ -40,13 +39,13 @@ func init5StopReplicaRequest() []schema.Schema {
 		),
 
 		// Message: StopReplicaRequest, API Key: 5, Version: 3
-		schema.NewSchema("StopReplicaRequestv3",
+		schema.NewSchema("StopReplicaRequest:v3",
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldStopReplicaRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldStopReplicaRequestTopicStates, Ty: schema.NewSchema("TopicStatesV3",
+			&schema.ArrayCompact{Name: FieldStopReplicaRequestTopicStates, Ty: schema.NewSchema("[]StopReplicaTopicState:v3",
 				&schema.Mfield{Name: FieldStopReplicaRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldStopReplicaRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV3",
+				&schema.ArrayCompact{Name: FieldStopReplicaRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]StopReplicaPartitionState:v3",
 					&schema.Mfield{Name: FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition, Ty: schema.TypeBool},
@@ -57,41 +56,59 @@ func init5StopReplicaRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldStopReplicaRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldStopReplicaRequestBrokerEpoch is: The broker epoch.
 	FieldStopReplicaRequestBrokerEpoch = "BrokerEpoch"
+
 	// FieldStopReplicaRequestControllerEpoch is: The controller epoch.
 	FieldStopReplicaRequestControllerEpoch = "ControllerEpoch"
+
 	// FieldStopReplicaRequestControllerId is: The controller id.
 	FieldStopReplicaRequestControllerId = "ControllerId"
+
 	// FieldStopReplicaRequestDeletePartitions is: Whether these partitions should be deleted.
 	FieldStopReplicaRequestDeletePartitions = "DeletePartitions"
+
 	// FieldStopReplicaRequestTags is: The tagged fields.
 	FieldStopReplicaRequestTags = "Tags"
+
 	// FieldStopReplicaRequestTopicStates is: Each topic.
 	FieldStopReplicaRequestTopicStates = "TopicStates"
+
 	// FieldStopReplicaRequestTopicStatesPartitionStates is: The state of each partition
 	FieldStopReplicaRequestTopicStatesPartitionStates = "PartitionStates"
+
 	// FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition is: Whether this partition should be deleted.
 	FieldStopReplicaRequestTopicStatesPartitionStatesDeletePartition = "DeletePartition"
+
 	// FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch.
 	FieldStopReplicaRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
+
 	// FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
 	FieldStopReplicaRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
+
 	// FieldStopReplicaRequestTopicStatesPartitionStatesTags is: The tagged fields.
 	FieldStopReplicaRequestTopicStatesPartitionStatesTags = "Tags"
+
 	// FieldStopReplicaRequestTopicStatesTags is: The tagged fields.
 	FieldStopReplicaRequestTopicStatesTags = "Tags"
+
 	// FieldStopReplicaRequestTopicStatesTopicName is: The topic name.
 	FieldStopReplicaRequestTopicStatesTopicName = "TopicName"
+
 	// FieldStopReplicaRequestTopics is: The topics to stop.
 	FieldStopReplicaRequestTopics = "Topics"
+
 	// FieldStopReplicaRequestTopicsName is: The topic name.
 	FieldStopReplicaRequestTopicsName = "Name"
+
 	// FieldStopReplicaRequestTopicsPartitionIndexes is: The partition indexes.
 	FieldStopReplicaRequestTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldStopReplicaRequestTopicsTags is: The tagged fields.
 	FieldStopReplicaRequestTopicsTags = "Tags"
 )

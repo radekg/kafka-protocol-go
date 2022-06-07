@@ -5,25 +5,29 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init50DescribeUserScramCredentialsRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeUserScramCredentialsRequest, API Key: 50, Version: 0
-		schema.NewSchema("DescribeUserScramCredentialsRequestv0",
-			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsRequestUsers, Ty: schema.NewSchema("UsersV0",
+		schema.NewSchema("DescribeUserScramCredentialsRequest:v0",
+			&schema.ArrayCompact{Name: FieldDescribeUserScramCredentialsRequestUsers, Ty: schema.NewSchema("[]UserName:v0",
 				&schema.Mfield{Name: FieldDescribeUserScramCredentialsRequestUsersName, Ty: schema.TypeStrCompact},
 				&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestUsersTags},
 			)},
 			&schema.SchemaTaggedFields{Name: FieldDescribeUserScramCredentialsRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeUserScramCredentialsRequestTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsRequestTags = "Tags"
+
 	// FieldDescribeUserScramCredentialsRequestUsers is: The users to describe, or null/empty to describe all users.
 	FieldDescribeUserScramCredentialsRequestUsers = "Users"
+
 	// FieldDescribeUserScramCredentialsRequestUsersName is: The user name.
 	FieldDescribeUserScramCredentialsRequestUsersName = "Name"
+
 	// FieldDescribeUserScramCredentialsRequestUsersTags is: The tagged fields.
 	FieldDescribeUserScramCredentialsRequestUsersTags = "Tags"
 )

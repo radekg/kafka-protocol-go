@@ -5,12 +5,11 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init9OffsetFetchResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: OffsetFetchResponse, API Key: 9, Version: 0
-		schema.NewSchema("OffsetFetchResponsev0",
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV0",
+		schema.NewSchema("OffsetFetchResponse:v0",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v0",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v0",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsMetadata, Ty: schema.TypeStrNullable},
@@ -20,10 +19,10 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 1
-		schema.NewSchema("OffsetFetchResponsev1",
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV1",
+		schema.NewSchema("OffsetFetchResponse:v1",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v1",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v1",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsMetadata, Ty: schema.TypeStrNullable},
@@ -33,10 +32,10 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 2
-		schema.NewSchema("OffsetFetchResponsev2",
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV2",
+		schema.NewSchema("OffsetFetchResponse:v2",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v2",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v2",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsMetadata, Ty: schema.TypeStrNullable},
@@ -47,11 +46,11 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 3
-		schema.NewSchema("OffsetFetchResponsev3",
+		schema.NewSchema("OffsetFetchResponse:v3",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v3",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v3",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsMetadata, Ty: schema.TypeStrNullable},
@@ -62,11 +61,11 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 4
-		schema.NewSchema("OffsetFetchResponsev4",
+		schema.NewSchema("OffsetFetchResponse:v4",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v4",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v4",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsMetadata, Ty: schema.TypeStrNullable},
@@ -77,11 +76,11 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 5
-		schema.NewSchema("OffsetFetchResponsev5",
+		schema.NewSchema("OffsetFetchResponse:v5",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v5",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v5",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -93,11 +92,11 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 6
-		schema.NewSchema("OffsetFetchResponsev6",
+		schema.NewSchema("OffsetFetchResponse:v6",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v6",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v6",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -112,11 +111,11 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 7
-		schema.NewSchema("OffsetFetchResponsev7",
+		schema.NewSchema("OffsetFetchResponse:v7",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopic:v7",
 				&schema.Mfield{Name: FieldOffsetFetchResponseTopicsName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.ArrayCompact{Name: FieldOffsetFetchResponseTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartition:v7",
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 					&schema.Mfield{Name: FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -131,13 +130,13 @@ func init9OffsetFetchResponse() []schema.Schema {
 		),
 
 		// Message: OffsetFetchResponse, API Key: 9, Version: 8
-		schema.NewSchema("OffsetFetchResponsev8",
+		schema.NewSchema("OffsetFetchResponse:v8",
 			&schema.Mfield{Name: FieldOffsetFetchResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroups, Ty: schema.NewSchema("GroupsV8",
+			&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroups, Ty: schema.NewSchema("[]OffsetFetchResponseGroup:v8",
 				&schema.Mfield{Name: FieldOffsetFetchResponseGroupsgroupId, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroupsTopics, Ty: schema.NewSchema("TopicsV8",
+				&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroupsTopics, Ty: schema.NewSchema("[]OffsetFetchResponseTopics:v8",
 					&schema.Mfield{Name: FieldOffsetFetchResponseGroupsTopicsName, Ty: schema.TypeStrCompact},
-					&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroupsTopicsPartitions, Ty: schema.NewSchema("PartitionsV8",
+					&schema.ArrayCompact{Name: FieldOffsetFetchResponseGroupsTopicsPartitions, Ty: schema.NewSchema("[]OffsetFetchResponsePartitions:v8",
 						&schema.Mfield{Name: FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 						&schema.Mfield{Name: FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset, Ty: schema.TypeInt64},
 						&schema.Mfield{Name: FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch, Ty: schema.TypeInt32},
@@ -153,61 +152,89 @@ func init9OffsetFetchResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldOffsetFetchResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldOffsetFetchResponseErrorCode is: The top-level error code, or 0 if there was no error.
 	FieldOffsetFetchResponseErrorCode = "ErrorCode"
+
 	// FieldOffsetFetchResponseGroups is: The responses per group id.
 	FieldOffsetFetchResponseGroups = "Groups"
+
 	// FieldOffsetFetchResponseGroupsErrorCode is: The group-level error code, or 0 if there was no error.
 	FieldOffsetFetchResponseGroupsErrorCode = "ErrorCode"
+
 	// FieldOffsetFetchResponseGroupsTags is: The tagged fields.
 	FieldOffsetFetchResponseGroupsTags = "Tags"
+
 	// FieldOffsetFetchResponseGroupsTopics is: The responses per topic.
 	FieldOffsetFetchResponseGroupsTopics = "Topics"
+
 	// FieldOffsetFetchResponseGroupsTopicsName is: The topic name.
 	FieldOffsetFetchResponseGroupsTopicsName = "Name"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitions is: The responses per partition
 	FieldOffsetFetchResponseGroupsTopicsPartitions = "Partitions"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset is: The committed message offset.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsCommittedOffset = "CommittedOffset"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode is: The partition-level error code, or 0 if there was no error.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata is: The partition metadata.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsMetadata = "Metadata"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldOffsetFetchResponseGroupsTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetFetchResponseGroupsTopicsPartitionsTags = "Tags"
+
 	// FieldOffsetFetchResponseGroupsTopicsTags is: The tagged fields.
 	FieldOffsetFetchResponseGroupsTopicsTags = "Tags"
+
 	// FieldOffsetFetchResponseGroupsgroupId is: The group ID.
 	FieldOffsetFetchResponseGroupsgroupId = "groupId"
+
 	// FieldOffsetFetchResponseTags is: The tagged fields.
 	FieldOffsetFetchResponseTags = "Tags"
+
 	// FieldOffsetFetchResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldOffsetFetchResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldOffsetFetchResponseTopics is: The responses per topic.
 	FieldOffsetFetchResponseTopics = "Topics"
+
 	// FieldOffsetFetchResponseTopicsName is: The topic name.
 	FieldOffsetFetchResponseTopicsName = "Name"
+
 	// FieldOffsetFetchResponseTopicsPartitions is: The responses per partition
 	FieldOffsetFetchResponseTopicsPartitions = "Partitions"
+
 	// FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch is: The leader epoch.
 	FieldOffsetFetchResponseTopicsPartitionsCommittedLeaderEpoch = "CommittedLeaderEpoch"
+
 	// FieldOffsetFetchResponseTopicsPartitionsCommittedOffset is: The committed message offset.
 	FieldOffsetFetchResponseTopicsPartitionsCommittedOffset = "CommittedOffset"
+
 	// FieldOffsetFetchResponseTopicsPartitionsErrorCode is: The error code, or 0 if there was no error.
 	FieldOffsetFetchResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldOffsetFetchResponseTopicsPartitionsMetadata is: The partition metadata.
 	FieldOffsetFetchResponseTopicsPartitionsMetadata = "Metadata"
+
 	// FieldOffsetFetchResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldOffsetFetchResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldOffsetFetchResponseTopicsPartitionsTags is: The tagged fields.
 	FieldOffsetFetchResponseTopicsPartitionsTags = "Tags"
+
 	// FieldOffsetFetchResponseTopicsTags is: The tagged fields.
 	FieldOffsetFetchResponseTopicsTags = "Tags"
 )

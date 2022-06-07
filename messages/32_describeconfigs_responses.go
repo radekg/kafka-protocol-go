@@ -5,16 +5,15 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init32DescribeConfigsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeConfigsResponse, API Key: 32, Version: 0
-		schema.NewSchema("DescribeConfigsResponsev0",
+		schema.NewSchema("DescribeConfigsResponse:v0",
 			&schema.Mfield{Name: FieldDescribeConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("[]DescribeConfigsResult:v0",
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("ConfigsV0",
+				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("[]DescribeConfigsResourceResult:v0",
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsValue, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsReadOnly, Ty: schema.TypeBool},
@@ -24,20 +23,20 @@ func init32DescribeConfigsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeConfigsResponse, API Key: 32, Version: 1
-		schema.NewSchema("DescribeConfigsResponsev1",
+		schema.NewSchema("DescribeConfigsResponse:v1",
 			&schema.Mfield{Name: FieldDescribeConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("[]DescribeConfigsResult:v1",
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("ConfigsV1",
+				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("[]DescribeConfigsResourceResult:v1",
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsValue, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsReadOnly, Ty: schema.TypeBool},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsConfigSource, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsIsSensitive, Ty: schema.TypeBool},
-					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("SynonymsV1",
+					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("[]DescribeConfigsSynonym:v1",
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsName, Ty: schema.TypeStr},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsValue, Ty: schema.TypeStrNullable},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsSource, Ty: schema.TypeInt8},
@@ -47,20 +46,20 @@ func init32DescribeConfigsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeConfigsResponse, API Key: 32, Version: 2
-		schema.NewSchema("DescribeConfigsResponsev2",
+		schema.NewSchema("DescribeConfigsResponse:v2",
 			&schema.Mfield{Name: FieldDescribeConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("[]DescribeConfigsResult:v2",
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("ConfigsV2",
+				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("[]DescribeConfigsResourceResult:v2",
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsValue, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsReadOnly, Ty: schema.TypeBool},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsConfigSource, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsIsSensitive, Ty: schema.TypeBool},
-					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("SynonymsV2",
+					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("[]DescribeConfigsSynonym:v2",
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsName, Ty: schema.TypeStr},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsValue, Ty: schema.TypeStrNullable},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsSource, Ty: schema.TypeInt8},
@@ -70,20 +69,20 @@ func init32DescribeConfigsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeConfigsResponse, API Key: 32, Version: 3
-		schema.NewSchema("DescribeConfigsResponsev3",
+		schema.NewSchema("DescribeConfigsResponse:v3",
 			&schema.Mfield{Name: FieldDescribeConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("ResultsV3",
+			&schema.Array{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("[]DescribeConfigsResult:v3",
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("ConfigsV3",
+				&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("[]DescribeConfigsResourceResult:v3",
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsValue, Ty: schema.TypeStrNullable},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsReadOnly, Ty: schema.TypeBool},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsConfigSource, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsIsSensitive, Ty: schema.TypeBool},
-					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("SynonymsV3",
+					&schema.Array{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("[]DescribeConfigsSynonym:v3",
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsName, Ty: schema.TypeStr},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsValue, Ty: schema.TypeStrNullable},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsSource, Ty: schema.TypeInt8},
@@ -95,20 +94,20 @@ func init32DescribeConfigsResponse() []schema.Schema {
 		),
 
 		// Message: DescribeConfigsResponse, API Key: 32, Version: 4
-		schema.NewSchema("DescribeConfigsResponsev4",
+		schema.NewSchema("DescribeConfigsResponse:v4",
 			&schema.Mfield{Name: FieldDescribeConfigsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("ResultsV4",
+			&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResults, Ty: schema.NewSchema("[]DescribeConfigsResult:v4",
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceType, Ty: schema.TypeInt8},
 				&schema.Mfield{Name: FieldDescribeConfigsResponseResultsResourceName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("ConfigsV4",
+				&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResultsConfigs, Ty: schema.NewSchema("[]DescribeConfigsResourceResult:v4",
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsValue, Ty: schema.TypeStrCompactNullable},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsReadOnly, Ty: schema.TypeBool},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsConfigSource, Ty: schema.TypeInt8},
 					&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsIsSensitive, Ty: schema.TypeBool},
-					&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("SynonymsV4",
+					&schema.ArrayCompact{Name: FieldDescribeConfigsResponseResultsConfigsSynonyms, Ty: schema.NewSchema("[]DescribeConfigsSynonym:v4",
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsName, Ty: schema.TypeStrCompact},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsValue, Ty: schema.TypeStrCompactNullable},
 						&schema.Mfield{Name: FieldDescribeConfigsResponseResultsConfigsSynonymsSource, Ty: schema.TypeInt8},
@@ -123,51 +122,74 @@ func init32DescribeConfigsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeConfigsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeConfigsResponseResults is: The results for each resource.
 	FieldDescribeConfigsResponseResults = "Results"
+
 	// FieldDescribeConfigsResponseResultsConfigs is: Each listed configuration.
 	FieldDescribeConfigsResponseResultsConfigs = "Configs"
+
 	// FieldDescribeConfigsResponseResultsConfigsConfigSource is: The configuration source.
 	FieldDescribeConfigsResponseResultsConfigsConfigSource = "ConfigSource"
+
 	// FieldDescribeConfigsResponseResultsConfigsConfigType is: The configuration data type. Type can be one of the following values - BOOLEAN, STRING, INT, SHORT, LONG, DOUBLE, LIST, CLASS, PASSWORD
 	FieldDescribeConfigsResponseResultsConfigsConfigType = "ConfigType"
+
 	// FieldDescribeConfigsResponseResultsConfigsDocumentation is: The configuration documentation.
 	FieldDescribeConfigsResponseResultsConfigsDocumentation = "Documentation"
+
 	// FieldDescribeConfigsResponseResultsConfigsIsSensitive is: True if this configuration is sensitive.
 	FieldDescribeConfigsResponseResultsConfigsIsSensitive = "IsSensitive"
+
 	// FieldDescribeConfigsResponseResultsConfigsName is: The configuration name.
 	FieldDescribeConfigsResponseResultsConfigsName = "Name"
+
 	// FieldDescribeConfigsResponseResultsConfigsReadOnly is: True if the configuration is read-only.
 	FieldDescribeConfigsResponseResultsConfigsReadOnly = "ReadOnly"
+
 	// FieldDescribeConfigsResponseResultsConfigsSynonyms is: The synonyms for this configuration key.
 	FieldDescribeConfigsResponseResultsConfigsSynonyms = "Synonyms"
+
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsName is: The synonym name.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsName = "Name"
+
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsSource is: The synonym source.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsSource = "Source"
+
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsTags is: The tagged fields.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsTags = "Tags"
+
 	// FieldDescribeConfigsResponseResultsConfigsSynonymsValue is: The synonym value.
 	FieldDescribeConfigsResponseResultsConfigsSynonymsValue = "Value"
+
 	// FieldDescribeConfigsResponseResultsConfigsTags is: The tagged fields.
 	FieldDescribeConfigsResponseResultsConfigsTags = "Tags"
+
 	// FieldDescribeConfigsResponseResultsConfigsValue is: The configuration value.
 	FieldDescribeConfigsResponseResultsConfigsValue = "Value"
+
 	// FieldDescribeConfigsResponseResultsErrorCode is: The error code, or 0 if we were able to successfully describe the configurations.
 	FieldDescribeConfigsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldDescribeConfigsResponseResultsErrorMessage is: The error message, or null if we were able to successfully describe the configurations.
 	FieldDescribeConfigsResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldDescribeConfigsResponseResultsResourceName is: The resource name.
 	FieldDescribeConfigsResponseResultsResourceName = "ResourceName"
+
 	// FieldDescribeConfigsResponseResultsResourceType is: The resource type.
 	FieldDescribeConfigsResponseResultsResourceType = "ResourceType"
+
 	// FieldDescribeConfigsResponseResultsTags is: The tagged fields.
 	FieldDescribeConfigsResponseResultsTags = "Tags"
+
 	// FieldDescribeConfigsResponseTags is: The tagged fields.
 	FieldDescribeConfigsResponseTags = "Tags"
+
 	// FieldDescribeConfigsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeConfigsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

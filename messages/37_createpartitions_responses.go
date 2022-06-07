@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init37CreatePartitionsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: CreatePartitionsResponse, API Key: 37, Version: 0
-		schema.NewSchema("CreatePartitionsResponsev0",
+		schema.NewSchema("CreatePartitionsResponse:v0",
 			&schema.Mfield{Name: FieldCreatePartitionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("ResultsV0",
+			&schema.Array{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("[]CreatePartitionsTopicResult:v0",
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
@@ -17,9 +16,9 @@ func init37CreatePartitionsResponse() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsResponse, API Key: 37, Version: 1
-		schema.NewSchema("CreatePartitionsResponsev1",
+		schema.NewSchema("CreatePartitionsResponse:v1",
 			&schema.Mfield{Name: FieldCreatePartitionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("ResultsV1",
+			&schema.Array{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("[]CreatePartitionsTopicResult:v1",
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorMessage, Ty: schema.TypeStrNullable},
@@ -27,9 +26,9 @@ func init37CreatePartitionsResponse() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsResponse, API Key: 37, Version: 2
-		schema.NewSchema("CreatePartitionsResponsev2",
+		schema.NewSchema("CreatePartitionsResponse:v2",
 			&schema.Mfield{Name: FieldCreatePartitionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("ResultsV2",
+			&schema.ArrayCompact{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("[]CreatePartitionsTopicResult:v2",
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -39,9 +38,9 @@ func init37CreatePartitionsResponse() []schema.Schema {
 		),
 
 		// Message: CreatePartitionsResponse, API Key: 37, Version: 3
-		schema.NewSchema("CreatePartitionsResponsev3",
+		schema.NewSchema("CreatePartitionsResponse:v3",
 			&schema.Mfield{Name: FieldCreatePartitionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("ResultsV3",
+			&schema.ArrayCompact{Name: FieldCreatePartitionsResponseResults, Ty: schema.NewSchema("[]CreatePartitionsTopicResult:v3",
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldCreatePartitionsResponseResultsErrorMessage, Ty: schema.TypeStrCompactNullable},
@@ -50,21 +49,29 @@ func init37CreatePartitionsResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldCreatePartitionsResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldCreatePartitionsResponseResults is: The partition creation results for each topic.
 	FieldCreatePartitionsResponseResults = "Results"
+
 	// FieldCreatePartitionsResponseResultsErrorCode is: The result error, or zero if there was no error.
 	FieldCreatePartitionsResponseResultsErrorCode = "ErrorCode"
+
 	// FieldCreatePartitionsResponseResultsErrorMessage is: The result message, or null if there was no error.
 	FieldCreatePartitionsResponseResultsErrorMessage = "ErrorMessage"
+
 	// FieldCreatePartitionsResponseResultsName is: The topic name.
 	FieldCreatePartitionsResponseResultsName = "Name"
+
 	// FieldCreatePartitionsResponseResultsTags is: The tagged fields.
 	FieldCreatePartitionsResponseResultsTags = "Tags"
+
 	// FieldCreatePartitionsResponseTags is: The tagged fields.
 	FieldCreatePartitionsResponseTags = "Tags"
+
 	// FieldCreatePartitionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldCreatePartitionsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

@@ -5,36 +5,35 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init14SyncGroupResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: SyncGroupResponse, API Key: 14, Version: 0
-		schema.NewSchema("SyncGroupResponsev0",
+		schema.NewSchema("SyncGroupResponse:v0",
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseAssignment, Ty: schema.TypeBytes},
 		),
 
 		// Message: SyncGroupResponse, API Key: 14, Version: 1
-		schema.NewSchema("SyncGroupResponsev1",
+		schema.NewSchema("SyncGroupResponse:v1",
 			&schema.Mfield{Name: FieldSyncGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseAssignment, Ty: schema.TypeBytes},
 		),
 
 		// Message: SyncGroupResponse, API Key: 14, Version: 2
-		schema.NewSchema("SyncGroupResponsev2",
+		schema.NewSchema("SyncGroupResponse:v2",
 			&schema.Mfield{Name: FieldSyncGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseAssignment, Ty: schema.TypeBytes},
 		),
 
 		// Message: SyncGroupResponse, API Key: 14, Version: 3
-		schema.NewSchema("SyncGroupResponsev3",
+		schema.NewSchema("SyncGroupResponse:v3",
 			&schema.Mfield{Name: FieldSyncGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseAssignment, Ty: schema.TypeBytes},
 		),
 
 		// Message: SyncGroupResponse, API Key: 14, Version: 4
-		schema.NewSchema("SyncGroupResponsev4",
+		schema.NewSchema("SyncGroupResponse:v4",
 			&schema.Mfield{Name: FieldSyncGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseAssignment, Ty: schema.TypeBytesCompact},
@@ -42,7 +41,7 @@ func init14SyncGroupResponse() []schema.Schema {
 		),
 
 		// Message: SyncGroupResponse, API Key: 14, Version: 5
-		schema.NewSchema("SyncGroupResponsev5",
+		schema.NewSchema("SyncGroupResponse:v5",
 			&schema.Mfield{Name: FieldSyncGroupResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldSyncGroupResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldSyncGroupResponseProtocolType, Ty: schema.TypeStrCompactNullable},
@@ -51,19 +50,26 @@ func init14SyncGroupResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldSyncGroupResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldSyncGroupResponseAssignment is: The member assignment.
 	FieldSyncGroupResponseAssignment = "Assignment"
+
 	// FieldSyncGroupResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldSyncGroupResponseErrorCode = "ErrorCode"
+
 	// FieldSyncGroupResponseProtocolName is: The group protocol name.
 	FieldSyncGroupResponseProtocolName = "ProtocolName"
+
 	// FieldSyncGroupResponseProtocolType is: The group protocol type.
 	FieldSyncGroupResponseProtocolType = "ProtocolType"
+
 	// FieldSyncGroupResponseTags is: The tagged fields.
 	FieldSyncGroupResponseTags = "Tags"
+
 	// FieldSyncGroupResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldSyncGroupResponseThrottleTimeMs = "ThrottleTimeMs"
 )

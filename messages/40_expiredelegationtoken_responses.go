@@ -5,38 +5,42 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init40ExpireDelegationTokenResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ExpireDelegationTokenResponse, API Key: 40, Version: 0
-		schema.NewSchema("ExpireDelegationTokenResponsev0",
+		schema.NewSchema("ExpireDelegationTokenResponse:v0",
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: ExpireDelegationTokenResponse, API Key: 40, Version: 1
-		schema.NewSchema("ExpireDelegationTokenResponsev1",
+		schema.NewSchema("ExpireDelegationTokenResponse:v1",
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 		),
 
 		// Message: ExpireDelegationTokenResponse, API Key: 40, Version: 2
-		schema.NewSchema("ExpireDelegationTokenResponsev2",
+		schema.NewSchema("ExpireDelegationTokenResponse:v2",
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseExpiryTimestampMs, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldExpireDelegationTokenResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.SchemaTaggedFields{Name: FieldExpireDelegationTokenResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldExpireDelegationTokenResponseErrorCode is: The error code, or 0 if there was no error.
 	FieldExpireDelegationTokenResponseErrorCode = "ErrorCode"
+
 	// FieldExpireDelegationTokenResponseExpiryTimestampMs is: The timestamp in milliseconds at which this token expires.
 	FieldExpireDelegationTokenResponseExpiryTimestampMs = "ExpiryTimestampMs"
+
 	// FieldExpireDelegationTokenResponseTags is: The tagged fields.
 	FieldExpireDelegationTokenResponseTags = "Tags"
+
 	// FieldExpireDelegationTokenResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldExpireDelegationTokenResponseThrottleTimeMs = "ThrottleTimeMs"
 )

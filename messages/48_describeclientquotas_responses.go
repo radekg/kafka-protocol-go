@@ -5,18 +5,17 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init48DescribeClientQuotasResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: DescribeClientQuotasResponse, API Key: 48, Version: 0
-		schema.NewSchema("DescribeClientQuotasResponsev0",
+		schema.NewSchema("DescribeClientQuotasResponse:v0",
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseErrorMessage, Ty: schema.TypeStrNullable},
-			&schema.Array{Name: FieldDescribeClientQuotasResponseEntries, Ty: schema.NewSchema("EntriesV0",
-				&schema.Array{Name: FieldDescribeClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("EntityV0",
+			&schema.Array{Name: FieldDescribeClientQuotasResponseEntries, Ty: schema.NewSchema("[]EntryData:v0",
+				&schema.Array{Name: FieldDescribeClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("[]EntityData:v0",
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesEntityEntityType, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesEntityEntityName, Ty: schema.TypeStrNullable},
 				)},
-				&schema.Array{Name: FieldDescribeClientQuotasResponseEntriesValues, Ty: schema.NewSchema("ValuesV0",
+				&schema.Array{Name: FieldDescribeClientQuotasResponseEntriesValues, Ty: schema.NewSchema("[]ValueData:v0",
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesValuesKey, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesValuesValue, Ty: schema.TypeFloat64},
 				)},
@@ -24,17 +23,17 @@ func init48DescribeClientQuotasResponse() []schema.Schema {
 		),
 
 		// Message: DescribeClientQuotasResponse, API Key: 48, Version: 1
-		schema.NewSchema("DescribeClientQuotasResponsev1",
+		schema.NewSchema("DescribeClientQuotasResponse:v1",
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseThrottleTimeMs, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseErrorCode, Ty: schema.TypeInt16},
 			&schema.Mfield{Name: FieldDescribeClientQuotasResponseErrorMessage, Ty: schema.TypeStrCompactNullable},
-			&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntries, Ty: schema.NewSchema("EntriesV1",
-				&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("EntityV1",
+			&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntries, Ty: schema.NewSchema("[]EntryData:v1",
+				&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntriesEntity, Ty: schema.NewSchema("[]EntityData:v1",
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesEntityEntityType, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesEntityEntityName, Ty: schema.TypeStrCompactNullable},
 					&schema.SchemaTaggedFields{Name: FieldDescribeClientQuotasResponseEntriesEntityTags},
 				)},
-				&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntriesValues, Ty: schema.NewSchema("ValuesV1",
+				&schema.ArrayCompact{Name: FieldDescribeClientQuotasResponseEntriesValues, Ty: schema.NewSchema("[]ValueData:v1",
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesValuesKey, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldDescribeClientQuotasResponseEntriesValuesValue, Ty: schema.TypeFloat64},
 					&schema.SchemaTaggedFields{Name: FieldDescribeClientQuotasResponseEntriesValuesTags},
@@ -44,35 +43,50 @@ func init48DescribeClientQuotasResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldDescribeClientQuotasResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldDescribeClientQuotasResponseEntries is: A result entry.
 	FieldDescribeClientQuotasResponseEntries = "Entries"
+
 	// FieldDescribeClientQuotasResponseEntriesEntity is: The quota entity description.
 	FieldDescribeClientQuotasResponseEntriesEntity = "Entity"
+
 	// FieldDescribeClientQuotasResponseEntriesEntityEntityName is: The entity name, or null if the default.
 	FieldDescribeClientQuotasResponseEntriesEntityEntityName = "EntityName"
+
 	// FieldDescribeClientQuotasResponseEntriesEntityEntityType is: The entity type.
 	FieldDescribeClientQuotasResponseEntriesEntityEntityType = "EntityType"
+
 	// FieldDescribeClientQuotasResponseEntriesEntityTags is: The tagged fields.
 	FieldDescribeClientQuotasResponseEntriesEntityTags = "Tags"
+
 	// FieldDescribeClientQuotasResponseEntriesTags is: The tagged fields.
 	FieldDescribeClientQuotasResponseEntriesTags = "Tags"
+
 	// FieldDescribeClientQuotasResponseEntriesValues is: The quota values for the entity.
 	FieldDescribeClientQuotasResponseEntriesValues = "Values"
+
 	// FieldDescribeClientQuotasResponseEntriesValuesKey is: The quota configuration key.
 	FieldDescribeClientQuotasResponseEntriesValuesKey = "Key"
+
 	// FieldDescribeClientQuotasResponseEntriesValuesTags is: The tagged fields.
 	FieldDescribeClientQuotasResponseEntriesValuesTags = "Tags"
+
 	// FieldDescribeClientQuotasResponseEntriesValuesValue is: The quota configuration value.
 	FieldDescribeClientQuotasResponseEntriesValuesValue = "Value"
+
 	// FieldDescribeClientQuotasResponseErrorCode is: The error code, or `0` if the quota description succeeded.
 	FieldDescribeClientQuotasResponseErrorCode = "ErrorCode"
+
 	// FieldDescribeClientQuotasResponseErrorMessage is: The error message, or `null` if the quota description succeeded.
 	FieldDescribeClientQuotasResponseErrorMessage = "ErrorMessage"
+
 	// FieldDescribeClientQuotasResponseTags is: The tagged fields.
 	FieldDescribeClientQuotasResponseTags = "Tags"
+
 	// FieldDescribeClientQuotasResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldDescribeClientQuotasResponseThrottleTimeMs = "ThrottleTimeMs"
 )

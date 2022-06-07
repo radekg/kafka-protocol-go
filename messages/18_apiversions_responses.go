@@ -5,11 +5,10 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init18ApiVersionsResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: ApiVersionsResponse, API Key: 18, Version: 0
-		schema.NewSchema("ApiVersionsResponsev0",
+		schema.NewSchema("ApiVersionsResponse:v0",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeysV0",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v0",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -17,9 +16,9 @@ func init18ApiVersionsResponse() []schema.Schema {
 		),
 
 		// Message: ApiVersionsResponse, API Key: 18, Version: 1
-		schema.NewSchema("ApiVersionsResponsev1",
+		schema.NewSchema("ApiVersionsResponse:v1",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeysV1",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v1",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -28,9 +27,9 @@ func init18ApiVersionsResponse() []schema.Schema {
 		),
 
 		// Message: ApiVersionsResponse, API Key: 18, Version: 2
-		schema.NewSchema("ApiVersionsResponsev2",
+		schema.NewSchema("ApiVersionsResponse:v2",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeysV2",
+			&schema.Array{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v2",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
@@ -39,70 +38,102 @@ func init18ApiVersionsResponse() []schema.Schema {
 		),
 
 		// Message: ApiVersionsResponse, API Key: 18, Version: 3
-		schema.NewSchema("ApiVersionsResponsev3",
+		schema.NewSchema("ApiVersionsResponse:v3",
 			&schema.Mfield{Name: FieldApiVersionsResponseErrorCode, Ty: schema.TypeInt16},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("ApiKeysV3",
+			&schema.ArrayCompact{Name: FieldApiVersionsResponseApiKeys, Ty: schema.NewSchema("[]ApiVersion:v3",
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysApiKey, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMinVersion, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldApiVersionsResponseApiKeysMaxVersion, Ty: schema.TypeInt16},
 				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseApiKeysTags},
 			)},
 			&schema.Mfield{Name: FieldApiVersionsResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseSupportedFeatures, Ty: schema.NewSchema("SupportedFeaturesV3",
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesName, Ty: schema.TypeStrCompact},
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMinVersion, Ty: schema.TypeInt16},
-				&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMaxVersion, Ty: schema.TypeInt16},
-				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseSupportedFeaturesTags},
-			)},
-			&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldApiVersionsResponseFinalizedFeatures, Ty: schema.NewSchema("FinalizedFeaturesV3",
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesName, Ty: schema.TypeStrCompact},
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel, Ty: schema.TypeInt16},
-				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel, Ty: schema.TypeInt16},
-				&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseFinalizedFeaturesTags},
-			)},
 			&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseTags},
+			/** Applicable tags:
+
+				0: SupportedFeatures (type: []SupportedFeatureKey) =
+				&schema.ArrayCompact{Name: FieldApiVersionsResponseSupportedFeatures, Ty: schema.NewSchema("[]SupportedFeatureKey:v3",
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesName, Ty: schema.TypeStrCompact},
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMinVersion, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldApiVersionsResponseSupportedFeaturesMaxVersion, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseSupportedFeaturesTags},
+
+				)},
+
+				1: FinalizedFeaturesEpoch (type: int64) =
+				&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesEpoch, Ty: schema.TypeInt64},
+
+				2: FinalizedFeatures (type: []FinalizedFeatureKey) =
+				&schema.ArrayCompact{Name: FieldApiVersionsResponseFinalizedFeatures, Ty: schema.NewSchema("[]FinalizedFeatureKey:v3",
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesName, Ty: schema.TypeStrCompact},
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel, Ty: schema.TypeInt16},
+					&schema.Mfield{Name: FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel, Ty: schema.TypeInt16},
+					&schema.SchemaTaggedFields{Name: FieldApiVersionsResponseFinalizedFeaturesTags},
+
+				)},
+
+			**/
+
 		),
 	}
+
 }
 
 const (
+
 	// FieldApiVersionsResponseApiKeys is: The APIs supported by the broker.
 	FieldApiVersionsResponseApiKeys = "ApiKeys"
+
 	// FieldApiVersionsResponseApiKeysApiKey is: The API index.
 	FieldApiVersionsResponseApiKeysApiKey = "ApiKey"
+
 	// FieldApiVersionsResponseApiKeysMaxVersion is: The maximum supported version, inclusive.
 	FieldApiVersionsResponseApiKeysMaxVersion = "MaxVersion"
+
 	// FieldApiVersionsResponseApiKeysMinVersion is: The minimum supported version, inclusive.
 	FieldApiVersionsResponseApiKeysMinVersion = "MinVersion"
+
 	// FieldApiVersionsResponseApiKeysTags is: The tagged fields.
 	FieldApiVersionsResponseApiKeysTags = "Tags"
+
 	// FieldApiVersionsResponseErrorCode is: The top-level error code.
 	FieldApiVersionsResponseErrorCode = "ErrorCode"
+
 	// FieldApiVersionsResponseFinalizedFeatures is: List of cluster-wide finalized features. The information is valid only if FinalizedFeaturesEpoch >= 0.
 	FieldApiVersionsResponseFinalizedFeatures = "FinalizedFeatures"
+
 	// FieldApiVersionsResponseFinalizedFeaturesEpoch is: The monotonically increasing epoch for the finalized features information. Valid values are >= 0. A value of -1 is special and represents unknown epoch.
 	FieldApiVersionsResponseFinalizedFeaturesEpoch = "FinalizedFeaturesEpoch"
+
 	// FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel is: The cluster-wide finalized max version level for the feature.
 	FieldApiVersionsResponseFinalizedFeaturesMaxVersionLevel = "MaxVersionLevel"
+
 	// FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel is: The cluster-wide finalized min version level for the feature.
 	FieldApiVersionsResponseFinalizedFeaturesMinVersionLevel = "MinVersionLevel"
+
 	// FieldApiVersionsResponseFinalizedFeaturesName is: The name of the feature.
 	FieldApiVersionsResponseFinalizedFeaturesName = "Name"
+
 	// FieldApiVersionsResponseFinalizedFeaturesTags is: The tagged fields.
 	FieldApiVersionsResponseFinalizedFeaturesTags = "Tags"
+
 	// FieldApiVersionsResponseSupportedFeatures is: Features supported by the broker.
 	FieldApiVersionsResponseSupportedFeatures = "SupportedFeatures"
+
 	// FieldApiVersionsResponseSupportedFeaturesMaxVersion is: The maximum supported version for the feature.
 	FieldApiVersionsResponseSupportedFeaturesMaxVersion = "MaxVersion"
+
 	// FieldApiVersionsResponseSupportedFeaturesMinVersion is: The minimum supported version for the feature.
 	FieldApiVersionsResponseSupportedFeaturesMinVersion = "MinVersion"
+
 	// FieldApiVersionsResponseSupportedFeaturesName is: The name of the feature.
 	FieldApiVersionsResponseSupportedFeaturesName = "Name"
+
 	// FieldApiVersionsResponseSupportedFeaturesTags is: The tagged fields.
 	FieldApiVersionsResponseSupportedFeaturesTags = "Tags"
+
 	// FieldApiVersionsResponseTags is: The tagged fields.
 	FieldApiVersionsResponseTags = "Tags"
+
 	// FieldApiVersionsResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldApiVersionsResponseThrottleTimeMs = "ThrottleTimeMs"
 )

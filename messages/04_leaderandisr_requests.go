@@ -5,13 +5,21 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init4LeaderAndIsrRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 0
-		schema.NewSchema("LeaderAndIsrRequestv0",
+		schema.NewSchema("LeaderAndIsrRequest:v0",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV0")},
-			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV0",
+			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v0",
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+			)},
+			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v0",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -19,11 +27,21 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 1
-		schema.NewSchema("LeaderAndIsrRequestv1",
+		schema.NewSchema("LeaderAndIsrRequest:v1",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("UngroupedPartitionStatesV1")},
-			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV1",
+			&schema.Array{Name: FieldLeaderAndIsrRequestUngroupedPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v1",
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesTopicName, Ty: schema.TypeStr},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesLeader, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesIsr, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesZkVersion, Ty: schema.TypeInt32},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+				&schema.Mfield{Name: FieldLeaderAndIsrRequestUngroupedPartitionStatesIsNew, Ty: schema.TypeBool},
+			)},
+			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v1",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -31,15 +49,24 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 2
-		schema.NewSchema("LeaderAndIsrRequestv2",
+		schema.NewSchema("LeaderAndIsrRequest:v2",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV2",
+			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("[]LeaderAndIsrTopicState:v2",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV2")},
+				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v2",
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew, Ty: schema.TypeBool},
+				)},
 			)},
-			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV2",
+			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v2",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -47,15 +74,26 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 3
-		schema.NewSchema("LeaderAndIsrRequestv3",
+		schema.NewSchema("LeaderAndIsrRequest:v3",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV3",
+			&schema.Array{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("[]LeaderAndIsrTopicState:v3",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV3")},
+				&schema.Array{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v3",
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas, Ty: schema.TypeInt32Array},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew, Ty: schema.TypeBool},
+				)},
 			)},
-			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV3",
+			&schema.Array{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v3",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -63,16 +101,28 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 4
-		schema.NewSchema("LeaderAndIsrRequestv4",
+		schema.NewSchema("LeaderAndIsrRequest:v4",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV4",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("[]LeaderAndIsrTopicState:v4",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV4")},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v4",
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew, Ty: schema.TypeBool},
+					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV4",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v4",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -82,18 +132,30 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 5
-		schema.NewSchema("LeaderAndIsrRequestv5",
+		schema.NewSchema("LeaderAndIsrRequest:v5",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestType, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV5",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("[]LeaderAndIsrTopicState:v5",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV5")},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v5",
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew, Ty: schema.TypeBool},
+					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV5",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v5",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -103,18 +165,31 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 		),
 
 		// Message: LeaderAndIsrRequest, API Key: 4, Version: 6
-		schema.NewSchema("LeaderAndIsrRequestv6",
+		schema.NewSchema("LeaderAndIsrRequest:v6",
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerId, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestControllerEpoch, Ty: schema.TypeInt32},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestBrokerEpoch, Ty: schema.TypeInt64},
 			&schema.Mfield{Name: FieldLeaderAndIsrRequestType, Ty: schema.TypeInt8},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("TopicStatesV6",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStates, Ty: schema.NewSchema("[]LeaderAndIsrTopicState:v6",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesTopicId, Ty: schema.TypeUuid},
-				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("PartitionStatesV6")},
+				&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStates, Ty: schema.NewSchema("[]LeaderAndIsrPartitionState:v6",
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion, Ty: schema.TypeInt32},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas, Ty: schema.TypeInt32CompactArray},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew, Ty: schema.TypeBool},
+					&schema.Mfield{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderRecoveryState, Ty: schema.TypeInt8},
+					&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesPartitionStatesTags},
+				)},
 				&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTopicStatesTags},
 			)},
-			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("LiveLeadersV6",
+			&schema.ArrayCompact{Name: FieldLeaderAndIsrRequestLiveLeaders, Ty: schema.NewSchema("[]LeaderAndIsrLiveLeader:v6",
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersBrokerId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersHostName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldLeaderAndIsrRequestLiveLeadersPort, Ty: schema.TypeInt32},
@@ -123,41 +198,121 @@ func init4LeaderAndIsrRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldLeaderAndIsrRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldLeaderAndIsrRequestBrokerEpoch is: The current broker epoch.
 	FieldLeaderAndIsrRequestBrokerEpoch = "BrokerEpoch"
+
 	// FieldLeaderAndIsrRequestControllerEpoch is: The current controller epoch.
 	FieldLeaderAndIsrRequestControllerEpoch = "ControllerEpoch"
+
 	// FieldLeaderAndIsrRequestControllerId is: The current controller ID.
 	FieldLeaderAndIsrRequestControllerId = "ControllerId"
+
 	// FieldLeaderAndIsrRequestLiveLeaders is: The current live leaders.
 	FieldLeaderAndIsrRequestLiveLeaders = "LiveLeaders"
+
 	// FieldLeaderAndIsrRequestLiveLeadersBrokerId is: The leader's broker ID.
 	FieldLeaderAndIsrRequestLiveLeadersBrokerId = "BrokerId"
+
 	// FieldLeaderAndIsrRequestLiveLeadersHostName is: The leader's hostname.
 	FieldLeaderAndIsrRequestLiveLeadersHostName = "HostName"
+
 	// FieldLeaderAndIsrRequestLiveLeadersPort is: The leader's port.
 	FieldLeaderAndIsrRequestLiveLeadersPort = "Port"
+
 	// FieldLeaderAndIsrRequestLiveLeadersTags is: The tagged fields.
 	FieldLeaderAndIsrRequestLiveLeadersTags = "Tags"
+
 	// FieldLeaderAndIsrRequestTags is: The tagged fields.
 	FieldLeaderAndIsrRequestTags = "Tags"
+
 	// FieldLeaderAndIsrRequestTopicStates is: Each topic.
 	FieldLeaderAndIsrRequestTopicStates = "TopicStates"
+
 	// FieldLeaderAndIsrRequestTopicStatesPartitionStates is: The state of each partition
 	FieldLeaderAndIsrRequestTopicStatesPartitionStates = "PartitionStates"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas is: The replica IDs that we are adding this partition to, or null if no replicas are being added.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesAddingReplicas = "AddingReplicas"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch is: The controller epoch.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesControllerEpoch = "ControllerEpoch"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew is: Whether the replica should have existed on the broker or not.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsNew = "IsNew"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr is: The in-sync replica IDs.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesIsr = "Isr"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader is: The broker ID of the leader.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeader = "Leader"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch is: The leader epoch.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderEpoch = "LeaderEpoch"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderRecoveryState is: 1 if the partition is recovering from an unclean leader election; 0 otherwise.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesLeaderRecoveryState = "LeaderRecoveryState"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex is: The partition index.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesPartitionIndex = "PartitionIndex"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas is: The replica IDs that we are removing this partition from, or null if no replicas are being removed.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesRemovingReplicas = "RemovingReplicas"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas is: The replica IDs.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesReplicas = "Replicas"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesTags is: The tagged fields.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesTags = "Tags"
+
+	// FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion is: The ZooKeeper version.
+	FieldLeaderAndIsrRequestTopicStatesPartitionStatesZkVersion = "ZkVersion"
+
 	// FieldLeaderAndIsrRequestTopicStatesTags is: The tagged fields.
 	FieldLeaderAndIsrRequestTopicStatesTags = "Tags"
+
 	// FieldLeaderAndIsrRequestTopicStatesTopicId is: The unique topic ID.
 	FieldLeaderAndIsrRequestTopicStatesTopicId = "TopicId"
+
 	// FieldLeaderAndIsrRequestTopicStatesTopicName is: The topic name.
 	FieldLeaderAndIsrRequestTopicStatesTopicName = "TopicName"
+
 	// FieldLeaderAndIsrRequestType is: The type that indicates whether all topics are included in the request
 	FieldLeaderAndIsrRequestType = "Type"
+
 	// FieldLeaderAndIsrRequestUngroupedPartitionStates is: The state of each partition, in a v0 or v1 message.
 	FieldLeaderAndIsrRequestUngroupedPartitionStates = "UngroupedPartitionStates"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesControllerEpoch is: The controller epoch.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesControllerEpoch = "ControllerEpoch"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesIsNew is: Whether the replica should have existed on the broker or not.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesIsNew = "IsNew"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesIsr is: The in-sync replica IDs.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesIsr = "Isr"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesLeader is: The broker ID of the leader.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesLeader = "Leader"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesLeaderEpoch is: The leader epoch.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesLeaderEpoch = "LeaderEpoch"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesPartitionIndex is: The partition index.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesPartitionIndex = "PartitionIndex"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesReplicas is: The replica IDs.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesReplicas = "Replicas"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesTopicName is: The topic name.  This is only present in v0 or v1.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesTopicName = "TopicName"
+
+	// FieldLeaderAndIsrRequestUngroupedPartitionStatesZkVersion is: The ZooKeeper version.
+	FieldLeaderAndIsrRequestUngroupedPartitionStatesZkVersion = "ZkVersion"
 )
 
 // Generated from Apache Kafka source code file: clients/src/main/resources/common/message/LeaderAndIsrRequest.json

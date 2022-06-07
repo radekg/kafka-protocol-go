@@ -5,18 +5,17 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init3MetadataResponse() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: MetadataResponse, API Key: 3, Version: 0
-		schema.NewSchema("MetadataResponsev0",
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV0",
+		schema.NewSchema("MetadataResponse:v0",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v0",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
 			)},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV0",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v0",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV0",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v0",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -27,19 +26,19 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 1
-		schema.NewSchema("MetadataResponsev1",
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV1",
+		schema.NewSchema("MetadataResponse:v1",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v1",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersRack, Ty: schema.TypeStrNullable},
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV1",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v1",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV1",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v1",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -50,8 +49,8 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 2
-		schema.NewSchema("MetadataResponsev2",
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV2",
+		schema.NewSchema("MetadataResponse:v2",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v2",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -59,11 +58,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV2",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v2",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV2",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v2",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -74,9 +73,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 3
-		schema.NewSchema("MetadataResponsev3",
+		schema.NewSchema("MetadataResponse:v3",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV3",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v3",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -84,11 +83,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV3",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v3",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV3",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v3",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -99,9 +98,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 4
-		schema.NewSchema("MetadataResponsev4",
+		schema.NewSchema("MetadataResponse:v4",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV4",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v4",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -109,11 +108,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV4",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v4",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV4",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v4",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -124,9 +123,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 5
-		schema.NewSchema("MetadataResponsev5",
+		schema.NewSchema("MetadataResponse:v5",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV5",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v5",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -134,11 +133,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV5",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v5",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV5",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v5",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -150,9 +149,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 6
-		schema.NewSchema("MetadataResponsev6",
+		schema.NewSchema("MetadataResponse:v6",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV6",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v6",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -160,11 +159,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV6",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v6",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV6",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v6",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -176,9 +175,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 7
-		schema.NewSchema("MetadataResponsev7",
+		schema.NewSchema("MetadataResponse:v7",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV7",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v7",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -186,11 +185,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV7",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v7",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV7",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v7",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -203,9 +202,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 8
-		schema.NewSchema("MetadataResponsev8",
+		schema.NewSchema("MetadataResponse:v8",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV8",
+			&schema.Array{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v8",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -213,11 +212,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV8",
+			&schema.Array{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v8",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStr},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV8",
+				&schema.Array{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v8",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -232,9 +231,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 9
-		schema.NewSchema("MetadataResponsev9",
+		schema.NewSchema("MetadataResponse:v9",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV9",
+			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v9",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -243,11 +242,11 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV9",
+			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v9",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV9",
+				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v9",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -265,9 +264,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 10
-		schema.NewSchema("MetadataResponsev10",
+		schema.NewSchema("MetadataResponse:v10",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV10",
+			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v10",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -276,12 +275,12 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV10",
+			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v10",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV10",
+				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v10",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -299,9 +298,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 11
-		schema.NewSchema("MetadataResponsev11",
+		schema.NewSchema("MetadataResponse:v11",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV11",
+			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v11",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -310,12 +309,12 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV11",
+			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v11",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV11",
+				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v11",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -332,9 +331,9 @@ func init3MetadataResponse() []schema.Schema {
 		),
 
 		// Message: MetadataResponse, API Key: 3, Version: 12
-		schema.NewSchema("MetadataResponsev12",
+		schema.NewSchema("MetadataResponse:v12",
 			&schema.Mfield{Name: FieldMetadataResponseThrottleTimeMs, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("BrokersV12",
+			&schema.ArrayCompact{Name: FieldMetadataResponseBrokers, Ty: schema.NewSchema("[]MetadataResponseBroker:v12",
 				&schema.Mfield{Name: FieldMetadataResponseBrokersNodeId, Ty: schema.TypeInt32},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersHost, Ty: schema.TypeStrCompact},
 				&schema.Mfield{Name: FieldMetadataResponseBrokersPort, Ty: schema.TypeInt32},
@@ -343,12 +342,12 @@ func init3MetadataResponse() []schema.Schema {
 			)},
 			&schema.Mfield{Name: FieldMetadataResponseClusterId, Ty: schema.TypeStrCompactNullable},
 			&schema.Mfield{Name: FieldMetadataResponseControllerId, Ty: schema.TypeInt32},
-			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("TopicsV12",
+			&schema.ArrayCompact{Name: FieldMetadataResponseTopics, Ty: schema.NewSchema("[]MetadataResponseTopic:v12",
 				&schema.Mfield{Name: FieldMetadataResponseTopicsErrorCode, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsName, Ty: schema.TypeStrCompactNullable},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsTopicId, Ty: schema.TypeUuid},
 				&schema.Mfield{Name: FieldMetadataResponseTopicsIsInternal, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("PartitionsV12",
+				&schema.ArrayCompact{Name: FieldMetadataResponseTopicsPartitions, Ty: schema.NewSchema("[]MetadataResponsePartition:v12",
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsErrorCode, Ty: schema.TypeInt16},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsPartitionIndex, Ty: schema.TypeInt32},
 					&schema.Mfield{Name: FieldMetadataResponseTopicsPartitionsLeaderId, Ty: schema.TypeInt32},
@@ -364,61 +363,89 @@ func init3MetadataResponse() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldMetadataResponseTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldMetadataResponseBrokers is: Each broker in the response.
 	FieldMetadataResponseBrokers = "Brokers"
+
 	// FieldMetadataResponseBrokersHost is: The broker hostname.
 	FieldMetadataResponseBrokersHost = "Host"
+
 	// FieldMetadataResponseBrokersNodeId is: The broker ID.
 	FieldMetadataResponseBrokersNodeId = "NodeId"
+
 	// FieldMetadataResponseBrokersPort is: The broker port.
 	FieldMetadataResponseBrokersPort = "Port"
+
 	// FieldMetadataResponseBrokersRack is: The rack of the broker, or null if it has not been assigned to a rack.
 	FieldMetadataResponseBrokersRack = "Rack"
+
 	// FieldMetadataResponseBrokersTags is: The tagged fields.
 	FieldMetadataResponseBrokersTags = "Tags"
+
 	// FieldMetadataResponseClusterAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this cluster.
 	FieldMetadataResponseClusterAuthorizedOperations = "ClusterAuthorizedOperations"
+
 	// FieldMetadataResponseClusterId is: The cluster ID that responding broker belongs to.
 	FieldMetadataResponseClusterId = "ClusterId"
+
 	// FieldMetadataResponseControllerId is: The ID of the controller broker.
 	FieldMetadataResponseControllerId = "ControllerId"
+
 	// FieldMetadataResponseTags is: The tagged fields.
 	FieldMetadataResponseTags = "Tags"
+
 	// FieldMetadataResponseThrottleTimeMs is: The duration in milliseconds for which the request was throttled due to a quota violation, or zero if the request did not violate any quota.
 	FieldMetadataResponseThrottleTimeMs = "ThrottleTimeMs"
+
 	// FieldMetadataResponseTopics is: Each topic in the response.
 	FieldMetadataResponseTopics = "Topics"
+
 	// FieldMetadataResponseTopicsErrorCode is: The topic error, or 0 if there was no error.
 	FieldMetadataResponseTopicsErrorCode = "ErrorCode"
+
 	// FieldMetadataResponseTopicsIsInternal is: True if the topic is internal.
 	FieldMetadataResponseTopicsIsInternal = "IsInternal"
+
 	// FieldMetadataResponseTopicsName is: The topic name.
 	FieldMetadataResponseTopicsName = "Name"
+
 	// FieldMetadataResponseTopicsPartitions is: Each partition in the topic.
 	FieldMetadataResponseTopicsPartitions = "Partitions"
+
 	// FieldMetadataResponseTopicsPartitionsErrorCode is: The partition error, or 0 if there was no error.
 	FieldMetadataResponseTopicsPartitionsErrorCode = "ErrorCode"
+
 	// FieldMetadataResponseTopicsPartitionsIsrNodes is: The set of nodes that are in sync with the leader for this partition.
 	FieldMetadataResponseTopicsPartitionsIsrNodes = "IsrNodes"
+
 	// FieldMetadataResponseTopicsPartitionsLeaderEpoch is: The leader epoch of this partition.
 	FieldMetadataResponseTopicsPartitionsLeaderEpoch = "LeaderEpoch"
+
 	// FieldMetadataResponseTopicsPartitionsLeaderId is: The ID of the leader broker.
 	FieldMetadataResponseTopicsPartitionsLeaderId = "LeaderId"
+
 	// FieldMetadataResponseTopicsPartitionsOfflineReplicas is: The set of offline replicas of this partition.
 	FieldMetadataResponseTopicsPartitionsOfflineReplicas = "OfflineReplicas"
+
 	// FieldMetadataResponseTopicsPartitionsPartitionIndex is: The partition index.
 	FieldMetadataResponseTopicsPartitionsPartitionIndex = "PartitionIndex"
+
 	// FieldMetadataResponseTopicsPartitionsReplicaNodes is: The set of all nodes that host this partition.
 	FieldMetadataResponseTopicsPartitionsReplicaNodes = "ReplicaNodes"
+
 	// FieldMetadataResponseTopicsPartitionsTags is: The tagged fields.
 	FieldMetadataResponseTopicsPartitionsTags = "Tags"
+
 	// FieldMetadataResponseTopicsTags is: The tagged fields.
 	FieldMetadataResponseTopicsTags = "Tags"
+
 	// FieldMetadataResponseTopicsTopicAuthorizedOperations is: 32-bit bitfield to represent authorized operations for this topic.
 	FieldMetadataResponseTopicsTopicAuthorizedOperations = "TopicAuthorizedOperations"
+
 	// FieldMetadataResponseTopicsTopicId is: The topic id.
 	FieldMetadataResponseTopicsTopicId = "TopicId"
 )

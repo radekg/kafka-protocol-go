@@ -5,14 +5,13 @@ import "github.com/radekg/kafka-protocol-go/schema"
 func init27WriteTxnMarkersRequest() []schema.Schema {
 
 	return []schema.Schema{
-
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 0
-		schema.NewSchema("WriteTxnMarkersRequestv0",
-			&schema.Array{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("MarkersV0",
+		schema.NewSchema("WriteTxnMarkersRequest:v0",
+			&schema.Array{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("[]WritableTxnMarker:v0",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTransactionResult, Ty: schema.TypeBool},
-				&schema.Array{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("TopicsV0",
+				&schema.Array{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopic:v0",
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsName, Ty: schema.TypeStr},
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes, Ty: schema.TypeInt32Array},
 				)},
@@ -21,12 +20,12 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 		),
 
 		// Message: WriteTxnMarkersRequest, API Key: 27, Version: 1
-		schema.NewSchema("WriteTxnMarkersRequestv1",
-			&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("MarkersV1",
+		schema.NewSchema("WriteTxnMarkersRequest:v1",
+			&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkers, Ty: schema.NewSchema("[]WritableTxnMarker:v1",
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerId, Ty: schema.TypeInt64},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersProducerEpoch, Ty: schema.TypeInt16},
 				&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTransactionResult, Ty: schema.TypeBool},
-				&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("TopicsV1",
+				&schema.ArrayCompact{Name: FieldWriteTxnMarkersRequestMarkersTopics, Ty: schema.NewSchema("[]WritableTxnMarkerTopic:v1",
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsName, Ty: schema.TypeStrCompact},
 					&schema.Mfield{Name: FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes, Ty: schema.TypeInt32CompactArray},
 					&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersRequestMarkersTopicsTags},
@@ -37,29 +36,41 @@ func init27WriteTxnMarkersRequest() []schema.Schema {
 			&schema.SchemaTaggedFields{Name: FieldWriteTxnMarkersRequestTags},
 		),
 	}
+
 }
 
 const (
+
 	// FieldWriteTxnMarkersRequestMarkers is: The transaction markers to be written.
 	FieldWriteTxnMarkersRequestMarkers = "Markers"
+
 	// FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch is: Epoch associated with the transaction state partition hosted by this transaction coordinator
 	FieldWriteTxnMarkersRequestMarkersCoordinatorEpoch = "CoordinatorEpoch"
+
 	// FieldWriteTxnMarkersRequestMarkersProducerEpoch is: The current epoch associated with the producer ID.
 	FieldWriteTxnMarkersRequestMarkersProducerEpoch = "ProducerEpoch"
+
 	// FieldWriteTxnMarkersRequestMarkersProducerId is: The current producer ID.
 	FieldWriteTxnMarkersRequestMarkersProducerId = "ProducerId"
+
 	// FieldWriteTxnMarkersRequestMarkersTags is: The tagged fields.
 	FieldWriteTxnMarkersRequestMarkersTags = "Tags"
+
 	// FieldWriteTxnMarkersRequestMarkersTopics is: Each topic that we want to write transaction marker(s) for.
 	FieldWriteTxnMarkersRequestMarkersTopics = "Topics"
+
 	// FieldWriteTxnMarkersRequestMarkersTopicsName is: The topic name.
 	FieldWriteTxnMarkersRequestMarkersTopicsName = "Name"
+
 	// FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes is: The indexes of the partitions to write transaction markers for.
 	FieldWriteTxnMarkersRequestMarkersTopicsPartitionIndexes = "PartitionIndexes"
+
 	// FieldWriteTxnMarkersRequestMarkersTopicsTags is: The tagged fields.
 	FieldWriteTxnMarkersRequestMarkersTopicsTags = "Tags"
+
 	// FieldWriteTxnMarkersRequestMarkersTransactionResult is: The result of the transaction to write to the partitions (false = ABORT, true = COMMIT).
 	FieldWriteTxnMarkersRequestMarkersTransactionResult = "TransactionResult"
+
 	// FieldWriteTxnMarkersRequestTags is: The tagged fields.
 	FieldWriteTxnMarkersRequestTags = "Tags"
 )
